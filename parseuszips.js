@@ -2,6 +2,21 @@ const fs = require('fs');
 const { resolveTripleslashReference } = require('typescript');
 const { stringify } = require('querystring');
 
+// now we have to wonder why they decided on windows 10 to be the 'last version' even though
+// linux has serious gaming deficiencies.s
+// again and they're leaving now... lol which means theyre both of age hmmm
+console.log(Math.random())
+//ohhh putting some easily recognizable numbers in that eh ?
+// predict this to make it weird again lol
+console.log(Math.random()*Math.random()*1000000)
+//this too
+console.log("HEY FUCKING PEDOPHILES OF COLORADO AND ELSEWHERE STOP TRYING TO FUCK JOHN'S HEAD UP OR HE'LL KILL SEVERAL OF THEM")
+console.log(Math.random()*100000)
+// this too
+console.log(Math.random()*10000)
+// did this before lol
+console.log(Math.random()*100)
+
 var json = fs.readFileSync("us-zip-code-latitude-and-longitude.json")
 
 var collection = JSON.parse(json)
@@ -53,12 +68,25 @@ function processFields(jsonobject,tablevel)
 
             for (index in jsonobject[field])
             {
-                if (index+1==)
+                if (index+1==NaN)
+                {
+                    notnumber=true;
+                    break;
+                }
             }
 
+            if (notnumber)
+            {
             tcode=processClass(jsonobject[field],field,0)
             classcode+=tcode.classcode;
             classcode+=tcode.runcode;
+            }
+            else
+            {
+                tcode=processArray(jsonobject[field])
+                code+=tabs+"//array type test"
+                code+=tcode.classcode
+            }
         }
         else
         {
@@ -122,6 +150,10 @@ function processConstructor(jsonobject,tablevel)
     return code
 }
 
+function processArray(jsonobject,tablevel)
+{
+
+}
 
 function processClass(jsonobject,classname,tablevel)
 {

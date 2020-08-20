@@ -1,7 +1,7 @@
 import QrCode from "qrcode-reader";
 import fs from "fs";
 import jimp from 'jimp'
-import {QrReadResult} from './QrReadResult'
+import {QrReadResult} from './old code long finished/QrReadResult'
 
 export class QRUnpacker {
 	constructor(public files: string[], public outpath: string) {}
