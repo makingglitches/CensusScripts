@@ -1,0 +1,9 @@
+[ 
+    {
+        "str":"jkjkjkjkj",
+        "arr":[1,2,3,4],
+        "arr2":["jojojo","jojo",1],
+        "arrmixed":["jojojoj",1,{"str2":"hi","desc":"weird mixed array", "number":0},2]
+
+    }
+]
