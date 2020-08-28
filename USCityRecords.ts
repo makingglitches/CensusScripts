@@ -1,3 +1,5 @@
+import fs from 'fs'
+
 
 export class fields
 {
@@ -83,6 +85,19 @@ export class USCityRecord
 	public record_timestamp:string="";
 
 
+static loadFromFile(filename:string)
+{
+var json = fs.readFileSync(filename);
+var collection = JSON.parse(json.toString());
+
+let ret:Array<USCityRecord> = [];
+
+for (var i in json)
+{
+ret.push(new USCityRecord(json[i]));
+
+}
+return ret;
 
 }
 

@@ -8,7 +8,11 @@ var _require = require("typescript"),
     resolveTripleslashReference = _require.resolveTripleslashReference;
 
 var _require2 = require("querystring"),
-    stringify = _require2.stringify; // second time attempted to guess the age of my offspring and they repeated this
+    stringify = _require2.stringify; // will contain data about the database structure to create, parent/child elements and fk relationships
+// for later database write and table creation methods.
+
+
+var dbstructure = []; // second time attempted to guess the age of my offspring and they repeated this
 // assholes say 'oh now we believe you' but they're just being cruel piece of shit assholes
 // which is their nature
 // ohh we could LIE and say yeah... they're great... we could also castrate ourselves but they dont see that happening
@@ -29,7 +33,6 @@ var _require2 = require("querystring"),
 // a note on the 'code' returns, runcode field is meant to contain code that is contained in the present class
 // classcode contains the code that will be prepended to dataset class.
 // javascript really is an annoying language to trace through by eye.
-
 
 var filename = "us-zip-code-latitude-and-longitude.json";
 var tsfilename = "USCityRecords.ts";
@@ -164,6 +167,7 @@ function processArray(jsonobject, name, tablevel) {
 }
 
 function processClass(jsonobject, classname, tablevel) {
+  var loadMethod = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
   console.log("in process class:" + classname);
   var runcode = "";
   var tabs = makeTabs(tablevel);
@@ -172,6 +176,12 @@ function processClass(jsonobject, classname, tablevel) {
   runcode += processConstructor(jsonobject, tablevel + 1);
   var fieldcode = processFields(jsonobject, tablevel + 1);
   runcode += fieldcode.runcode;
+
+  if (loadMethod) {
+    runcode += "static loadFromFile(filename:string)\n" + "{\n" + tabs + "var json = fs.readFileSync(filename);\n" + tabs + "var collection = JSON.parse(json.toString());\n\n" + tabs + "let ret:Array<USCityRecord> = [];\n" + "\n" + tabs + "for (var i in json)\n" + "{\n" + tabs + "ret.push(new USCityRecord(json[i]));\n" + "\n}\n" + tabs + "return ret;\n";
+    "}\n";
+  }
+
   runcode += "\n" + tabs + "}\n\n";
   console.log("leaving processclass:" + classname);
   console.log("runcode length:" + runcode.length + " classcode length:" + fieldcode.classcode.length);
@@ -182,8 +192,9 @@ function processClass(jsonobject, classname, tablevel) {
 } //https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/api/\
 
 
-var code = processClass(collection[0], "USCityRecord", 0); //console.log(processClass(collection[0],"USCityRecord",0))
+var code = processClass(collection[0], "USCityRecord", 0, true); //console.log(processClass(collection[0],"USCityRecord",0))
 
+code.classcode = "import fs from 'fs'\n\n" + code.classcode;
 fs.writeFileSync(tsfilename, code.classcode + "\n" + code.runcode);
 /*
 datasetid - string

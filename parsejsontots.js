@@ -2,6 +2,10 @@ const fs = require("fs");
 const { resolveTripleslashReference } = require("typescript");
 const { stringify } = require("querystring");
 
+// will contain data about the database structure to create, parent/child elements and fk relationships
+// for later database write and table creation methods.
+var dbstructure=[];
+
 // second time attempted to guess the age of my offspring and they repeated this
 // assholes say 'oh now we believe you' but they're just being cruel piece of shit assholes
 // which is their nature
@@ -193,7 +197,7 @@ function processArray(jsonobject, name, tablevel) {
 	return tabs + "public " + name + ":Array<" + datype + ">=[];\n";
 }
 
-function processClass(jsonobject, classname, tablevel) {
+function processClass(jsonobject, classname, tablevel,loadMethod=false) {
 	console.log("in process class:" + classname);
 
 	var runcode = "";
@@ -207,6 +211,23 @@ function processClass(jsonobject, classname, tablevel) {
 	var fieldcode = processFields(jsonobject, tablevel + 1);
 
 	runcode += fieldcode.runcode;
+
+	if (loadMethod)
+	{
+		runcode+= "static loadFromFile(filename:string)\n"+
+				  "{\n"+
+				  tabs+"var json = fs.readFileSync(filename);\n"+	   
+			 	  tabs+"var collection = JSON.parse(json.toString());\n\n"+
+				  tabs+"let ret:Array<USCityRecord> = [];\n"+
+				  "\n"+
+				  tabs+"for (var i in json)\n"+
+				   "{\n"+
+				   tabs+"ret.push(new USCityRecord(json[i]));\n"+
+				   "\n}\n"+
+				   tabs+"return ret;\n"
+				   "}\n";
+		
+	}
 
 	runcode += "\n" + tabs + "}\n\n";
 
@@ -223,8 +244,10 @@ function processClass(jsonobject, classname, tablevel) {
 
 //https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/api/\
 
-var code = processClass(collection[0], "USCityRecord", 0);
+var code = processClass(collection[0], "USCityRecord", 0,true);
 //console.log(processClass(collection[0],"USCityRecord",0))
+
+code.classcode= "import fs from 'fs'\n\n"+code.classcode;
 
 fs.writeFileSync(tsfilename , code.classcode + "\n" + code.runcode);
 
