@@ -8,7 +8,7 @@
         
         {
             "name": "Launch Program",
-            "program": "${workspaceFolder}/.js",
+            "program": "${workspaceFolder}/ZipParser/JsonToTypeScript.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"

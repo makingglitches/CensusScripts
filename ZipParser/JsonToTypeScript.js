@@ -2,6 +2,9 @@ const fs = require("fs");
 const { resolveTripleslashReference } = require("typescript");
 const { stringify } = require("querystring");
 
+// god so sick of working on this over and over. jesus leave our fucking code alone so things can fucking grow 
+// fucking sick fucking chomo fucks !
+
 // will contain data about the database structure to create, parent/child elements and fk relationships
 // for later database write and table creation methods.
 var dbstructure=[];
