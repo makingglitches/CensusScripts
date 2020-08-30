@@ -168,6 +168,6 @@ function processClass(jsonobject, classname, tablevel) {
 
 var json = fs.readFileSync("us-zip-code-latitude-and-longitude.json");
 var collection = JSON.parse(json);
-var code = processClass(collection[0], "USCityRecord", 0, true);
+var code = processClass(collection[0], classname, 0, true);
 code.classcode = "import fs from 'fs'\n\n" + code.classcode;
 fs.writeFileSync(tsfilename, code.classcode + "\n" + code.runcode);

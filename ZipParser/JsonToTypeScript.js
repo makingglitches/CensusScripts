@@ -155,7 +155,7 @@ function processArray(jsonobject, name, tablevel) {
 	var datype = typeof jsonobject[0];
 	var tabs = makeTabs(tablevel);
 	console.log(datype);
-	
+
 	for (var i in jsonobject) {
 		if (datype != typeof jsonobject[i]) {
 			datype = typeof string;
@@ -218,7 +218,7 @@ var json = fs.readFileSync("us-zip-code-latitude-and-longitude.json");
 
 var collection = JSON.parse(json);
 
-var code = processClass(collection[0], "USCityRecord", 0,true);
+var code = processClass(collection[0], classname, 0,true);
 
 code.classcode= "import fs from 'fs'\n\n"+code.classcode;
 
