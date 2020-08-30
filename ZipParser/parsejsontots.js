@@ -225,7 +225,7 @@ function processClass(jsonobject, classname, tablevel,loadMethod=false) {
 				   tabs+"ret.push(new USCityRecord(json[i]));\n"+
 				   "\n}\n"+
 				   tabs+"return ret;\n"
-				   "}\n";
+				   "}\n}\n";
 		
 	}
 

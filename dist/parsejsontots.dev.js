@@ -179,7 +179,7 @@ function processClass(jsonobject, classname, tablevel) {
 
   if (loadMethod) {
     runcode += "static loadFromFile(filename:string)\n" + "{\n" + tabs + "var json = fs.readFileSync(filename);\n" + tabs + "var collection = JSON.parse(json.toString());\n\n" + tabs + "let ret:Array<USCityRecord> = [];\n" + "\n" + tabs + "for (var i in json)\n" + "{\n" + tabs + "ret.push(new USCityRecord(json[i]));\n" + "\n}\n" + tabs + "return ret;\n";
-    "}\n";
+    "}\n}\n";
   }
 
   runcode += "\n" + tabs + "}\n\n";
