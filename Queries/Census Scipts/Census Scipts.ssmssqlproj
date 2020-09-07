@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Census Scipts">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="localhost:DESKTOP-2D6FI0A\John">
+          <Created>2020-09-07T06:51:19.7490377-06:00</Created>
+          <Type>SQL</Type>
+          <Server>localhost</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="00 - Create Geography Database.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>00 - Create Geography Database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="01 - Create JSON Store.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>01 - Create JSON Store.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02 - Populate JSON Store With Zip Data.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>02 - Populate JSON Store With Zip Data.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02a - Create USCities Table for Zip Storage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>02a - Create USCities Table for Zip Storage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03 - Parse Zips from JSON Store.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>03 - Parse Zips from JSON Store.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04 - Trim Zip Data StateNames Cities.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>04 - Trim Zip Data StateNames Cities.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05 - Create StateLookup.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>05 - Create StateLookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06 - Populate StateLookup.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>06 - Populate StateLookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07 - Create Census Lookup.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>07 - Create Census Lookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08 - Populate Census Lookup.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>08 - Populate Census Lookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09 - Create Census Table.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>09 - Create Census Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10 - Create Constants Table.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>10 - Create Constants Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11 - Add Constants.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>11 - Add Constants.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12 - Populate Census.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>12 - Populate Census.sql</FullPath>
+        </FileNode>
+        <FileNode Name="13 - Update Census State Names.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>13 - Update Census State Names.sql</FullPath>
+        </FileNode>
+        <FileNode Name="14 - Fix Census Names.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>14 - Fix Census Names.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Check SQL Mgmt Import Census.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Check SQL Mgmt Import Census.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
