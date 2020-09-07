@@ -80,38 +80,38 @@
           <FullPath>08 - Populate Census Lookup.sql</FullPath>
         </FileNode>
         <FileNode Name="09 - Create Census Table.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>09 - Create Census Table.sql</FullPath>
         </FileNode>
         <FileNode Name="10 - Create Constants Table.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>10 - Create Constants Table.sql</FullPath>
         </FileNode>
         <FileNode Name="11 - Add Constants.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>11 - Add Constants.sql</FullPath>
         </FileNode>
         <FileNode Name="12 - Populate Census.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>12 - Populate Census.sql</FullPath>
         </FileNode>
         <FileNode Name="13 - Update Census State Names.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>13 - Update Census State Names.sql</FullPath>
         </FileNode>
         <FileNode Name="14 - Fix Census Names.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>14 - Fix Census Names.sql</FullPath>
         </FileNode>
@@ -120,6 +120,12 @@
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>Check SQL Mgmt Import Census.sql</FullPath>
+        </FileNode>
+        <FileNode Name="15 - Fix Abbreviations.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>15 - Fix Abbreviations.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
