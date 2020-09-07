@@ -12,3 +12,6 @@ with ( fieldterminator=',',
 	   )
 
 go
+
+update dbo.Census2018 set StateName=trim(statename)
+GO

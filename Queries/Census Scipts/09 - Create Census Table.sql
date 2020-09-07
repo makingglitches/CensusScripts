@@ -35,7 +35,8 @@ CREATE TABLE [dbo].[Census2018](
 	[TotPop65to74] float NOT NULL,
 	[TotPop75to84] float NOT NULL,
 	[TotPop85Plus] float NOT NULL,
-	[TotPopMedianAge] float NOT NULL
+	[TotPopMedianAge] float NOT NULL,
+	[CensusClass] nvarchar(20) null
 ) ON [PRIMARY]
 GO
 
