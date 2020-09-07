@@ -1,31 +1,29 @@
-const fs = require("fs");
-const { resolveTripleslashReference } = require("typescript");
-const { stringify } = require("querystring");
+const fs = require('fs');
+const { resolveTripleslashReference } = require('typescript');
+const { stringify } = require('querystring');
 
-var dbstructure=[];
+var dbstructure = [];
 
-var filename =".\\Input\\us-zip-code-latitude-and-longitude.json";
-var classname = "UsCityRecord"
-var tsfilename = "USCityRecords.ts";
-
-
+var filename = '.\\Input\\us-zip-code-latitude-and-longitude.json';
+var classname = 'UsCityRecord';
+var tsfilename = 'USCityRecords.ts';
 
 function commentize(value) {
 	if (value == null || value == undefined) {
-		return "";
+		return '';
 	}
 
 	value = value.toString();
-	value = value.replace("\n", "\n//");
+	value = value.replace('\n', '\n//');
 	return value;
 }
 
 function makeTabs(count) {
-	return repeat("\t", count);
+	return repeat('\t', count);
 }
 
 function repeat(value, count) {
-	var ret = "";
+	var ret = '';
 
 	for (i = 0; i < count; i++) {
 		ret += value;
@@ -35,66 +33,54 @@ function repeat(value, count) {
 }
 
 function processFields(jsonobject, tablevel) {
-    
-	console.log("entering processfields");
+	console.log('entering processfields');
 
 	var tabs = makeTabs(tablevel);
 
 	var retvalue = {};
 
-	var runcode = "";
-	var classcode = "";
+	var runcode = '';
+	var classcode = '';
 
 	for (field in jsonobject) {
-        var datype = typeof jsonobject[field];
-        
-        console.log("field:" + field + " fieldtype:" + datype);
-        
-		if (datype == "object") {
+		var datype = typeof jsonobject[field];
 
-			
+		console.log('field:' + field + ' fieldtype:' + datype);
+
+		if (datype == 'object') {
 			if (!isArray(jsonobject[field])) {
-				runcode += tabs + "public _" + field + ":" + field + ";\n\n";
+				runcode += tabs + 'public _' + field + ':' + field + ';\n\n';
 
 				tcode = processClass(jsonobject[field], field, 0);
-				classcode += tcode.classcode+"\n"+tcode.runcode;
-				
-			} else {
+				classcode += tcode.classcode + '\n' + tcode.runcode;
+			}
+			else {
 				runcode += processArray(jsonobject[field], field, tablevel);
 			}
-		} else {
-			runcode +=
-				tabs +
-				"//Sample Value:" +
-				commentize(jsonobject[field]) +
-                "\n";
-                
-			runcode +=
-				tabs +
-				"public " +
-				field +
-				":" +
-				typeof jsonobject[field] +
-				"=";
+		}
+		else {
+			runcode += tabs + '//Sample Value:' + commentize(jsonobject[field]) + '\n';
+
+			runcode += tabs + 'public ' + field + ':' + typeof jsonobject[field] + '=';
 
 			switch (datype) {
-				case "string":
+				case 'string':
 					runcode += '""';
 					break;
-				case "number":
-					runcode += "0";
+				case 'number':
+					runcode += '0';
 					break;
 				default:
-					runcode += "null";
+					runcode += 'null';
 			}
 
-			runcode += ";\n";
+			runcode += ';\n';
 		}
 
-		runcode += "\n";
+		runcode += '\n';
 	}
 
-	runcode += "\n";
+	runcode += '\n';
 
 	retvalue.runcode = runcode;
 	retvalue.classcode = classcode;
@@ -105,7 +91,7 @@ function processFields(jsonobject, tablevel) {
 function isArray(jsonobject) {
 	var datype = typeof jsonobject;
 
-	if (datype == "object") {
+	if (datype == 'object') {
 		var notnumber = false;
 
 		for (index in jsonobject) {
@@ -114,39 +100,38 @@ function isArray(jsonobject) {
 		}
 
 		return !notnumber;
-	} else {
+	}
+	else {
 		return false;
 	}
 }
 
 function processConstructor(jsonobject, tablevel) {
-	var code = "";
+	var code = '';
 	var tabs = makeTabs(tablevel);
 
-	code += tabs + "constructor(jsonobject:any)\n";
-	code += tabs + "{\n";
+	code += tabs + 'constructor(jsonobject:any)\n';
+	code += tabs + '{\n';
 
 	tabs = makeTabs(tablevel + 1);
 
 	for (field in jsonobject) {
 		var datype = typeof jsonobject[field];
-		var isobject = ( datype == "object" && (!isArray(jsonobject[field])));
+		var isobject = datype == 'object' && !isArray(jsonobject[field]);
 
 		code +=
 			tabs +
 			'this["' +
-			(isobject ? "_" : "") +
+			(isobject ? '_' : '') +
 			field +
 			'"]=' +
-			(isobject
-				? "new " + field + '(jsonobject["' + field + '"])'
-				: 'jsonobject["' + field + '"]') +
-			";\n";
+			(isobject ? 'new ' + field + '(jsonobject["' + field + '"])' : 'jsonobject["' + field + '"]') +
+			';\n';
 	}
 
 	tabs = makeTabs(tablevel);
 
-	code += tabs + "}\n";
+	code += tabs + '}\n';
 
 	return code;
 }
@@ -163,17 +148,17 @@ function processArray(jsonobject, name, tablevel) {
 		}
 	}
 
-	return tabs + "public " + name + ":Array<" + datype + ">=[];\n";
+	return tabs + 'public ' + name + ':Array<' + datype + '>=[];\n';
 }
 
-function processClass(jsonobject, classname, tablevel,loadMethod=false) {
-	console.log("in process class:" + classname);
+function processClass(jsonobject, classname, tablevel, loadMethod = false) {
+	console.log('in process class:' + classname);
 
-	var runcode = "";
+	var runcode = '';
 	var tabs = makeTabs(tablevel);
 
-	runcode += tabs + "export class " + classname + "\n";
-	runcode += tabs + "{\n";
+	runcode += tabs + 'export class ' + classname + '\n';
+	runcode += tabs + '{\n';
 
 	runcode += processConstructor(jsonobject, tablevel + 1);
 
@@ -181,46 +166,44 @@ function processClass(jsonobject, classname, tablevel,loadMethod=false) {
 
 	runcode += fieldcode.runcode;
 
-	if (loadMethod)
-	{
-		runcode+= "static loadFromFile(filename:string)\n"+
-				  "{\n"+
-				  tabs+"var json = fs.readFileSync(filename);\n"+	   
-			 	  tabs+"var collection = JSON.parse(json.toString());\n\n"+
-				  tabs+"let ret:Array<USCityRecord> = [];\n"+
-				  "\n"+
-				  tabs+"for (var i in json)\n"+
-				   "{\n"+
-				   tabs+"ret.push(new USCityRecord(json[i]));\n"+
-				   "\n}\n"+
-				   tabs+"return ret;\n"
-				   "}\n}\n";
-		
+	if (loadMethod) {
+		runcode +=
+			'static loadFromFile(filename:string)\n' +
+			'{\n' +
+			tabs +
+			'var json = fs.readFileSync(filename);\n' +
+			tabs +
+			'var collection = JSON.parse(json.toString());\n\n' +
+			tabs +
+			'let ret:Array<USCityRecord> = [];\n' +
+			'\n' +
+			tabs +
+			'for (var i in json)\n' +
+			'{\n' +
+			tabs +
+			'ret.push(new USCityRecord(json[i]));\n' +
+			'\n}\n' +
+			tabs +
+			'return ret;\n';
+		('}\n}\n');
 	}
 
-	runcode += "\n" + tabs + "}\n\n";
+	runcode += '\n' + tabs + '}\n\n';
 
-	console.log("leaving processclass:" + classname);
-	console.log(
-		"runcode length:" +
-			runcode.length +
-			" classcode length:" +
-			fieldcode.classcode.length
-	);
+	console.log('leaving processclass:' + classname);
+	console.log('runcode length:' + runcode.length + ' classcode length:' + fieldcode.classcode.length);
 
 	return { runcode: runcode, classcode: fieldcode.classcode };
 }
 
 //https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/api/\
 
-
-var json = fs.readFileSync("us-zip-code-latitude-and-longitude.json");
+var json = fs.readFileSync('us-zip-code-latitude-and-longitude.json');
 
 var collection = JSON.parse(json);
 
-var code = processClass(collection[0], classname, 0,true);
+var code = processClass(collection[0], classname, 0, true);
 
-code.classcode= "import fs from 'fs'\n\n"+code.classcode;
+code.classcode = "import fs from 'fs'\n\n" + code.classcode;
 
-fs.writeFileSync(tsfilename , code.classcode + "\n" + code.runcode);
-
+fs.writeFileSync(tsfilename, code.classcode + '\n' + code.runcode);
