@@ -66,9 +66,16 @@ namespace ImportShapeFilesAndDBF
 
             // oc.Close();
 
-            string connector = "Driver ={ Microsoft dBASE Driver(*.dbf)}; Dbq = c:\testdbf";
 
-            OdbcConnection ob = new OdbcConnection(connector);
+            // this was a change that piece of crap zimmerman added which we're pretty sure contains fucked up code
+            // they misinterpreted just like EVERYTHING ELSE NORMAL PEOPLE DO.
+            string connector =@"Driver ={ Microsoft dBASE Driver(*.dbf)} ; DriverID=277; Dbq = c:\testdbf";
+
+            OdbcConnectionStringBuilder osc = new OdbcConnectionStringBuilder();
+            osc.Dsn = "test";
+
+            OdbcConnection ob = new OdbcConnection(osc.ConnectionString);
+            
             ob.Open();
             DataTable tables =  ob.GetSchema("Tables");
 
