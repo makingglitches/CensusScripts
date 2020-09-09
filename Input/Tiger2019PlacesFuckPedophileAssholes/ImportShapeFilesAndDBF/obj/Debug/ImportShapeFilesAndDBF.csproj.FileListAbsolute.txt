@@ -5,3 +5,6 @@ C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\Import
 C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\bin\Debug\ImportShapeFilesAndDBF.pdb
 C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.exe
 C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.pdb
+C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\bin\Debug\DbfDataReader.dll
+C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.csproj.CopyComplete
+C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\bin\Debug\DbfDataReader.pdb
