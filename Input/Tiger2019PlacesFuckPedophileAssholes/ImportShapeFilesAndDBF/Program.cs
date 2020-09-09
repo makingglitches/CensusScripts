@@ -67,17 +67,33 @@ namespace ImportShapeFilesAndDBF
             // oc.Close();
 
 
-            // this was a change that piece of crap zimmerman added which we're pretty sure contains fucked up code
-            // they misinterpreted just like EVERYTHING ELSE NORMAL PEOPLE DO.
-            string connector =@"Driver ={ Microsoft dBASE Driver(*.dbf)} ; DriverID=277; Dbq = c:\testdbf";
-
+         // works with shortened non ntfs style filenames
+         // update asshole indicated for trieber driver
+         // kind of indicates they place bugs in shit to try to force people into certain formats of behavior
+         // comp science would be a really convenient way of stripping people cognitively like all science and math
             OdbcConnectionStringBuilder osc = new OdbcConnectionStringBuilder();
-            osc.Dsn = "test";
+            osc.Dsn = "fuckzim";
 
+            // not supposed to create fucking odbc dsn;s ! 
             OdbcConnection ob = new OdbcConnection(osc.ConnectionString);
             
             ob.Open();
+
+            // yup same stupid name format problem. wtf.
             DataTable tables =  ob.GetSchema("Tables");
+
+            string tb = tables.Rows[0]["TABLE_NAME"].ToString();
+
+            OdbcCommand comm = new OdbcCommand("select * from " + tb,ob);
+            var reader = comm.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Console.WriteLine(reader[0]);
+            }
+
+
+            ob.Close();
 
 
         }
