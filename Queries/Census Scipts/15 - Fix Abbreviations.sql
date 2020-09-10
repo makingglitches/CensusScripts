@@ -20,3 +20,6 @@ update dbo.USCities set City =  REPLACE(City COLLATE Latin1_General_CS_AS,'St.' 
 where City like 'St.%'
 
 go
+
+
+select * from openrowset('C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\tl_2019_01_place.dbf',)

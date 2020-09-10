@@ -15,7 +15,8 @@ GO
 
 CREATE TABLE [dbo].[StateLookup](
 	[StateName] [nvarchar](50) NOT NULL,
-	[State] [nvarchar](2) NOT NULL
+	[State] [nvarchar](2) NOT NULL,
+	[Fips] [nvarchar](2) null
 ) ON [PRIMARY]
 GO
 

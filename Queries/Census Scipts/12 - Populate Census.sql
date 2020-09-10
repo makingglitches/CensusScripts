@@ -13,5 +13,9 @@ with ( fieldterminator=',',
 
 go
 
-update dbo.Census2018 set StateName=trim(statename)
+-- place and shape files match against this id.
+
+update dbo.Census2018 set StateName=trim(statename),
+						GeoId = SUBSTRING(geoid,10,7)
 GO
+

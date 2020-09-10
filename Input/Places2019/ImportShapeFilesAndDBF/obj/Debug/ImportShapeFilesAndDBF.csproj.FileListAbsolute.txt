@@ -8,3 +8,13 @@ C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\Import
 C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\bin\Debug\DbfDataReader.dll
 C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.csproj.CopyComplete
 C:\Users\John\Documents\QrCode\Input\Tiger2019PlacesFuckPedophileAssholes\ImportShapeFilesAndDBF\bin\Debug\DbfDataReader.pdb
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\bin\Debug\ImportShapeFilesAndDBF.exe.config
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\bin\Debug\ImportShapeFilesAndDBF.exe
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\bin\Debug\ImportShapeFilesAndDBF.pdb
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\bin\Debug\DbfDataReader.dll
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\bin\Debug\DbfDataReader.pdb
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.csprojAssemblyReference.cache
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.csproj.CoreCompileInputs.cache
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.csproj.CopyComplete
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.exe
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\obj\Debug\ImportShapeFilesAndDBF.pdb
