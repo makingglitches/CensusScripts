@@ -1,0 +1,5 @@
+14.0
+3
+1       SQLNCHAR            0       2       ","      1     Code                                         SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       100     ","      2     Description                                  SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       600     "\r\n"   3     EntititesDescription                      SQL_Latin1_General_CP1_CI_AS
