@@ -1,0 +1,13 @@
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\obj\Debug\TestChanges.csprojAssemblyReference.cache
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\obj\Debug\TestChanges.csproj.CoreCompileInputs.cache
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\obj\Debug\Fixfbfcrap.exe
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\obj\Debug\Fixfbfcrap.pdb
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\tl_2019_02_place.dbf
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\Fixfbfcrap.exe.config
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\Fixfbfcrap.exe
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\Fixfbfcrap.pdb
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\DbfDataReader.dll
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\ShapeUtilities.dll
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\DbfDataReader.pdb
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\bin\Debug\ShapeUtilities.pdb
+C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\Fixfbfcrap\obj\Debug\TestChanges.csproj.CopyComplete
