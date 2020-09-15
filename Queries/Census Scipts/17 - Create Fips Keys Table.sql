@@ -21,7 +21,7 @@ CREATE TABLE [dbo].[FipsKeys](
 	[PlaceCode] [char](5) NOT NULL,
 	[ConsolidatedCity] [char](10) NOT NULL,
 	[AreaName] [varchar](100) NOT NULL,
-	[FipsId] [int] IDENTITY(1,1) NOT NULL,
+	[FipsId] [char](20)  NOT NULL,
  CONSTRAINT [PK_FipsKeys] PRIMARY KEY CLUSTERED 
 (
 	[FipsId] ASC
@@ -49,11 +49,26 @@ GO
 
 -- MS SQL REMAINS INANE IN SOME WAYS. 
 
-INSERT INTO DBO.FipsKeys(SummLevel,State,County,CountyDivision,PlaceCode,ConsolidatedCity,AreaName)
-SELECT T1.*
-      FROM  OPENROWSET(BULK  'C:\Users\John\Documents\QrCode\Input\GeoCodesFips\2017Geocodes.csv',  
+INSERT INTO 
+DBO.FipsKeys(SummLevel,
+State,
+County,
+CountyDivision,
+PlaceCode,
+ConsolidatedCity,
+AreaName,
+FipsId)
+SELECT T1.SummLevel, 
+	   T1.State, 
+	   T1.County, 
+	   T1.CountyDivision,
+	   t1.Placecode, 
+	   t1.ConsolidatedCity,
+	   t1.AreaName,
+	   CONCAT(t1.state,t1.county,t1.countydivision, t1.placecode, t1.consolidatedcity)
+      FROM  OPENROWSET(BULK  'C:\Users\John\Documents\QrCode\Input\GeoCodesFips\2019Geocodes.csv',  
 	  format='csv',
-     FORMATFILE='C:\Users\John\Documents\QrCode\Input\GeoCodesFips\bcp.fmt'    
+     FORMATFILE='C:\Users\John\Documents\QrCode\Queries\Census Scipts\FipsFormat.fmt'    
        ) t1
 
 go

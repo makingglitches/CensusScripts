@@ -15,18 +15,18 @@ GO
 
 CREATE TABLE [dbo].[Places](
 	[Id] int identity(0,1),
-	[FipsId] [int] NULL,
+	[FipsId] [char](20) NULL,
 	[GeoId] [nvarchar](7) NULL,
 	[GNISCode] [nvarchar](8) null,
 	[Name] [nvarchar](100) NULL,
 	[LegalName] [nvarchar](100) NULL,
-	[LSADId] [int] NULL,
+	[LSADId] [nvarchar](2) NULL,
 	[FipsClass] [nvarchar](2) NULL,
 	[MetroOrMicroIndicator] [nvarchar](1) NULL,
 	[CensusPlace][bit] default(0) not null,
 	[IncorporatedPlace][bit] default(0) not null,
-	[AreaLand] [float](53) NULL,
-	[AreaWater] [float](53) NULL,
+	[AreaLand] [bigint] NULL,
+	[AreaWater] [bigint] NULL,
 	[Latitude] [float](53) NULL,
 	[Longitude] [float](53) NULL
 ) ON [PRIMARY]
@@ -35,3 +35,4 @@ GO
 -- run the shape and dbf importer now.
 
 
+select * from dbo.Places

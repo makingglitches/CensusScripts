@@ -56,14 +56,14 @@
           <FullPath>04 - Trim Zip Data StateNames Cities.sql</FullPath>
         </FileNode>
         <FileNode Name="05 - Create StateLookup.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>05 - Create StateLookup.sql</FullPath>
         </FileNode>
         <FileNode Name="06 - Populate StateLookup.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>06 - Populate StateLookup.sql</FullPath>
         </FileNode>
@@ -74,8 +74,8 @@
           <FullPath>07 - Create Census Lookup.sql</FullPath>
         </FileNode>
         <FileNode Name="08 - Populate Census Lookup.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>08 - Populate Census Lookup.sql</FullPath>
         </FileNode>
@@ -114,6 +114,30 @@
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>14 - Fix Census Names.sql</FullPath>
+        </FileNode>
+        <FileNode Name="16 - Create LSAD Lookup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>16 - Create LSAD Lookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="16a - Create Fips Field Descriptor Lookup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>16a - Create Fips Field Descriptor Lookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="17 - Create Fips Keys Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>17 - Create Fips Keys Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="18 - Create Place table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>18 - Create Place table.sql</FullPath>
         </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker />

@@ -17,6 +17,7 @@ namespace ImportShapeFilesAndDBF
         static void Main(string[] args)
         {
 
+            
             // this john s decided to add to avoid using crappy m$ methods.
             // only software that interacts with their own software tends to be well written
             // as per their world corporate takeover apparently suck small penises fucking
@@ -24,6 +25,8 @@ namespace ImportShapeFilesAndDBF
             // that or the david pumpkins bullshit mimicking an actor these fucks venerate heh
 
             var dbfPath = @"C:\Users\John\Documents\QrCode\Input\Places2019\places";
+
+            Console.WriteLine("Processing path: " + dbfPath);
 
             string[] dbasefiles = Directory.GetFiles(dbfPath, "*.dbf");
 
@@ -33,6 +36,8 @@ namespace ImportShapeFilesAndDBF
             csb.IntegratedSecurity = true;
             csb.InitialCatalog = "Geography";
 
+
+            #region GetFips
             SqlConnection scon = new SqlConnection(csb.ConnectionString);
 
             SqlCommand getfips = new SqlCommand("select * from dbo.FipsKeys f where f.PlaceCode <> '00000' and state=@state", scon);
@@ -40,7 +45,9 @@ namespace ImportShapeFilesAndDBF
 
             SqlDataAdapter sd =
                      new SqlDataAdapter(getfips);
+            #endregion 
 
+            #region PlaceInsertQuery
             // honestly this could be divided into loadable string data that got autoformatted by a helper
             // but dont see that much reusability occurring in this code so why do so ?
             SqlCommand insertplace =
@@ -75,12 +82,12 @@ namespace ImportShapeFilesAndDBF
                                 ,@Latitude
                                 ,@Longitude)",scon);
 
-            insertplace.Parameters.Add("@FipsId", SqlDbType.Int);
+            insertplace.Parameters.Add("@FipsId", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@GeoId", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@GNISCode", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@Name", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@LegalName", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@LSADId", SqlDbType.Int);
+            insertplace.Parameters.Add("@LSADId", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@FipsClass", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@MetroOrMicroIndicator", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@CensusPlace", SqlDbType.Bit);
@@ -90,17 +97,30 @@ namespace ImportShapeFilesAndDBF
             insertplace.Parameters.Add("@Latitude", SqlDbType.Float);
             insertplace.Parameters.Add("@Longitude", SqlDbType.Float);
 
+            #endregion
+
 
             scon.Open();
 
+            StreamWriter missingfips = new StreamWriter("missingfips.txt");
+            missingfips.WriteLine("StateFip\tPLaceFip\tTown");
 
             // loop through each place data dbf file
             foreach (string dbfname in dbasefiles)
             {
+                Console.WriteLine("Processing File:" + dbfname);
+                int recordcount = 0;
+
                 string[] pieces = dbfname.Split('_');
                 string statecode = pieces[2];
 
-                DbfDataReader.DbfDataReader dr = new DbfDataReader.DbfDataReader(dbfname);
+                DbfDataReaderOptions ops = new DbfDataReaderOptions()
+                {
+                    SkipDeletedRecords = true
+                };
+
+                DbfDataReader.DbfDataReader dr = new DbfDataReader.DbfDataReader(dbfname,ops);
+                
 
                 getfips.Parameters["@state"].Value = statecode;
 
@@ -109,23 +129,32 @@ namespace ImportShapeFilesAndDBF
 
                 var BETTERFIPPER =
                     ds.Tables[0].AsEnumerable().
-                    Select(o => new { FipsId = (int)o["FipsId"], State = o["State"], Place = o["PlaceCode"] }).ToList();
+                    Select(o => new { FipsId = o["FipsId"], State = o["State"], Place = o["PlaceCode"] }).ToList();
+
+
 
                 while (dr.Read())
                 {
+                    recordcount++;
 
-                    int fipsid = BETTERFIPPER.
+                    string fipsid = BETTERFIPPER.
                      Where(o => o.State.Equals(dr["STATEFP"]) &&
-                    o.Place.Equals(dr["PLACEFP"])).Select(o => o.FipsId).First();
+                    o.Place.Equals(dr["PLACEFP"])).Select(o => o.FipsId.ToString()).FirstOrDefault();
+
+                    if (string.IsNullOrEmpty(fipsid))
+                    {
+                        missingfips.WriteLine(dr["STATEFP"] + "\t" + dr["PLACEFP"] + "\t" + dr["NAME"]);
+                    }
 
 
+                    object fipser = string.IsNullOrEmpty(fipsid) ? DBNull.Value as object: fipsid as object;
 
-                    insertplace.Parameters["@FipsId"].Value = fipsid;
+                    insertplace.Parameters["@FipsId"].Value = fipser;
                     insertplace.Parameters["@GeoId"].Value = dr["GEOID"];
                     insertplace.Parameters["@GNISCode"].Value = dr["PLACENS"];
                     insertplace.Parameters["@Name"].Value = dr["NAME"];
                     insertplace.Parameters["@LegalName"].Value = dr["NAMELSAD"];
-                    insertplace.Parameters["@LSADId"].Value = int.Parse(dr["LSAD"].ToString());
+                    insertplace.Parameters["@LSADId"].Value = dr["LSAD"];
                     insertplace.Parameters["@FipsClass"].Value = dr["CLASSFP"];
                     insertplace.Parameters["@MetroOrMicroIndicator"].Value = dr["PCICBSA"];
 
@@ -140,14 +169,22 @@ namespace ImportShapeFilesAndDBF
                     insertplace.Parameters["@Longitude"].Value = float.Parse(dr["INTPTLON"].ToString().Replace("+", ""));
 
                     if (insertplace.ExecuteNonQuery() <= 0) throw new Exception("something fucked up place didnt get inserted");
+
                 }
 
+                Console.WriteLine("Processed " + recordcount.ToString() + " records.");
 
                 dr.Close();
 
             }
 
+            missingfips.Close();
+
             scon.Close();
+
+
+         
+
         }
     }
 }

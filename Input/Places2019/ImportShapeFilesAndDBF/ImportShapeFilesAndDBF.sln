@@ -7,9 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportShapeFilesAndDBF", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbfDataReader", "DbfDataReader\src\DbfDataReader\DbfDataReader.csproj", "{056EDE95-9F44-48E2-AA3E-81FE498DF00A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetTopologySuite.IO.ShapeFile", "NetTopologySuite.IO.ShapeFile\src\NetTopologySuite.IO.ShapeFile\NetTopologySuite.IO.ShapeFile.csproj", "{7492C9B7-00B9-41B8-8FCB-FC931BB872F4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetTopologySuite", "NetTopologySuite\src\NetTopologySuite\NetTopologySuite.csproj", "{B702AD85-192B-403A-987E-31B75D51972D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixfbfcrap", "Fixfbfcrap\Fixfbfcrap.csproj", "{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +23,10 @@ Global
 		{056EDE95-9F44-48E2-AA3E-81FE498DF00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{056EDE95-9F44-48E2-AA3E-81FE498DF00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{056EDE95-9F44-48E2-AA3E-81FE498DF00A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7492C9B7-00B9-41B8-8FCB-FC931BB872F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7492C9B7-00B9-41B8-8FCB-FC931BB872F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7492C9B7-00B9-41B8-8FCB-FC931BB872F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7492C9B7-00B9-41B8-8FCB-FC931BB872F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B702AD85-192B-403A-987E-31B75D51972D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B702AD85-192B-403A-987E-31B75D51972D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B702AD85-192B-403A-987E-31B75D51972D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B702AD85-192B-403A-987E-31B75D51972D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
