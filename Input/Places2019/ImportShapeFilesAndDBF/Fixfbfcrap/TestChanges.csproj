@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{288C321E-B7B6-4C97-A7F8-6F68B64308DB}</ProjectGuid>
+    <ProjectGuid>{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ImportShapeFilesAndDBF</RootNamespace>
-    <AssemblyName>ImportShapeFilesAndDBF</AssemblyName>
+    <RootNamespace>Fixfbfcrap</RootNamespace>
+    <AssemblyName>Fixfbfcrap</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,19 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Data.SQLite, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>packages\System.Data.SQLite.MSIL.1.0.86.0\lib\net45\System.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>packages\System.Data.SQLite.MSIL.1.0.86.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,12 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="tl_2019_02_place.dbf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
+    <ProjectReference Include="..\DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
       <Project>{056ede95-9f44-48e2-aa3e-81fe498df00a}</Project>
       <Name>DbfDataReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShapeUtilities\ShapeUtilities.csproj">
+      <Project>{b1b2e1d1-085c-42c7-bc55-e27b36cac38d}</Project>
+      <Name>ShapeUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

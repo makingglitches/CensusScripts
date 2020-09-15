@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{288C321E-B7B6-4C97-A7F8-6F68B64308DB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ImportShapeFilesAndDBF</RootNamespace>
-    <AssemblyName>ImportShapeFilesAndDBF</AssemblyName>
+    <ProjectGuid>{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShapeUtilities</RootNamespace>
+    <AssemblyName>ShapeUtilities</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,19 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Data.SQLite, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>packages\System.Data.SQLite.MSIL.1.0.86.0\lib\net45\System.Data.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>packages\System.Data.SQLite.MSIL.1.0.86.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,15 +41,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BaseRecord.cs" />
+    <Compile Include="Box.cs" />
+    <Compile Include="MultiPatchShape.cs" />
+    <Compile Include="MultiPointMShape.cs" />
+    <Compile Include="MultiPointShape.cs" />
+    <Compile Include="MultiPointZShape.cs" />
+    <Compile Include="NullShape.cs" />
+    <Compile Include="PointMShape.cs" />
+    <Compile Include="PointShape.cs" />
+    <Compile Include="PointZShape.cs" />
+    <Compile Include="PolygonMShape.cs" />
+    <Compile Include="PolygonShape.cs" />
+    <Compile Include="PolygonZShape.cs" />
+    <Compile Include="PolyLineMShape.cs" />
+    <Compile Include="PolyLineShape.cs" />
+    <Compile Include="PolyLineZShape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordHeader.cs" />
+    <Compile Include="ShapeFile.cs" />
+    <Compile Include="SHPHeader.cs" />
+    <Compile Include="ShpPoint.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
+    <ProjectReference Include="..\DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
       <Project>{056ede95-9f44-48e2-aa3e-81fe498df00a}</Project>
       <Name>DbfDataReader</Name>
     </ProjectReference>

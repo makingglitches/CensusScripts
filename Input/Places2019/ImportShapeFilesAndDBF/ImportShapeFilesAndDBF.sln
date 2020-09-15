@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportShapeFilesAndDBF", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbfDataReader", "DbfDataReader\src\DbfDataReader\DbfDataReader.csproj", "{056EDE95-9F44-48E2-AA3E-81FE498DF00A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixfbfcrap", "Fixfbfcrap\Fixfbfcrap.csproj", "{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestChanges", "Fixfbfcrap\TestChanges.csproj", "{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeUtilities", "ShapeUtilities\ShapeUtilities.csproj", "{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0B71A46-CE40-495C-8D8E-AC9A4D8E69F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
