@@ -7,3 +7,11 @@ C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\ShapeUtil
 C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\ShapeUtilities\obj\Debug\ShapeUtilities.csproj.CopyComplete
 C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\ShapeUtilities\obj\Debug\ShapeUtilities.dll
 C:\Users\John\Documents\QrCode\Input\Places2019\ImportShapeFilesAndDBF\ShapeUtilities\obj\Debug\ShapeUtilities.pdb
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\bin\Debug\ShapeUtilities.dll
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\bin\Debug\ShapeUtilities.pdb
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\bin\Debug\DbfDataReader.dll
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\bin\Debug\DbfDataReader.pdb
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\obj\Debug\ShapeUtilities.csproj.CoreCompileInputs.cache
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\obj\Debug\ShapeUtilities.csproj.CopyComplete
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\obj\Debug\ShapeUtilities.dll
+C:\Users\John\Documents\QrCode\ImportShapeFilesAndDBF\ShapeUtilities\obj\Debug\ShapeUtilities.pdb

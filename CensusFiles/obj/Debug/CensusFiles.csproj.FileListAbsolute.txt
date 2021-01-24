@@ -1,0 +1,9 @@
+C:\Users\John\Documents\QrCode\CensusFiles\obj\Debug\CensusFiles.csprojAssemblyReference.cache
+C:\Users\John\Documents\QrCode\CensusFiles\obj\Debug\CensusFiles.csproj.CoreCompileInputs.cache
+C:\Users\John\Documents\QrCode\CensusFiles\bin\Debug\CensusFiles.dll
+C:\Users\John\Documents\QrCode\CensusFiles\bin\Debug\CensusFiles.pdb
+C:\Users\John\Documents\QrCode\CensusFiles\bin\Debug\DbfDataReader.dll
+C:\Users\John\Documents\QrCode\CensusFiles\bin\Debug\DbfDataReader.pdb
+C:\Users\John\Documents\QrCode\CensusFiles\obj\Debug\CensusFiles.csproj.CopyComplete
+C:\Users\John\Documents\QrCode\CensusFiles\obj\Debug\CensusFiles.dll
+C:\Users\John\Documents\QrCode\CensusFiles\obj\Debug\CensusFiles.pdb

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestChanges", "Fixfbfcrap\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeUtilities", "ShapeUtilities\ShapeUtilities.csproj", "{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CensusFiles", "..\CensusFiles\CensusFiles.csproj", "{D8352A45-8769-423E-B873-7E6DED83C4D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1B2E1D1-085C-42C7-BC55-E27B36CAC38D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8352A45-8769-423E-B873-7E6DED83C4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8352A45-8769-423E-B873-7E6DED83C4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8352A45-8769-423E-B873-7E6DED83C4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8352A45-8769-423E-B873-7E6DED83C4D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
