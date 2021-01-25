@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data;
 using DbfDataReader;
+using ShapeUtilities;
+using System.IO;
 
 namespace CensusFiles
 {
@@ -14,6 +16,8 @@ namespace CensusFiles
     {
 
         public string FipsId { get; set; }
+
+        public PolygonShape ShapeInfo { get; set; }
 
         public static SqlCommand GetInsert(SqlConnection scon)
         {
@@ -32,7 +36,8 @@ namespace CensusFiles
                                 ,[AreaLand]
                                 ,[AreaWater]
                                 ,[Latitude]
-                                ,[Longitude])
+                                ,[Longitude]
+                                ,[Shape])
                             VALUES
                                 (@FipsId
                                 ,@GeoId
@@ -47,7 +52,8 @@ namespace CensusFiles
                                 ,@AreaLand
                                 ,@AreaWater
                                 ,@Latitude
-                                ,@Longitude)", scon);
+                                ,@Longitude
+                                ,@Shape)", scon);
 
             insertplace.Parameters.Add("@FipsId", SqlDbType.NVarChar);
             insertplace.Parameters.Add("@GeoId", SqlDbType.NVarChar);
@@ -63,15 +69,16 @@ namespace CensusFiles
             insertplace.Parameters.Add("@AreaWater", SqlDbType.Float);
             insertplace.Parameters.Add("@Latitude", SqlDbType.Float);
             insertplace.Parameters.Add("@Longitude", SqlDbType.Float);
+            insertplace.Parameters.Add("@Shape", System.Data.SqlDbType.NVarChar);
 
-           
+
 
             return insertplace;
         }
 
         public static List<string> MissingFips = new List<string>();
 
-        public void MapParameters(SqlCommand insertPlace, List<FipsKeyRecord> fips)
+        public void MapParameters(SqlCommand insertPlace)
         { 
             object fipser = string.IsNullOrEmpty(FipsId) ? DBNull.Value as object : this.FipsId as object;
 
@@ -93,6 +100,13 @@ namespace CensusFiles
             insertPlace.Parameters["@AreaWater"].Value = float.Parse(this.AWATER.ToString());
             insertPlace.Parameters["@Latitude"].Value = float.Parse(this.INTPTLAT.ToString().Replace("+", ""));
             insertPlace.Parameters["@Longitude"].Value = float.Parse(this.INTPTLON.ToString().Replace("+", ""));
+
+            object geomstring = 
+                ShapeInfo == null ? DBNull.Value as object: 
+                "geography::STGeomFromText('" + ShapeInfo.GetWKT() + "',4122)";
+
+            insertPlace.Parameters["@Shape"].Value = geomstring;
+
         }
 
         public PlaceRecord()
@@ -108,14 +122,24 @@ namespace CensusFiles
         /// <param name="scon">an open sqlconnection</param>
         /// <param name="resetMissingFips">default false, but set to true to clear missingfips static list</param>
         /// <returns></returns>
-        public static List<PlaceRecord> ParseDBFFile(string filename,SqlConnection scon, bool resetMissingFips=false)
+        public static List<PlaceRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile=false, bool resetMissingFips=false)
         {
+
+            ShapeFile shpfile = null;
+
+            if (loadShapeFile)
+            {
+                string shapefilename = Path.GetDirectoryName(filename) + "\\" + Path.GetFileNameWithoutExtension(filename) + ".shp"; ;
+                shpfile = new ShapeFile(shapefilename);
+                shpfile.Load();
+            }
+
             if (resetMissingFips) MissingFips = new List<string>();
 
             string[] pieces = filename.Split('_');
             string statecode = pieces[2];
 
-            var FipsRecords = FipsKeyRecord.GetByState(statecode,scon);
+            var FipsRecords = FipsKeyRecord.GetPlaceByState(statecode,scon);
 
             DbfDataReaderOptions ops = new DbfDataReaderOptions()
             {
@@ -125,6 +149,8 @@ namespace CensusFiles
             List<PlaceRecord> results = new List<PlaceRecord>();
 
             DbfDataReader.DbfDataReader dread = new DbfDataReader.DbfDataReader(filename,ops);
+
+            int shpfileindex = 0;
 
             while (dread.Read())
             {
@@ -138,8 +164,16 @@ namespace CensusFiles
                     MissingFips.Add(pr.STATEFP + "\t" + pr.PLACEFP + "\t" + pr.NAME);          
                 }
 
+                if (shpfile!=null)
+                {
+                    pr.ShapeInfo = (PolygonShape)shpfile.Records[shpfileindex].Record;
+                    shpfileindex++;
+                }
+
                 results.Add(pr);
             }
+
+            dread.Close();
 
             return results;
         }

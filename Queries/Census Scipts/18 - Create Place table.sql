@@ -28,7 +28,8 @@ CREATE TABLE [dbo].[Places](
 	[AreaLand] [bigint] NULL,
 	[AreaWater] [bigint] NULL,
 	[Latitude] [float](53) NULL,
-	[Longitude] [float](53) NULL
+	[Longitude] [float](53) NULL,
+	Shape Geography null
 ) ON [PRIMARY]
 GO
 

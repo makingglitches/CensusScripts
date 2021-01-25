@@ -17,7 +17,37 @@ namespace Fixfbfcrap
         static void Main(string[] args)
         {
 
+           // string shpfiledir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places";
+           // string sampleshpfile = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places\tl_2019_01_place.shp";
 
+           //var shpfiles =  Directory.GetFiles(shpfiledir, "*.shp");
+
+           // foreach (string filename in shpfiles)
+           // {
+           //     ShapeFile s = new ShapeFile(filename);
+           //     s.Load();
+
+           //     int nonpoly = 0;
+
+           //     foreach (var r in s.Records)
+           //     {
+           //         if (!(r.Record is PolygonShape))
+           //         {
+           //             nonpoly++;
+           //         }
+           //     }
+
+           //     if(nonpoly >0)
+           //     {
+           //         Console.WriteLine(filename + "  contains " + nonpoly.ToString() + " records.");
+           //     }
+           // }
+
+
+            string roaddir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads";
+            string roaddbf = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.dbf";
+            string roadshp = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.shp";
+        
             SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
             scb.InitialCatalog = "Geography";
             scb.IntegratedSecurity = true;
@@ -25,9 +55,29 @@ namespace Fixfbfcrap
             SqlConnection scon = new SqlConnection(scb.ConnectionString);
             scon.Open();
 
-            string sampledbffile = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places\tl_2019_01_place.dbf";
+            var roaddbfrecords = RoadRecord.ParseDBFFile(roaddbf, scon,true);
 
-            var places = PlaceRecord.ParseDBFFile(sampledbffile,scon);
+            ShapeFile road = new ShapeFile(roadshp);
+            road.Load();
+
+           Console.WriteLine( road.Records[0].Record.GetWKT());
+
+           // DbfDataReader.DbfDataReader dread = new DbfDataReader.DbfDataReader(roaddbf);
+
+            //ClassGenerator.WriteClassBase("RoadBase", "RoadBase.cs", dread);
+
+            //  Console.WriteLine(s.Records[0].Record.GetWKT());
+
+            //SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
+            //scb.InitialCatalog = "Geography";
+            //scb.IntegratedSecurity = true;
+
+            //SqlConnection scon = new SqlConnection(scb.ConnectionString);
+            //scon.Open();
+
+            //string sampledbffile = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places\tl_2019_01_place.dbf";
+
+            //var places = PlaceRecord.ParseDBFFile(sampledbffile,scon);
 
 
 

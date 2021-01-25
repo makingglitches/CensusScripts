@@ -139,6 +139,18 @@
           <AssociatedConnUserName />
           <FullPath>18 - Create Place table.sql</FullPath>
         </FileNode>
+        <FileNode Name="19 - Create Roads Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>19 - Create Roads Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20 - Create RouteType Lookup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>20 - Create RouteType Lookup.sql</FullPath>
+        </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />

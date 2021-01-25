@@ -48,11 +48,17 @@
     <Compile Include="PlaceRecord.cs" />
     <Compile Include="ClassGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoadBase.cs" />
+    <Compile Include="RoadRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImportShapeFilesAndDBF\DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
       <Project>{056ede95-9f44-48e2-aa3e-81fe498df00a}</Project>
       <Name>DbfDataReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImportShapeFilesAndDBF\ShapeUtilities\ShapeUtilities.csproj">
+      <Project>{b1b2e1d1-085c-42c7-bc55-e27b36cac38d}</Project>
+      <Name>ShapeUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

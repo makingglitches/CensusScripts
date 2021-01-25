@@ -27,7 +27,78 @@ namespace ShapeUtilities
 
             StringBuilder sb = new StringBuilder();
 
+            #region Implemented
 
+            if (this is PolygonShape)
+            {
+                var obj = (PolygonShape)this;
+                sb.Append("POLYGON(");
+
+                for (int parts = 0; parts < obj.NumParts; parts++)
+                {
+                    sb.Append("(");
+                    int index = obj.Parts[parts];
+                    int lastindex = (parts < obj.NumParts - 1 ? obj.Parts[parts + 1] : obj.NumPoints - 1);
+
+                    for (int pointindex = index; pointindex < lastindex + 1; pointindex++)
+                    {
+                        sb.Append(obj.Points[pointindex].X.ToString() + " " +
+                            obj.Points[pointindex].Y.ToString() + ",");
+
+                    }
+
+                    sb.Remove(sb.Length - 1, 1);
+
+                    sb.Append(")");
+
+                    if (parts < obj.NumParts - 1)
+                    {
+                        sb.Append(", ");
+                    }
+                }
+
+                sb.Append(")");
+
+                return sb.ToString();
+            }
+
+            if (this is PolyLineShape)
+            {
+                var obj = (PolyLineShape)this;
+                sb.Append("POLYLINE(");
+
+                for (int parts = 0; parts < obj.NumParts; parts++)
+                {
+                    sb.Append("(");
+                    int index = obj.Parts[parts];
+                    int lastindex = (parts < obj.NumParts - 1 ? obj.Parts[parts + 1] : obj.NumPoints - 1);
+
+                    for (int pointindex = index; pointindex < lastindex + 1; pointindex++)
+                    {
+                        sb.Append(obj.Points[pointindex].X.ToString() + " " +
+                            obj.Points[pointindex].Y.ToString() + ",");
+
+                    }
+
+                    sb.Remove(sb.Length - 1, 1);
+
+                    sb.Append(")");
+
+                    if (parts < obj.NumParts - 1)
+                    {
+                        sb.Append(", ");
+                    }
+                }
+
+                sb.Append(")");
+
+                return sb.ToString();
+
+            }
+
+            #endregion
+
+            #region NotImplemented
             if (this is MultiPatchShape)
             {
                 var obj = (MultiPatchShape)this;
@@ -38,12 +109,16 @@ namespace ShapeUtilities
             {
                 var obj = (MultiPointMShape)this;
                 sb.Append("MULTIPOINT(");
+
+            
             }
 
             if (this is MultiPointShape)
             {
                 var obj = (MultiPointShape)this;
                 sb.Append("MULTIPOINT(");
+
+               
             }
 
             if (this is MultiPointZShape)
@@ -80,13 +155,7 @@ namespace ShapeUtilities
                 var obj = (PolygonMShape)this;
                 sb.Append("POLYGON(");
             }
-
-            if (this is PolygonShape)
-            {
-                var obj = (PolygonShape)this;
-                sb.Append("POLYGON(");
-            }
-
+                     
             if (this is PolygonZShape)
             {
                 var obj = (PolygonZShape)this;
@@ -97,12 +166,7 @@ namespace ShapeUtilities
             {
                 var obj = (PolyLineMShape)this;
                 sb.Append("POLYLINE(");
-            }
-
-            if (this is PolyLineShape)
-            {
-                var obj = (PolyLineShape)this;
-                sb.Append("POLYLINE(");
+                
             }
 
             if (this is PolyLineZShape)
@@ -110,6 +174,8 @@ namespace ShapeUtilities
                 var obj = (PolyLineZShape)this;
                 sb.Append("POLYLINE(");
             }
+
+            #endregion
 
             sb.Append(")");
             
