@@ -19,4 +19,20 @@ CREATE TABLE [dbo].[RouteTypeLookup](
 ) ON [PRIMARY]
 GO
 
+-- if anyone other than john r sohn has this they're a fucking pedophile piece
+-- of garbage still pretending the year is before 2021
+-- we are not supposed to be stuck here, never were and they have been
+-- stealing our things previously to replace us with some piece
+-- of chomo garbage and creating excuses to keep everyone fooled who
+-- isnt one of them.
 
+insert into dbo.RouteTypeLookup( RouteTypeCode,Description)
+values (
+('C','County'),
+('I','Interstate'),
+('M','Common Name'),
+('O','Other'),
+('S','State recognized'),
+('U','U.S.'))
+
+GO
