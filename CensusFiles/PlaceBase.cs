@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data;
 using DbfDataReader;
+using System.Data.Common;
 
 namespace CensusFiles
 {
@@ -30,7 +31,7 @@ namespace CensusFiles
         public String INTPTLAT { get; set; }
         public String INTPTLON { get; set; }
 
-        public void Read(DbfDataReader.DbfDataReader dread)
+        public void Read(DbDataReader dread)
         {
             this.STATEFP = (String)dread["STATEFP"];
             this.PLACEFP = (String)dread["PLACEFP"];

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DbfDataReader;
 using System.IO;
+using System.Data;
+using System.Data.Common;
 
 namespace CensusFiles
 {
@@ -16,7 +18,7 @@ namespace CensusFiles
     public class ClassGenerator
     {
 
-        public static void WriteClassBase(string ClassName, string filename, DbfDataReader.DbfDataReader dread)
+        public static void WriteClassBase(string ClassName, string filename, DbDataReader  dread)
         {
 
             StringBuilder sb = new StringBuilder();
@@ -29,6 +31,7 @@ namespace CensusFiles
             using System.Threading.Tasks;
             using System.Data.SqlClient;
             using System.Data.SqlTypes;
+            using System.Data.Common;
             using System.Data;
             using DbfDataReader;
 
@@ -37,7 +40,7 @@ namespace CensusFiles
                 public abstract class "+ClassName+@":IBaseReader
                 {");
 
-            string readmethod = "\r\npublic void Read(DbfDataReader.DbfDataReader dread)\r\n{\r\n";
+            string readmethod = "\r\npublic void Read(DbDataReader dread)\r\n{\r\n";
 
             for (int x = 0; x < dread.FieldCount; x++)
             {
