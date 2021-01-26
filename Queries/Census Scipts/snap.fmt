@@ -1,0 +1,15 @@
+14.0
+13
+1       SQLNCHAR            0       50      ","    1     X                        SQL_Latin1_General_CP1_CI_AS
+2       SQLNCHAR            0       50      ","    2     Y                        SQL_Latin1_General_CP1_CI_AS
+3       SQLNCHAR            0       40      ","    3     ObjectId                 SQL_Latin1_General_CP1_CI_AS
+4       SQLNCHAR            0       200     ","    4     Store_Name               SQL_Latin1_General_CP1_CI_AS
+5       SQLNCHAR            0       200     ","    5     Address                  SQL_Latin1_General_CP1_CI_AS
+6       SQLNCHAR            0       200     ","    6     Address2                 SQL_Latin1_General_CP1_CI_AS
+7       SQLNCHAR            0       100     ","    7     City                     SQL_Latin1_General_CP1_CI_AS
+8       SQLNCHAR            0       20      ","    8     State                    SQL_Latin1_General_CP1_CI_AS
+9       SQLNCHAR            0       10      ","    9     Zip5                     SQL_Latin1_General_CP1_CI_AS
+10      SQLNCHAR            0       50      ","    10    Zip4                     SQL_Latin1_General_CP1_CI_AS
+11      SQLNCHAR            0       100     ","    11    County                   SQL_Latin1_General_CP1_CI_AS
+12      SQLNCHAR            0       50      ","    12    Longitude                SQL_Latin1_General_CP1_CI_AS
+13      SQLNCHAR            0       50      "\r\n"     13    Latitude             SQL_Latin1_General_CP1_CI_AS

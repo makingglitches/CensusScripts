@@ -27,12 +27,12 @@ GO
 -- isnt one of them.
 
 insert into dbo.RouteTypeLookup( RouteTypeCode,Description)
-values (
+values 
 ('C','County'),
 ('I','Interstate'),
 ('M','Common Name'),
 ('O','Other'),
 ('S','State recognized'),
-('U','U.S.'))
+('U','U.S.')
 
 GO

@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		FipsFormat.fmt = FipsFormat.fmt
 		LSADCodesFormat.fmt = LSADCodesFormat.fmt
 		..\..\MakeFmt.bat = ..\..\MakeFmt.bat
+		snap.fmt = snap.fmt
+		..\..\Input\Snap\test.fmt = ..\..\Input\Snap\test.fmt
 	EndProjectSection
 EndProject
 Global
@@ -17,7 +19,7 @@ Global
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4AFDB3E7-1119-4722-A7C6-FD58A7EEEA1D}.Default|Default.ActiveCfg = Default
+		{2E60AF86-7FAE-4A22-857C-86EAFE70719F}.Default|Default.ActiveCfg = Default
 		{1FF21FB7-0C53-4325-A9CC-EB844D5EE449}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution

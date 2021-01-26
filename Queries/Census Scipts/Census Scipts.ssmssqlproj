@@ -32,20 +32,20 @@
           <FullPath>01 - Create JSON Store.sql</FullPath>
         </FileNode>
         <FileNode Name="02 - Populate JSON Store With Zip Data.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>02 - Populate JSON Store With Zip Data.sql</FullPath>
         </FileNode>
         <FileNode Name="02a - Create USCities Table for Zip Storage.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>02a - Create USCities Table for Zip Storage.sql</FullPath>
         </FileNode>
         <FileNode Name="03 - Parse Zips from JSON Store.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>03 - Parse Zips from JSON Store.sql</FullPath>
         </FileNode>
@@ -150,6 +150,18 @@
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>20 - Create RouteType Lookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="21 - Create Snap store table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>21 - Create Snap store table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="22 - Bulk Load SNAP_Store_Locations.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>22 - Bulk Load SNAP_Store_Locations.sql</FullPath>
         </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker />
