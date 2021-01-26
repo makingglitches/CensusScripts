@@ -11,14 +11,14 @@ create table dbo.SNAP_Store_Locations
 (
 	X float not null,
 	Y float not null,
-	ObjectId nvarchar(20) primary key not null,
+	ObjectId int primary key not null,
 	Store_Name nvarchar(100) not null,
 	[Address] nvarchar(100) not null,
 	Address2 nvarchar(100) null,
 	City Nvarchar(50) not null,
 	State Nvarchar(10) not null,
 	Zip5 Nvarchar(5) not null,
-	Zip4 Nvarchar(4) not null,
+	Zip4 Nvarchar(4)  null,
 	County Nvarchar(50) not null,
 	Longitude float not null,
 	Latitude float not null
