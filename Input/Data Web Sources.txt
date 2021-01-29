@@ -1,0 +1,26 @@
+US Cities Geocoded
+
+https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/export/
+
+Census Shape Files and Data
+
+ftp2.census.gov
+
+SNAP/EBT Locations
+
+https://www.fns.usda.gov/snap/retailer-locator
+
+
+Local Weather Data
+
+https://www.ncdc.noaa.gov/cdo-web/datatools/lcd
+
+
+Species Data
+
+https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/species-data-download?qt-science_center_objects=0#qt-science_center_objects
+
+UV Index Data
+
+https://www.cpc.ncep.noaa.gov/products/stratosphere/uv_index/uv_global.shtml
+
