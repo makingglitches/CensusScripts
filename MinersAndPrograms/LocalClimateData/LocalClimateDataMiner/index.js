@@ -1,21 +1,22 @@
 const console = require('console');
-const { app, BrowserWindow,ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const { onrejectionhandled } = require('globalthis/implementation');
 const { stdin, stdout } = require('process');
 const readline = require('readline');
 var fs = require('fs');
 
+console.log('App Started');
 
+console.log(process.cwd());
 
-for (var i in ipcMain.rawListeners)
+var miningjs = fs.readFileSync(
+	'minestations.js'
+);
+
+function sendarg(arg)
 {
-	console.log(ipcMain.rawListeners[i]);
+	mainwindow.send('nochochannel',arg)
 }
-
-console.log("App Started");
-
-console.log(process.cwd())
-var miningjs = fs.readFileSync('C:\\Users\\John\\Documents\\CensusProject\\QrCode\\MinersAndPrograms\\LocalClimateData\\LocalClimateDataMiner\\minestations.js');
 
 // the folder to download the zips to.
 var datafolder = 'C:\\Users\\John\\Documents\\CensusProject\\LocalClimateData';
@@ -44,8 +45,19 @@ function createWindow() {
 	});
 }
 
+function createNodeWindow() {
+	return new BrowserWindow({
+		width: 800,
+		height: 600,
+		webPreferences: {
+			nodeIntegration: true
+		}
+	});
+}
+
+
 function injectJs(js) {
-	var prom = win.webContents
+	var prom = lcdwindow.webContents
 		.executeJavaScript(js)
 		.then((value) => {
 			console.log('Javascript Injected');
@@ -57,41 +69,50 @@ function injectJs(js) {
 	return prom;
 }
 
-function LoadMain()
-{
+function LoadMain() {
 	lcdwindow = createWindow();
-		lcdLoadPromise = lcdwindow.loadURL('https://www.ncdc.noaa.gov/cdo-web/datatools/lcd');
-		lcdwindow.webContents.toggleDevTools();
+	lcdLoadPromise = lcdwindow.loadURL('https://www.ncdc.noaa.gov/cdo-web/datatools/lcd');
+	lcdwindow.webContents.toggleDevTools();
 
-		lcdLoadPromise.then(
-			(value) => {
-				console.log('Page Loaded');
-				injectJs(miningjs);
-			},
-			(value) => {
-				// if there is an error loading page.
-				console.log('Load Error: ' + (value ? value : 'Error'));
-			}
-		);
+	lcdLoadPromise.then(
+		(value) => {
+			console.log('Page Loaded');
+			injectJs(miningjs);
+		},
+		(value) => {
+			// if there is an error loading page.
+			console.log('Load Error: ' + (value ? value : 'Error'));
+		}
+	);
 
-		mainwindow = createWindow();
-		mainwindowLoadPromise = mainwindow.loadFile('index.html');
+	mainwindow = createNodeWindow();
+	mainwindowLoadPromise = mainwindow.loadFile('index.html');
 
-		mainwindowLoadPromise
-			.then((value) => {
-				console.log('Main Window Loaded');
-			})
-			.catch((value) => {
-				console.log('Error Loading');
-			});
-	
+	mainwindowLoadPromise
+		.then((value) => {
+			console.log('Main Window Loaded');
+		
+		})
+		.catch((value) => {
+			console.log('Error Loading');
+		});
+
+	ipcMain.on('nochochannel', (event, args) => {
+		console.log(args);
+
+		if (args.type=='recordcount')
+		{
+			event.reply('nochochannel',{type:'recordcount', count:stations.length});
+		}
+	});
+
+	mainwindow.webContents.toggleDevTools();
+	mainwindow.webContents.send('nochochannel', { i: 2, c: 3 });
 }
 
-app.whenReady().then( (value)=>
-{
+app.whenReady().then((value) => {
 	LoadMain();
-}
-)
+});
 
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {

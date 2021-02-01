@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "electron": "^11.2.1"
+    "electron": "^11.2.1",
+    "jquery": "^3.5.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"electron ."
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",

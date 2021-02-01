@@ -1,25 +1,56 @@
+<!DOCTYPE html>
 <html>
 
 <body>
-    <script src="renderer.js"></script>
+    <script>
+        window.$ = window.jQuery = require('jquery');
 
-<div id="CartOptions">
-    Select items in the lcd webpage for download.<br>
-    There are <span id='countids'></span> ids in the lcd.json file.
-    <label for="fromid">Start Id</label>
-    <input type="number" id="fromid">
-    <label for="toid">To Id</label>
-    <input type="number" id="toid">
-    <label for="startDate">Start Date</label>
-    <input type="date" id ="startDate">
-    <label for="endDate">End Date</label>
-    <input type="date" id="endDate">
-    <button id="sendSelectPost">Send</button>
-</div>
+        const { ipcRenderer } = require('electron')
 
-<div id="StationGrab">
+        ipcRenderer.on('nochochannel', (event, arg) => {
+           
+            if (arg.type=='recordcount')
+            {
+                $('#countids').html(arg.count);
+                $('#toid').attr('max',arg.count-1);
+                $('#fromid').attr('max',arg.count-1);
+            }
+        });
 
-</div>
+        function sendarg(arg) {
+            ipcRenderer.send('nochochannel', arg);
+        }
+
+        $(document).ready(function () {
+
+            sendarg({type:'recordcount'});
+
+            $('#sendSelectPost').click(function () {
+                sendarg('button click');
+                sendarg({ i: 0, b: 2 });
+            });
+        });
+
+    </script>
+
+    <div id="CartOptions">
+        Select items in the lcd webpage for download.<br>
+        There are <span id='countids'></span> ids in the lcd.json file.
+        <label for="fromid">Start Id</label>
+        <input type="number" min="0" id="fromid">
+        <label for="toid">To Id</label>
+        <input type="number" min="0" id="toid">
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate">
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate">
+        <button id="sendSelectPost">Send</button>
+    </div>
+
+    <div id="StationGrab">
+
+    </div>
 
 </body>
+
 </html>
