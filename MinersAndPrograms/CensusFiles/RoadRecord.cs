@@ -70,7 +70,7 @@ namespace CensusFiles
 
         }
 
-        public SqlCommand GetInsert(SqlConnection scon)
+        public static SqlCommand GetInsert(SqlConnection scon)
         {
            // insert into dbo.Roads(Shape)
            // Values(geography::STGeomFromText('LINESTRING(-122.5360 47.656, -122.343 47.656)', 4326))

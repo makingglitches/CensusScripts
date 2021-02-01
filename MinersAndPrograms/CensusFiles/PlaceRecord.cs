@@ -103,7 +103,9 @@ namespace CensusFiles
 
             object geomstring = 
                 ShapeInfo == null ? DBNull.Value as object: 
-                "geography::STGeomFromText('" + ShapeInfo.GetWKT() + "',4122)";
+                //"geography::STGeomFromText('" + 
+                ShapeInfo.GetWKT() //+ "',4122)"
+                ;
 
             insertPlace.Parameters["@Shape"].Value = geomstring;
 

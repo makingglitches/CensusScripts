@@ -28,6 +28,8 @@ namespace CensusFiles
                 results.Add(f);
             }
 
+            sr.Close();
+
             return results;
         }
 
@@ -47,6 +49,8 @@ namespace CensusFiles
 
                 results.Add(f);
             }
+
+            sr.Close();
 
             return results;
         }

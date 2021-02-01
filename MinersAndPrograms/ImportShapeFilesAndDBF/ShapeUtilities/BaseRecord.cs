@@ -47,7 +47,7 @@ namespace ShapeUtilities
 
                     }
 
-                    sb.Remove(sb.Length - 1, 1);
+                    sb.Append(obj.Points[index].X.ToString() + " " + obj.Points[index].Y.ToString());
 
                     sb.Append(")");
 
@@ -55,6 +55,7 @@ namespace ShapeUtilities
                     {
                         sb.Append(", ");
                     }
+
                 }
 
                 sb.Append(")");

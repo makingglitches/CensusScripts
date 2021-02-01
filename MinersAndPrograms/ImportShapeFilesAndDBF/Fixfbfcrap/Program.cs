@@ -8,6 +8,9 @@ using System.IO;
 using ShapeUtilities;
 using CensusFiles;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.Data.Common;
+
 
 
 namespace Fixfbfcrap
@@ -61,6 +64,7 @@ namespace Fixfbfcrap
             road.Load();
 
            Console.WriteLine( road.Records[0].Record.GetWKT());
+
 
            // DbfDataReader.DbfDataReader dread = new DbfDataReader.DbfDataReader(roaddbf);
 

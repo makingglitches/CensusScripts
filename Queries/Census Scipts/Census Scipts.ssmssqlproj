@@ -163,6 +163,18 @@
           <AssociatedConnUserName />
           <FullPath>22 - Bulk Load SNAP_Store_Locations.sql</FullPath>
         </FileNode>
+        <FileNode Name="23 - Create GNISCodes Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>23 - Create GNISCodes Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="24 - BULK Load GNISCodes Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>24 - BULK Load GNISCodes Table.sql</FullPath>
+        </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>

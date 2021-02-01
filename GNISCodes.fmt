@@ -1,0 +1,22 @@
+14.0
+20
+1       SQLCHAR          0       19      "|"          1     FEATURE_ID                         ""
+2       SQLCHAR            0       240     "|"          2     FEATURE_NAME                       SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR            0       100     "|"          3     FEATURE_CLASS                      SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR            0       4       "|"          4     STATE_ALPHA                        SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR            0       4       "|"          5     STATE_NUMERIC                      SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR            0       200     "|"          6     COUNTY_NAME                        SQL_Latin1_General_CP1_CI_AS
+7       SQLCHAR            0       6       "|"          7     COUNTY_NUMERIC                     SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR            0       14      "|"          8     PRIMARY_LAT_DMS                    SQL_Latin1_General_CP1_CI_AS
+9       SQLCHAR            0       16      "|"          9     PRIM_LONG_DMS                      SQL_Latin1_General_CP1_CI_AS
+10      SQLCHAR             0       20       "|"          10    PRIM_LAT_DEC                       ""
+11      SQLCHAR             0       20       "|"          11    PRIM_LONG_DEC                      ""
+12      SQLCHAR            0       14      "|"          12    SOURCE_LAT_DMS                     SQL_Latin1_General_CP1_CI_AS
+13      SQLCHAR            0       16      "|"          13    SOURCE_LONG_DMS                    SQL_Latin1_General_CP1_CI_AS
+14      SQLCHAR            0       20       "|"          14    SOURCE_LAT_DEC                     ""
+15      SQLCHAR             0       20       "|"          15    SOURCE_LONG_DEC                    ""
+16      SQLCHAR             0       20       "|"          16    ELEV_IN_M                          ""
+17      SQLCHAR             0       20       "|"          17    ELEV_IN_FT                         ""
+18      SQLCHAR            0       200     "|"          18    MAP_NAME                           SQL_Latin1_General_CP1_CI_AS
+19      SQLCHAR             0       20       "|"    19    DATE_CREATED                       ""
+20      SQLCHAR             0       20       "\r\n"          20    DATE_EDITED                        ""
