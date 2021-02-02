@@ -26,8 +26,17 @@
             sendarg({type:'recordcount'});
 
             $('#sendSelectPost').click(function () {
-                sendarg('button click');
-                sendarg({ i: 0, b: 2 });
+              
+                var args = {
+                            type:'downloadoptions', 
+                            fromid:$('#fromid').val(),
+                            fromdate: $('#startDate').val(),
+                            toid:$('#toid').val(),
+                            todate: $('#endDate').val()
+                        }
+
+                sendarg(args);
+
             });
         });
 

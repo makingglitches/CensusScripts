@@ -104,10 +104,16 @@ function LoadMain() {
 		{
 			event.reply('nochochannel',{type:'recordcount', count:stations.length});
 		}
+		else if (args.type=='downloadoptions')
+		{
+			job = args;
+			job.started=false;
+			
+		}
 	});
 
 	mainwindow.webContents.toggleDevTools();
-	mainwindow.webContents.send('nochochannel', { i: 2, c: 3 });
+	
 }
 
 app.whenReady().then((value) => {

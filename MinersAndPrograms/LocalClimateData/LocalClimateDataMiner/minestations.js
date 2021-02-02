@@ -31,6 +31,11 @@ $.ajax(c)
 }
 
 
+function GoToCart()
+{
+	$('#cartPreviewButton').click();
+}
+
 
 // this function pushes data to the lcd's session stack, selecting the statioid for download
 function addCartData(stationid)
