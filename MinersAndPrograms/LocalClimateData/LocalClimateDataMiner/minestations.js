@@ -14,6 +14,24 @@ c = {
 };
 }
 
+function DownloadOptionsPage(startdate,enddate)
+{
+	$('#LCD_CUSTOM_CSV').click()
+	$('#selectedStartDate').val(startdate)
+	$('#selectedEndDate').val(enddate)
+	$('.cartButton').click()
+
+}
+
+function DownloadSubmission(email)
+{
+	$('#email').val(email)
+	$('#emailConfirmation').val(email)
+	document.getElementById('rememberEmail').checked=true;
+	$('#buttonSubmit').click()
+}
+
+
 function callStations()
 {
 // this is where the stations will get stored for recovery
