@@ -20,6 +20,11 @@ namespace Fixfbfcrap
         static void Main(string[] args)
         {
 
+            var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\CensusShapeFileData\CountyZips\tl_2019_us_county\tl_2019_us_county.dbf");
+
+
+            ClassGenerator.WriteClassBase("CountyBase", "CountyBase.cs", dread);
+
            // string shpfiledir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places";
            // string sampleshpfile = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places\tl_2019_01_place.shp";
 
@@ -47,23 +52,23 @@ namespace Fixfbfcrap
            // }
 
 
-            string roaddir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads";
-            string roaddbf = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.dbf";
-            string roadshp = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.shp";
+           // string roaddir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads";
+           // string roaddbf = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.dbf";
+           // string roadshp = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.shp";
         
-            SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
-            scb.InitialCatalog = "Geography";
-            scb.IntegratedSecurity = true;
+           // SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
+           // scb.InitialCatalog = "Geography";
+           // scb.IntegratedSecurity = true;
 
-            SqlConnection scon = new SqlConnection(scb.ConnectionString);
-            scon.Open();
+           // SqlConnection scon = new SqlConnection(scb.ConnectionString);
+           // scon.Open();
 
-            var roaddbfrecords = RoadRecord.ParseDBFFile(roaddbf, scon,true);
+           // var roaddbfrecords = RoadRecord.ParseDBFFile(roaddbf, scon,true);
 
-            ShapeFile road = new ShapeFile(roadshp);
-            road.Load();
+           // ShapeFile road = new ShapeFile(roadshp);
+           // road.Load();
 
-           Console.WriteLine( road.Records[0].Record.GetWKT());
+           //Console.WriteLine( road.Records[0].Record.GetWKT());
 
 
            // DbfDataReader.DbfDataReader dread = new DbfDataReader.DbfDataReader(roaddbf);

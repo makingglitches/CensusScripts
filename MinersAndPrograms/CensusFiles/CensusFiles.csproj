@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountyBase.cs" />
+    <Compile Include="CountyRecord.cs" />
     <Compile Include="FipsKeyRecord.cs" />
     <Compile Include="FipsKeyBase.cs" />
     <Compile Include="IBaseReader.cs" />

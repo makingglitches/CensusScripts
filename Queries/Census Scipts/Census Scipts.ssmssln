@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0FFA9F7-D1BE-400A-9E6A-B7FE50F30808}"
 	ProjectSection(SolutionItems) = preProject
 		FipsFormat.fmt = FipsFormat.fmt
+		..\..\GNISClasses.fmt = ..\..\GNISClasses.fmt
 		..\..\GNISCodes.fmt = ..\..\GNISCodes.fmt
 		LSADCodesFormat.fmt = LSADCodesFormat.fmt
 		..\..\MakeFmt.bat = ..\..\MakeFmt.bat
@@ -20,7 +21,7 @@ Global
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6D27E715-A7F7-4463-999A-C520F44740DD}.Default|Default.ActiveCfg = Default
+		{872377AB-0221-4986-95F4-5FF504E0871F}.Default|Default.ActiveCfg = Default
 		{1FF21FB7-0C53-4325-A9CC-EB844D5EE449}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution

@@ -103,7 +103,9 @@ namespace CensusFiles
 
             object geomstring =
            ShapeInfo == null ? DBNull.Value as object :
-           "geography::STGeomFromText('" + ShapeInfo.GetWKT() + "',4122)";
+           //"geography::STGeomFromText('" + 
+           ShapeInfo.GetWKT();
+           //+ "',4122)";
 
             insertcmd.Parameters["@LinearId"].Value = this.LINEARID;
             insertcmd.Parameters["@FullName"].Value = this.FULLNAME;

@@ -66,11 +66,11 @@ namespace ShapeUtilities
             if (this is PolyLineShape)
             {
                 var obj = (PolyLineShape)this;
-                sb.Append("POLYLINE(");
+                sb.Append("LINESTRING(");
 
                 for (int parts = 0; parts < obj.NumParts; parts++)
                 {
-                    sb.Append("(");
+                  //  sb.Append("(");
                     int index = obj.Parts[parts];
                     int lastindex = (parts < obj.NumParts - 1 ? obj.Parts[parts + 1] : obj.NumPoints - 1);
 
@@ -83,12 +83,12 @@ namespace ShapeUtilities
 
                     sb.Remove(sb.Length - 1, 1);
 
-                    sb.Append(")");
+                  //  sb.Append(")");
 
-                    if (parts < obj.NumParts - 1)
-                    {
-                        sb.Append(", ");
-                    }
+                   // if (parts < obj.NumParts - 1)
+                   // {
+                    //    sb.Append(", ");
+                    //}
                 }
 
                 sb.Append(")");

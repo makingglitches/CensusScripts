@@ -24,6 +24,9 @@ namespace ImportShapeFilesAndDBF
 
             RoadLoader rl = new RoadLoader(basedatadir + "RoadsZips",true);
             rl.LoadZips();
+
+            CountyLoader cl = new CountyLoader(basedatadir + "CountyZips", true);
+            cl.LoadZips();
          
 
         }
