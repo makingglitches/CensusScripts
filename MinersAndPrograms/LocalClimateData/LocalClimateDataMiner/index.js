@@ -69,7 +69,8 @@ function injectJs(js) {
 	return prom;
 }
 
-function LoadMain() {
+function LoadLCD()
+{
 	lcdwindow = createWindow();
 	lcdLoadPromise = lcdwindow.loadURL('https://www.ncdc.noaa.gov/cdo-web/datatools/lcd');
 	lcdwindow.webContents.toggleDevTools();
@@ -85,6 +86,16 @@ function LoadMain() {
 		}
 	);
 
+	lcdwindow.webContents.on('did-navigate',(event,url,response,status)=>
+	{
+		console.log("LCD Window Navigated to:"+url)
+		injectJs(miningjs);
+	});
+
+}
+function LoadMain() {
+
+
 	mainwindow = createNodeWindow();
 	mainwindowLoadPromise = mainwindow.loadFile('index.html');
 
@@ -97,6 +108,24 @@ function LoadMain() {
 			console.log('Error Loading');
 		});
 
+	
+	mainwindow.webContents.session.on('will-download', (event,item,wcontents)=>
+	{
+		console.log(item.getFilename());
+
+		item.on('done',(event,state)=>
+		{
+			console.log(this.getFilename());
+			console.log(state)
+		});
+
+	})
+
+	mainwindow.webContents.on('did-navigate', (event,url,response,status)=>
+	{
+		console.log('navigated to:'+url)
+	});
+
 	ipcMain.on('nochochannel', (event, args) => {
 		console.log(args);
 
@@ -108,6 +137,7 @@ function LoadMain() {
 		{
 			job = args;
 			job.started=false;
+			job.processed=''
 			
 		}
 	});
@@ -118,6 +148,7 @@ function LoadMain() {
 
 app.whenReady().then((value) => {
 	LoadMain();
+	LoadLCD();
 });
 
 app.on('window-all-closed', () => {
@@ -129,6 +160,7 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
 	if (BrowserWindow.getAllWindows().length === 0) {
 		LoadMain();
+		LoadLCD();
 	}
 });
 
