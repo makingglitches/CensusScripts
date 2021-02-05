@@ -16,7 +16,10 @@ namespace CensusFiles
 
         public PolyLineShape ShapeInfo { get; set; }
 
-        public static List<RoadRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false)
+        public static event Action<RoadRecord> OnParse;
+        public static event Action<long> OnFileLength;
+
+        public static List<RoadRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode=false)
         {
             string[] pieces = filename.Split('_');
             string stcountycode = pieces[2];
@@ -48,6 +51,11 @@ namespace CensusFiles
 
             int shpfileindex = 0;
 
+            if (eventmode)
+            {
+                OnFileLength(dread.DbfTable.Header.RecordCount);
+            }
+
             while (dread.Read())
             {
                 RoadRecord r = new RoadRecord();
@@ -61,7 +69,14 @@ namespace CensusFiles
                     shpfileindex++;
                 }
 
-                results.Add(r);
+                if (eventmode)
+                {
+                    OnParse(r);
+                }
+                else
+                {
+                    results.Add(r);
+                }
             }
 
             dread.Close();

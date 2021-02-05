@@ -17,6 +17,9 @@ namespace CensusFiles
         public string FipsId { get; set; }
         public PolygonShape ShapeInfo { get; set; }
 
+        public static event Action<CountyRecord> OnParse;
+        public static event Action<long> OnFileLength;
+
 
         public static SqlCommand GetInsert(SqlConnection scon)
         {
@@ -98,7 +101,7 @@ namespace CensusFiles
         }
 
 
-            public static List<CountyRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false)
+            public static List<CountyRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode=false)
         {
       
 
@@ -124,6 +127,11 @@ namespace CensusFiles
       
             int shpfileindex = 0;
 
+            if (eventmode)
+            {
+                OnFileLength(dread.DbfTable.Header.RecordCount);
+            }
+         
             while (dread.Read())
             {
                 CountyRecord r = new CountyRecord();
@@ -143,7 +151,19 @@ namespace CensusFiles
                     shpfileindex++;
                 }
 
-                results.Add(r);
+                if (eventmode)
+                {
+                    OnParse(r);
+                }
+                else
+                {
+                    results.Add(r);
+                }
+
+                r = null;
+                GC.AddMemoryPressure(200000000);
+                GC.Collect();
+                GC.WaitForFullGCComplete();
             }
 
             dread.Close();

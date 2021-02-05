@@ -116,15 +116,23 @@ namespace CensusFiles
 
         }
 
-        /// <summary>
-        /// Parses an entire censuus dbf file for places, could be altered to be generic for roads etc
-        /// Also matches existing populated fips data 
-        /// </summary>
-        /// <param name="filename">absolute path to .dbf file</param>
-        /// <param name="scon">an open sqlconnection</param>
-        /// <param name="resetMissingFips">default false, but set to true to clear missingfips static list</param>
-        /// <returns></returns>
-        public static List<PlaceRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile=false, bool resetMissingFips=false)
+        public static  event Action<PlaceRecord> OnParse;
+        public static  event Action<long> OnFileLength;
+
+        
+
+      /// <summary>
+      /// Parses an entire CensusDBF For places, if eventmode is selected, will return an empty recordset 
+      /// To bypass the memory pressure error SQL Server throws during load, and allow implementing code to handle record processing
+      /// One at a time.
+      /// </summary>
+      /// <param name="filename"></param>
+      /// <param name="scon"></param>
+      /// <param name="loadShapeFile"></param>
+      /// <param name="resetMissingFips"></param>
+      /// <param name="eventmode"></param>
+      /// <returns></returns>
+        public static List<PlaceRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile=false, bool resetMissingFips=false, bool eventmode=false)
         {
 
             ShapeFile shpfile = null;
@@ -154,6 +162,16 @@ namespace CensusFiles
 
             int shpfileindex = 0;
 
+
+            if (eventmode)
+            {
+                // apparently the record length is in fact published, indirectly.
+                // we'll see if its right. should be there have been no parse errors in the header load code.
+                OnFileLength(dread.DbfTable.Header.RecordCount);
+            }
+
+        
+
             while (dread.Read())
             {
                 PlaceRecord pr = new PlaceRecord();
@@ -172,7 +190,15 @@ namespace CensusFiles
                     shpfileindex++;
                 }
 
-                results.Add(pr);
+                if (eventmode)
+                {
+                    OnParse(pr);
+
+                }
+                else
+                {
+                    results.Add(pr);
+                }
             }
 
             dread.Close();
