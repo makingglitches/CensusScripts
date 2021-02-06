@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="CountyBase.cs" />
     <Compile Include="CountyRecord.cs" />
+    <Compile Include="DbfParser.cs" />
     <Compile Include="FipsKeyRecord.cs" />
     <Compile Include="FipsKeyBase.cs" />
     <Compile Include="IBaseReader.cs" />
+    <Compile Include="IRecordWriter.cs" />
     <Compile Include="PlaceBase.cs" />
     <Compile Include="PlaceRecord.cs" />
     <Compile Include="ClassGenerator.cs" />

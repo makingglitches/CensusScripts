@@ -19,14 +19,14 @@ namespace ImportShapeFilesAndDBF
             string basedatadir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\";
 
 
-            //PlaceLoader pl = new PlaceLoader(basedatadir + "PlacesZips",true);
-            //pl.LoadZips();
+          //  PlaceLoader pl = new PlaceLoader(basedatadir + "PlacesZips",true,true);
+          //  pl.LoadZips();
 
-            //RoadLoader rl = new RoadLoader(basedatadir + "RoadsZips",true);
-            //rl.LoadZips();
+            RoadLoader rl = new RoadLoader(basedatadir + "RoadsZips",true,true);
+            rl.LoadZips();
 
-            CountyLoader cl = new CountyLoader(basedatadir + "CountyZips", true,true);
-            cl.LoadZips();
+//            CountyLoader cl = new CountyLoader(basedatadir + "CountyZips", true,true);
+  //          cl.LoadZips();
          
 
         }

@@ -11,5 +11,6 @@ namespace CensusFiles
    public interface IBaseReader
     {
         void Read(DbDataReader dr);
+       
     }
 }

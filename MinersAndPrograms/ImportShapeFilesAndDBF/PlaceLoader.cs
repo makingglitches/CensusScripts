@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.IO.Compression;
 using CensusFiles;
+using System.Threading;
 
 namespace ImportShapeFilesAndDBF
 {
@@ -17,16 +18,27 @@ namespace ImportShapeFilesAndDBF
 
         string line = "";
 
-        public PlaceLoader(string zipdirectory, bool emptyPlaceTable)
+        public PlaceLoader(string zipdirectory, bool emptyPlaceTable, bool eventmode=false)
         {
             ZipDirectory = zipdirectory;
             EmptyPlaceTable = emptyPlaceTable;
+            EventMode = eventmode;
 
             for (int x =0; x < 50; x++)
             {
                 line += " ";
             }
         }
+
+        public bool EventMode { get; set; }
+
+
+        private long index;
+        private SqlCommand insrec;
+        private SqlConnection scon;
+        private long length;
+        private int x;
+        private int y;
 
         public void LoadZips(string tablename="Places")
         {
@@ -35,7 +47,7 @@ namespace ImportShapeFilesAndDBF
             scsb.DataSource = "localhost";
             scsb.InitialCatalog = "Geography";
 
-            SqlConnection scon = new SqlConnection(scsb.ConnectionString);
+            scon = new SqlConnection(scsb.ConnectionString);
 
             Console.WriteLine("Opening Sql Connection.");
 
@@ -49,6 +61,12 @@ namespace ImportShapeFilesAndDBF
                 Console.WriteLine("Emptying Places Table");
                 SqlCommand trunccom = new SqlCommand("truncate table dbo.Places", scon);
                 trunccom.ExecuteNonQuery();
+            }
+
+            if (EventMode)
+            {
+                PlaceRecord.OnParse += PlaceRecord_OnParse;
+                PlaceRecord.OnFileLength += PlaceRecord_OnFileLength;
             }
           
 
@@ -68,34 +86,77 @@ namespace ImportShapeFilesAndDBF
                 string [] files = Directory.GetFiles(outputdir, "*.dbf");
 
                 // load records and wkt strings.
-                List<PlaceRecord> records = PlaceRecord.ParseDBFFile(files[0], scon, true);
 
-                SqlCommand insrec = PlaceRecord.GetInsert(scon);
+                index = 1;
+                insrec = PlaceRecord.GetInsert(scon);
 
-                Console.WriteLine("Loaded " + records.Count.ToString() + " records.");
-
-                int x = Console.CursorLeft;
-                int y = Console.CursorTop;
+                x = Console.CursorLeft;
+                y = Console.CursorTop;
 
                 Console.Write(line);
-                int index = 1;
 
-                foreach (PlaceRecord r in records)
+
+                if (!EventMode)
                 {
-                    Console.SetCursorPosition(x, y);
-                    Console.WriteLine("Processing Record "+index.ToString() + " of " + records.Count.ToString());
+                    List<PlaceRecord> records = PlaceRecord.ParseDBFFile(files[0], scon, true,false,false);
+                    Console.WriteLine("Loaded " + records.Count.ToString() + " records.");
 
-                    r.MapParameters(insrec);
-                    insrec.ExecuteNonQuery();
-                    index++;
+                    foreach (PlaceRecord r in records)
+                    {
+                        Console.SetCursorPosition(x, y);
+                        Console.WriteLine("Processing Record " + index.ToString() + " of " + records.Count.ToString());
+                        if (!EventMode)
+                            r.MapParameters(insrec);
+                        insrec.ExecuteNonQuery();
+                        index++;
+                    }
+                }
+                else
+                {
+
+                    Task t = Task.Run(() =>
+                    {
+                        PlaceRecord.ParseDBFFile(files[0], scon, true, false, true);
+                    });
+
+                    t.Wait();
+
                 }
 
                 Console.WriteLine();
             }
+
             scon.Close();
 
             Console.WriteLine("Closed SQL Connection");
 
+        }
+
+        private void PlaceRecord_OnFileLength(long obj)
+        {
+            length = obj;
+        }
+
+        private void PlaceRecord_OnParse(PlaceRecord obj)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine("Processing Record " + index.ToString() + " of " + length.ToString());
+
+            try
+            {
+                obj.MapParameters(insrec);
+                insrec.ExecuteNonQuery();
+            }
+            catch
+            {
+                scon.Close();
+                scon.Open();
+                Thread.Sleep(2000);
+                insrec.ExecuteNonQuery();
+
+            }
+
+            index++;
         }
     }
 }

@@ -199,6 +199,11 @@ namespace CensusFiles
                 {
                     results.Add(pr);
                 }
+
+                pr = null;
+                GC.AddMemoryPressure(200000000);
+                GC.Collect();
+                GC.WaitForFullGCComplete();
             }
 
             dread.Close();
