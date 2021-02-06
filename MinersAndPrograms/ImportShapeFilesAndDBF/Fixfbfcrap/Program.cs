@@ -19,59 +19,63 @@ namespace Fixfbfcrap
     {
         static void Main(string[] args)
         {
-
-            var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\CensusShapeFileData\CountyZips\tl_2019_us_county\tl_2019_us_county.dbf");
-
-
-            ClassGenerator.WriteClassBase("CountyBase", "CountyBase.cs", dread);
-
-           // string shpfiledir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places";
-           // string sampleshpfile = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places\tl_2019_01_place.shp";
-
-           //var shpfiles =  Directory.GetFiles(shpfiledir, "*.shp");
-
-           // foreach (string filename in shpfiles)
-           // {
-           //     ShapeFile s = new ShapeFile(filename);
-           //     s.Load();
-
-           //     int nonpoly = 0;
-
-           //     foreach (var r in s.Records)
-           //     {
-           //         if (!(r.Record is PolygonShape))
-           //         {
-           //             nonpoly++;
-           //         }
-           //     }
-
-           //     if(nonpoly >0)
-           //     {
-           //         Console.WriteLine(filename + "  contains " + nonpoly.ToString() + " records.");
-           //     }
-           // }
+            var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\CensusShapeFileData\StateZips\tl_2019_us_state\tl_2019_us_state.dbf");
 
 
-           // string roaddir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads";
-           // string roaddbf = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.dbf";
-           // string roadshp = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.shp";
-        
-           // SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
-           // scb.InitialCatalog = "Geography";
-           // scb.IntegratedSecurity = true;
+            ClassGenerator.WriteClassBase("StateBase", "StateBase.cs", dread);
 
-           // SqlConnection scon = new SqlConnection(scb.ConnectionString);
-           // scon.Open();
-
-           // var roaddbfrecords = RoadRecord.ParseDBFFile(roaddbf, scon,true);
-
-           // ShapeFile road = new ShapeFile(roadshp);
-           // road.Load();
-
-           //Console.WriteLine( road.Records[0].Record.GetWKT());
+            //var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\CensusShapeFileData\CountyZips\tl_2019_us_county\tl_2019_us_county.dbf");
 
 
-           // DbfDataReader.DbfDataReader dread = new DbfDataReader.DbfDataReader(roaddbf);
+            //ClassGenerator.WriteClassBase("CountyBase", "CountyBase.cs", dread);
+
+            // string shpfiledir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places";
+            // string sampleshpfile = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Places\tl_2019_01_place.shp";
+
+            //var shpfiles =  Directory.GetFiles(shpfiledir, "*.shp");
+
+            // foreach (string filename in shpfiles)
+            // {
+            //     ShapeFile s = new ShapeFile(filename);
+            //     s.Load();
+
+            //     int nonpoly = 0;
+
+            //     foreach (var r in s.Records)
+            //     {
+            //         if (!(r.Record is PolygonShape))
+            //         {
+            //             nonpoly++;
+            //         }
+            //     }
+
+            //     if(nonpoly >0)
+            //     {
+            //         Console.WriteLine(filename + "  contains " + nonpoly.ToString() + " records.");
+            //     }
+            // }
+
+
+            // string roaddir = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads";
+            // string roaddbf = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.dbf";
+            // string roadshp = @"C:\Users\John\Documents\CensusProject\QrCode\Input\Places2019\Roads\tl_2019_01001_roads.shp";
+
+            // SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
+            // scb.InitialCatalog = "Geography";
+            // scb.IntegratedSecurity = true;
+
+            // SqlConnection scon = new SqlConnection(scb.ConnectionString);
+            // scon.Open();
+
+            // var roaddbfrecords = RoadRecord.ParseDBFFile(roaddbf, scon,true);
+
+            // ShapeFile road = new ShapeFile(roadshp);
+            // road.Load();
+
+            //Console.WriteLine( road.Records[0].Record.GetWKT());
+
+
+            // DbfDataReader.DbfDataReader dread = new DbfDataReader.DbfDataReader(roaddbf);
 
             //ClassGenerator.WriteClassBase("RoadBase", "RoadBase.cs", dread);
 

@@ -193,6 +193,12 @@
           <AssociatedConnUserName />
           <FullPath>27 - Create Counties Table.sql</FullPath>
         </FileNode>
+        <FileNode Name="28 - Create States Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>28 - Create States Table.sql</FullPath>
+        </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>

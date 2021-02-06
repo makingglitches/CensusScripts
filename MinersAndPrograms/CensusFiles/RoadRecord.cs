@@ -77,6 +77,11 @@ namespace CensusFiles
                 {
                     results.Add(r);
                 }
+
+                r = null;
+                GC.AddMemoryPressure(200000000);
+                GC.Collect();
+                GC.WaitForFullGCComplete();
             }
 
             dread.Close();
