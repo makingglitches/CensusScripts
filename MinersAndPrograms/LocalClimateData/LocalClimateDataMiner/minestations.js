@@ -47,8 +47,6 @@ function DownloadSubmission(email) {
 	$('#buttonSubmit').click();
 }
 
-
-
 // this navigates to the cart contents
 function GoToCart() {
 	$('#cartPreviewButton').click();
@@ -76,4 +74,14 @@ function addCartData(stationid) {
 
 	console.log('Calling Cart Item POST');
 	$.ajax(ajaxparams);
+}
+
+function CheckStatusButton()
+{
+	$('.statusButton')[0].click();
+}
+
+function ClickToDownload()
+{
+	$('[title="Click to download"]')[0].click()
 }
