@@ -7,7 +7,7 @@ using System.IO;
 
 namespace ShapeUtilities
 {
-    public class PolyLineShape:BaseRecord
+    public class PolyLineShape:BaseRecord,IHasPoints
     {
         public ShpBox BoundingBox { get; set; }
         public int NumParts { get; set; }

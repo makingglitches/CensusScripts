@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseRecord.cs" />
+    <Compile Include="BoundingBox.cs" />
     <Compile Include="Box.cs" />
+    <Compile Include="IHasPoints.cs" />
     <Compile Include="MultiPatchShape.cs" />
     <Compile Include="MultiPointMShape.cs" />
     <Compile Include="MultiPointShape.cs" />

@@ -21,85 +21,61 @@ namespace CensusFiles
 
         public static SqlCommand GetInsert(SqlConnection scon)
         {
-            SqlCommand insertplace =
-              new SqlCommand(@"INSERT INTO[dbo].[Places]
-                                ([FipsId]
-                                ,[GeoId]
-                                ,[GNISCode]
-                                ,[Name]
-                                ,[LegalName]
-                                ,[LSADId]
-                                ,[FipsClass]
-                                ,[MetroOrMicroIndicator]
-                                ,[CensusPlace]
-                                ,[IncorporatedPlace]
-                                ,[AreaLand]
-                                ,[AreaWater]
-                                ,[Latitude]
-                                ,[Longitude]
-                                ,[Shape])
-                            VALUES
-                                (@FipsId
-                                ,@GeoId
-                                ,@GNISCode
-                                ,@Name
-                                ,@LegalName
-                                ,@LSADId
-                                ,@FipsClass
-                                ,@MetroOrMicroIndicator
-                                ,@CensusPlace
-                                ,@IncorporatedPlace
-                                ,@AreaLand
-                                ,@AreaWater
-                                ,@Latitude
-                                ,@Longitude
-                                ,@Shape)", scon);
+            string cmd = File.ReadAllText("Queries\\InsertPlace.txt");
 
-            insertplace.Parameters.Add("@FipsId", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@GeoId", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@GNISCode", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@Name", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@LegalName", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@LSADId", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@FipsClass", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@MetroOrMicroIndicator", SqlDbType.NVarChar);
-            insertplace.Parameters.Add("@CensusPlace", SqlDbType.Bit);
-            insertplace.Parameters.Add("@IncorporatedPlace", SqlDbType.Bit);
-            insertplace.Parameters.Add("@AreaLand", SqlDbType.Float);
-            insertplace.Parameters.Add("@AreaWater", SqlDbType.Float);
-            insertplace.Parameters.Add("@Latitude", SqlDbType.Float);
-            insertplace.Parameters.Add("@Longitude", SqlDbType.Float);
-            insertplace.Parameters.Add("@Shape", System.Data.SqlDbType.NVarChar);
+            SqlCommand insertcmd =
+              new SqlCommand(cmd, scon);
+
+            insertcmd.Parameters.Add("@FipsId", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@GeoId", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@GNISCode", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@Name", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@LegalName", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@LSADId", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@FipsClass", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@MetroOrMicroIndicator", SqlDbType.NVarChar);
+            insertcmd.Parameters.Add("@CensusPlace", SqlDbType.Bit);
+            insertcmd.Parameters.Add("@IncorporatedPlace", SqlDbType.Bit);
+            insertcmd.Parameters.Add("@AreaLand", SqlDbType.Float);
+            insertcmd.Parameters.Add("@AreaWater", SqlDbType.Float);
+            insertcmd.Parameters.Add("@Latitude", SqlDbType.Float);
+            insertcmd.Parameters.Add("@Longitude", SqlDbType.Float);
+            insertcmd.Parameters.Add("@Shape", System.Data.SqlDbType.NVarChar);
+
+            insertcmd.Parameters.Add("@MinLon", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MinLat", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MaxLon", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MaxLat", SqlDbType.Float);
 
 
 
-            return insertplace;
+            return insertcmd;
         }
 
         public static List<string> MissingFips = new List<string>();
 
-        public void MapParameters(SqlCommand insertPlace)
+        public void MapParameters(SqlCommand insertcmd)
         { 
             object fipser = string.IsNullOrEmpty(FipsId) ? DBNull.Value as object : this.FipsId as object;
 
-            insertPlace.Parameters["@FipsId"].Value = fipser;
-            insertPlace.Parameters["@GeoId"].Value = this.GEOID;
-            insertPlace.Parameters["@GNISCode"].Value = this.PLACENS;
-            insertPlace.Parameters["@Name"].Value = this.NAME;
-            insertPlace.Parameters["@LegalName"].Value = this.NAMELSAD;
-            insertPlace.Parameters["@LSADId"].Value = this.LSAD;
-            insertPlace.Parameters["@FipsClass"].Value = this.CLASSFP;
-            insertPlace.Parameters["@MetroOrMicroIndicator"].Value = this.PCICBSA;
+            insertcmd.Parameters["@FipsId"].Value = fipser;
+            insertcmd.Parameters["@GeoId"].Value = this.GEOID;
+            insertcmd.Parameters["@GNISCode"].Value = this.PLACENS;
+            insertcmd.Parameters["@Name"].Value = this.NAME;
+            insertcmd.Parameters["@LegalName"].Value = this.NAMELSAD;
+            insertcmd.Parameters["@LSADId"].Value = this.LSAD;
+            insertcmd.Parameters["@FipsClass"].Value = this.CLASSFP;
+            insertcmd.Parameters["@MetroOrMicroIndicator"].Value = this.PCICBSA;
 
             bool isCDP =this.MTFCC.ToString() == "GS4210"; // GS4110 is the value for incorporated, should check if there are null values in ds
 
-            insertPlace.Parameters["@CensusPlace"].Value = isCDP;
-            insertPlace.Parameters["@IncorporatedPlace"].Value = !isCDP;
+            insertcmd.Parameters["@CensusPlace"].Value = isCDP;
+            insertcmd.Parameters["@IncorporatedPlace"].Value = !isCDP;
 
-            insertPlace.Parameters["@AreaLand"].Value = float.Parse(this.ALAND.ToString());
-            insertPlace.Parameters["@AreaWater"].Value = float.Parse(this.AWATER.ToString());
-            insertPlace.Parameters["@Latitude"].Value = float.Parse(this.INTPTLAT.ToString().Replace("+", ""));
-            insertPlace.Parameters["@Longitude"].Value = float.Parse(this.INTPTLON.ToString().Replace("+", ""));
+            insertcmd.Parameters["@AreaLand"].Value = float.Parse(this.ALAND.ToString());
+            insertcmd.Parameters["@AreaWater"].Value = float.Parse(this.AWATER.ToString());
+            insertcmd.Parameters["@Latitude"].Value = float.Parse(this.INTPTLAT.ToString().Replace("+", ""));
+            insertcmd.Parameters["@Longitude"].Value = float.Parse(this.INTPTLON.ToString().Replace("+", ""));
 
             object geomstring = 
                 ShapeInfo == null ? DBNull.Value as object: 
@@ -107,7 +83,16 @@ namespace CensusFiles
                 ShapeInfo.GetWKT() //+ "',4122)"
                 ;
 
-            insertPlace.Parameters["@Shape"].Value = geomstring;
+            insertcmd.Parameters["@Shape"].Value = geomstring;
+
+            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+
+            insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
+            insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
+            insertcmd.Parameters["@MaxLon"].Value = bounding != null ? (object)bounding.X2 : DBNull.Value;
+            insertcmd.Parameters["@MaxLat"].Value = bounding != null ? (object)bounding.Y2 : DBNull.Value;
+
+
 
         }
 

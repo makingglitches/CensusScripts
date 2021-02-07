@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace CensusFiles
         public static event Action<RoadRecord> OnParse;
         public static event Action<long> OnFileLength;
 
-        public static List<RoadRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode=false)
+        public static List<RoadRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode = false)
         {
             string[] pieces = filename.Split('_');
             string stcountycode = pieces[2];
@@ -31,9 +32,9 @@ namespace CensusFiles
 
             if (loadShapeFile)
             {
-                
-                string shapefilename = Path.GetDirectoryName(filename)+"\\"+Path.GetFileNameWithoutExtension(filename) + ".shp";
-                 shpfile = new ShapeFile(shapefilename);
+
+                string shapefilename = Path.GetDirectoryName(filename) + "\\" + Path.GetFileNameWithoutExtension(filename) + ".shp";
+                shpfile = new ShapeFile(shapefilename);
                 shpfile.Load();
             }
 
@@ -63,7 +64,7 @@ namespace CensusFiles
 
                 r.FipsId = fipsid;
 
-                if (shpfile!=null)
+                if (shpfile != null)
                 {
                     r.ShapeInfo = (PolyLineShape)shpfile.Records[shpfileindex].Record;
                     shpfileindex++;
@@ -92,27 +93,24 @@ namespace CensusFiles
 
         public static SqlCommand GetInsert(SqlConnection scon)
         {
-           // insert into dbo.Roads(Shape)
-           // Values(geography::STGeomFromText('LINESTRING(-122.5360 47.656, -122.343 47.656)', 4326))
+            // insert into dbo.Roads(Shape)
+            // Values(geography::STGeomFromText('LINESTRING(-122.5360 47.656, -122.343 47.656)', 4326))
 
-            SqlCommand insertcmd = new SqlCommand(@"INSERT INTO[dbo].[Roads]
-           ([LinearId]
-          ,[FullName]
-          ,[RouteType]
-          ,[MafFeatureCode]
-          ,[Shape])
-          VALUES
-          (@LinearId,
-           @FullName,
-           @RouteType,
-           @FeatureCode,
-           @Shape)", scon);
+            string cmd = File.ReadAllText("Queries\\InsertRoad.txt");
+
+            SqlCommand insertcmd = new SqlCommand(cmd, scon);
 
             insertcmd.Parameters.Add("@LinearId", System.Data.SqlDbType.NVarChar);
             insertcmd.Parameters.Add("@FullName", System.Data.SqlDbType.NVarChar);
             insertcmd.Parameters.Add("@RouteType", System.Data.SqlDbType.NVarChar);
             insertcmd.Parameters.Add("@FeatureCode", System.Data.SqlDbType.NVarChar);
             insertcmd.Parameters.Add("@Shape", System.Data.SqlDbType.NVarChar);
+
+            insertcmd.Parameters.Add("@MinLon", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MinLat", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MaxLon", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MaxLat", SqlDbType.Float);
+
 
             return insertcmd;
         }
@@ -125,13 +123,23 @@ namespace CensusFiles
            ShapeInfo == null ? DBNull.Value as object :
            //"geography::STGeomFromText('" + 
            ShapeInfo.GetWKT();
-           //+ "',4122)";
+            //+ "',4122)";
+
+           
 
             insertcmd.Parameters["@LinearId"].Value = this.LINEARID;
             insertcmd.Parameters["@FullName"].Value = this.FULLNAME;
             insertcmd.Parameters["@RouteType"].Value = this.RTTYP;
             insertcmd.Parameters["@FeatureCode"].Value = this.MTFCC;
             insertcmd.Parameters["@Shape"].Value = geomstring;
+
+            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+
+            insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
+            insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
+            insertcmd.Parameters["@MaxLon"].Value = bounding != null ? (object)bounding.X2 : DBNull.Value;
+            insertcmd.Parameters["@MaxLat"].Value = bounding != null ? (object)bounding.Y2 : DBNull.Value;
+
 
         }
     }

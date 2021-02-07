@@ -93,34 +93,9 @@ namespace CensusFiles
             // insert into dbo.Roads(Shape)
             // Values(geography::STGeomFromText('LINESTRING(-122.5360 47.656, -122.343 47.656)', 4326))
 
-            SqlCommand insertcmd = new SqlCommand(@"INSERT INTO [dbo].[States]
-           ([RegionCode]
-           ,[DivisionCode]
-           ,[FipsKey]
-           ,[GNISKey]
-           ,[Abbreviation]
-           ,[Name]
-           ,[LSAD]
-           ,[AreaLand]
-           ,[AreaWater]
-           ,[Longitude]
-           ,[Latitude]
-           ,Shape)
-     VALUES
-            ( @RegionCode,  
-              @DivisionCode,
-              @FipsKey,
-              @GNISKey,
-              @Abbreviation,
-              @Name,
-              @LSAD,
-              @ALand,
-              @Awater,
-              @Longitude,
-              @Latitude,
-              @Shape
-)
-          ", scon);
+            string cmd = File.ReadAllText("Queries\\InsertState.txt");
+
+            SqlCommand insertcmd = new SqlCommand(cmd, scon);
 
             insertcmd.Parameters.Add("@RegionCode", SqlDbType.NVarChar);
             insertcmd.Parameters.Add("@DivisionCode", SqlDbType.NVarChar);
@@ -134,6 +109,11 @@ namespace CensusFiles
             insertcmd.Parameters.Add("@Longitude", SqlDbType.NVarChar);
             insertcmd.Parameters.Add("@Latitude", SqlDbType.NVarChar);
             insertcmd.Parameters.Add("@Shape", SqlDbType.NVarChar);
+
+            insertcmd.Parameters.Add("@MinLon", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MinLat", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MaxLon", SqlDbType.Float);
+            insertcmd.Parameters.Add("@MaxLat", SqlDbType.Float);
 
 
 
@@ -162,6 +142,13 @@ namespace CensusFiles
             insertcmd.Parameters["@Longitude"].Value=this.INTPTLON;
             insertcmd.Parameters["@Latitude"].Value=this.INTPTLAT;
             insertcmd.Parameters["@Shape"].Value=geomstring;
+
+            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+
+            insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
+            insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
+            insertcmd.Parameters["@MaxLon"].Value = bounding != null ? (object)bounding.X2 : DBNull.Value;
+            insertcmd.Parameters["@MaxLat"].Value = bounding != null ? (object)bounding.Y2 : DBNull.Value;
 
 
         }

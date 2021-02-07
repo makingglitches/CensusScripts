@@ -27,6 +27,10 @@ CREATE TABLE [dbo].[Counties](
 	[AreaWater] [bigint] NULL,
 	[Longitude] [float] NULL,
 	[Latititude] [float] NULL,
+	MinLatitude [float] null,
+	MinLongitude [float] null,
+	MaxLatitude [float] null,
+	MaxLongitude [float] null,
 	[Shape] [geography] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO

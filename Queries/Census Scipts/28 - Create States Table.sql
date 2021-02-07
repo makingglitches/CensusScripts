@@ -26,6 +26,10 @@ CREATE TABLE [dbo].[States](
 	[AreaWater] [bigint] NULL,
 	[Longitude] [float](11) NULL,
 	[Latitude] [float](12) NULL,
+	MinLatitude [float] null,
+	MinLongitude [float] null,
+	MaxLatitude [float] null,
+	MaxLongitude [float] null,
 	[Shape] Geography null
 ) ON [PRIMARY]
 GO

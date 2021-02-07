@@ -19,6 +19,10 @@ CREATE TABLE [dbo].[Roads](
 	[FullName] [nvarchar](100) NULL,
 	[RouteType] [nvarchar](1) NULL,
 	[MafFeatureCode] [nvarchar](5) NULL,
+	MinLatitude [float] null,
+	MinLongitude [float] null,
+	MaxLatitude [float] null,
+	MaxLongitude [float] null,
 	Shape [Geography] null
 ) ON [PRIMARY]
 GO

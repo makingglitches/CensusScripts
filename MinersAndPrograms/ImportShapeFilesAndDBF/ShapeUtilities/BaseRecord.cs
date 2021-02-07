@@ -22,6 +22,26 @@ namespace ShapeUtilities
           
         }
 
+        /// <summary>
+        /// Gets the bounding box of a shape implemeting IHasPoints
+        /// </summary>
+        /// <returns>Null if shape does not a have a points collection otherwise returns a boundingbox enclosing the points</returns>
+        public BoundingBox GetExtent()
+        {
+            if (this is IHasPoints)
+            {
+                var obj = (IHasPoints)this;
+
+                var xes = obj.Points.Select(o => o.X).ToList();
+                var yes = obj.Points.Select(o => o.Y).ToList();
+
+                return new BoundingBox() { X1 = xes.Min(), X2 = xes.Max(), Y1 = yes.Min(), Y2 = yes.Max() };
+            }
+            else return null;
+          
+        }
+
+
         public string GetWKT()
         {
 
