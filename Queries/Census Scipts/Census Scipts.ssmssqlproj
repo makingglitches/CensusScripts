@@ -26,8 +26,8 @@
           <FullPath>00 - Create Geography Database.sql</FullPath>
         </FileNode>
         <FileNode Name="01 - Create JSON Store.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>01 - Create JSON Store.sql</FullPath>
         </FileNode>
@@ -199,6 +199,12 @@
           <AssociatedConnUserName />
           <FullPath>28 - Create States Table.sql</FullPath>
         </FileNode>
+        <FileNode Name="29 - Create Climate Stations Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>29 - Create Climate Stations Table.sql</FullPath>
+        </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
@@ -211,11 +217,11 @@
           <AssociatedConnUserName />
           <FullPath>15 - Fix Abbreviations.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1.sql">
+        <FileNode Name="30 - Populate Climate Stations from JSON.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
+          <FullPath>30 - Populate Climate Stations from JSON.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
