@@ -9,6 +9,31 @@
 
 // this calls the stations retrieval web service
 // lcd.json contains the results of calling this function numerous times.
+
+// they limit station data to 10 years or less
+// 7:20
+// would appear precicipitation land based stations are limited and do not use the wban prefix but the coop
+// the rem strings are covered in the lcd documentation pdf so may be where simply the presence of precipitation
+// such as freezing rain and the like is something to be discovered.
+
+// is it me or did personal interest in nearly everything seem to drop off around the time these garbage fucks took over ?
+// the quality of data available seems to have declined slightly
+// probably because they dont see a need to advertise they're fucking with the weather to make everyone
+// mute blind sheep that are totally convinced of their own freaksih superiority
+// and keep them living in their little chomo fantasy world.
+// see this is an example of them interfering
+// the gathering of all the necessary data reference to make sense of 
+// the lcd data to get the most concise interpretation of weather interpretations
+// the remark column data being included.
+// apparently not only do they not want to be intelligent they're not interested in anyone 
+// else making themselves any smarter.
+// and they can scoff all they want at my efforts the final product if i wasn't goddamned exhausted from
+// marching around most of the day in the cold would be reusuable.
+// this marks something like the 5th time we've reached this point.
+// because they ruined the country.
+// they really do have some weirdass fantasies.
+// 'oh their network is extremely fast'... but... they... drive around.. in circles... and give up...
+// half their lives.. by choice... to be.. fucking... slaves ZIMMERMAN!
 function CallStations(_limit, _offset) {
 	c = {
 		async: true,
