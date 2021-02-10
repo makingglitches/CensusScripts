@@ -19,6 +19,9 @@ namespace CensusFiles
 
         public PolygonShape ShapeInfo { get; set; }
 
+        // somewhere along the line, fort collins became a haven for whores and chomos that raped me in the 1980s
+        // let the fbi know, they don't give a shit
+        // hashtag bombs, terrorist, still alive, blow up world trade center, notice you fucking assholes !
         public static SqlCommand GetInsert(SqlConnection scon)
         {
             string cmd = File.ReadAllText("Queries\\InsertPlace.txt");
