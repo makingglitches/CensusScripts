@@ -1,0 +1,40 @@
+https://www.cadcorp.com/products/desktop/cadcorp-sis-desktop-express
+
+https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/species-data-download?qt-science_center_objects=0#qt-science_center_objects
+
+ftp://ftp2.census.gov/
+
+https://www.fns.usda.gov/snap/retailer-locator
+
+https://www.ncdc.noaa.gov/cdo-web/datatools/lcd
+
+https://www.ncdc.noaa.gov/cdo-web/search?datasetid=PRECIP_15
+
+https://www.weather.gov/marfc/DailyPrecipData
+
+https://www.epa.gov/sunsafety/uv-index-1
+
+https://www.usgs.gov/products/maps/gis-data
+
+https://pfaf.org/user/cmspage.aspx?pageid=174
+
+https://pfaf.org/user/shop.aspx
+
+https://plants.sc.egov.usda.gov/java/
+
+obviously some miners would be very helpful.
+plants and species arent always so easily obtained
+
+
+the kml database from the national parks service databases which redirects to arcgis contains more usuable features if you can
+find the actual datasource you're looking for.
+
+https://public-nps.opendata.arcgis.com/search?collection=Dataset
+
+something to look at 
+
+https://mapbox.github.io/togeojson/
+https://geojson.org
+
+its possible that I may want to consider from the perspective of someone who is walking around a lot... maybe..
+adding a time buffer to incorporate extra rest and recuperation between each major point.
