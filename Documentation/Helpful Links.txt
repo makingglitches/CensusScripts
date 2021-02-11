@@ -38,3 +38,29 @@ https://geojson.org
 
 its possible that I may want to consider from the perspective of someone who is walking around a lot... maybe..
 adding a time buffer to incorporate extra rest and recuperation between each major point.
+
+https://water.usgs.gov/ogw/aquifer/map.html
+
+https://www.fws.gov/wetlands/Data/Data-Download.html
+
+https://www.cdc.gov/gis/geo-spatial-data.html
+
+https://avmajournals.avma.org/doi/pdfplus/10.2460/javma.256.2.195
+
+i wonder if they realize when i talk about separatist things I mean forming a place where we can raise children and adults who arent raped ? they must underestimate how infectious they are.
+
+https://www.cdc.gov/lyme/datasurveillance/tables-recent.html
+
+I may have to go to each state governments websites to compile better data
+
+
+-- kind of useless data.
+https://waterdata.usgs.gov/nwis/inventory
+
+-- maybe with headwater consideration ?
+https://hub.arcgis.com/datasets/esri::usa-rivers-and-streams/data
+
+-- worth deeper look
+https://earthexplorer.usgs.gov
+
+see as i said this could keep EVERYONE busy. reproducing gis data in overlay of activities for most redundancy.
