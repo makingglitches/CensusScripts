@@ -18,6 +18,8 @@ namespace ImportShapeFilesAndDBF
 
             string basedatadir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\";
 
+            RiversLoader rivl = new RiversLoader(basedatadir + "RiversAndStreamsData", true, true);
+            rivl.LoadZips();
 
             PlaceLoader pl = new PlaceLoader(basedatadir + "PlacesZips", true, true);
             pl.LoadZips();

@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RiversLoader.cs" />
     <Compile Include="StateLoader.cs" />
     <Compile Include="PlaceLoader.cs" />
     <Compile Include="Program.cs" />

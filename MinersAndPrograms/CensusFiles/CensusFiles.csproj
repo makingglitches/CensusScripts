@@ -52,6 +52,11 @@
     <Compile Include="PlaceRecord.cs" />
     <Compile Include="ClassGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Queries\InsertRiver.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="RiversBase.cs" />
+    <Compile Include="RiversRecord.cs" />
     <Compile Include="RoadBase.cs" />
     <Compile Include="StateRecord.cs" />
     <Compile Include="RoadRecord.cs" />
