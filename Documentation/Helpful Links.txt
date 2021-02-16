@@ -76,3 +76,7 @@ I like data gathering and many things are worth expanding and making more machin
 compilations can be generated for humans !
 
 mother fucking fuck fucks :) x2
+
+Oh and use the same damn usgs downloader and convert anything with .img in a zip into a geotiff, because there are no fucking
+readers for the format in c#!
+https://apps.nationalmap.gov/downloader/#/
