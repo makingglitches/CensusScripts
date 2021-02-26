@@ -16,7 +16,7 @@ var downloadList = '';
 var timems = 1000;
 
 for (var i in speciesdata) {
-	console.log('Processing: ' + i + ' of ' + speciesdata.len);
+	console.log('Processing: ' + i + ' of ' + speciesdata.length);
 	if (!speciesdata[i].RangeArchiveName) {
 		var cmd = '.\\wget --server-response -q -O - ' + speciesdata[i].DlLink + ' 1>dumby.txt 2>value.txt';
 
