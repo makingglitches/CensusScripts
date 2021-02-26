@@ -19,14 +19,24 @@ namespace Fixfbfcrap
     {
         static void Main(string[] args)
         {
-            var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\RiversAndStreamsData\USA_Rivers_and_Streams-shp\9ae73184-d43c-4ab8-940a-c8687f61952f2020328-1-r9gw71.0odx9.dbf");
+
+            var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\AqiferData\aquifrp025.dbf");
 
 
 
-            ClassGenerator.WriteClassBase("RiversBase", "RiversBase.cs", dread);
+            ClassGenerator.WriteClassBase("AquiferBase", "AquiferBase.cs", dread);
 
-            var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\RiversAndStreamsData\USA_Rivers_and_Streams-shp\9ae73184-d43c-4ab8-940a-c8687f61952f2020328-1-r9gw71.0odx9.shp");
+            var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\AqiferData\aquifrp025.shp");
             shp.Load();
+
+            //var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\RiversAndStreamsData\USA_Rivers_and_Streams-shp\9ae73184-d43c-4ab8-940a-c8687f61952f2020328-1-r9gw71.0odx9.dbf");
+
+
+
+            //ClassGenerator.WriteClassBase("RiversBase", "RiversBase.cs", dread);
+
+            //var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\RiversAndStreamsData\USA_Rivers_and_Streams-shp\9ae73184-d43c-4ab8-940a-c8687f61952f2020328-1-r9gw71.0odx9.shp");
+            //shp.Load();
 
             //var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\CensusShapeFileData\StateZips\tl_2019_us_state\tl_2019_us_state.dbf");
 

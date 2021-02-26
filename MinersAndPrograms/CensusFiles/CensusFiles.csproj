@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AquiferBase.cs" />
     <Compile Include="CountyBase.cs" />
     <Compile Include="CountyRecord.cs" />
     <Compile Include="DbfParser.cs" />
@@ -52,10 +53,14 @@
     <Compile Include="PlaceRecord.cs" />
     <Compile Include="ClassGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Queries\InsertAquifer.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Queries\InsertRiver.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Compile Include="RiversBase.cs" />
+    <Compile Include="AquiferRecord.cs" />
     <Compile Include="RiversRecord.cs" />
     <Compile Include="RoadBase.cs" />
     <Compile Include="StateRecord.cs" />
