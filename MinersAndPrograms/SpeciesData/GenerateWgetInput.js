@@ -1,15 +1,29 @@
+// this program generates a list of urls from the 
+// species data webpage, and then saves then to a json file
+// when run again, it generates another file 
+// which tracks which have been finished downloading
+// using the wget tool 
+// it follows the content disposition headers returned from the
+// server to ensure the correct filename is set when each zip is downloaded
+
+
 var fs = require('fs');
 const { execSync } = require('child_process');
 const { time } = require('console');
 
-var json = fs.readFileSync('speciesdownload.json');
-
-var speciesdata = JSON.parse(json);
+// loads the speciesdownload file first
+var json = "" 
+var speciesdata = []
 
 if (fs.existsSync('speciesdatawithfilename.json')) {
-	var json = fs.readFileSync('speciesdatawithfilename.json');
-	var speciesdata = JSON.parse(json);
+	 json = fs.readFileSync('speciesdatawithfilename.json');
 }
+else
+{
+	json=fs.readFileSync('speciesdownload.json');
+}
+
+speciesdata = JSON.parse(json);
 
 var downloadList = '';
 

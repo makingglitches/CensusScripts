@@ -1,0 +1,6978 @@
+[
+	{
+		"LatinName": "Abelmoschus esculentus",
+		"CommonName": "Okra",
+		"URL": "Plant.aspx?LatinName=Abelmoschus esculentus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Abelmoschus manihot",
+		"CommonName": "Aibika",
+		"URL": "Plant.aspx?LatinName=Abelmoschus manihot",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Abutilon megapotamicum",
+		"CommonName": "Trailing Abutilon",
+		"URL": "Plant.aspx?LatinName=Abutilon megapotamicum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Acca sellowiana",
+		"CommonName": "Feijoa, Pineapple Guava",
+		"URL": "Plant.aspx?LatinName=Acca sellowiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Acer saccharum",
+		"CommonName": "Sugar Maple, Florida Maple, Hard Maple, Rock Maple",
+		"URL": "Plant.aspx?LatinName=Acer saccharum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Acer saccharum grandidentatum",
+		"CommonName": "Big-Tooth Maple, Canyon Maple, Rocky Mountain Sugar Maple",
+		"URL": "Plant.aspx?LatinName=Acer saccharum grandidentatum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Acer saccharum nigrum",
+		"CommonName": "Black Maple",
+		"URL": "Plant.aspx?LatinName=Acer saccharum nigrum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Actinidia arguta",
+		"CommonName": "Tara Vine",
+		"URL": "Plant.aspx?LatinName=Actinidia arguta",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Actinidia arguta cordifolia",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Actinidia arguta cordifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Actinidia arguta rufa",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Actinidia arguta rufa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Actinidia chinensis",
+		"CommonName": "Kiwi",
+		"URL": "Plant.aspx?LatinName=Actinidia chinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Actinidia deliciosa",
+		"CommonName": "Kiwi Fruit",
+		"URL": "Plant.aspx?LatinName=Actinidia deliciosa",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Actinidia kolomikta",
+		"CommonName": "Kiwi",
+		"URL": "Plant.aspx?LatinName=Actinidia kolomikta",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Actinidia melanandra",
+		"CommonName": "Red Kiwi",
+		"URL": "Plant.aspx?LatinName=Actinidia melanandra",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Actinidia polygama",
+		"CommonName": "Silver Vine",
+		"URL": "Plant.aspx?LatinName=Actinidia polygama",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Actinidia purpurea",
+		"CommonName": "Purple hardy kiwi",
+		"URL": "Plant.aspx?LatinName=Actinidia purpurea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Actinidia x fairchildii",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Actinidia x fairchildii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Aesculus flava",
+		"CommonName": "Sweet Buckeye, Yellow buckeye",
+		"URL": "Plant.aspx?LatinName=Aesculus flava",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Aesculus spp",
+		"CommonName": "Horse chestnut",
+		"URL": "Plant.aspx?LatinName=Aesculus spp",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Agastache foeniculum",
+		"CommonName": "Anise Hyssop, Blue giant hyssop",
+		"URL": "Plant.aspx?LatinName=Agastache foeniculum",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Agastache rugosa",
+		"CommonName": "Korean Mint",
+		"URL": "Plant.aspx?LatinName=Agastache rugosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Akebia quinata",
+		"CommonName": "Akebia, Chocolate vine, Fiveleaf Akebia, Chocolate Vine",
+		"URL": "Plant.aspx?LatinName=Akebia quinata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Akebia trifoliata",
+		"CommonName": "Akebia, Threeleaf Akebia",
+		"URL": "Plant.aspx?LatinName=Akebia trifoliata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Akebia x pentaphylla",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Akebia x pentaphylla",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium ampeloprasum",
+		"CommonName": "Wild Leek, Broadleaf wild leek",
+		"URL": "Plant.aspx?LatinName=Allium ampeloprasum",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Allium canadense",
+		"CommonName": "Canadian Garlic, Meadow garlic, Fraser meadow garlic, Hyacinth meadow garlic",
+		"URL": "Plant.aspx?LatinName=Allium canadense",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Allium canadense mobilense",
+		"CommonName": "Canadian Garlic",
+		"URL": "Plant.aspx?LatinName=Allium canadense mobilense",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium cepa",
+		"CommonName": "Onion, Garden onion",
+		"URL": "Plant.aspx?LatinName=Allium cepa",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Allium cepa aggregatum",
+		"CommonName": "Potato Onion",
+		"URL": "Plant.aspx?LatinName=Allium cepa aggregatum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Allium cepa ascalonicum",
+		"CommonName": "Shallot",
+		"URL": "Plant.aspx?LatinName=Allium cepa ascalonicum",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium cepa proliferum",
+		"CommonName": "Tree Onion, Walking Onion",
+		"URL": "Plant.aspx?LatinName=Allium cepa proliferum",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Allium cernuum",
+		"CommonName": "Nodding Onion, New Mexican nodding onion",
+		"URL": "Plant.aspx?LatinName=Allium cernuum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Allium chinense",
+		"CommonName": "Rakkyo",
+		"URL": "Plant.aspx?LatinName=Allium chinense",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium fistulosum",
+		"CommonName": "Welsh Onion",
+		"URL": "Plant.aspx?LatinName=Allium fistulosum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Allium moly",
+		"CommonName": "Golden Garlic, Ornamental Onion",
+		"URL": "Plant.aspx?LatinName=Allium moly",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium neapolitanum",
+		"CommonName": "Daffodil Garlic, White garlic",
+		"URL": "Plant.aspx?LatinName=Allium neapolitanum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Allium paradoxum",
+		"CommonName": "Few-Flowered Leek",
+		"URL": "Plant.aspx?LatinName=Allium paradoxum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium porrum",
+		"CommonName": "Leek, Garden leek",
+		"URL": "Plant.aspx?LatinName=Allium porrum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium ramosum",
+		"CommonName": "Chinese Chives",
+		"URL": "Plant.aspx?LatinName=Allium ramosum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium sativum",
+		"CommonName": "Garlic, Cultivated garlic",
+		"URL": "Plant.aspx?LatinName=Allium sativum",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Allium sativum ophioscorodon",
+		"CommonName": "Serpent Garlic",
+		"URL": "Plant.aspx?LatinName=Allium sativum ophioscorodon",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Allium schoenoprasum",
+		"CommonName": "Chives, Wild chives, Flowering Onion",
+		"URL": "Plant.aspx?LatinName=Allium schoenoprasum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Allium schoenoprasum sibiricum",
+		"CommonName": "Giant Chives",
+		"URL": "Plant.aspx?LatinName=Allium schoenoprasum sibiricum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Allium scorodoprasum",
+		"CommonName": "Rocambole, Sand leek",
+		"URL": "Plant.aspx?LatinName=Allium scorodoprasum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium scorodoprasum rotundum",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Allium scorodoprasum rotundum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium senescens",
+		"CommonName": "German Garlic",
+		"URL": "Plant.aspx?LatinName=Allium senescens",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium subhirsutum",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Allium subhirsutum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium tricoccum",
+		"CommonName": "Wood Leek, Ramp",
+		"URL": "Plant.aspx?LatinName=Allium tricoccum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Allium triquetrum",
+		"CommonName": "Three-Cornered Leek",
+		"URL": "Plant.aspx?LatinName=Allium triquetrum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium tuberosum",
+		"CommonName": "Garlic Chives, Chinese chives, Oriental Chives,",
+		"URL": "Plant.aspx?LatinName=Allium tuberosum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Allium ursinum",
+		"CommonName": "Wild Garlic",
+		"URL": "Plant.aspx?LatinName=Allium ursinum",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Allium victorialis",
+		"CommonName": "Alpine Leek, Victory onion",
+		"URL": "Plant.aspx?LatinName=Allium victorialis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Aloysia citriodora",
+		"CommonName": "Lemon Verbena, Lemon beebrush",
+		"URL": "Plant.aspx?LatinName=Aloysia citriodora",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Alternanthera sissoo",
+		"CommonName": "Brazilian Spinach, Sambu, Samba lettuce",
+		"URL": "Plant.aspx?LatinName=Alternanthera sissoo",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Althaea officinalis",
+		"CommonName": "Marsh Mallow, Common marshmallow",
+		"URL": "Plant.aspx?LatinName=Althaea officinalis",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Amaranthus blitum",
+		"CommonName": "Slender Amaranth, Purple amaranth",
+		"URL": "Plant.aspx?LatinName=Amaranthus blitum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Amaranthus caudatus",
+		"CommonName": "Love Lies Bleeding",
+		"URL": "Plant.aspx?LatinName=Amaranthus caudatus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Amaranthus cruentus",
+		"CommonName": "Purple Amaranth, Red amaranth",
+		"URL": "Plant.aspx?LatinName=Amaranthus cruentus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Amaranthus hybridus",
+		"CommonName": "Rough Pigweed, Slim amaranth",
+		"URL": "Plant.aspx?LatinName=Amaranthus hybridus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Amaranthus hypochondriacus",
+		"CommonName": "Prince's Feather, Prince-of-wales feather",
+		"URL": "Plant.aspx?LatinName=Amaranthus hypochondriacus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Amelanchier alnifolia",
+		"CommonName": "Saskatoon, Saskatoon serviceberry, Serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier alnifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Amelanchier alnifolia cusickii",
+		"CommonName": "Cusick's Serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier alnifolia cusickii",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Amelanchier alnifolia semiintegrifolia",
+		"CommonName": "Pacific Serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier alnifolia semiintegrifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Amelanchier basalticola",
+		"CommonName": "Dwarf Service-berry",
+		"URL": "Plant.aspx?LatinName=Amelanchier basalticola",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Amelanchier canadensis",
+		"CommonName": "Juneberry, Canadian serviceberry, Serviceberry Downy, Shadblow, Shadbush, Serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier canadensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Amelanchier confusa",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Amelanchier confusa",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Amelanchier laevis",
+		"CommonName": "Allegheny Shadberry, Allegheny serviceberry, Smooth Serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier laevis",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Amelanchier lamarckii",
+		"CommonName": "Apple Serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier lamarckii",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Amelanchier stolonifera",
+		"CommonName": "Quebec Berry, Running serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier stolonifera",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Amelanchier x grandiflora",
+		"CommonName": "Apple Serviceberry",
+		"URL": "Plant.aspx?LatinName=Amelanchier x grandiflora",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Amorphophallus konjac",
+		"CommonName": "Devil's Tongue, Devil's Tongue, Snake Plant, Konjac, Konnyaku Potato, Voodoo Lily",
+		"URL": "Plant.aspx?LatinName=Amorphophallus konjac",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Amphicarpaea bracteata",
+		"CommonName": "Hog Peanut, American hogpeanut",
+		"URL": "Plant.aspx?LatinName=Amphicarpaea bracteata",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Amphicarpaea edgeworthii",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Amphicarpaea edgeworthii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Amphicarpaea pitcheri",
+		"CommonName": "Hog Peanut",
+		"URL": "Plant.aspx?LatinName=Amphicarpaea pitcheri",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Anacardium occidentale",
+		"CommonName": "Cashew, Caju",
+		"URL": "Plant.aspx?LatinName=Anacardium occidentale",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Anacolosa frutescens",
+		"CommonName": "Galo Nut, Kopi gunung, Tangki leuweung, Belian landak.",
+		"URL": "Plant.aspx?LatinName=Anacolosa frutescens",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ananas comosus",
+		"CommonName": "Pineapple",
+		"URL": "Plant.aspx?LatinName=Ananas comosus",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Ancylobotrys petersiana",
+		"CommonName": "Mbohoya, Mwungo-wungo.",
+		"URL": "Plant.aspx?LatinName=Ancylobotrys petersiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Anethum graveolens",
+		"CommonName": "Dill",
+		"URL": "Plant.aspx?LatinName=Anethum graveolens",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Annona atemoya",
+		"CommonName": "Atemoya",
+		"URL": "Plant.aspx?LatinName=Annona atemoya",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Annona cherimola",
+		"CommonName": "Cherimoya, Custard Apple",
+		"URL": "Plant.aspx?LatinName=Annona cherimola",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Annona liebmanniana",
+		"CommonName": "Posh-te",
+		"URL": "Plant.aspx?LatinName=Annona liebmanniana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Annona mucosa",
+		"CommonName": "Wild Sweetsop",
+		"URL": "Plant.aspx?LatinName=Annona mucosa",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Annona muricata",
+		"CommonName": "Sour Sop",
+		"URL": "Plant.aspx?LatinName=Annona muricata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Annona salzmannii",
+		"CommonName": "Beach Sugar Apple",
+		"URL": "Plant.aspx?LatinName=Annona salzmannii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Annona squamosa",
+		"CommonName": "Sugar Apple, Sweetsop, Custard Apple",
+		"URL": "Plant.aspx?LatinName=Annona squamosa",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Annona vepretorum",
+		"CommonName": "Araticum, Pinha da Caatinga, Araticum-da-bahia",
+		"URL": "Plant.aspx?LatinName=Annona vepretorum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Antidesma bunius",
+		"CommonName": "Bignay, Bignai",
+		"URL": "Plant.aspx?LatinName=Antidesma bunius",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Apios americana",
+		"CommonName": "Ground Nut",
+		"URL": "Plant.aspx?LatinName=Apios americana",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Apios fortunei",
+		"CommonName": "Hodo, Hodoimo",
+		"URL": "Plant.aspx?LatinName=Apios fortunei",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Apios priceana",
+		"CommonName": "Traveler's delight",
+		"URL": "Plant.aspx?LatinName=Apios priceana",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Apium graveolens dulce",
+		"CommonName": "Celery",
+		"URL": "Plant.aspx?LatinName=Apium graveolens dulce",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Apium graveolens rapaceum",
+		"CommonName": "Celeriac",
+		"URL": "Plant.aspx?LatinName=Apium graveolens rapaceum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Apium graveolens secalinum",
+		"CommonName": "Leaf Celery",
+		"URL": "Plant.aspx?LatinName=Apium graveolens secalinum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Arachis hypogaea",
+		"CommonName": "Peanut",
+		"URL": "Plant.aspx?LatinName=Arachis hypogaea",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Aralia cordata",
+		"CommonName": "Udo",
+		"URL": "Plant.aspx?LatinName=Aralia cordata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Aralia nudicaulis",
+		"CommonName": "Wild Sarsaparilla",
+		"URL": "Plant.aspx?LatinName=Aralia nudicaulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Araucaria araucana",
+		"CommonName": "Monkey Puzzle Tree",
+		"URL": "Plant.aspx?LatinName=Araucaria araucana",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Arbutus unedo",
+		"CommonName": "Strawberry Tree",
+		"URL": "Plant.aspx?LatinName=Arbutus unedo",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Arbutus x andrachnoides",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Arbutus x andrachnoides",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Archidendron jiringa",
+		"CommonName": "Jengkol, Jiringa",
+		"URL": "Plant.aspx?LatinName=Archidendron jiringa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Arctium lappa",
+		"CommonName": "Great Burdock, Gobo",
+		"URL": "Plant.aspx?LatinName=Arctium lappa",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Arenga pinnata",
+		"CommonName": "Solitary Sugar Palm",
+		"URL": "Plant.aspx?LatinName=Arenga pinnata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Argania spinosa",
+		"CommonName": "Argan Tree, Spiny Argania, Morocco Ironwood",
+		"URL": "Plant.aspx?LatinName=Argania spinosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Arracacia xanthorrhiza",
+		"CommonName": "Arracacha",
+		"URL": "Plant.aspx?LatinName=Arracacia xanthorrhiza",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Artemisia dracunculus",
+		"CommonName": "Tarragon, French Tarragon",
+		"URL": "Plant.aspx?LatinName=Artemisia dracunculus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Artocarpus altilis",
+		"CommonName": "Breadfruit",
+		"URL": "Plant.aspx?LatinName=Artocarpus altilis",
+		"EdibleRating": "5",
+		"MedicinalRating": "4",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Artocarpus camansi",
+		"CommonName": "Breadnut, Kamansi",
+		"URL": "Plant.aspx?LatinName=Artocarpus camansi",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Artocarpus heterophyllus",
+		"CommonName": "Jackfruit",
+		"URL": "Plant.aspx?LatinName=Artocarpus heterophyllus",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Artocarpus integer",
+		"CommonName": "Champedak",
+		"URL": "Plant.aspx?LatinName=Artocarpus integer",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Artocarpus mariannensis",
+		"CommonName": "Seeded breadfruit, Marianas bread",
+		"URL": "Plant.aspx?LatinName=Artocarpus mariannensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Artocarpus odoratissimus",
+		"CommonName": "Marang, Terap",
+		"URL": "Plant.aspx?LatinName=Artocarpus odoratissimus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Asimina triloba",
+		"CommonName": "Papaw",
+		"URL": "Plant.aspx?LatinName=Asimina triloba",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Asparagus officinalis",
+		"CommonName": "Asparagus, Garden asparagus",
+		"URL": "Plant.aspx?LatinName=Asparagus officinalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Asphodeline lutea",
+		"CommonName": "King's Spear, Yellow Asphodel, Jacob's Rod",
+		"URL": "Plant.aspx?LatinName=Asphodeline lutea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Astragalus crassicarpus",
+		"CommonName": "Ground Plum, Groundplum milkvetch",
+		"URL": "Plant.aspx?LatinName=Astragalus crassicarpus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Astragalus pictus-filifolius",
+		"CommonName": "Painted Milkvetch",
+		"URL": "Plant.aspx?LatinName=Astragalus pictus-filifolius",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Astrebla squarrosa",
+		"CommonName": "Bull Mitchell grass",
+		"URL": "Plant.aspx?LatinName=Astrebla squarrosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Atriplex canescens",
+		"CommonName": "Grey Sage Brush, Fourwing saltbush",
+		"URL": "Plant.aspx?LatinName=Atriplex canescens",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Atriplex confertifolia",
+		"CommonName": "Shadscale, Shadscale saltbush",
+		"URL": "Plant.aspx?LatinName=Atriplex confertifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Atriplex halimus",
+		"CommonName": "Sea Orach, Saltbush",
+		"URL": "Plant.aspx?LatinName=Atriplex halimus",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Atriplex hortensis",
+		"CommonName": "Orach, Garden orache",
+		"URL": "Plant.aspx?LatinName=Atriplex hortensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Atriplex nuttallii",
+		"CommonName": "Nuttall's Saltbush",
+		"URL": "Plant.aspx?LatinName=Atriplex nuttallii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Attalea butyracea",
+		"CommonName": "Wine Palm",
+		"URL": "Plant.aspx?LatinName=Attalea butyracea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Attalea colenda",
+		"CommonName": "Palma real, Chivila",
+		"URL": "Plant.aspx?LatinName=Attalea colenda",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Attalea speciosa",
+		"CommonName": "Babassu, American Oil Palm, Motacu, Motacuchi",
+		"URL": "Plant.aspx?LatinName=Attalea speciosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Avena nuda",
+		"CommonName": "Naked Oat",
+		"URL": "Plant.aspx?LatinName=Avena nuda",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Averrhoa carambola",
+		"CommonName": "Carambola, Star Fruit",
+		"URL": "Plant.aspx?LatinName=Averrhoa carambola",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Baccharoides hymenolepis",
+		"CommonName": "Baccharoides",
+		"URL": "Plant.aspx?LatinName=Baccharoides hymenolepis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Bactris gasipaes",
+		"CommonName": "Peach Palm, Pupunha",
+		"URL": "Plant.aspx?LatinName=Bactris gasipaes",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Balsamorhiza deltoidea",
+		"CommonName": "Deltoid Balsamroot",
+		"URL": "Plant.aspx?LatinName=Balsamorhiza deltoidea",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Balsamorhiza hookeri",
+		"CommonName": "Balsam Root, Hooker's balsamroot, Hairy balsamroot, Idaho balsamroot, Rabbithead balsamroot, Negle",
+		"URL": "Plant.aspx?LatinName=Balsamorhiza hookeri",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Balsamorhiza sagittata",
+		"CommonName": "Oregon Sunflower, Arrowleaf balsamroot",
+		"URL": "Plant.aspx?LatinName=Balsamorhiza sagittata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Bambusa odashimae",
+		"CommonName": "Odashimae Bamboo",
+		"URL": "Plant.aspx?LatinName=Bambusa odashimae",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Basella alba",
+		"CommonName": "Malabar Spinach, Indian Spinach, Ceylon spinach,",
+		"URL": "Plant.aspx?LatinName=Basella alba",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Berberis aristata",
+		"CommonName": "Chitra, Indian Barberry or Tree Turmeric",
+		"URL": "Plant.aspx?LatinName=Berberis aristata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Berberis asiatica",
+		"CommonName": "Chutro, Rasanjan (Nep); marpyashi (Newa); Daruharidra, Darbi (Sans)",
+		"URL": "Plant.aspx?LatinName=Berberis asiatica",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Berberis buxifolia",
+		"CommonName": "Magellan Barberry",
+		"URL": "Plant.aspx?LatinName=Berberis buxifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Berberis darwinii",
+		"CommonName": "Darwin's Barberry, Darwin's berberis",
+		"URL": "Plant.aspx?LatinName=Berberis darwinii",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Bertholletia excelsa",
+		"CommonName": "Brazil Nut",
+		"URL": "Plant.aspx?LatinName=Bertholletia excelsa",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Beta vulgaris altissima",
+		"CommonName": "Sugar Beet",
+		"URL": "Plant.aspx?LatinName=Beta vulgaris altissima",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Beta vulgaris cicla",
+		"CommonName": "Spinach Beet",
+		"URL": "Plant.aspx?LatinName=Beta vulgaris cicla",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Beta vulgaris craca",
+		"CommonName": "Beetroot",
+		"URL": "Plant.aspx?LatinName=Beta vulgaris craca",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Beta vulgaris flavescens",
+		"CommonName": "Swiss Chard",
+		"URL": "Plant.aspx?LatinName=Beta vulgaris flavescens",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Borassus aethiopum",
+		"CommonName": "African Fan Palm, Palmyra Palm",
+		"URL": "Plant.aspx?LatinName=Borassus aethiopum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Borassus akeassii",
+		"CommonName": "African Fan Palm",
+		"URL": "Plant.aspx?LatinName=Borassus akeassii",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Borassus flabellifer",
+		"CommonName": "Palmyra Palm",
+		"URL": "Plant.aspx?LatinName=Borassus flabellifer",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Borojoa patinoi",
+		"CommonName": "Borojo",
+		"URL": "Plant.aspx?LatinName=Borojoa patinoi",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Boscia senegalensis",
+		"CommonName": "Aizen, Boscia",
+		"URL": "Plant.aspx?LatinName=Boscia senegalensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Brassica carinata",
+		"CommonName": "Abyssinian Cabbage",
+		"URL": "Plant.aspx?LatinName=Brassica carinata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Brassica juncea",
+		"CommonName": "Brown Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica juncea crispifolia",
+		"CommonName": "Curled Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea crispifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica juncea foliosa",
+		"CommonName": "Leaf Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea foliosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica juncea integrifolia crispifolia",
+		"CommonName": "Curled Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea integrifolia crispifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica juncea integrifolia rugosa",
+		"CommonName": "Head Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea integrifolia rugosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica juncea integrifolia strumata",
+		"CommonName": "Large Petiole Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea integrifolia strumata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica juncea integrifolia subintegrifolia",
+		"CommonName": "Leaf Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea integrifolia subintegrifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica juncea multiceps",
+		"CommonName": "Green In The Snow",
+		"URL": "Plant.aspx?LatinName=Brassica juncea multiceps",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica juncea napiformis",
+		"CommonName": "Root Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea napiformis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica juncea rugosa",
+		"CommonName": "Head Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea rugosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica juncea strumata",
+		"CommonName": "Large Petiole Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea strumata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica juncea tsatsai multiceps",
+		"CommonName": "Green In The Snow",
+		"URL": "Plant.aspx?LatinName=Brassica juncea tsatsai multiceps",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica juncea tsatsai tumida",
+		"CommonName": "Swollen-Stem Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea tsatsai tumida",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica juncea tumida",
+		"CommonName": "Swollen-Stem Mustard",
+		"URL": "Plant.aspx?LatinName=Brassica juncea tumida",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica napus napobrassica",
+		"CommonName": "Swede",
+		"URL": "Plant.aspx?LatinName=Brassica napus napobrassica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica oleracea",
+		"CommonName": "Wild Cabbage, Broccoli, Tronchuda cabbage, Brussels sprouts, Kohlrabi, Sprouting broccoli",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Brassica oleracea acephala",
+		"CommonName": "Collards",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea acephala",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Brassica oleracea botrytis",
+		"CommonName": "Cauliflower",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea botrytis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Brassica oleracea botrytis aparagoides",
+		"CommonName": "Nine Star Perennial Broccoli",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea botrytis aparagoides",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Brassica oleracea capitata",
+		"CommonName": "Cabbage,Ornamental Cabbage, Red Cabbage, Savoy Cabbage",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea capitata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Brassica oleracea gemmifera",
+		"CommonName": "Brussels Sprouts",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea gemmifera",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica oleracea italica",
+		"CommonName": "Broccoli",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea italica",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica oleracea medullosa",
+		"CommonName": "Marrow-Stem Kale",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea medullosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica oleracea ramosa",
+		"CommonName": "Perpetual Kale",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea ramosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Brassica oleracea sabauda",
+		"CommonName": "Savoy Cabbage",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea sabauda",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Brassica oleracea sabellica",
+		"CommonName": "Curly Kale",
+		"URL": "Plant.aspx?LatinName=Brassica oleracea sabellica",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica rapa chinensis",
+		"CommonName": "Pak Choi",
+		"URL": "Plant.aspx?LatinName=Brassica rapa chinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica rapa nipposinica",
+		"CommonName": "Mizuna",
+		"URL": "Plant.aspx?LatinName=Brassica rapa nipposinica",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Brassica rapa parachinensis",
+		"CommonName": "False Pak Choi",
+		"URL": "Plant.aspx?LatinName=Brassica rapa parachinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Brassica rapa pekinensis",
+		"CommonName": "Chinese Cabbage",
+		"URL": "Plant.aspx?LatinName=Brassica rapa pekinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Broussonetia papyrifera",
+		"CommonName": "Paper Mulberry",
+		"URL": "Plant.aspx?LatinName=Broussonetia papyrifera",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Buchanania lanzan",
+		"CommonName": "Almondette, Charoli Nut",
+		"URL": "Plant.aspx?LatinName=Buchanania lanzan",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Bunias orientalis",
+		"CommonName": "Turkish Rocket, Turkish wartycabbage",
+		"URL": "Plant.aspx?LatinName=Bunias orientalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Bunium bulbocastanum",
+		"CommonName": "Pig Nut, Earth-nut",
+		"URL": "Plant.aspx?LatinName=Bunium bulbocastanum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Byrsonima crassifolia",
+		"CommonName": "Golden Spoon, Nance, Nancy Tree",
+		"URL": "Plant.aspx?LatinName=Byrsonima crassifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cajanus cajan",
+		"CommonName": "Pigeon Pea, Puerto Rico Bean, Gandul, Dhal, Congo Pea",
+		"URL": "Plant.aspx?LatinName=Cajanus cajan",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Calathea allouia",
+		"CommonName": "Sweetcorn Root, Guinea Arrowroot",
+		"URL": "Plant.aspx?LatinName=Calathea allouia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Camassia leichtlinii",
+		"CommonName": "Wild Hyacinth, Large camas, Suksdorf's large camas",
+		"URL": "Plant.aspx?LatinName=Camassia leichtlinii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Camassia quamash",
+		"CommonName": "Quamash, Small camas, Utah small camas, Walpole's small camas",
+		"URL": "Plant.aspx?LatinName=Camassia quamash",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Camellia sinensis",
+		"CommonName": "Tea Plant, Assam tea, Tea Tree Camellia",
+		"URL": "Plant.aspx?LatinName=Camellia sinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Camellia sinensis assamica",
+		"CommonName": "Tea Plant, Assam Tea",
+		"URL": "Plant.aspx?LatinName=Camellia sinensis assamica",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Campanula cochleariifolia",
+		"CommonName": "Fairies Thimbles",
+		"URL": "Plant.aspx?LatinName=Campanula cochleariifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula fenestrellata",
+		"CommonName": "Adriatic Bellflower",
+		"URL": "Plant.aspx?LatinName=Campanula fenestrellata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula glomerata",
+		"CommonName": "Clustered Bellflower, Dane's blood, Clustered Bellflower",
+		"URL": "Plant.aspx?LatinName=Campanula glomerata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula persicifolia",
+		"CommonName": "Harebell, Peachleaf bellflower",
+		"URL": "Plant.aspx?LatinName=Campanula persicifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula poscharskyana",
+		"CommonName": "Trailing Bellflower",
+		"URL": "Plant.aspx?LatinName=Campanula poscharskyana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula punctata",
+		"CommonName": "Chinese Rampion, Spotted bellflower",
+		"URL": "Plant.aspx?LatinName=Campanula punctata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula rapunculus",
+		"CommonName": "Rampion",
+		"URL": "Plant.aspx?LatinName=Campanula rapunculus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula takesimana",
+		"CommonName": "Korean Bellflower",
+		"URL": "Plant.aspx?LatinName=Campanula takesimana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Campanula versicolor",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Campanula versicolor",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Canarium indicum",
+		"CommonName": "Canarium Nut, Ngali, Galip nut, kenari nut",
+		"URL": "Plant.aspx?LatinName=Canarium indicum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Canarium luzonicum",
+		"CommonName": "Manila Elemi",
+		"URL": "Plant.aspx?LatinName=Canarium luzonicum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Canarium ovatum",
+		"CommonName": "Pili Nut",
+		"URL": "Plant.aspx?LatinName=Canarium ovatum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Canarium vulgare",
+		"CommonName": "Java Almond, Kenari Nut",
+		"URL": "Plant.aspx?LatinName=Canarium vulgare",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Canna indica",
+		"CommonName": "Indian Shot",
+		"URL": "Plant.aspx?LatinName=Canna indica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cannabis sativa",
+		"CommonName": "Hemp, Marijuana",
+		"URL": "Plant.aspx?LatinName=Cannabis sativa",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Capsicum annuum",
+		"CommonName": "Sweet Pepper, Cayenne Pepper, Chili Pepper, Christmas Pepper, Red Pepper, Ornamental Chili Pepper",
+		"URL": "Plant.aspx?LatinName=Capsicum annuum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Caragana arborescens",
+		"CommonName": "Siberian Pea Tree, Siberian peashrub",
+		"URL": "Plant.aspx?LatinName=Caragana arborescens",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Caragana boisii",
+		"CommonName": "Siberian peatree",
+		"URL": "Plant.aspx?LatinName=Caragana boisii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Caragana brevispina",
+		"CommonName": "Pea Tree, Bebali kanda",
+		"URL": "Plant.aspx?LatinName=Caragana brevispina",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Carica papaya",
+		"CommonName": "Papaya, Mamo, Melon Tree",
+		"URL": "Plant.aspx?LatinName=Carica papaya",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Carthamus tinctorius",
+		"CommonName": "Safflower | Koosumbha | Hoang-tchi",
+		"URL": "Plant.aspx?LatinName=Carthamus tinctorius",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Carum carvi",
+		"CommonName": "Caraway",
+		"URL": "Plant.aspx?LatinName=Carum carvi",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Carya hybrids",
+		"CommonName": "Hybrid and neohybrid hickories",
+		"URL": "Plant.aspx?LatinName=Carya hybrids",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Carya illinoinensis",
+		"CommonName": "Pecan",
+		"URL": "Plant.aspx?LatinName=Carya illinoinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Caryocar brasiliense",
+		"CommonName": "Pequi, Souari nut",
+		"URL": "Plant.aspx?LatinName=Caryocar brasiliense",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Caryocar nuciferum",
+		"CommonName": "Souari Nut. Butter Nut",
+		"URL": "Plant.aspx?LatinName=Caryocar nuciferum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Caryota urens",
+		"CommonName": "Jaggary Palm, Toddy Palm, Fishtail Wine Palm",
+		"URL": "Plant.aspx?LatinName=Caryota urens",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Casimiroa edulis",
+		"CommonName": "White Sapote, Mexican Apple",
+		"URL": "Plant.aspx?LatinName=Casimiroa edulis",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cassia leiandra",
+		"CommonName": "Marimari",
+		"URL": "Plant.aspx?LatinName=Cassia leiandra",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Castanea pumila",
+		"CommonName": "Chinquapin, Ozark chinkapin",
+		"URL": "Plant.aspx?LatinName=Castanea pumila",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Castanea pumila ashei",
+		"CommonName": "Chinquapin",
+		"URL": "Plant.aspx?LatinName=Castanea pumila ashei",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Castanea sativa",
+		"CommonName": "Sweet Chestnut, European chestnut",
+		"URL": "Plant.aspx?LatinName=Castanea sativa",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Castanea species",
+		"CommonName": "Chestnut Hybrids",
+		"URL": "Plant.aspx?LatinName=Castanea species",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Castanospermum australe",
+		"CommonName": "Moreton Bay Chestnut",
+		"URL": "Plant.aspx?LatinName=Castanospermum australe",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Celosia argentea cristata",
+		"CommonName": "Common Cockscomb, Crested Celosia",
+		"URL": "Plant.aspx?LatinName=Celosia argentea cristata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Cephalotaxus fortunei",
+		"CommonName": "Chinese Plum Yew",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus fortunei",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cephalotaxus harringtonia",
+		"CommonName": "Japanese Plum Yew",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus harringtonia",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cephalotaxus harringtonia drupacea",
+		"CommonName": "Japanese Plum Yew",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus harringtonia drupacea",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cephalotaxus harringtonia koreana",
+		"CommonName": "Korean Plum Yew",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus harringtonia koreana",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cephalotaxus harringtonia nana",
+		"CommonName": "Japanese Plum Yew",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus harringtonia nana",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cephalotaxus lanceolata",
+		"CommonName": "Yunnan Plum Yew",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus lanceolata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cephalotaxus sinensis",
+		"CommonName": "Chinese Plum Yew",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus sinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cephalotaxus wilsoniana",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Cephalotaxus wilsoniana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cercis siliquastrum",
+		"CommonName": "Judas Tree, Redbud",
+		"URL": "Plant.aspx?LatinName=Cercis siliquastrum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Chaenomeles cathayensis",
+		"CommonName": "Chinese Quince",
+		"URL": "Plant.aspx?LatinName=Chaenomeles cathayensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Chamaedorea tepejilote",
+		"CommonName": "Pacaya Palm, Palmito dulce",
+		"URL": "Plant.aspx?LatinName=Chamaedorea tepejilote",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Chenopodium bonus-henricus",
+		"CommonName": "Good King Henry",
+		"URL": "Plant.aspx?LatinName=Chenopodium bonus-henricus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Chenopodium nuttalliae",
+		"CommonName": "Huauzontle, Nuttall's goosefoot",
+		"URL": "Plant.aspx?LatinName=Chenopodium nuttalliae",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Chenopodium quinoa",
+		"CommonName": "Quinoa, Goosefoot, Pigweed, Inca Wheat",
+		"URL": "Plant.aspx?LatinName=Chenopodium quinoa",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Chenopodium spp.",
+		"CommonName": "Perennial quinoa",
+		"URL": "Plant.aspx?LatinName=Chenopodium spp.",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Chrysobalanus icaco",
+		"CommonName": "Coco Plum, Paradise Plum",
+		"URL": "Plant.aspx?LatinName=Chrysobalanus icaco",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Chrysophyllum cainito",
+		"CommonName": "Star Apple, Caimito",
+		"URL": "Plant.aspx?LatinName=Chrysophyllum cainito",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cicer arietinum",
+		"CommonName": "Chick Pea",
+		"URL": "Plant.aspx?LatinName=Cicer arietinum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cichorium intybus",
+		"CommonName": "Chicory, Radicchio, Succory, Witloof",
+		"URL": "Plant.aspx?LatinName=Cichorium intybus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cinnamomum loureiroi",
+		"CommonName": "Saigon Cinnamon",
+		"URL": "Plant.aspx?LatinName=Cinnamomum loureiroi",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cinnamomum verum",
+		"CommonName": "Cinnamon, Ceylon Cinnamon Tree",
+		"URL": "Plant.aspx?LatinName=Cinnamomum verum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Citrullus lanatus",
+		"CommonName": "Water Melon",
+		"URL": "Plant.aspx?LatinName=Citrullus lanatus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Citrus aurantiifolia",
+		"CommonName": "Lime, Key Lime, Mexican Lime, Mexican Thornless Key Lime",
+		"URL": "Plant.aspx?LatinName=Citrus aurantiifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Citrus limon",
+		"CommonName": "Lemon",
+		"URL": "Plant.aspx?LatinName=Citrus limon",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Citrus sinensis",
+		"CommonName": "Sweet Orange",
+		"URL": "Plant.aspx?LatinName=Citrus sinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Citrus x paradisi",
+		"CommonName": "Grapefruit, Pomelo, Pamplemousse",
+		"URL": "Plant.aspx?LatinName=Citrus x paradisi",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Claytonia perfoliata",
+		"CommonName": "Miner's Lettuce",
+		"URL": "Plant.aspx?LatinName=Claytonia perfoliata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Claytonia sibirica",
+		"CommonName": "Pink Purslane, Siberian springbeauty",
+		"URL": "Plant.aspx?LatinName=Claytonia sibirica",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cnidoscolus aconitifolius",
+		"CommonName": "Tree Spinach, Tread Softly, Cabbage Star, Chaya",
+		"URL": "Plant.aspx?LatinName=Cnidoscolus aconitifolius",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cocos nucifera",
+		"CommonName": "Coconut Palm, Coconut",
+		"URL": "Plant.aspx?LatinName=Cocos nucifera",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Colocasia esculenta",
+		"CommonName": "Taro, Elephant Ears Taro, Dasheen, Eddo",
+		"URL": "Plant.aspx?LatinName=Colocasia esculenta",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Corchorus olitorius",
+		"CommonName": "Jew's Mallow, Nalta jute",
+		"URL": "Plant.aspx?LatinName=Corchorus olitorius",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Coriandrum sativum",
+		"CommonName": "Coriander - Dhania - Cilantro, Coriander",
+		"URL": "Plant.aspx?LatinName=Coriandrum sativum",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Cornus canadensis",
+		"CommonName": "Creeping Dogwood, Bunchberry dogwood, Bunchberry",
+		"URL": "Plant.aspx?LatinName=Cornus canadensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cornus capitata",
+		"CommonName": "Bentham's Cornel",
+		"URL": "Plant.aspx?LatinName=Cornus capitata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cornus elliptica",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Cornus elliptica",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cornus kousa",
+		"CommonName": "Japanese Dogwood, Kousa dogwood, Chinese Dogwood,",
+		"URL": "Plant.aspx?LatinName=Cornus kousa",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cornus kousa chinensis",
+		"CommonName": "Japanese Dogwood",
+		"URL": "Plant.aspx?LatinName=Cornus kousa chinensis",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cornus mas",
+		"CommonName": "Cornelian Cherry, Cornelian Cherry Dogwood",
+		"URL": "Plant.aspx?LatinName=Cornus mas",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cornus officinalis",
+		"CommonName": "Shan Zhu Yu, Asiatic dogwood, Japanese Cornel Dogwood",
+		"URL": "Plant.aspx?LatinName=Cornus officinalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Corylus avellana",
+		"CommonName": "Common Hazel, Common filbert, European Filbert, Harry Lauder's Walking Stick, Corkscrew Hazel, Hazel",
+		"URL": "Plant.aspx?LatinName=Corylus avellana",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Corylus avellana pontica",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Corylus avellana pontica",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Corylus hybrids & neohybrids",
+		"CommonName": "Hybrid & Neohybrids, Hazel, Filbert",
+		"URL": "Plant.aspx?LatinName=Corylus hybrids & neohybrids",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Corylus maxima",
+		"CommonName": "Filbert, Giant filbert",
+		"URL": "Plant.aspx?LatinName=Corylus maxima",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Couepia bracteosa",
+		"CommonName": "Pajura",
+		"URL": "Plant.aspx?LatinName=Couepia bracteosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Couma macrocarpa",
+		"CommonName": "Barca, Milk Tree, Couba, Sorva, Sorva grande",
+		"URL": "Plant.aspx?LatinName=Couma macrocarpa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Couma utilis",
+		"CommonName": "Sorva, Milk Tree",
+		"URL": "Plant.aspx?LatinName=Couma utilis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crambe maritima",
+		"CommonName": "Sea Kale",
+		"URL": "Plant.aspx?LatinName=Crambe maritima",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Crassocephalum crepidioides",
+		"CommonName": "Okinawa Spinach, Redflower Ragleaf, Fireweed",
+		"URL": "Plant.aspx?LatinName=Crassocephalum crepidioides",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus acclivis",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus acclivis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus arnoldiana",
+		"CommonName": "Arnold Hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus arnoldiana",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Crataegus azarolus",
+		"CommonName": "Azarole",
+		"URL": "Plant.aspx?LatinName=Crataegus azarolus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus baroussana",
+		"CommonName": "Tejocote",
+		"URL": "Plant.aspx?LatinName=Crataegus baroussana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus caesa",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus caesa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus champlainensis",
+		"CommonName": "Quebec hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus champlainensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus douglasii",
+		"CommonName": "Black Hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus douglasii",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus durobrivensis",
+		"CommonName": "Caughuawaga Hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus durobrivensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus ellwangeriana",
+		"CommonName": "Scarlet Hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus ellwangeriana",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus elongata",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus elongata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus festiva",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus festiva",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus holmesiana",
+		"CommonName": "Holmes' hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus holmesiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus illinoiensis",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus illinoiensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus laciniata",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus laciniata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus missouriensis",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus missouriensis",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus mollis",
+		"CommonName": "Red Haw, Downy hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus mollis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus pedicellata",
+		"CommonName": "Scarlet Haw, Scarlet hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus pedicellata",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus pennsylvanica",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus pennsylvanica",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus pinnatifida major",
+		"CommonName": "Chinese Haw",
+		"URL": "Plant.aspx?LatinName=Crataegus pinnatifida major",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus pontica",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Crataegus pontica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus schraderana",
+		"CommonName": "Blue hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus schraderana",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus submollis",
+		"CommonName": "Quebec Hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus submollis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Crataegus succulenta",
+		"CommonName": "Fleshy hawthorn",
+		"URL": "Plant.aspx?LatinName=Crataegus succulenta",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Crataegus tanacetifolia",
+		"CommonName": "Tansy-Leaved Thorn",
+		"URL": "Plant.aspx?LatinName=Crataegus tanacetifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cryptotaenia japonica",
+		"CommonName": "Mitsuba, Japanese honewort",
+		"URL": "Plant.aspx?LatinName=Cryptotaenia japonica",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cucumis melo",
+		"CommonName": "Melon, Cantaloupe",
+		"URL": "Plant.aspx?LatinName=Cucumis melo",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Cucumis melo cantalupensis",
+		"CommonName": "Cantaloupe Melon",
+		"URL": "Plant.aspx?LatinName=Cucumis melo cantalupensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cucumis melo conomon",
+		"CommonName": "Pickling Melon",
+		"URL": "Plant.aspx?LatinName=Cucumis melo conomon",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cucumis melo flexuosus",
+		"CommonName": "Serpent Melon",
+		"URL": "Plant.aspx?LatinName=Cucumis melo flexuosus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cucumis melo inodorus",
+		"CommonName": "Honeydew Melon",
+		"URL": "Plant.aspx?LatinName=Cucumis melo inodorus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cucumis melo momordica",
+		"CommonName": "Snap Melon",
+		"URL": "Plant.aspx?LatinName=Cucumis melo momordica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cucumis sativus",
+		"CommonName": "Cucumber, Garden cucumber",
+		"URL": "Plant.aspx?LatinName=Cucumis sativus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cucurbita argyrosperma",
+		"CommonName": "Cushaw Pumpkin",
+		"URL": "Plant.aspx?LatinName=Cucurbita argyrosperma",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Cucurbita maxima",
+		"CommonName": "Winter Squash",
+		"URL": "Plant.aspx?LatinName=Cucurbita maxima",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cucurbita moschata",
+		"CommonName": "Squash, Crookneck squash",
+		"URL": "Plant.aspx?LatinName=Cucurbita moschata",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Cucurbita pepo",
+		"CommonName": "Pumpkin, Field pumpkin, Ozark melon, Texas gourd",
+		"URL": "Plant.aspx?LatinName=Cucurbita pepo",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cuminum cyminum",
+		"CommonName": "Cumin - Jeera",
+		"URL": "Plant.aspx?LatinName=Cuminum cyminum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Cyamopsis tetragonoloba",
+		"CommonName": "Guar, Cluster Bean",
+		"URL": "Plant.aspx?LatinName=Cyamopsis tetragonoloba",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cydonia oblonga",
+		"CommonName": "Quince",
+		"URL": "Plant.aspx?LatinName=Cydonia oblonga",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Cymopterus acaulis",
+		"CommonName": "Plains Springparsley, Fendler's springparsley, Greeley springparsley, Higgins' springparsley",
+		"URL": "Plant.aspx?LatinName=Cymopterus acaulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Cymopterus purpurascens",
+		"CommonName": "Gamote, Widewing springparsley",
+		"URL": "Plant.aspx?LatinName=Cymopterus purpurascens",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Cyperus esculentus",
+		"CommonName": "Tiger Nut, Yellow nutsedge, Nut Grass",
+		"URL": "Plant.aspx?LatinName=Cyperus esculentus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Dacryodes edulis",
+		"CommonName": "Bush Butter Tree, Butterfruit, African Plum, bush pear, bush plum, safou",
+		"URL": "Plant.aspx?LatinName=Dacryodes edulis",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Daucus carota sativus",
+		"CommonName": "Carrot",
+		"URL": "Plant.aspx?LatinName=Daucus carota sativus",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Dendrocalamus asper",
+		"CommonName": "Giant Bamboo, Dragon bamboo, Sweet bamboo",
+		"URL": "Plant.aspx?LatinName=Dendrocalamus asper",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Dendrocalamus latiflorus",
+		"CommonName": "Sweet Bamboo, Sweet bamboo shoot, Taiwan giant bamboo",
+		"URL": "Plant.aspx?LatinName=Dendrocalamus latiflorus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Dentaria diphylla",
+		"CommonName": "Crinkleroot",
+		"URL": "Plant.aspx?LatinName=Dentaria diphylla",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Desmanthus illinoensis",
+		"CommonName": "Prairie Mimosa, Illinois bundleflower",
+		"URL": "Plant.aspx?LatinName=Desmanthus illinoensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Dichelostemma pulchellum",
+		"CommonName": "Wild Hyacinth",
+		"URL": "Plant.aspx?LatinName=Dichelostemma pulchellum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Dictyosperma album",
+		"CommonName": "Hurricane Palm, Princess Palm, Red Palm",
+		"URL": "Plant.aspx?LatinName=Dictyosperma album",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Dimocarpus longan",
+		"CommonName": "Longan, Lungan, Dragon's Eye, Cat's Eye",
+		"URL": "Plant.aspx?LatinName=Dimocarpus longan",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Dioscorea alata",
+		"CommonName": "Water Yam, Purple yam, Greater yam, White yam",
+		"URL": "Plant.aspx?LatinName=Dioscorea alata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Dioscorea batatas",
+		"CommonName": "Chinese Yam",
+		"URL": "Plant.aspx?LatinName=Dioscorea batatas",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Dioscorea bulbifera",
+		"CommonName": "Aerial Yam, Air Potato",
+		"URL": "Plant.aspx?LatinName=Dioscorea bulbifera",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Dioscorea cayennensis",
+		"CommonName": "Yellow Yam, Yellow Guinea yam",
+		"URL": "Plant.aspx?LatinName=Dioscorea cayennensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Dioscorea esculenta",
+		"CommonName": "Lesser Yam, Potato Yam, Chinese Yam, Wild Yam",
+		"URL": "Plant.aspx?LatinName=Dioscorea esculenta",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Dioscorea japonica",
+		"CommonName": "Glutinous Yam, Japanese yam",
+		"URL": "Plant.aspx?LatinName=Dioscorea japonica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Dioscorea trifida",
+		"CommonName": "Cush Cush Yam, Sweet yam",
+		"URL": "Plant.aspx?LatinName=Dioscorea trifida",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Dioscoreophyllum cumminsii",
+		"CommonName": "Serendipity Berry, Guinea potato",
+		"URL": "Plant.aspx?LatinName=Dioscoreophyllum cumminsii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Diospyros conzattii",
+		"CommonName": "Zapote negro mont's, zapotillo.",
+		"URL": "Plant.aspx?LatinName=Diospyros conzattii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Diospyros digyna",
+		"CommonName": "Black Sapote, Chocolate Pudding Tree",
+		"URL": "Plant.aspx?LatinName=Diospyros digyna",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Diospyros kaki",
+		"CommonName": "Persimmon, Japanese persimmon",
+		"URL": "Plant.aspx?LatinName=Diospyros kaki",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Diospyros lotus",
+		"CommonName": "Date Plum",
+		"URL": "Plant.aspx?LatinName=Diospyros lotus",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Diospyros mespiliformis",
+		"CommonName": "West African Ebony, Monkey guava, jackalberry",
+		"URL": "Plant.aspx?LatinName=Diospyros mespiliformis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Diospyros virginiana",
+		"CommonName": "American Persimmon, Common persimmon, Persimmon",
+		"URL": "Plant.aspx?LatinName=Diospyros virginiana",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Diplotaxis tenuifolia",
+		"CommonName": "Perennial Wall Rocket",
+		"URL": "Plant.aspx?LatinName=Diplotaxis tenuifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Distichlis palmeri",
+		"CommonName": "Nipa. Palmer saltgrass, NyPa Wild Wheat",
+		"URL": "Plant.aspx?LatinName=Distichlis palmeri",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Dovyalis abyssinica",
+		"CommonName": "Abyssinian Gooseberry",
+		"URL": "Plant.aspx?LatinName=Dovyalis abyssinica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Durio dulcis",
+		"CommonName": "Durian Marangang, Merangang, Red Durian, Tutong, Lahong",
+		"URL": "Plant.aspx?LatinName=Durio dulcis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Durio zibethinus",
+		"CommonName": "Durian",
+		"URL": "Plant.aspx?LatinName=Durio zibethinus",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Elaeagnus angustifolia",
+		"CommonName": "Oleaster, Russian olive",
+		"URL": "Plant.aspx?LatinName=Elaeagnus angustifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Elaeagnus cordifolia",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Elaeagnus cordifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Elaeagnus glabra",
+		"CommonName": "Goat nipple",
+		"URL": "Plant.aspx?LatinName=Elaeagnus glabra",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Elaeagnus macrophylla",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Elaeagnus macrophylla",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Elaeagnus multiflora",
+		"CommonName": "Goumi, Cherry silverberry",
+		"URL": "Plant.aspx?LatinName=Elaeagnus multiflora",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Elaeagnus multiflora ovata",
+		"CommonName": "Goumi",
+		"URL": "Plant.aspx?LatinName=Elaeagnus multiflora ovata",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Elaeagnus orientalis",
+		"CommonName": "Trebizond Date",
+		"URL": "Plant.aspx?LatinName=Elaeagnus orientalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Elaeagnus parvifolia",
+		"CommonName": "Autumn olive",
+		"URL": "Plant.aspx?LatinName=Elaeagnus parvifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Elaeagnus pungens",
+		"CommonName": "Elaeagnus, Thorny olive, Thorny Elaeagnus, Oleaster, Silverberry, Silverthorn, Pungent Elaeagnus",
+		"URL": "Plant.aspx?LatinName=Elaeagnus pungens",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Elaeagnus umbellata",
+		"CommonName": "Autumn Olive",
+		"URL": "Plant.aspx?LatinName=Elaeagnus umbellata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Elaeagnus x ebbingei",
+		"CommonName": "Elaeagnus, Ebbing's Silverberry",
+		"URL": "Plant.aspx?LatinName=Elaeagnus x ebbingei",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Elaeis guineensis",
+		"CommonName": "African Oil Palm",
+		"URL": "Plant.aspx?LatinName=Elaeis guineensis",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Eleusine coracana",
+		"CommonName": "Finger Millet, African finger millet",
+		"URL": "Plant.aspx?LatinName=Eleusine coracana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Elymus hispidus",
+		"CommonName": "Wild triga, Pubescent wheatgrass,",
+		"URL": "Plant.aspx?LatinName=Elymus hispidus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Eriobotrya japonica",
+		"CommonName": "Loquat, Japanese Loquat",
+		"URL": "Plant.aspx?LatinName=Eriobotrya japonica",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Eruca vesicaria sativa",
+		"CommonName": "Rocket",
+		"URL": "Plant.aspx?LatinName=Eruca vesicaria sativa",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Erythronium americanum",
+		"CommonName": "Trout Lily, Dogtooth violet",
+		"URL": "Plant.aspx?LatinName=Erythronium americanum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Erythronium japonicum",
+		"CommonName": "Katakuri",
+		"URL": "Plant.aspx?LatinName=Erythronium japonicum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Escontria chiotilla",
+		"CommonName": "Chiotilla, Jiotilla",
+		"URL": "Plant.aspx?LatinName=Escontria chiotilla",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Eugenia brasiliensis",
+		"CommonName": "Grumichama, Brazilian Plum",
+		"URL": "Plant.aspx?LatinName=Eugenia brasiliensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Eugenia uniflora",
+		"CommonName": "Brazil Cherry",
+		"URL": "Plant.aspx?LatinName=Eugenia uniflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Euterpe edulis",
+		"CommonName": "Jucara Palm, Assai Palm",
+		"URL": "Plant.aspx?LatinName=Euterpe edulis",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Euterpe oleracea",
+		"CommonName": "Acai, Assai Palm, Acai Palm",
+		"URL": "Plant.aspx?LatinName=Euterpe oleracea",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Fagopyrum dibotrys",
+		"CommonName": "Perennial Buckwheat",
+		"URL": "Plant.aspx?LatinName=Fagopyrum dibotrys",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Fagopyrum esculentum",
+		"CommonName": "Buckwheat",
+		"URL": "Plant.aspx?LatinName=Fagopyrum esculentum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Fagopyrum spp.",
+		"CommonName": "Perennial Buckwheat",
+		"URL": "Plant.aspx?LatinName=Fagopyrum spp.",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Fagus sylvatica",
+		"CommonName": "Beech, European beech, Common Beech",
+		"URL": "Plant.aspx?LatinName=Fagus sylvatica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Ficus carica",
+		"CommonName": "Fig, Edible fig, Fig Common",
+		"URL": "Plant.aspx?LatinName=Ficus carica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Foeniculum vulgare",
+		"CommonName": "Fennel, Sweet fennel",
+		"URL": "Plant.aspx?LatinName=Foeniculum vulgare",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Foeniculum vulgare dulce",
+		"CommonName": "Sweet Fennel",
+		"URL": "Plant.aspx?LatinName=Foeniculum vulgare dulce",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Fragaria vesca 'Semperflorens'",
+		"CommonName": "Alpine Strawberry",
+		"URL": "Plant.aspx?LatinName=Fragaria vesca 'Semperflorens'",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Fragaria x ananassa",
+		"CommonName": "Strawberry",
+		"URL": "Plant.aspx?LatinName=Fragaria x ananassa",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Fritillaria camschatcensis",
+		"CommonName": "Kamchatka Lily, Kamchatka fritillary",
+		"URL": "Plant.aspx?LatinName=Fritillaria camschatcensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Fuchsia coccinea",
+		"CommonName": "Scarlet fuchsia",
+		"URL": "Plant.aspx?LatinName=Fuchsia coccinea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Fuchsia splendens",
+		"CommonName": "Platanillo",
+		"URL": "Plant.aspx?LatinName=Fuchsia splendens",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Garcinia brasiliensis",
+		"CommonName": "Bacupari",
+		"URL": "Plant.aspx?LatinName=Garcinia brasiliensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Garcinia gardneriana",
+		"CommonName": "Bacupari, achacha",
+		"URL": "Plant.aspx?LatinName=Garcinia gardneriana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Garcinia madruno",
+		"CommonName": "Madruno, Charichuela, Madrono",
+		"URL": "Plant.aspx?LatinName=Garcinia madruno",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Garcinia mangostana",
+		"CommonName": "Mangosteen, Manggis",
+		"URL": "Plant.aspx?LatinName=Garcinia mangostana",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Gaultheria hispidula",
+		"CommonName": "Creeping Snowberry",
+		"URL": "Plant.aspx?LatinName=Gaultheria hispidula",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Gaultheria humifusa",
+		"CommonName": "Alpine Wintergreen, Alpine spicywintergreen",
+		"URL": "Plant.aspx?LatinName=Gaultheria humifusa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Gaultheria japonica",
+		"CommonName": "Creeping Snowberry",
+		"URL": "Plant.aspx?LatinName=Gaultheria japonica",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Gaultheria mucronata",
+		"CommonName": "Prickly heath",
+		"URL": "Plant.aspx?LatinName=Gaultheria mucronata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Gaultheria procumbens",
+		"CommonName": "Checkerberry, Eastern teaberry, Teaberry, Creeping Wintergreen",
+		"URL": "Plant.aspx?LatinName=Gaultheria procumbens",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Gaultheria shallon",
+		"CommonName": "Shallon, Salal",
+		"URL": "Plant.aspx?LatinName=Gaultheria shallon",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Gaylussacia baccata",
+		"CommonName": "Black Huckleberry",
+		"URL": "Plant.aspx?LatinName=Gaylussacia baccata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Gigantochloa hasskarliana",
+		"CommonName": "Awi Tela",
+		"URL": "Plant.aspx?LatinName=Gigantochloa hasskarliana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Ginkgo biloba",
+		"CommonName": "Maidenhair Tree, Ginkgo",
+		"URL": "Plant.aspx?LatinName=Ginkgo biloba",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Glycine max",
+		"CommonName": "Soya Bean",
+		"URL": "Plant.aspx?LatinName=Glycine max",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Glycine spp.",
+		"CommonName": "Perennial Soybean",
+		"URL": "Plant.aspx?LatinName=Glycine spp.",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Glycyrrhiza echinata",
+		"CommonName": "Wild Liquorice, Chinese licorice",
+		"URL": "Plant.aspx?LatinName=Glycyrrhiza echinata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Glycyrrhiza glabra",
+		"CommonName": "Liquorice, Cultivated licorice",
+		"URL": "Plant.aspx?LatinName=Glycyrrhiza glabra",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Glycyrrhiza lepidota",
+		"CommonName": "American Liquorice",
+		"URL": "Plant.aspx?LatinName=Glycyrrhiza lepidota",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Gnetum africanum",
+		"CommonName": "Eru, African Jointfir",
+		"URL": "Plant.aspx?LatinName=Gnetum africanum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Gnetum buchholzianum",
+		"CommonName": "Jointfir",
+		"URL": "Plant.aspx?LatinName=Gnetum buchholzianum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Gymnanthemum amygdalinum",
+		"CommonName": "Bitterleaf",
+		"URL": "Plant.aspx?LatinName=Gymnanthemum amygdalinum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hablitzia tamnoides",
+		"CommonName": "Caucasian spinach",
+		"URL": "Plant.aspx?LatinName=Hablitzia tamnoides",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Hedysarum boreale",
+		"CommonName": "Sweet Vetch, Utah sweetvetch, Northern sweetvetch",
+		"URL": "Plant.aspx?LatinName=Hedysarum boreale",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Hedysarum boreale mackenzii",
+		"CommonName": "Liquorice Root",
+		"URL": "Plant.aspx?LatinName=Hedysarum boreale mackenzii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hedysarum occidentale",
+		"CommonName": "Liquorice Root, Western sweetvetch",
+		"URL": "Plant.aspx?LatinName=Hedysarum occidentale",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Helianthus annuus",
+		"CommonName": "Sunflower, Common sunflower",
+		"URL": "Plant.aspx?LatinName=Helianthus annuus",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Helianthus hybrids",
+		"CommonName": "Perennial Sunflower",
+		"URL": "Plant.aspx?LatinName=Helianthus hybrids",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Helianthus pauciflorus",
+		"CommonName": "Stiff Sunflower, Prairie Sunflower",
+		"URL": "Plant.aspx?LatinName=Helianthus pauciflorus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Helianthus tuberosus",
+		"CommonName": "Jerusalem Artichoke",
+		"URL": "Plant.aspx?LatinName=Helianthus tuberosus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Helicostylis tomentosa",
+		"CommonName": "Letterhout, Letter Wood",
+		"URL": "Plant.aspx?LatinName=Helicostylis tomentosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Hemerocallis altissima",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis altissima",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis aurantiaca",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis aurantiaca",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis bulbiferum",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis bulbiferum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis citrina",
+		"CommonName": "Citron daylily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis citrina",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis coreana",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis coreana",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Hemerocallis darrowiana",
+		"CommonName": "Day Lily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis darrowiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis dumortieri",
+		"CommonName": "Dumortier's daylily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis dumortieri",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Hemerocallis exaltata",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis exaltata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis fulva",
+		"CommonName": "Common Day Lily, Orange daylily, Tawny Daylily, Double Daylily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis fulva",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis fulva longituba",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis fulva longituba",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis graminea",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis graminea",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis hakunensis",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis hakunensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis lilioasphodelus",
+		"CommonName": "Yellow Day Lily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis lilioasphodelus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis littorea",
+		"CommonName": "Coastal Day Lily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis littorea",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis micrantha",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis micrantha",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis middendorffii",
+		"CommonName": "Amur daylily, Middendorf, Daylily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis middendorffii",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis middendorffii esculenta",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis middendorffii esculenta",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis minor",
+		"CommonName": "Grassleaf Day Lily, Small daylily",
+		"URL": "Plant.aspx?LatinName=Hemerocallis minor",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis multiflora",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis multiflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis pedicellata",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis pedicellata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis plicata",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis plicata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis species",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis species",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hemerocallis thunbergii",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis thunbergii",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hemerocallis yezoensis",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hemerocallis yezoensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hibiscus cannabinus",
+		"CommonName": "Kenaf, Brown Indianhemp",
+		"URL": "Plant.aspx?LatinName=Hibiscus cannabinus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Hibiscus sinosyriacus",
+		"CommonName": "Rose Of Sharon",
+		"URL": "Plant.aspx?LatinName=Hibiscus sinosyriacus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Hibiscus syriacus",
+		"CommonName": "Rose Of Sharon, Althaea, Shrub Althea, Hardy Hibiscus",
+		"URL": "Plant.aspx?LatinName=Hibiscus syriacus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hippophae rhamnoides",
+		"CommonName": "Sea Buckthorn, Seaberry",
+		"URL": "Plant.aspx?LatinName=Hippophae rhamnoides",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Hippophae rhamnoides turkestanica",
+		"CommonName": "Sea Buckthorn",
+		"URL": "Plant.aspx?LatinName=Hippophae rhamnoides turkestanica",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Hippophae salicifolia",
+		"CommonName": "Willow-Leaved Sea Buckthorn",
+		"URL": "Plant.aspx?LatinName=Hippophae salicifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Hippophae sinensis",
+		"CommonName": "Chinese Sea Buckthorn",
+		"URL": "Plant.aspx?LatinName=Hippophae sinensis",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hippophae tibetana",
+		"CommonName": "Tibetan Sea Buckthorn",
+		"URL": "Plant.aspx?LatinName=Hippophae tibetana",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hordeum distichon",
+		"CommonName": "Two-Rowed Barley",
+		"URL": "Plant.aspx?LatinName=Hordeum distichon",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Hordeum vulgare",
+		"CommonName": "Barley, Common barley",
+		"URL": "Plant.aspx?LatinName=Hordeum vulgare",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Houttuynia cordata",
+		"CommonName": "Tsi, Chameleon, Rainbow Plant, Chameleon Plant",
+		"URL": "Plant.aspx?LatinName=Houttuynia cordata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Humulus lupulus",
+		"CommonName": "Hop, Common hop, European Hop,",
+		"URL": "Plant.aspx?LatinName=Humulus lupulus",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Hydrangea serrata amagiana",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Hydrangea serrata amagiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Hylocereus megalanthus",
+		"CommonName": "Yellow Pitaya",
+		"URL": "Plant.aspx?LatinName=Hylocereus megalanthus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Hylocereus undatus",
+		"CommonName": "Dragon Fruit, Red Pitaya",
+		"URL": "Plant.aspx?LatinName=Hylocereus undatus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Inga cinnamomea",
+		"CommonName": "Inga Assu, Inga Acu",
+		"URL": "Plant.aspx?LatinName=Inga cinnamomea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Inga densiflora",
+		"CommonName": "Densely flowered Inga",
+		"URL": "Plant.aspx?LatinName=Inga densiflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Inga edulis",
+		"CommonName": "Ice Cream Bean, Monkey Tamarind",
+		"URL": "Plant.aspx?LatinName=Inga edulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Inga insignis",
+		"CommonName": "Guaba de zorro",
+		"URL": "Plant.aspx?LatinName=Inga insignis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Inga jinicuil",
+		"CommonName": "Ice Cream Bean, Jinicuil",
+		"URL": "Plant.aspx?LatinName=Inga jinicuil",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Inocarpus fagifer",
+		"CommonName": "Tahiti Chestnut, Polynesian Chestnut",
+		"URL": "Plant.aspx?LatinName=Inocarpus fagifer",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ipomoea aquatica",
+		"CommonName": "Swamp Morning Glory",
+		"URL": "Plant.aspx?LatinName=Ipomoea aquatica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Ipomoea batatas",
+		"CommonName": "Sweet Potato, Black Sweet Potato, Sweet Potato Vine",
+		"URL": "Plant.aspx?LatinName=Ipomoea batatas",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Irvingia gabonensis",
+		"CommonName": "Dika Nut",
+		"URL": "Plant.aspx?LatinName=Irvingia gabonensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Irvingia wombolu",
+		"CommonName": "Bitter bush-mango",
+		"URL": "Plant.aspx?LatinName=Irvingia wombolu",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Juglans ailanthifolia cordiformis",
+		"CommonName": "Heartseed Walnut",
+		"URL": "Plant.aspx?LatinName=Juglans ailanthifolia cordiformis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Juglans regia",
+		"CommonName": "Walnut, English walnut, Persian Walnut,",
+		"URL": "Plant.aspx?LatinName=Juglans regia",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Lablab purpureus",
+		"CommonName": "Hyacinth Bean, Bonavist-bean",
+		"URL": "Plant.aspx?LatinName=Lablab purpureus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Lacunaria jenmanii",
+		"CommonName": "Moela de mutum",
+		"URL": "Plant.aspx?LatinName=Lacunaria jenmanii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lansium domesticum",
+		"CommonName": "Langsat, Lansa, Lanzon",
+		"URL": "Plant.aspx?LatinName=Lansium domesticum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Lathyrus tuberosus",
+		"CommonName": "Earthnut Pea, Tuberous sweetpea",
+		"URL": "Plant.aspx?LatinName=Lathyrus tuberosus",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Lecythis minor",
+		"CommonName": "Coco de mono",
+		"URL": "Plant.aspx?LatinName=Lecythis minor",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Lens culinaris",
+		"CommonName": "Lentil",
+		"URL": "Plant.aspx?LatinName=Lens culinaris",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lepidium meyenii",
+		"CommonName": "Maca",
+		"URL": "Plant.aspx?LatinName=Lepidium meyenii",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Lepidium spp.",
+		"CommonName": "Perennial Lepidium",
+		"URL": "Plant.aspx?LatinName=Lepidium spp.",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Leptadenia hastata",
+		"CommonName": "Akamongot, Anvara",
+		"URL": "Plant.aspx?LatinName=Leptadenia hastata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lilium lancifolium",
+		"CommonName": "Tiger Lily, Devil Lily",
+		"URL": "Plant.aspx?LatinName=Lilium lancifolium",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Limnocharis flava",
+		"CommonName": "Sawah Lettuce, Sawah Flowering Rush",
+		"URL": "Plant.aspx?LatinName=Limnocharis flava",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Linum hybrids",
+		"CommonName": "Perennial Flax",
+		"URL": "Plant.aspx?LatinName=Linum hybrids",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Linum usitatissimum",
+		"CommonName": "Flax, Common flax",
+		"URL": "Plant.aspx?LatinName=Linum usitatissimum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Lippia graveolens",
+		"CommonName": "Mexican Oregano",
+		"URL": "Plant.aspx?LatinName=Lippia graveolens",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Litchi chinensis",
+		"CommonName": "Lychee, Litchi",
+		"URL": "Plant.aspx?LatinName=Litchi chinensis",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lomatium ambiguum",
+		"CommonName": "Biscuitroot, Wyeth biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium ambiguum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Lomatium canbyi",
+		"CommonName": "Biscuitroot, Canby's biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium canbyi",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Lomatium cous",
+		"CommonName": "Biscuitroot, Cous biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium cous",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Lomatium dissectum",
+		"CommonName": "Fernleaf Biscuitroot, Carrotleaf biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium dissectum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lomatium gayeri",
+		"CommonName": "Biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium gayeri",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Lomatium grayi",
+		"CommonName": "Biscuitroot, Gray's biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium grayi",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Lomatium macrocarpum",
+		"CommonName": "Bigseed Biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium macrocarpum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lomatium nudicaule",
+		"CommonName": "Pestle Parsnip, Barestem biscuitroot",
+		"URL": "Plant.aspx?LatinName=Lomatium nudicaule",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lonicera angustifolia",
+		"CommonName": "Narrow-leafed honeysuckle",
+		"URL": "Plant.aspx?LatinName=Lonicera angustifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Lonicera caerulea",
+		"CommonName": "Sweetberry honeysuckle, Bluefly honeysuckle, Haskap berry",
+		"URL": "Plant.aspx?LatinName=Lonicera caerulea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Lupinus albus",
+		"CommonName": "White Lupin",
+		"URL": "Plant.aspx?LatinName=Lupinus albus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Lupinus albus graecus",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Lupinus albus graecus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Lupinus angustifolius",
+		"CommonName": "Blue Lupin, Narrowleaf lupine",
+		"URL": "Plant.aspx?LatinName=Lupinus angustifolius",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Lupinus mutabilis",
+		"CommonName": "Pearl Lupin, Tarwi",
+		"URL": "Plant.aspx?LatinName=Lupinus mutabilis",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Lycium barbarum",
+		"CommonName": "Goji, Box Thorn, Matrimony vine",
+		"URL": "Plant.aspx?LatinName=Lycium barbarum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Lycium chinense",
+		"CommonName": "Chinese Boxthorn, Chinese desert-thorn",
+		"URL": "Plant.aspx?LatinName=Lycium chinense",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Lycopersicon esculentum",
+		"CommonName": "Tomato",
+		"URL": "Plant.aspx?LatinName=Lycopersicon esculentum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Lycopersicon pimpinellifolium",
+		"CommonName": "Currant Tomato",
+		"URL": "Plant.aspx?LatinName=Lycopersicon pimpinellifolium",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Macadamia hildebrandii",
+		"CommonName": "Celebes nut",
+		"URL": "Plant.aspx?LatinName=Macadamia hildebrandii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Macadamia integrifolia",
+		"CommonName": "Macadamia, Macadamia nut",
+		"URL": "Plant.aspx?LatinName=Macadamia integrifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Macadamia ternifolia",
+		"CommonName": "Macadamia Nut, Gympie nut",
+		"URL": "Plant.aspx?LatinName=Macadamia ternifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Macadamia tetraphylla",
+		"CommonName": "Queensland Nut, Macadamia nut",
+		"URL": "Plant.aspx?LatinName=Macadamia tetraphylla",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Malpighia emarginata",
+		"CommonName": "Acerola, Barbados Cherry",
+		"URL": "Plant.aspx?LatinName=Malpighia emarginata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Malpighia glabra",
+		"CommonName": "Escobillo, Acerola",
+		"URL": "Plant.aspx?LatinName=Malpighia glabra",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Malus baccata mandschurica",
+		"CommonName": "Manchurian Apple",
+		"URL": "Plant.aspx?LatinName=Malus baccata mandschurica",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Malus domestica",
+		"CommonName": "Apple",
+		"URL": "Plant.aspx?LatinName=Malus domestica",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Malus prunifolia",
+		"CommonName": "Chinese Apple, Plumleaf crab apple",
+		"URL": "Plant.aspx?LatinName=Malus prunifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Malus pumila",
+		"CommonName": "Paradise Apple, Common Apple, Apple Tree",
+		"URL": "Plant.aspx?LatinName=Malus pumila",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Malva alcea",
+		"CommonName": "Vervain mallow, Hollyhock Mallow",
+		"URL": "Plant.aspx?LatinName=Malva alcea",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Malva excisa",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Malva excisa",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Malva moschata",
+		"CommonName": "Musk Mallow",
+		"URL": "Plant.aspx?LatinName=Malva moschata",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Malva neglecta",
+		"CommonName": "Dwarf Mallow, Common mallow",
+		"URL": "Plant.aspx?LatinName=Malva neglecta",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Malva pusilla",
+		"CommonName": "Dwarf Mallow, Low mallow",
+		"URL": "Plant.aspx?LatinName=Malva pusilla",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Malva verticillata",
+		"CommonName": "Chinese Mallow, Cluster mallow",
+		"URL": "Plant.aspx?LatinName=Malva verticillata",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Mammea americana",
+		"CommonName": "Mammee Apple, Mammey",
+		"URL": "Plant.aspx?LatinName=Mammea americana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Mangifera indica",
+		"CommonName": "Mango, Bowen Mango",
+		"URL": "Plant.aspx?LatinName=Mangifera indica",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Mangifera kemanga",
+		"CommonName": "Kemang",
+		"URL": "Plant.aspx?LatinName=Mangifera kemanga",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Mangifera rubropetala",
+		"CommonName": "Red petaled mango",
+		"URL": "Plant.aspx?LatinName=Mangifera rubropetala",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Manihot esculenta",
+		"CommonName": "Cassava, Tapioca Plant, Yuca",
+		"URL": "Plant.aspx?LatinName=Manihot esculenta",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Manilkara discolor",
+		"CommonName": "Red milkwood, Silvery milkwood",
+		"URL": "Plant.aspx?LatinName=Manilkara discolor",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Manilkara zapota",
+		"CommonName": "Sapodilla, Nispero",
+		"URL": "Plant.aspx?LatinName=Manilkara zapota",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Maranta arundinacea",
+		"CommonName": "Arrowroot",
+		"URL": "Plant.aspx?LatinName=Maranta arundinacea",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Mauritia flexuosa",
+		"CommonName": "Buriti Palm, Aguaje Palm",
+		"URL": "Plant.aspx?LatinName=Mauritia flexuosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Medeola virginiana",
+		"CommonName": "Indian Cucumber Root",
+		"URL": "Plant.aspx?LatinName=Medeola virginiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Medicago sativa",
+		"CommonName": "Alfalfa, Yellow alfalfa",
+		"URL": "Plant.aspx?LatinName=Medicago sativa",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Melicoccus bijugatus",
+		"CommonName": "Mamoncillo, Spanish Lime, Guayo",
+		"URL": "Plant.aspx?LatinName=Melicoccus bijugatus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Mentha spicata",
+		"CommonName": "Spearmint",
+		"URL": "Plant.aspx?LatinName=Mentha spicata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Mentha x piperita vulgaris",
+		"CommonName": "Black Peppermint",
+		"URL": "Plant.aspx?LatinName=Mentha x piperita vulgaris",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Mentha x villosa alopecuroides",
+		"CommonName": "Apple Mint, Bowles' Mint",
+		"URL": "Plant.aspx?LatinName=Mentha x villosa alopecuroides",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Mespilus germanica",
+		"CommonName": "Medlar",
+		"URL": "Plant.aspx?LatinName=Mespilus germanica",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Metroxylon sagu",
+		"CommonName": "Sago Palm",
+		"URL": "Plant.aspx?LatinName=Metroxylon sagu",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Microseris scapigera",
+		"CommonName": "Yam Daisy",
+		"URL": "Plant.aspx?LatinName=Microseris scapigera",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Monstera deliciosa",
+		"CommonName": "Ceriman, Windowleaf",
+		"URL": "Plant.aspx?LatinName=Monstera deliciosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Moringa oleifera",
+		"CommonName": "Horseradish Tree, Moringa,",
+		"URL": "Plant.aspx?LatinName=Moringa oleifera",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Moringa stenopetala",
+		"CommonName": "African horseradish tree, cabbagetree",
+		"URL": "Plant.aspx?LatinName=Moringa stenopetala",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Morus alba",
+		"CommonName": "White Mulberry, Common Mulberry,",
+		"URL": "Plant.aspx?LatinName=Morus alba",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Morus alba multicaulis",
+		"CommonName": "White Mulberry",
+		"URL": "Plant.aspx?LatinName=Morus alba multicaulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Morus nigra",
+		"CommonName": "Black Mulberry",
+		"URL": "Plant.aspx?LatinName=Morus nigra",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Morus species",
+		"CommonName": "Mulberry",
+		"URL": "Plant.aspx?LatinName=Morus species",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Musa acuminata",
+		"CommonName": "Dwarf Banana, Edible banana",
+		"URL": "Plant.aspx?LatinName=Musa acuminata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Musa balbisiana",
+		"CommonName": "Plantain, Plantain Banana",
+		"URL": "Plant.aspx?LatinName=Musa balbisiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Musa x paradisiaca",
+		"CommonName": "Banana",
+		"URL": "Plant.aspx?LatinName=Musa x paradisiaca",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Myrcianthes pungens",
+		"CommonName": "Guabiyu",
+		"URL": "Plant.aspx?LatinName=Myrcianthes pungens",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Myrciaria vexator",
+		"CommonName": "Blue Grape, False Jaboticaba",
+		"URL": "Plant.aspx?LatinName=Myrciaria vexator",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Myrianthus arboreus",
+		"CommonName": "Giant yellow mulberry, Monkeyfruit",
+		"URL": "Plant.aspx?LatinName=Myrianthus arboreus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Myrrhis odorata",
+		"CommonName": "Sweet Cicely, Anise",
+		"URL": "Plant.aspx?LatinName=Myrrhis odorata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Myrteola nummularia",
+		"CommonName": "Cranberry-myrtle,",
+		"URL": "Plant.aspx?LatinName=Myrteola nummularia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Nasturtium officinale",
+		"CommonName": "Watercress",
+		"URL": "Plant.aspx?LatinName=Nasturtium officinale",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Nasturtium x sterile",
+		"CommonName": "Brown Watercress",
+		"URL": "Plant.aspx?LatinName=Nasturtium x sterile",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Nelumbo lutea",
+		"CommonName": "American Water Lotus, American lotus",
+		"URL": "Plant.aspx?LatinName=Nelumbo lutea",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Nelumbo nucifera",
+		"CommonName": "Sacred Water Lotus, Sacred lotus",
+		"URL": "Plant.aspx?LatinName=Nelumbo nucifera",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Nephelium lappaceum",
+		"CommonName": "Rambutan, Hairy Lychee",
+		"URL": "Plant.aspx?LatinName=Nephelium lappaceum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Nephelium ramboutan-ake",
+		"CommonName": "Pulasan",
+		"URL": "Plant.aspx?LatinName=Nephelium ramboutan-ake",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ocimum basilicum",
+		"CommonName": "Sweet Basil, Common Basil, Thai Basil, Tropical Basil",
+		"URL": "Plant.aspx?LatinName=Ocimum basilicum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Ocimum minimum",
+		"CommonName": "Bush Basil",
+		"URL": "Plant.aspx?LatinName=Ocimum minimum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Olea europaea",
+		"CommonName": "Olive, African olive, European olive",
+		"URL": "Plant.aspx?LatinName=Olea europaea",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Ophioglossum reticulatum",
+		"CommonName": "Adder's tongue fern",
+		"URL": "Plant.aspx?LatinName=Ophioglossum reticulatum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Origanum vulgare",
+		"CommonName": "Oregano, Pot Marjoram",
+		"URL": "Plant.aspx?LatinName=Origanum vulgare",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Origanum vulgare hirtum",
+		"CommonName": "Greek Oregano",
+		"URL": "Plant.aspx?LatinName=Origanum vulgare hirtum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Orogenia linearifolia",
+		"CommonName": "Indian Potato, Great Basin Indian potato",
+		"URL": "Plant.aspx?LatinName=Orogenia linearifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Oryza hybrids",
+		"CommonName": "Perennial Rice",
+		"URL": "Plant.aspx?LatinName=Oryza hybrids",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Oryza sativa",
+		"CommonName": "Rice, Common Rice",
+		"URL": "Plant.aspx?LatinName=Oryza sativa",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Oxalis deppei",
+		"CommonName": "Iron Cross Plant",
+		"URL": "Plant.aspx?LatinName=Oxalis deppei",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Oxalis tuberosa",
+		"CommonName": "Oca",
+		"URL": "Plant.aspx?LatinName=Oxalis tuberosa",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pachira insignis",
+		"CommonName": "Malabar Chestnut",
+		"URL": "Plant.aspx?LatinName=Pachira insignis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pachyrhizus erosus",
+		"CommonName": "Yam Bean, Jicama, Mexican Yam",
+		"URL": "Plant.aspx?LatinName=Pachyrhizus erosus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pandanus conoideus",
+		"CommonName": "Marita, Red fruit, Pandan",
+		"URL": "Plant.aspx?LatinName=Pandanus conoideus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pandanus julianettii",
+		"CommonName": "Karuka",
+		"URL": "Plant.aspx?LatinName=Pandanus julianettii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Papaver somniferum",
+		"CommonName": "Opium Poppy",
+		"URL": "Plant.aspx?LatinName=Papaver somniferum",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Parinari curatellifolia",
+		"CommonName": "Mbola, Grys Appel",
+		"URL": "Plant.aspx?LatinName=Parinari curatellifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Parkia biglobosa",
+		"CommonName": "African Locust Bean",
+		"URL": "Plant.aspx?LatinName=Parkia biglobosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Passiflora antioquiensis",
+		"CommonName": "Banana Passionfruit",
+		"URL": "Plant.aspx?LatinName=Passiflora antioquiensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Passiflora edulis",
+		"CommonName": "Passion Flower, Purple granadilla",
+		"URL": "Plant.aspx?LatinName=Passiflora edulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Passiflora laurifolia",
+		"CommonName": "Yellow Granadilla",
+		"URL": "Plant.aspx?LatinName=Passiflora laurifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Passiflora ligularis",
+		"CommonName": "Sweet Grenadilla, Passion Flower",
+		"URL": "Plant.aspx?LatinName=Passiflora ligularis",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Passiflora popenovii",
+		"CommonName": "Granadilla de Quijos",
+		"URL": "Plant.aspx?LatinName=Passiflora popenovii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Passiflora quadrangularis",
+		"CommonName": "Giant Granadilla, Badea",
+		"URL": "Plant.aspx?LatinName=Passiflora quadrangularis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Passiflora tarminiana",
+		"CommonName": "banana passionfruit, banana poka",
+		"URL": "Plant.aspx?LatinName=Passiflora tarminiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Passiflora tripartita mollissima",
+		"CommonName": "Banana Passionfruit",
+		"URL": "Plant.aspx?LatinName=Passiflora tripartita mollissima",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Pastinaca sativa",
+		"CommonName": "Parsnip, Wild parsnip",
+		"URL": "Plant.aspx?LatinName=Pastinaca sativa",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Paullinia cupana",
+		"CommonName": "Guarana",
+		"URL": "Plant.aspx?LatinName=Paullinia cupana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Paullinia yoco",
+		"CommonName": "Yoco",
+		"URL": "Plant.aspx?LatinName=Paullinia yoco",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Peltaria alliacea",
+		"CommonName": "Garlic Cress",
+		"URL": "Plant.aspx?LatinName=Peltaria alliacea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Peltaria turkmena",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Peltaria turkmena",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pentadiplandra brazzeana",
+		"CommonName": "Joy perfume tree, j'oubli",
+		"URL": "Plant.aspx?LatinName=Pentadiplandra brazzeana",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Perideridia gairdneri",
+		"CommonName": "Yampa, Gardner's yampah, Common yampah",
+		"URL": "Plant.aspx?LatinName=Perideridia gairdneri",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Perilla frutescens",
+		"CommonName": "Shiso, Beefsteakplant, Spreading Beefsteak Plant",
+		"URL": "Plant.aspx?LatinName=Perilla frutescens",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Perilla frutescens nankinensis",
+		"CommonName": "Purple Shiso",
+		"URL": "Plant.aspx?LatinName=Perilla frutescens nankinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Persea americana",
+		"CommonName": "Avocado, Alligator Pear",
+		"URL": "Plant.aspx?LatinName=Persea americana",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Petroselinum crispum",
+		"CommonName": "Parsley",
+		"URL": "Plant.aspx?LatinName=Petroselinum crispum",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Petroselinum crispum tuberosum",
+		"CommonName": "Hamburg Parsley",
+		"URL": "Plant.aspx?LatinName=Petroselinum crispum tuberosum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Phaseolus coccineus",
+		"CommonName": "Runner Bean, Scarlet runner",
+		"URL": "Plant.aspx?LatinName=Phaseolus coccineus",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Phoenix dactylifera",
+		"CommonName": "Date Palm",
+		"URL": "Plant.aspx?LatinName=Phoenix dactylifera",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Phragmites australis",
+		"CommonName": "Common Reed, American common reed, Hybrid common reed, European common reed, Subtropical common re",
+		"URL": "Plant.aspx?LatinName=Phragmites australis",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Phyllostachys aurea",
+		"CommonName": "Golden Bamboo, Fishpole Bamboo",
+		"URL": "Plant.aspx?LatinName=Phyllostachys aurea",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Phyllostachys aureosulcata",
+		"CommonName": "Yellow-Groove Bamboo",
+		"URL": "Plant.aspx?LatinName=Phyllostachys aureosulcata",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Phyllostachys bambusoides",
+		"CommonName": "Madake, Japanese timber bamboo",
+		"URL": "Plant.aspx?LatinName=Phyllostachys bambusoides",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Phyllostachys dulcis",
+		"CommonName": "Sweetshoot Bamboo",
+		"URL": "Plant.aspx?LatinName=Phyllostachys dulcis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Phyllostachys edulis",
+		"CommonName": "Moso-Chiku, Tortoise shell bamboo",
+		"URL": "Plant.aspx?LatinName=Phyllostachys edulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Phyllostachys nidularia",
+		"CommonName": "Big-Node Bamboo, Broom bamboo",
+		"URL": "Plant.aspx?LatinName=Phyllostachys nidularia",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Phyllostachys nigra",
+		"CommonName": "Black Bamboo, Kuro-Chiku",
+		"URL": "Plant.aspx?LatinName=Phyllostachys nigra",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Phyllostachys nigra henonis",
+		"CommonName": "Ha-Chiku",
+		"URL": "Plant.aspx?LatinName=Phyllostachys nigra henonis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Phyllostachys nigra punctata",
+		"CommonName": "Kurodake",
+		"URL": "Plant.aspx?LatinName=Phyllostachys nigra punctata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Phyllostachys nuda",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Phyllostachys nuda",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Phyllostachys sulphurea viridis",
+		"CommonName": "Kou-Chiku",
+		"URL": "Plant.aspx?LatinName=Phyllostachys sulphurea viridis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Phyllostachys viridiglaucescens",
+		"CommonName": "Greenwax golden bamboo",
+		"URL": "Plant.aspx?LatinName=Phyllostachys viridiglaucescens",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Physalis ixocarpa",
+		"CommonName": "Tomatillo",
+		"URL": "Plant.aspx?LatinName=Physalis ixocarpa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Physalis peruviana",
+		"CommonName": "Goldenberry, Peruvian groundcherry",
+		"URL": "Plant.aspx?LatinName=Physalis peruviana",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Physalis philadelphica",
+		"CommonName": "Wild Tomatillo, Mexican groundcherry",
+		"URL": "Plant.aspx?LatinName=Physalis philadelphica",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Physalis pubescens",
+		"CommonName": "Ground Cherry, Husk tomato",
+		"URL": "Plant.aspx?LatinName=Physalis pubescens",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Physalis viscosa",
+		"CommonName": "Sticky Ground Cherry, Starhair groundcherry",
+		"URL": "Plant.aspx?LatinName=Physalis viscosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Pimpinella anisum",
+		"CommonName": "Aniseed (Saunf - Hindi), Anise burnet saxifrage",
+		"URL": "Plant.aspx?LatinName=Pimpinella anisum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pinus albicaulis",
+		"CommonName": "White-Bark Pine",
+		"URL": "Plant.aspx?LatinName=Pinus albicaulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pinus armandii",
+		"CommonName": "Chinese White Pine, Armand pine",
+		"URL": "Plant.aspx?LatinName=Pinus armandii",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pinus cembra",
+		"CommonName": "Swiss Stone Pine, Swiss Pine, Arolla Pine",
+		"URL": "Plant.aspx?LatinName=Pinus cembra",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pinus cembra sibirica",
+		"CommonName": "Siberian Pine",
+		"URL": "Plant.aspx?LatinName=Pinus cembra sibirica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pinus cembroides",
+		"CommonName": "Mexican Pine Nut, Pinyon Pine",
+		"URL": "Plant.aspx?LatinName=Pinus cembroides",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Pinus cembroides orizabensis",
+		"CommonName": "Mexican Pine Nut",
+		"URL": "Plant.aspx?LatinName=Pinus cembroides orizabensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pinus coulteri",
+		"CommonName": "Big-Cone Pine, Coulter pine",
+		"URL": "Plant.aspx?LatinName=Pinus coulteri",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pinus edulis",
+		"CommonName": "Rocky Mountain Piñon, Twoneedle pinyon, Nut Pine, Pinyon Pine, Rocky Mountain Pinyon Pine, Singlelea",
+		"URL": "Plant.aspx?LatinName=Pinus edulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pinus koraiensis",
+		"CommonName": "Korean Nut Pine, Chinese pinenut",
+		"URL": "Plant.aspx?LatinName=Pinus koraiensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pinus monophylla",
+		"CommonName": "Single Leaf Piñon, Single Leaf PinyonPine, Stone Pine, Pine Pinyon",
+		"URL": "Plant.aspx?LatinName=Pinus monophylla",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Pinus parviflora",
+		"CommonName": "Japanese White Pine, Five-needle pine",
+		"URL": "Plant.aspx?LatinName=Pinus parviflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pinus pinea",
+		"CommonName": "Italian Stone Pine, Umbrella Pine, Stone Pine",
+		"URL": "Plant.aspx?LatinName=Pinus pinea",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Pinus quadrifolia",
+		"CommonName": "Parry Piñon, Parry's Pinyon Pine, Four-leaved Pinyon",
+		"URL": "Plant.aspx?LatinName=Pinus quadrifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pinus sabiniana",
+		"CommonName": "Digger Pine, California foothill pine, Bull Pine, Gray Pine, Digger Pine",
+		"URL": "Plant.aspx?LatinName=Pinus sabiniana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Piper nigrum",
+		"CommonName": "Black Pepper",
+		"URL": "Plant.aspx?LatinName=Piper nigrum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pisum sativum",
+		"CommonName": "Garden Pea",
+		"URL": "Plant.aspx?LatinName=Pisum sativum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pisum sativum elatius",
+		"CommonName": "Wild Pea",
+		"URL": "Plant.aspx?LatinName=Pisum sativum elatius",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pisum sativum macrocarpon",
+		"CommonName": "Sugar Pea",
+		"URL": "Plant.aspx?LatinName=Pisum sativum macrocarpon",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pithecellobium dulce",
+		"CommonName": "Manila Tamarind, Madras Thorn",
+		"URL": "Plant.aspx?LatinName=Pithecellobium dulce",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Platonia insignis",
+		"CommonName": "Bakuri, Bacuri",
+		"URL": "Plant.aspx?LatinName=Platonia insignis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Plinia cauliflora",
+		"CommonName": "Jaboticaba",
+		"URL": "Plant.aspx?LatinName=Plinia cauliflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Plinia edulis",
+		"CommonName": "Cambuca, ambucazeiro, Cambuca-verdadeiro",
+		"URL": "Plant.aspx?LatinName=Plinia edulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Plukenetia conophora",
+		"CommonName": "Conophor. Nigerian walnut. Awusa nut,",
+		"URL": "Plant.aspx?LatinName=Plukenetia conophora",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Polymnia edulis",
+		"CommonName": "Yacon Strawberry",
+		"URL": "Plant.aspx?LatinName=Polymnia edulis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Poraqueiba sericea",
+		"CommonName": "Umari",
+		"URL": "Plant.aspx?LatinName=Poraqueiba sericea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Portulaca oleracea",
+		"CommonName": "Green Purslane, Little hogweed",
+		"URL": "Plant.aspx?LatinName=Portulaca oleracea",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Portulaca oleracea sativa",
+		"CommonName": "Golden Purslane",
+		"URL": "Plant.aspx?LatinName=Portulaca oleracea sativa",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pourouma cecropiifolia",
+		"CommonName": "Amazon Grape",
+		"URL": "Plant.aspx?LatinName=Pourouma cecropiifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pouteria caimito",
+		"CommonName": "Abiu, Yellow Star Apple",
+		"URL": "Plant.aspx?LatinName=Pouteria caimito",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pouteria campechiana",
+		"CommonName": "Canistel, Eggfruit",
+		"URL": "Plant.aspx?LatinName=Pouteria campechiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Pouteria sapota",
+		"CommonName": "Sapote, Mamey Sapote",
+		"URL": "Plant.aspx?LatinName=Pouteria sapota",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Prinsepia utilis",
+		"CommonName": "Cherry prinsepia",
+		"URL": "Plant.aspx?LatinName=Prinsepia utilis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Prunus angustifolia watsonii",
+		"CommonName": "Sand Plum",
+		"URL": "Plant.aspx?LatinName=Prunus angustifolia watsonii",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Prunus armeniaca",
+		"CommonName": "Apricot",
+		"URL": "Plant.aspx?LatinName=Prunus armeniaca",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Prunus armeniaca mandschurica",
+		"CommonName": "Manchurian apricot",
+		"URL": "Plant.aspx?LatinName=Prunus armeniaca mandschurica",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus avium",
+		"CommonName": "Wild Cherry, Sweet cherry",
+		"URL": "Plant.aspx?LatinName=Prunus avium",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Prunus besseyi",
+		"CommonName": "Western Sand Cherry",
+		"URL": "Plant.aspx?LatinName=Prunus besseyi",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Prunus brigantina",
+		"CommonName": "Briançon Apricot",
+		"URL": "Plant.aspx?LatinName=Prunus brigantina",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Prunus cerasifera",
+		"CommonName": "Cherry Plum, Myrobalan Plum, Newport Cherry Plum, Pissard Plum",
+		"URL": "Plant.aspx?LatinName=Prunus cerasifera",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus cerasifera divaricata",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Prunus cerasifera divaricata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Prunus consociiflora",
+		"CommonName": "Chinese Wild Peach",
+		"URL": "Plant.aspx?LatinName=Prunus consociiflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Prunus domestica",
+		"CommonName": "Plum, European plum",
+		"URL": "Plant.aspx?LatinName=Prunus domestica",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus domestica italica",
+		"CommonName": "Gages, Greengage",
+		"URL": "Plant.aspx?LatinName=Prunus domestica italica",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Prunus dulcis",
+		"CommonName": "Almond, Sweet almond",
+		"URL": "Plant.aspx?LatinName=Prunus dulcis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus insititia",
+		"CommonName": "Damson",
+		"URL": "Plant.aspx?LatinName=Prunus insititia",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus laurocerasus",
+		"CommonName": "Cherry Laurel, English Laurel",
+		"URL": "Plant.aspx?LatinName=Prunus laurocerasus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Prunus maritima",
+		"CommonName": "Beach Plum, Graves' plum",
+		"URL": "Plant.aspx?LatinName=Prunus maritima",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus nigra",
+		"CommonName": "Canadian Plum",
+		"URL": "Plant.aspx?LatinName=Prunus nigra",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Prunus persica",
+		"CommonName": "Peach, Flowering Peach, Ornamental Peach, Common Peach",
+		"URL": "Plant.aspx?LatinName=Prunus persica",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus persica nucipersica",
+		"CommonName": "Nectarine",
+		"URL": "Plant.aspx?LatinName=Prunus persica nucipersica",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Prunus pseudocerasus",
+		"CommonName": "Cambridge Cherry",
+		"URL": "Plant.aspx?LatinName=Prunus pseudocerasus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Prunus pumila",
+		"CommonName": "Dwarf American Cherry, Sandcherry, Western sandcherry, Eastern sandcherry, Great Lakes sandcherry",
+		"URL": "Plant.aspx?LatinName=Prunus pumila",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Prunus pumila besseyi",
+		"CommonName": "Sand cherry, Rocky Mountain cherry",
+		"URL": "Plant.aspx?LatinName=Prunus pumila besseyi",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Prunus pumila susquehanae",
+		"CommonName": "Dwarf American Cherry",
+		"URL": "Plant.aspx?LatinName=Prunus pumila susquehanae",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Prunus serotina",
+		"CommonName": "Rum Cherry - Wild Cherry, Black Cherry, Wild Black Cherry",
+		"URL": "Plant.aspx?LatinName=Prunus serotina",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Prunus sogdiana",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Prunus sogdiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Psidium guajava",
+		"CommonName": "Guava, Tropical Guava, Goiaba, Araçá-goiaba",
+		"URL": "Plant.aspx?LatinName=Psidium guajava",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Psoralea castorea",
+		"CommonName": "Beaver Indian breadroot",
+		"URL": "Plant.aspx?LatinName=Psoralea castorea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Psoralea esculenta",
+		"CommonName": "Breadroot, Large Indian breadroot",
+		"URL": "Plant.aspx?LatinName=Psoralea esculenta",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Psoralea hypogaea",
+		"CommonName": "Small Indian Breadroot",
+		"URL": "Plant.aspx?LatinName=Psoralea hypogaea",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pueraria montana",
+		"CommonName": "Kudzu Vine",
+		"URL": "Plant.aspx?LatinName=Pueraria montana",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pueraria montana lobata",
+		"CommonName": "Kudzu Vine",
+		"URL": "Plant.aspx?LatinName=Pueraria montana lobata",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Pyrus bretschneideri",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Pyrus bretschneideri",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Pyrus communis sativa",
+		"CommonName": "Pear",
+		"URL": "Plant.aspx?LatinName=Pyrus communis sativa",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Pyrus pyrifolia",
+		"CommonName": "Sand Pear, Chinese pear",
+		"URL": "Plant.aspx?LatinName=Pyrus pyrifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Pyrus pyrifolia culta",
+		"CommonName": "Asian Pear",
+		"URL": "Plant.aspx?LatinName=Pyrus pyrifolia culta",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Pyrus ussuriensis",
+		"CommonName": "Harbin Pear, Chinese pear, Ussurian Pear",
+		"URL": "Plant.aspx?LatinName=Pyrus ussuriensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Quararibea cordata",
+		"CommonName": "South American Sapote, Chupa Chupa, Matisia",
+		"URL": "Plant.aspx?LatinName=Quararibea cordata",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Quercus aucheri",
+		"CommonName": "Boz-Pirnal Oak",
+		"URL": "Plant.aspx?LatinName=Quercus aucheri",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Quercus bicolor",
+		"CommonName": "Swamp White Oak",
+		"URL": "Plant.aspx?LatinName=Quercus bicolor",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Quercus frainetto",
+		"CommonName": "Hungarian Oak, Italian Oak, Forest Green Oak",
+		"URL": "Plant.aspx?LatinName=Quercus frainetto",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Quercus ilex",
+		"CommonName": "Holly Oak, Evergreen Oak",
+		"URL": "Plant.aspx?LatinName=Quercus ilex",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Quercus ilex ballota",
+		"CommonName": "Holm Oak",
+		"URL": "Plant.aspx?LatinName=Quercus ilex ballota",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Quercus ithaburensis macrolepis",
+		"CommonName": "Valonia Oak",
+		"URL": "Plant.aspx?LatinName=Quercus ithaburensis macrolepis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Quercus prinus",
+		"CommonName": "Rock Chestnut Oak",
+		"URL": "Plant.aspx?LatinName=Quercus prinus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Quercus robur",
+		"CommonName": "Pedunculate Oak, English oak",
+		"URL": "Plant.aspx?LatinName=Quercus robur",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Raphanus sativus",
+		"CommonName": "Radish, Cultivated radish",
+		"URL": "Plant.aspx?LatinName=Raphanus sativus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Raphanus sativus niger",
+		"CommonName": "Oriental Radish",
+		"URL": "Plant.aspx?LatinName=Raphanus sativus niger",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Reichardia picroides",
+		"CommonName": "French Scorzonera, Common brighteyes",
+		"URL": "Plant.aspx?LatinName=Reichardia picroides",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Rheum × hybridum",
+		"CommonName": "Garden Rhubarb",
+		"URL": "Plant.aspx?LatinName=Rheum × hybridum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rheum x cultorum",
+		"CommonName": "Rhubarb",
+		"URL": "Plant.aspx?LatinName=Rheum x cultorum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Rhus aromatica",
+		"CommonName": "Lemon Sumach, Fragrant sumac",
+		"URL": "Plant.aspx?LatinName=Rhus aromatica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Rhus copallina",
+		"CommonName": "Dwarf Sumach, Winged sumac, Flameleaf Sumac, Winged Sumac, Shining Sumac",
+		"URL": "Plant.aspx?LatinName=Rhus copallina",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rhus glabra",
+		"CommonName": "Smooth Sumach",
+		"URL": "Plant.aspx?LatinName=Rhus glabra",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rhus trilobata",
+		"CommonName": "Skunk Bush, Basketbush, Squawbush, Three Leaf Sumac",
+		"URL": "Plant.aspx?LatinName=Rhus trilobata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rhus typhina",
+		"CommonName": "Stag's Horn Sumach, Velvet Sumac, Staghorn Sumac",
+		"URL": "Plant.aspx?LatinName=Rhus typhina",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rhus x pulvinata",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Rhus x pulvinata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Rhynchosinapis wrightii",
+		"CommonName": "Lundy Cabbage",
+		"URL": "Plant.aspx?LatinName=Rhynchosinapis wrightii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Ribes aureum",
+		"CommonName": "Golden Currant",
+		"URL": "Plant.aspx?LatinName=Ribes aureum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Ribes burejense",
+		"CommonName": "Bureja gooseberry,",
+		"URL": "Plant.aspx?LatinName=Ribes burejense",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Ribes divaricatum",
+		"CommonName": "Coastal Black Gooseberry, Spreading gooseberry, Parish's gooseberry, Straggly gooseberry",
+		"URL": "Plant.aspx?LatinName=Ribes divaricatum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ribes maximowiczii",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Ribes maximowiczii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Ribes maximowiczii floribundum",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Ribes maximowiczii floribundum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Ribes nigrum",
+		"CommonName": "Blackcurrant, European black currant",
+		"URL": "Plant.aspx?LatinName=Ribes nigrum",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ribes odoratum",
+		"CommonName": "Buffalo Currant",
+		"URL": "Plant.aspx?LatinName=Ribes odoratum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Ribes procumbens",
+		"CommonName": "Trailing red currant",
+		"URL": "Plant.aspx?LatinName=Ribes procumbens",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Ribes rubrum",
+		"CommonName": "Red Currant, Cultivated currant",
+		"URL": "Plant.aspx?LatinName=Ribes rubrum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ribes uva-crispa",
+		"CommonName": "Gooseberry, European gooseberry",
+		"URL": "Plant.aspx?LatinName=Ribes uva-crispa",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ribes warszewiczii",
+		"CommonName": "Downy currant",
+		"URL": "Plant.aspx?LatinName=Ribes warszewiczii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Ribes x culverwellii",
+		"CommonName": "Jostaberry",
+		"URL": "Plant.aspx?LatinName=Ribes x culverwellii",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Rosa rugosa",
+		"CommonName": "Ramanas Rose, Rugosa rose",
+		"URL": "Plant.aspx?LatinName=Rosa rugosa",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rosa villosa",
+		"CommonName": "Apple Rose",
+		"URL": "Plant.aspx?LatinName=Rosa villosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus arcticus",
+		"CommonName": "Arctic Bramble, Arctic raspberry, Dwarf raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus arcticus",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus canadensis",
+		"CommonName": "American Dewberry, Smooth blackberry",
+		"URL": "Plant.aspx?LatinName=Rubus canadensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus chamaemorus",
+		"CommonName": "Cloudberry",
+		"URL": "Plant.aspx?LatinName=Rubus chamaemorus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Rubus crataegifolius",
+		"CommonName": "Korean raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus crataegifolius",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus ellipticus",
+		"CommonName": "Golden Evergreen Raspberry, Yellow Himalayan raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus ellipticus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rubus fruticosus",
+		"CommonName": "Blackberry, Shrubby blackberry",
+		"URL": "Plant.aspx?LatinName=Rubus fruticosus",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Rubus geoides",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Rubus geoides",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus idaeus",
+		"CommonName": "Raspberry, American red raspberry, Grayleaf red raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus idaeus",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rubus laciniatus",
+		"CommonName": "Oregon Cut-Leaf Blackberry, Cutleaf blackberry",
+		"URL": "Plant.aspx?LatinName=Rubus laciniatus",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus leucodermis",
+		"CommonName": "Whitebark Raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus leucodermis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus loganobaccus",
+		"CommonName": "Loganberry",
+		"URL": "Plant.aspx?LatinName=Rubus loganobaccus",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus nepalensis",
+		"CommonName": "Nepalese Raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus nepalensis",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Rubus occidentalis",
+		"CommonName": "Black Raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus occidentalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus phoenicolasius",
+		"CommonName": "Japanese Wineberry, Wine raspberry",
+		"URL": "Plant.aspx?LatinName=Rubus phoenicolasius",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus procerus",
+		"CommonName": "Himalayan Giant Blackberry",
+		"URL": "Plant.aspx?LatinName=Rubus procerus",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rubus trivialis",
+		"CommonName": "Southern Dewberry",
+		"URL": "Plant.aspx?LatinName=Rubus trivialis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rumex acetosa",
+		"CommonName": "Sorrel, Garden sorrel",
+		"URL": "Plant.aspx?LatinName=Rumex acetosa",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Rumex acetosella",
+		"CommonName": "Sheeps Sorrel, Common sheep sorrel",
+		"URL": "Plant.aspx?LatinName=Rumex acetosella",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rumex alpinus",
+		"CommonName": "Alpine Dock, Munk's rhubarb",
+		"URL": "Plant.aspx?LatinName=Rumex alpinus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Rumex scutatus",
+		"CommonName": "Buckler-Leaved Sorrel, French sorrel",
+		"URL": "Plant.aspx?LatinName=Rumex scutatus",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Rungia klossii",
+		"CommonName": "Mushroom Plant",
+		"URL": "Plant.aspx?LatinName=Rungia klossii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Saccharum hybrids",
+		"CommonName": "Energy Cane",
+		"URL": "Plant.aspx?LatinName=Saccharum hybrids",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Saccharum officinarum",
+		"CommonName": "Sugarcane, Purple Sugar Cane",
+		"URL": "Plant.aspx?LatinName=Saccharum officinarum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Sagittaria cuneata",
+		"CommonName": "Wapato, arumleaf arrowhead",
+		"URL": "Plant.aspx?LatinName=Sagittaria cuneata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Sagittaria latifolia",
+		"CommonName": "Duck Potato, Broadleaf Arrowhead",
+		"URL": "Plant.aspx?LatinName=Sagittaria latifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Sagittaria sagittifolia",
+		"CommonName": "Arrow Head, Hawaii arrowhead",
+		"URL": "Plant.aspx?LatinName=Sagittaria sagittifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Sagittaria trifolia",
+		"CommonName": "Chinese Arrowroot, Threeleaf arrowhead",
+		"URL": "Plant.aspx?LatinName=Sagittaria trifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Salacca zalacca",
+		"CommonName": "Salak Palm, Snake Palm",
+		"URL": "Plant.aspx?LatinName=Salacca zalacca",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Salvia officinalis",
+		"CommonName": "Sage, Kitchen sage, Small Leaf Sage, Garden Sage",
+		"URL": "Plant.aspx?LatinName=Salvia officinalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Sambucus caerulea",
+		"CommonName": "Blue Elder",
+		"URL": "Plant.aspx?LatinName=Sambucus caerulea",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Sambucus nigra",
+		"CommonName": "Elderberry - European Elder, Black elderberry, American black elderberry, Blue elderberry, Europea",
+		"URL": "Plant.aspx?LatinName=Sambucus nigra",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Sambucus nigra spp canadensis",
+		"CommonName": "American Elder",
+		"URL": "Plant.aspx?LatinName=Sambucus nigra spp canadensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Sanguisorba minor",
+		"CommonName": "Salad Burnet, Small burnet",
+		"URL": "Plant.aspx?LatinName=Sanguisorba minor",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Sasa kurilensis",
+		"CommonName": "Chishima Zasa",
+		"URL": "Plant.aspx?LatinName=Sasa kurilensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Sasa nipponica",
+		"CommonName": "Miyako-Zasa",
+		"URL": "Plant.aspx?LatinName=Sasa nipponica",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Sassafras albidum",
+		"CommonName": "Sassafras, Common Sassafras",
+		"URL": "Plant.aspx?LatinName=Sassafras albidum",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Satureja montana",
+		"CommonName": "Winter Savory",
+		"URL": "Plant.aspx?LatinName=Satureja montana",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Sauropus androgynus",
+		"CommonName": "Sweet Leaf, Sweetleaf Bush, Katuk",
+		"URL": "Plant.aspx?LatinName=Sauropus androgynus",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Schisandra chinensis",
+		"CommonName": "Magnolia Vine, Wu Wei Zi",
+		"URL": "Plant.aspx?LatinName=Schisandra chinensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Schisandra grandiflora",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Schisandra grandiflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Schisandra rubriflora",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Schisandra rubriflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Scorzonera hispanica",
+		"CommonName": "Scorzonera",
+		"URL": "Plant.aspx?LatinName=Scorzonera hispanica",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Secale cereale",
+		"CommonName": "Rye, Cereal rye",
+		"URL": "Plant.aspx?LatinName=Secale cereale",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Secale hybrids",
+		"CommonName": "Perennial cereal rye",
+		"URL": "Plant.aspx?LatinName=Secale hybrids",
+		"EdibleRating": "5",
+		"MedicinalRating": "1",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Secale strictum",
+		"CommonName": "Mountain Rye",
+		"URL": "Plant.aspx?LatinName=Secale strictum",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Secale strictum kuprijanovii",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Secale strictum kuprijanovii",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Sechium edule",
+		"CommonName": "Chayote, Mirliton, Cho Ko, Cho-Cho, Vegetable Pear",
+		"URL": "Plant.aspx?LatinName=Sechium edule",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Semiarundinaria fastuosa",
+		"CommonName": "Narihiradake, Narihira bamboo",
+		"URL": "Plant.aspx?LatinName=Semiarundinaria fastuosa",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Shorea robusta",
+		"CommonName": "Sal Tree",
+		"URL": "Plant.aspx?LatinName=Shorea robusta",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Sium sisarum",
+		"CommonName": "Skirret, Suikerwortel (Netherlands), Crummock (Scotland), Zuckewurzel (Germany)",
+		"URL": "Plant.aspx?LatinName=Sium sisarum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Smilacina racemosa",
+		"CommonName": "False Spikenard",
+		"URL": "Plant.aspx?LatinName=Smilacina racemosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Smilacina stellata",
+		"CommonName": "Star-Flowered Lily Of The Valley",
+		"URL": "Plant.aspx?LatinName=Smilacina stellata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Smilax china",
+		"CommonName": "China Root",
+		"URL": "Plant.aspx?LatinName=Smilax china",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Smilax herbacea",
+		"CommonName": "Carrion Flower, Smooth carrionflower",
+		"URL": "Plant.aspx?LatinName=Smilax herbacea",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Solanecio biafrae",
+		"CommonName": "Sierra Leone Bologi",
+		"URL": "Plant.aspx?LatinName=Solanecio biafrae",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Solanum lycopersicum",
+		"CommonName": "Tomato, Garden Tomato",
+		"URL": "Plant.aspx?LatinName=Solanum lycopersicum",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Solanum muricatum",
+		"CommonName": "Pepino",
+		"URL": "Plant.aspx?LatinName=Solanum muricatum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Solanum pimpinellifolium",
+		"CommonName": "Currant Tomato",
+		"URL": "Plant.aspx?LatinName=Solanum pimpinellifolium",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Solanum quitoense",
+		"CommonName": "Naranjilla, Quito Orange",
+		"URL": "Plant.aspx?LatinName=Solanum quitoense",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Solanum tuberosum",
+		"CommonName": "Potato, Irish potato",
+		"URL": "Plant.aspx?LatinName=Solanum tuberosum",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Sorbus domestica",
+		"CommonName": "Service Tree",
+		"URL": "Plant.aspx?LatinName=Sorbus domestica",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Sorbus latifolia",
+		"CommonName": "French Hales",
+		"URL": "Plant.aspx?LatinName=Sorbus latifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Sorbus mougeotii",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Sorbus mougeotii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Sorbus torminalis",
+		"CommonName": "Wild Service Tree, Checkertree",
+		"URL": "Plant.aspx?LatinName=Sorbus torminalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Sorghum hybrids",
+		"CommonName": "Perennial Sorghum",
+		"URL": "Plant.aspx?LatinName=Sorghum hybrids",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Sphenostylis stenocarpa",
+		"CommonName": "African Yam Bean",
+		"URL": "Plant.aspx?LatinName=Sphenostylis stenocarpa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Spondias dulcis",
+		"CommonName": "Golden Apple, Ambarella,",
+		"URL": "Plant.aspx?LatinName=Spondias dulcis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Spondias mombin",
+		"CommonName": "Yellow Mombin, Hog Plum, Caja Fruit, Taperebá",
+		"URL": "Plant.aspx?LatinName=Spondias mombin",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Spondias purpurea",
+		"CommonName": "Purple Mombin Red Mombin, Spanish Plum, Ciruela",
+		"URL": "Plant.aspx?LatinName=Spondias purpurea",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Spondias tuberosa",
+		"CommonName": "Imbu, Umbú, Brazil Plum",
+		"URL": "Plant.aspx?LatinName=Spondias tuberosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Stachys affinis",
+		"CommonName": "Chinese Artichoke, Artichoke betony",
+		"URL": "Plant.aspx?LatinName=Stachys affinis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Stevia rebaudiana",
+		"CommonName": "Stevia, Candyleaf",
+		"URL": "Plant.aspx?LatinName=Stevia rebaudiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Streptopus amplexifolius",
+		"CommonName": "Wild Cucumber, Claspleaf twistedstalk, Tubercle twistedstalk",
+		"URL": "Plant.aspx?LatinName=Streptopus amplexifolius",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Streptopus roseus",
+		"CommonName": "Scootberry, Rosybells",
+		"URL": "Plant.aspx?LatinName=Streptopus roseus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Sympholoma graveolens",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Sympholoma graveolens",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Synsepalum dulciferum",
+		"CommonName": "Miracle Berry",
+		"URL": "Plant.aspx?LatinName=Synsepalum dulciferum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Syzygium aromaticum",
+		"CommonName": "Clove, Zanzibar Redhead",
+		"URL": "Plant.aspx?LatinName=Syzygium aromaticum",
+		"EdibleRating": "4",
+		"MedicinalRating": "4",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Tacca leontopetaloides",
+		"CommonName": "Polynesian Arrowroot, Pia",
+		"URL": "Plant.aspx?LatinName=Tacca leontopetaloides",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Tagetes lucida",
+		"CommonName": "Mexican Tarragon, Sweetscented marigold",
+		"URL": "Plant.aspx?LatinName=Tagetes lucida",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Talisia esculenta",
+		"CommonName": "Pitomba",
+		"URL": "Plant.aspx?LatinName=Talisia esculenta",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Tamarindus indica",
+		"CommonName": "Tamarind",
+		"URL": "Plant.aspx?LatinName=Tamarindus indica",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Taraxacum officinale",
+		"CommonName": "Dandelion - Kukraundha, Kanphool, Common dandelion, Dandelion",
+		"URL": "Plant.aspx?LatinName=Taraxacum officinale",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Telfairia occidentalis",
+		"CommonName": "Fluted Gourd",
+		"URL": "Plant.aspx?LatinName=Telfairia occidentalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Telfairia pedata",
+		"CommonName": "Oysternut",
+		"URL": "Plant.aspx?LatinName=Telfairia pedata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Terminalia catappa",
+		"CommonName": "Indian Almond, Tropical Almond Tree",
+		"URL": "Plant.aspx?LatinName=Terminalia catappa",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Terminalia ferdinandiana",
+		"CommonName": "Billy Goat Plum",
+		"URL": "Plant.aspx?LatinName=Terminalia ferdinandiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Terminalia kaernbachii",
+		"CommonName": "Okari Nut",
+		"URL": "Plant.aspx?LatinName=Terminalia kaernbachii",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Thaumatococcus daniellii",
+		"CommonName": "Sweet Prayer Plant, Katemfe",
+		"URL": "Plant.aspx?LatinName=Thaumatococcus daniellii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Theobroma cacao",
+		"CommonName": "Cacao, Cocoa Tree",
+		"URL": "Plant.aspx?LatinName=Theobroma cacao",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Theobroma glaucum",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Theobroma glaucum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Theobroma grandiflorum",
+		"CommonName": "Cupuassu, Cupuacu",
+		"URL": "Plant.aspx?LatinName=Theobroma grandiflorum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Thymus serpyllum",
+		"CommonName": "Wild Thyme",
+		"URL": "Plant.aspx?LatinName=Thymus serpyllum",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Thymus vulgaris",
+		"CommonName": "Common Thyme, Garden thyme, Wild Thyme",
+		"URL": "Plant.aspx?LatinName=Thymus vulgaris",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Thymus x citriodorus",
+		"CommonName": "Lemon Thyme, Creeping Lemon Thyme, Lemon-Scented Thyme",
+		"URL": "Plant.aspx?LatinName=Thymus x citriodorus",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Thyrsostachys siamensis",
+		"CommonName": "Monastery Bamboo",
+		"URL": "Plant.aspx?LatinName=Thyrsostachys siamensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Tieghemella heckelii",
+		"CommonName": "Baku",
+		"URL": "Plant.aspx?LatinName=Tieghemella heckelii",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Tilia cordata",
+		"CommonName": "Small Leaved Lime, Littleleaf linden",
+		"URL": "Plant.aspx?LatinName=Tilia cordata",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Tilia platyphyllos",
+		"CommonName": "Large Leaved Lime, Largeleaf linden, Bigleaf Linden",
+		"URL": "Plant.aspx?LatinName=Tilia platyphyllos",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Tilia x europaea",
+		"CommonName": "Linden, Common Lime",
+		"URL": "Plant.aspx?LatinName=Tilia x europaea",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Torreya nucifera",
+		"CommonName": "Kaya, Japanese torreya",
+		"URL": "Plant.aspx?LatinName=Torreya nucifera",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Trapa bicornis",
+		"CommonName": "Ling, Horn nut",
+		"URL": "Plant.aspx?LatinName=Trapa bicornis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Trapa natans",
+		"CommonName": "Water Chestnut",
+		"URL": "Plant.aspx?LatinName=Trapa natans",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Treculia africana",
+		"CommonName": "African Breadfruit or Breadnut",
+		"URL": "Plant.aspx?LatinName=Treculia africana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Trichilia dregeana",
+		"CommonName": "Cape Mahogany",
+		"URL": "Plant.aspx?LatinName=Trichilia dregeana",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Trigonella foenum-graecum",
+		"CommonName": "Fenugreek, Sicklefruit fenugreek",
+		"URL": "Plant.aspx?LatinName=Trigonella foenum-graecum",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Triteleia grandiflora",
+		"CommonName": "Wild Hyacinth, Largeflower triteleia, Howell's triteleia",
+		"URL": "Plant.aspx?LatinName=Triteleia grandiflora",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Triteleia laxa",
+		"CommonName": "Grassnut, Ithuriel's spear",
+		"URL": "Plant.aspx?LatinName=Triteleia laxa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Triticum aestivum",
+		"CommonName": "Bread Wheat, Common wheat",
+		"URL": "Plant.aspx?LatinName=Triticum aestivum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Triticum aestivum spelta",
+		"CommonName": "Spelt Wheat",
+		"URL": "Plant.aspx?LatinName=Triticum aestivum spelta",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Triticum turgidum",
+		"CommonName": "Rivet Wheat",
+		"URL": "Plant.aspx?LatinName=Triticum turgidum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Tropaeolum majus",
+		"CommonName": "Nasturtium, Indian Cress",
+		"URL": "Plant.aspx?LatinName=Tropaeolum majus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Tropaeolum minus",
+		"CommonName": "Dwarf Nasturtium",
+		"URL": "Plant.aspx?LatinName=Tropaeolum minus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Tropaeolum tuberosum",
+		"CommonName": "Anu",
+		"URL": "Plant.aspx?LatinName=Tropaeolum tuberosum",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Tylosema esculentum",
+		"CommonName": "Marama Bean",
+		"URL": "Plant.aspx?LatinName=Tylosema esculentum",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Typha angustifolia",
+		"CommonName": "Small Reed Mace, Narrowleaf cattail",
+		"URL": "Plant.aspx?LatinName=Typha angustifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Typha bungeana",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Typha bungeana",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Typha davidiana",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Typha davidiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Typha domingensis",
+		"CommonName": "Southern Cattail",
+		"URL": "Plant.aspx?LatinName=Typha domingensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Typha glauca",
+		"CommonName": "Hybrid cattail",
+		"URL": "Plant.aspx?LatinName=Typha glauca",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Typha latifolia",
+		"CommonName": "Reedmace, Broadleaf cattail, Bullrush, Nailrod",
+		"URL": "Plant.aspx?LatinName=Typha latifolia",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Typha laxmannii",
+		"CommonName": " ",
+		"URL": "Plant.aspx?LatinName=Typha laxmannii",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Typha orientalis",
+		"CommonName": "Broadleaf Cumbungi",
+		"URL": "Plant.aspx?LatinName=Typha orientalis",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Uapaca kirkiana",
+		"CommonName": "Wild Loquat",
+		"URL": "Plant.aspx?LatinName=Uapaca kirkiana",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Ugni molinae",
+		"CommonName": "Uñi, Chilean guava",
+		"URL": "Plant.aspx?LatinName=Ugni molinae",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Umbellularia californica",
+		"CommonName": "California Laurel, California Bay",
+		"URL": "Plant.aspx?LatinName=Umbellularia californica",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Urtica dioica",
+		"CommonName": "Stinging Nettle, California nettle",
+		"URL": "Plant.aspx?LatinName=Urtica dioica",
+		"EdibleRating": "5",
+		"MedicinalRating": "5",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Vaccinium australe",
+		"CommonName": "Northern Blueberry",
+		"URL": "Plant.aspx?LatinName=Vaccinium australe",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Vaccinium corymbosum",
+		"CommonName": "High-Bush Blueberry, American Blueberry, Swamp Blueberry, Blueberry",
+		"URL": "Plant.aspx?LatinName=Vaccinium corymbosum",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Vaccinium myrtillus",
+		"CommonName": "Bilberry, Whortleberry",
+		"URL": "Plant.aspx?LatinName=Vaccinium myrtillus",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Vaccinium oxycoccos",
+		"CommonName": "Small Cranberry",
+		"URL": "Plant.aspx?LatinName=Vaccinium oxycoccos",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Vaccinium praestans",
+		"CommonName": "Kamchatka Bilberry",
+		"URL": "Plant.aspx?LatinName=Vaccinium praestans",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Valerianella locusta",
+		"CommonName": "Corn Salad, Lewiston cornsalad",
+		"URL": "Plant.aspx?LatinName=Valerianella locusta",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Vangueria infausta",
+		"CommonName": "African medlar",
+		"URL": "Plant.aspx?LatinName=Vangueria infausta",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Vanilla planifolia",
+		"CommonName": "Vanilla",
+		"URL": "Plant.aspx?LatinName=Vanilla planifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Vasconcellea x heilbornii",
+		"CommonName": "Babaco",
+		"URL": "Plant.aspx?LatinName=Vasconcellea x heilbornii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Viburnum lentago",
+		"CommonName": "Sheepberry, Nannyberry, Nannyberry Viburnum",
+		"URL": "Plant.aspx?LatinName=Viburnum lentago",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Vicia faba major",
+		"CommonName": "Broad Bean, Fava Bean",
+		"URL": "Plant.aspx?LatinName=Vicia faba major",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Vigna angularis",
+		"CommonName": "Adzuki Bean",
+		"URL": "Plant.aspx?LatinName=Vigna angularis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Vigna mungo",
+		"CommonName": "Black Gram, Urd Bean, Black Matpe, Black Mung Bean",
+		"URL": "Plant.aspx?LatinName=Vigna mungo",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Vigna radiata",
+		"CommonName": "Mung Bean, Thai Mung Bean",
+		"URL": "Plant.aspx?LatinName=Vigna radiata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Vigna unguiculata unguiculata",
+		"CommonName": "Black-Eyed Pea",
+		"URL": "Plant.aspx?LatinName=Vigna unguiculata unguiculata",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Viola odorata",
+		"CommonName": "Sweet Violet, English Violet, Garden Violet, Sweet Violet, Florist's Violet",
+		"URL": "Plant.aspx?LatinName=Viola odorata",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Vitellaria paradoxa",
+		"CommonName": "Shea Butter Tree",
+		"URL": "Plant.aspx?LatinName=Vitellaria paradoxa",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Vitex doniana",
+		"CommonName": "Black Plum",
+		"URL": "Plant.aspx?LatinName=Vitex doniana",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "4"
+	},
+	{
+		"LatinName": "Vitex madiensis",
+		"CommonName": "Ekarukei, Murukukwe",
+		"URL": "Plant.aspx?LatinName=Vitex madiensis",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Vitex payos",
+		"CommonName": "Chocolate Berry",
+		"URL": "Plant.aspx?LatinName=Vitex payos",
+		"EdibleRating": "4",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Vitis belaii",
+		"CommonName": "Grape",
+		"URL": "Plant.aspx?LatinName=Vitis belaii",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Vitis rotundifolia",
+		"CommonName": "Muscadine Grape, Muscadine, Southern Fox Grape, Scuppernong, Muscadine Grape",
+		"URL": "Plant.aspx?LatinName=Vitis rotundifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "1"
+	},
+	{
+		"LatinName": "Vitis vinifera",
+		"CommonName": "Grape, Wine grape, Purpleleaf Grape, Common Grape",
+		"URL": "Plant.aspx?LatinName=Vitis vinifera",
+		"EdibleRating": "5",
+		"MedicinalRating": "2",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Wasabia japonica",
+		"CommonName": "Japanese Horseradish, Wasabi",
+		"URL": "Plant.aspx?LatinName=Wasabia japonica",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Wolffia arrhiza",
+		"CommonName": "Least Duckweed, Spotless watermeal",
+		"URL": "Plant.aspx?LatinName=Wolffia arrhiza",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Wolffia globosa",
+		"CommonName": "Khai Nam",
+		"URL": "Plant.aspx?LatinName=Wolffia globosa",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "0"
+	},
+	{
+		"LatinName": "Wyethia mollis",
+		"CommonName": "Woolly Wyethia, Woolly mule-ears",
+		"URL": "Plant.aspx?LatinName=Wyethia mollis",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "x Sorbo­crataegus hybrid",
+		"CommonName": "Haw x mountain ash",
+		"URL": "Plant.aspx?LatinName=x Sorbo­crataegus hybrid",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "x Sorbopyrus hybrid",
+		"CommonName": "Pear x mountain ash",
+		"URL": "Plant.aspx?LatinName=x Sorbopyrus hybrid",
+		"EdibleRating": "4",
+		"MedicinalRating": "0",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Yucca baccata",
+		"CommonName": "Spanish Bayonet, Banana yucca, Blue Yucca, Spanish Yucca",
+		"URL": "Plant.aspx?LatinName=Yucca baccata",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "5"
+	},
+	{
+		"LatinName": "Zea hybrids",
+		"CommonName": "Perennial corn, Perennial Maize",
+		"URL": "Plant.aspx?LatinName=Zea hybrids",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Zea mays",
+		"CommonName": "Sweet Corn, Corn",
+		"URL": "Plant.aspx?LatinName=Zea mays",
+		"EdibleRating": "5",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	},
+	{
+		"LatinName": "Zingiber officinale",
+		"CommonName": "Ginger: Common,Cooking Stem, Canton",
+		"URL": "Plant.aspx?LatinName=Zingiber officinale",
+		"EdibleRating": "4",
+		"MedicinalRating": "5",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Zizania aquatica",
+		"CommonName": "Wild Rice, Annual wildrice",
+		"URL": "Plant.aspx?LatinName=Zizania aquatica",
+		"EdibleRating": "5",
+		"MedicinalRating": "0",
+		"OtherRating": " "
+	},
+	{
+		"LatinName": "Zizania latifolia",
+		"CommonName": "Manchurian Wild Rice",
+		"URL": "Plant.aspx?LatinName=Zizania latifolia",
+		"EdibleRating": "4",
+		"MedicinalRating": "1",
+		"OtherRating": "2"
+	},
+	{
+		"LatinName": "Ziziphus jujuba",
+		"CommonName": "Jujube",
+		"URL": "Plant.aspx?LatinName=Ziziphus jujuba",
+		"EdibleRating": "4",
+		"MedicinalRating": "3",
+		"OtherRating": "3"
+	}
+]

@@ -1,0 +1,13 @@
+  HTTP/1.1 200 OK
+  Date: Sat, 27 Feb 2021 03:48:51 GMT
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
+  X-Frame-Options: DENY
+  X-UA-Compatible: IE=edge
+  Set-Cookie: JSESSIONID=275395DA44C4BDE0B78F05AB1031FDA2; Path=/catalog; Secure; HttpOnly
+  Content-Disposition: attachment; filename="Golden_wingedWa.zip"
+  Content-Length: 1017609
+  Keep-Alive: timeout=10, max=452
+  Connection: Keep-Alive
+  Content-Type: application/zip
+  Set-Cookie: BNES_JSESSIONID=29wdSvtRiIByFu2UArlSGmtjK2IOUEeXrXOTvK9C5g5/X66qietEhQmQ2VD4NCs2BRqsYqLfmbNaKiybDsZiNhOF5/0vndQvfA0SbrtETpsS5c4SsxG1JA==; Path=/catalog; Secure; HttpOnly
