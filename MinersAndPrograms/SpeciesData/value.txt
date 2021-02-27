@@ -1,13 +1,10 @@
-  HTTP/1.1 200 OK
-  Date: Sat, 27 Feb 2021 03:48:51 GMT
-  X-Frame-Options: SAMEORIGIN
-  Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
-  X-Frame-Options: DENY
-  X-UA-Compatible: IE=edge
-  Set-Cookie: JSESSIONID=275395DA44C4BDE0B78F05AB1031FDA2; Path=/catalog; Secure; HttpOnly
-  Content-Disposition: attachment; filename="Golden_wingedWa.zip"
-  Content-Length: 1017609
-  Keep-Alive: timeout=10, max=452
-  Connection: Keep-Alive
-  Content-Type: application/zip
-  Set-Cookie: BNES_JSESSIONID=29wdSvtRiIByFu2UArlSGmtjK2IOUEeXrXOTvK9C5g5/X66qietEhQmQ2VD4NCs2BRqsYqLfmbNaKiybDsZiNhOF5/0vndQvfA0SbrtETpsS5c4SsxG1JA==; Path=/catalog; Secure; HttpOnly
+--2021-02-27 16:05:49--  https://www.sciencebase.gov/catalog/file/get/59f5ec74e4b063d5d307e73d
+Resolving www.sciencebase.gov (www.sciencebase.gov)... 137.227.229.83
+Connecting to www.sciencebase.gov (www.sciencebase.gov)|137.227.229.83|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2625990 (2.5M) [application/zip]
+Saving to: './zips/WarblingVireo_V.zip'
+
+     0K .......... .......... .......... .......... ..........  1%  156K 16s
+    50K .......... .......... .......... .......... ..........  3% 66.6K 26s
+   100K .......... .......... .......... .......... ...
