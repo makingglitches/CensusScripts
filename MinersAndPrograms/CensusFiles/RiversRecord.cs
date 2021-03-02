@@ -56,7 +56,7 @@ namespace CensusFiles
         {
             insertcmd.Parameters["@ObjectId"].Value = this.OBJECTID;
             insertcmd.Parameters["@Name"].Value = this.Name;
-            insertcmd.Parameters["@State"].Value = this.State;
+            insertcmd.Parameters["@State"].Value = this.State.Trim();
             insertcmd.Parameters["@Region"].Value= this.Region;
             insertcmd.Parameters["@Miles"].Value = this.Miles;
             insertcmd.Parameters["@ShapeLength"].Value = this.Shape__Len;
@@ -111,6 +111,7 @@ namespace CensusFiles
             }
 
 
+            
 
             while (dread.Read())
             {

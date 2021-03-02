@@ -1,8 +1,0 @@
---2021-02-27 16:37:09--  https://www.sciencebase.gov/catalog/file/get/59f5ec5ee4b063d5d307e685
-Resolving www.sciencebase.gov (www.sciencebase.gov)... 137.227.229.83
-Connecting to www.sciencebase.gov (www.sciencebase.gov)|137.227.229.83|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 5227305 (5.0M) [application/zip]
-Saving to: './zips/WinterWren_Trog.zip'
-
-     0K .......... .......... .......... .

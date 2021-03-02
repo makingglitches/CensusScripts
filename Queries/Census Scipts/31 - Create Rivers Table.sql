@@ -17,7 +17,7 @@ CREATE TABLE [dbo].[Rivers](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ObjectId] [int] NULL,
 	[Name] [nvarchar](300) NULL,
-	[StateAbbreviation] [nvarchar](2) NULL,
+	[StateAbbreviation] [nvarchar](8) NULL,
 	[Region] [int] NULL,
 	[Miles] [float] NULL,
 	[ShapeLength] [float] NULL,
