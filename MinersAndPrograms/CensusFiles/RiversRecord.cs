@@ -51,7 +51,7 @@ namespace CensusFiles
 
         public static event Action<RiversRecord> OnParse;
         public static event Action<long> OnFileLength;
-
+        public static event Action<RiversRecord> SkipRecord;
         public void MapParameters(SqlCommand insertcmd)
         {
             insertcmd.Parameters["@ObjectId"].Value = this.OBJECTID;
@@ -78,7 +78,7 @@ namespace CensusFiles
         }
 
 
-        public static List<RiversRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode = false)
+        public static List<RiversRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode = false,bool resume=false)
         {
 
             ShapeFile shpfile = null;
@@ -110,13 +110,47 @@ namespace CensusFiles
                 OnFileLength(dread.DbfTable.Header.RecordCount);
             }
 
+            List<int> objectids = new List<int>();
 
-            
+            if (resume)
+            {
+                SqlCommand getids = new SqlCommand("select objectid from dbo.Rivers", scon);
+                var dr = getids.ExecuteReader();
 
+                while (dr.Read())
+                {
+                    objectids.Add((int)dr[0]);
+                }
+
+                dr.Close();
+            }
+
+           
             while (dread.Read())
             {
+
                 RiversRecord pr = new RiversRecord();
                 pr.Read(dread);
+
+                if (resume)
+                {
+                    
+                    if (!pr.OBJECTID.HasValue)
+                    {
+                        // this should never ever fire.
+                        Console.WriteLine("Missing ObjectId");
+                    }
+
+                    // pretty sure they all have objectids, i dont know why the datasource is nullable
+                    if (objectids.Contains((pr.OBJECTID.HasValue ? pr.OBJECTID.Value : -1)))
+                    {
+                        if (eventmode)
+                        {
+                            SkipRecord(pr);
+                        }
+                        continue;
+                    }
+                }
 
                 if (shpfile != null)
                 {

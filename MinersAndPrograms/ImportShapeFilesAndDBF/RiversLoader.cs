@@ -25,12 +25,14 @@ namespace ImportShapeFilesAndDBF
         private int x;
         private int y;
         public bool EventMode { get; set; }
+        public bool Resume { get; set; }
 
-        public RiversLoader(string zipdirectory, bool emptyRoadTable = false, bool eventmode = false)
+        public RiversLoader(string zipdirectory, bool emptyRoadTable = false, bool eventmode = false, bool resume=false)
         {
             EventMode = eventmode;
             ZipDirectory = zipdirectory;
             EmptyRiversTable = emptyRoadTable;
+            Resume = resume;
 
             for (int x = 0; x < 50; x++)
             {
@@ -66,6 +68,7 @@ namespace ImportShapeFilesAndDBF
                
                 RiversRecord.OnParse += RiversRecord_OnParse;
                 RiversRecord.OnFileLength += RiversRecord_OnFileLength;
+                RiversRecord.SkipRecord += RiversRecord_SkipRecord;
             }
 
 
@@ -96,7 +99,7 @@ namespace ImportShapeFilesAndDBF
                 if (!EventMode)
                 {
                     // load records and wkt strings.
-                    List<RiversRecord> records = RiversRecord.ParseDBFFile(files[0], scon, true, false, false);
+                    List<RiversRecord> records = RiversRecord.ParseDBFFile(files[0], scon, true, false, false,Resume);
 
                     Console.WriteLine("Loaded " + records.Count.ToString() + " records.");
 
@@ -116,7 +119,7 @@ namespace ImportShapeFilesAndDBF
                 {
                     Task t = Task.Run(() =>
                     {
-                        RiversRecord.ParseDBFFile(files[0], scon, true, false, true);
+                        RiversRecord.ParseDBFFile(files[0], scon, true, false, true,Resume);
                     });
 
                     t.Wait();
@@ -130,6 +133,13 @@ namespace ImportShapeFilesAndDBF
             Console.WriteLine("Closed SQL Connection");
 
 
+        }
+
+        private void RiversRecord_SkipRecord(RiversRecord obj)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine("Skipping Record " + index.ToString() + " of " + length.ToString()+"          ");
+            index++;
         }
 
         private void RiversRecord_OnFileLength(long obj)

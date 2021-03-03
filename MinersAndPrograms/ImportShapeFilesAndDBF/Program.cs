@@ -21,7 +21,7 @@ namespace ImportShapeFilesAndDBF
          //   AquiferLoader aq = new AquiferLoader(basedatadir + "AqiferData", true, true);
           //  aq.LoadZips();
 
-            RiversLoader rivl = new RiversLoader(basedatadir + "RiversAndStreamsData", true, true);
+            RiversLoader rivl = new RiversLoader(basedatadir + "RiversAndStreamsData", false, true,true);
             rivl.LoadZips();
 
             PlaceLoader pl = new PlaceLoader(basedatadir + "PlacesZips", true, true);
