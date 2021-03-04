@@ -20,14 +20,55 @@ namespace Fixfbfcrap
         static void Main(string[] args)
         {
 
-            var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\AqiferData\aquifrp025.dbf");
 
-
-
-            ClassGenerator.WriteClassBase("AquiferBase", "AquiferBase.cs", dread);
-
-            var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\AqiferData\aquifrp025.shp");
+            // ok lets look into record 272
+            var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\Issues\tl_2019_01_place\tl_2019_01_place.shp");
             shp.Load();
+
+            var r = shp.Records[271];
+
+            string wkt = r.Record.GetWKT();
+
+            PolygonShape p = (PolygonShape)r.Record;
+
+            StreamWriter sw = new StreamWriter("Citronell Point Data.txt");
+
+            if (p.NumParts==1)
+            {
+                sw.WriteLine("File only has one part.");
+            }
+
+            sw.WriteLine("Shape contains " + p.NumPoints.ToString() + " points.");
+            sw.WriteLine("with " + p.NumParts.ToString() + " parts.");
+
+            int partindex = 0;
+
+            for (int x=0; x < p.NumPoints; x++)
+            {
+                if (partindex < p.NumParts &&  x==p.Parts[partindex])
+               {
+                    sw.WriteLine();
+                    sw.WriteLine("Part starting at point #" + x);
+                    partindex++;
+               }
+                sw.WriteLine(p.Points[x].X.ToString() + ", " + p.Points[x].Y.ToString());
+            }
+
+            sw.WriteLine();
+            sw.WriteLine(wkt);
+            sw.Flush();
+            sw.Close();
+
+
+
+            //var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\AqiferData\aquifrp025.dbf");
+
+
+
+            //ClassGenerator.WriteClassBase("AquiferBase", "AquiferBase.cs", dread);
+
+            //var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\AqiferData\aquifrp025.shp");
+            //shp.Load();
 
             //var dread = new DbfDataReader.DbfDataReader(@"C:\Users\John\Documents\CensusProject\RiversAndStreamsData\USA_Rivers_and_Streams-shp\9ae73184-d43c-4ab8-940a-c8687f61952f2020328-1-r9gw71.0odx9.dbf");
 

@@ -54,20 +54,36 @@ namespace ShapeUtilities
                 var obj = (PolygonShape)this;
                 sb.Append("POLYGON(");
 
+
+
                 for (int parts = 0; parts < obj.NumParts; parts++)
                 {
                     sb.Append("(");
-                    int index = obj.Parts[parts];
-                    int lastindex = (parts < obj.NumParts - 1 ? obj.Parts[parts + 1] : obj.NumPoints - 1);
 
+                    int index = obj.Parts[parts];
+
+                    int lastindex = 0;
+
+                    if (obj.NumParts==1)
+                    {
+                        lastindex = obj.NumPoints - 1;   
+                    }
+                    else if (parts < obj.NumParts-1)
+                    {
+                        lastindex = obj.Parts[parts + 1] - 1;
+                    }
+                    else
+                    {
+                        lastindex = obj.NumPoints - 1;
+                    }
+                    
                     for (int pointindex = index; pointindex < lastindex + 1; pointindex++)
                     {
                         sb.Append(obj.Points[pointindex].X.ToString() + " " +
-                            obj.Points[pointindex].Y.ToString() + ",");
+                            obj.Points[pointindex].Y.ToString() + 
+                            (pointindex==lastindex?" ": ","));
 
                     }
-
-                    sb.Append(obj.Points[index].X.ToString() + " " + obj.Points[index].Y.ToString());
 
                     sb.Append(")");
 
