@@ -19,45 +19,47 @@ namespace Fixfbfcrap
     {
         static void Main(string[] args)
         {
+            SqlConnection scon = new SqlConnection();
+            SqlBulkCopy s = new SqlBulkCopy(scon);
+           
 
+            //// ok lets look into record 272
+            //var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\Issues\tl_2019_01_place\tl_2019_01_place.shp");
+            //shp.Load();
 
-            // ok lets look into record 272
-            var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\Issues\tl_2019_01_place\tl_2019_01_place.shp");
-            shp.Load();
+            //var r = shp.Records[271];
 
-            var r = shp.Records[271];
+            //string wkt = r.Record.GetWKT();
 
-            string wkt = r.Record.GetWKT();
+            //PolygonShape p = (PolygonShape)r.Record;
 
-            PolygonShape p = (PolygonShape)r.Record;
+            //StreamWriter sw = new StreamWriter("Citronell Point Data.txt");
 
-            StreamWriter sw = new StreamWriter("Citronell Point Data.txt");
+            //if (p.NumParts==1)
+            //{
+            //    sw.WriteLine("File only has one part.");
+            //}
 
-            if (p.NumParts==1)
-            {
-                sw.WriteLine("File only has one part.");
-            }
+            //sw.WriteLine("Shape contains " + p.NumPoints.ToString() + " points.");
+            //sw.WriteLine("with " + p.NumParts.ToString() + " parts.");
 
-            sw.WriteLine("Shape contains " + p.NumPoints.ToString() + " points.");
-            sw.WriteLine("with " + p.NumParts.ToString() + " parts.");
+            //int partindex = 0;
 
-            int partindex = 0;
+            //for (int x=0; x < p.NumPoints; x++)
+            //{
+            //    if (partindex < p.NumParts &&  x==p.Parts[partindex])
+            //   {
+            //        sw.WriteLine();
+            //        sw.WriteLine("Part starting at point #" + x);
+            //        partindex++;
+            //   }
+            //    sw.WriteLine(p.Points[x].X.ToString() + ", " + p.Points[x].Y.ToString());
+            //}
 
-            for (int x=0; x < p.NumPoints; x++)
-            {
-                if (partindex < p.NumParts &&  x==p.Parts[partindex])
-               {
-                    sw.WriteLine();
-                    sw.WriteLine("Part starting at point #" + x);
-                    partindex++;
-               }
-                sw.WriteLine(p.Points[x].X.ToString() + ", " + p.Points[x].Y.ToString());
-            }
-
-            sw.WriteLine();
-            sw.WriteLine(wkt);
-            sw.Flush();
-            sw.Close();
+            //sw.WriteLine();
+            //sw.WriteLine(wkt);
+            //sw.Flush();
+            //sw.Close();
 
 
 

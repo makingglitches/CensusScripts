@@ -99,10 +99,22 @@ namespace ShapeUtilities
                 return sb.ToString();
             }
 
+            // as per the esri documentation on shapefiles, the multipart line would just translate into mulkiple linestrings
+            // however in this implementation 
             if (this is PolyLineShape)
             {
                 var obj = (PolyLineShape)this;
-                sb.Append("LINESTRING(");
+
+                if (obj.NumParts > 1)
+                {
+                    sb.Append("MULTILINESTRING(");
+                }
+                else
+                {
+                    // OPENING AND CLOSING PARENTHESIS WILL OCCUR IN THE GENERIC CODE INCLUDED BELOW.
+                    sb.Append("LINESTRING");
+                }
+
 
                 for (int parts = 0; parts < obj.NumParts; parts++)
                 {
@@ -142,8 +154,12 @@ namespace ShapeUtilities
 
                 }
 
-                sb.Append(")");
-
+                // FOR MULTILINESTRING
+                if (obj.NumParts > 1)
+                {
+                    sb.Append(")");
+                }
+                
                 return sb.ToString();
 
             }
