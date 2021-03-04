@@ -59,16 +59,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AquiferBase.cs" />
-    <Compile Include="CountyBase.cs" />
-    <Compile Include="CountyRecord.cs" />
-    <Compile Include="DbfParser.cs" />
-    <Compile Include="FipsKeyRecord.cs" />
-    <Compile Include="FipsKeyBase.cs" />
+    <Compile Include="GeneratedBases\AquiferBase.cs" />
+    <Compile Include="GeneratedBases\CountyBase.cs" />
+    <Compile Include="GeneratedBases\FipsKeyBase.cs" />
+    <Compile Include="GeneratedBases\PlaceBase.cs" />
+    <Compile Include="GeneratedBases\RiversBase.cs" />
+    <Compile Include="GeneratedBases\RoadBase.cs" />
+    <Compile Include="GeneratedBases\StateBase.cs" />
     <Compile Include="IBaseReader.cs" />
+    <Compile Include="IRecordLoader.cs" />
     <Compile Include="IRecordWriter.cs" />
-    <Compile Include="PlaceBase.cs" />
-    <Compile Include="PlaceRecord.cs" />
     <Compile Include="ClassGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Queries\InsertAquifer.txt">
@@ -77,13 +77,13 @@
     <Content Include="Queries\InsertRiver.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Compile Include="RiversBase.cs" />
-    <Compile Include="AquiferRecord.cs" />
-    <Compile Include="RiversRecord.cs" />
-    <Compile Include="RoadBase.cs" />
-    <Compile Include="StateRecord.cs" />
-    <Compile Include="RoadRecord.cs" />
-    <Compile Include="StateBase.cs" />
+    <Compile Include="Records\AquiferRecord.cs" />
+    <Compile Include="Records\CountyRecord.cs" />
+    <Compile Include="Records\FipsKeyRecord.cs" />
+    <Compile Include="Records\PlaceRecord.cs" />
+    <Compile Include="Records\RiversRecord.cs" />
+    <Compile Include="Records\RoadRecord.cs" />
+    <Compile Include="Records\StateRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImportShapeFilesAndDBF\DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
@@ -111,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Loaders\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

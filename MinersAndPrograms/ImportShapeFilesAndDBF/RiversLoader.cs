@@ -196,6 +196,7 @@ namespace ImportShapeFilesAndDBF
                 }
                 catch
                 {
+                    
                     scon.Close();
                     scon.Open();
                     Thread.Sleep(2000);
