@@ -10,7 +10,7 @@ using CensusFiles;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data.Common;
-
+using System.Data;
 
 
 namespace Fixfbfcrap
@@ -19,9 +19,22 @@ namespace Fixfbfcrap
     {
         static void Main(string[] args)
         {
-            SqlConnection scon = new SqlConnection();
-            SqlBulkCopy s = new SqlBulkCopy(scon);
-           
+
+            SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
+            scb.InitialCatalog = "Geography";
+            scb.IntegratedSecurity = true;
+
+            SqlConnection scon = new SqlConnection(scb.ConnectionString);
+            scon.Open();
+
+            DataTable dt = RiversRecord.GetTable(scon);
+
+            SqlBulkCopy sb = new SqlBulkCopy(scon);
+
+            sb.DestinationTableName = "Rivers";
+            sb.WriteToServer(dt);
+
+            scon.Close();
 
             //// ok lets look into record 272
             //var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\Issues\tl_2019_01_place\tl_2019_01_place.shp");

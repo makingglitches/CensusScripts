@@ -7,14 +7,22 @@ using ShapeUtilities;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.IO;
+using System.Data.SqlTypes;
 using System.Data;
 using DbfDataReader;
+using Microsoft.SqlServer.Types;
 
 namespace CensusFiles
 {
     public class RiversRecord : RiversBase
     {
         public PolyLineShape ShapeInfo { get; set; }
+
+        public static event Action<RiversRecord> OnParse;
+        public static event Action<long> OnFileLength;
+        public static event Action<RiversRecord> SkipRecord;
+
+        #region StandardInserts
 
         public static SqlCommand GetInsert(SqlConnection scon)
         {
@@ -37,29 +45,20 @@ namespace CensusFiles
 
 
             return insertcmd;
-
-
         }
 
-        // over and goddamn over i reproduce the same shit and if i dont someone else does and takes the credit and they hide someone
-        // who can't explain themselves at all
-        // the year is NOT 2021 they just somehow have got enough pieces of shit to play along. over a very long time
-        // using a rather involved yet still simple process of ensnaring either one poor sod or one evil dumbass over and over.
-        // eventually noone will remember being real. which is to say, truthful yet not while being imperfect and not being a total monster like them
-        // which represets the terminus of human evolution and its step backwards to monkeys.
-        // similar depressing thought really, but far from untrue.
-
-        public static event Action<RiversRecord> OnParse;
-        public static event Action<long> OnFileLength;
-        public static event Action<RiversRecord> SkipRecord;
-        public void MapParameters(SqlCommand insertcmd)
+        public void MapParameters(SqlCommand insertcmd, int row=0)
         {
-            insertcmd.Parameters["@ObjectId"].Value = this.OBJECTID;
-            insertcmd.Parameters["@Name"].Value = this.Name;
-            insertcmd.Parameters["@State"].Value = this.State.Trim();
-            insertcmd.Parameters["@Region"].Value= this.Region;
-            insertcmd.Parameters["@Miles"].Value = this.Miles;
-            insertcmd.Parameters["@ShapeLength"].Value = this.Shape__Len;
+            
+            // this i already did having not really wanted to bother with datatable and sqlbulk copy.
+            // actually a fairly easy idea really.
+            // see the issue is that there is record type specific logic in some of these.
+            insertcmd.Parameters["@ObjectId"+(row==0?"":row.ToString())].Value = this.OBJECTID;
+            insertcmd.Parameters["@Name" + (row == 0 ? "" : row.ToString())].Value = this.Name;
+            insertcmd.Parameters["@State" + (row == 0 ? "" : row.ToString())].Value = this.State.Trim();
+            insertcmd.Parameters["@Region" + (row == 0 ? "" : row.ToString())].Value= this.Region;
+            insertcmd.Parameters["@Miles" + (row == 0 ? "" : row.ToString())].Value = this.Miles;
+            insertcmd.Parameters["@ShapeLength" + (row == 0 ? "" : row.ToString())].Value = this.Shape__Len;
 
             object geomstring =
               ShapeInfo == null ? DBNull.Value as object :
@@ -67,18 +66,149 @@ namespace CensusFiles
               ShapeInfo.GetWKT() //+ "',4122)"
               ;
 
-            insertcmd.Parameters["@Shape"].Value = geomstring;
+            insertcmd.Parameters["@Shape" + (row == 0 ? "" : row.ToString())].Value = geomstring;
 
             var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
 
-            insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
-            insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
-            insertcmd.Parameters["@MaxLon"].Value = bounding != null ? (object)bounding.X2 : DBNull.Value;
-            insertcmd.Parameters["@MaxLat"].Value = bounding != null ? (object)bounding.Y2 : DBNull.Value;
+            insertcmd.Parameters["@MinLon" + (row == 0 ? "" : row.ToString())].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
+            insertcmd.Parameters["@MinLat" + (row == 0 ? "" : row.ToString())].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
+            insertcmd.Parameters["@MaxLon" + (row == 0 ? "" : row.ToString())].Value = bounding != null ? (object)bounding.X2 : DBNull.Value;
+            insertcmd.Parameters["@MaxLat" + (row == 0 ? "" : row.ToString())].Value = bounding != null ? (object)bounding.Y2 : DBNull.Value;
         }
 
 
-        public static List<RiversRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode = false,bool resume=false)
+        public static SqlCommand InsertMultiple(List<RiversRecord> input, SqlConnection scon)
+        {
+            var ins = RiversRecord.GetInsert(scon);
+
+            var s = ins.CommandText;
+
+            int startv = s.IndexOf("VALUES");
+
+            s = s.Substring(s.IndexOf("VALUES")+6);
+            s = s.Replace("(", "");
+            s = s.Replace(")", "");
+
+            // just in case the contents of the insertrivers.txt changes.
+            var paramslist = s.Split(new char[] { ',' }).Select(o => o.Trim()).ToList();
+
+            var sqlparamslist = ins.Parameters.Cast<SqlParameter>().ToList();
+
+            
+
+            for (int i=0; i<input.Count;i++)
+            {
+                if (i==0)
+                {
+                    input[0].MapParameters(ins);
+                }
+                else
+                {
+                    ins.CommandText += ",(";
+                    
+                    foreach (string p in paramslist)
+                    {
+                        ins.CommandText += p + ",";
+                    }
+
+                    ins.CommandText = ins.CommandText.Substring(0,ins.CommandText.Length - 1);
+                    ins.CommandText += ")";
+
+                    sqlparamslist.ForEach(p =>
+                    {
+                        ins.Parameters.Add(new SqlParameter(p.ParameterName + i.ToString(), p.SqlDbType));
+                    });
+
+                    input[i].MapParameters(ins, i);
+                }
+            }
+
+            return ins;
+        }
+
+        #endregion StandardInserts
+
+
+        // they fixed some things, because bulkcopy didnt work the time before it was last 2021.
+        // seriously... wtf kind of goddamn scifi horror fiction have you fucking idiots made the country ???
+        // or is it just screwed up here for no goddamn reason right now?
+        // alexandria, va has a bunch of idiots in glasses on the damn beach.
+        // they try so hard to seeem so fucking stupid.
+
+        #region BulkLoad
+
+        public static SqlBulkCopy GetBulkCopier(DataTable dt, SqlConnection scon)
+        {
+            SqlBulkCopy sb = new SqlBulkCopy(scon);
+
+            sb.DestinationTableName = "Rivers";
+
+            foreach (DataColumn dc in dt.Columns)
+            {
+                sb.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
+            }
+
+            return sb;
+        }
+
+        public static DataTable FillTable(List<RiversRecord> records, DataTable dt)
+        {
+            records.ForEach(rec =>
+            {
+                var dr = dt.NewRow();
+                dr["ObjectId"] = rec.OBJECTID;
+                dr["Name"] = rec.Name;
+                dr["StateAbbreviation"] = rec.State;
+                dr["Region"] = rec.Region;
+                dr["Miles"] = rec.Miles;
+                dr["ShapeLength"] = rec.Shape__Len;
+                dr["Shape"] = rec.ShapeInfo==null ? null: SqlGeography.STGeomFromText(new SqlChars( new SqlString(  rec.ShapeInfo.GetWKT())),4326);
+              
+                var bounding = rec.ShapeInfo!= null ? rec.ShapeInfo.GetExtent() : null;
+
+                if (bounding != null)
+                {
+                    dr["MinLatitude"] = bounding.X1;
+                    dr["MinLongitude"] = bounding.Y1;
+                    dr["MaxLatitude"] = bounding.X2;
+                    dr["MaxLongitude"] = bounding.Y2;
+               }
+
+                dt.Rows.Add(dr);
+
+            });
+
+            return dt;
+        }
+
+        public static DataTable GetTable(SqlConnection scon)
+        {
+            DataTable dt = new DataTable();
+
+            SqlCommand scom = new SqlCommand("select top 1 * from dbo.Rivers", scon);
+
+            var r = scom.ExecuteReader();
+
+
+            for (int x = 0; x < r.FieldCount; x++)
+            {
+                string name = r.GetName(x);
+
+                if (name != "Id")
+                {
+                    Type t = r.GetFieldType(x);
+                    dt.Columns.Add(name, name == "Shape" ? typeof(SqlGeography) : t);
+                }
+            }
+
+            r.Close();
+
+            return dt;
+        }
+
+        #endregion BulkLoad
+
+        public static List<RiversRecord> ParseDBFFile(string filename, SqlConnection scon, bool loadShapeFile = false, bool resetMissingFips = false, bool eventmode = false, bool resume = false, bool dogc = false)
         {
 
             ShapeFile shpfile = null;
@@ -114,7 +244,7 @@ namespace CensusFiles
 
             if (resume)
             {
-                SqlCommand getids = new SqlCommand("select objectid from dbo.Rivers", scon);
+                SqlCommand getids = new SqlCommand("select objectid from dbo.Rivers order by objectid", scon);
                 var dr = getids.ExecuteReader();
 
                 while (dr.Read())
@@ -147,8 +277,14 @@ namespace CensusFiles
                         if (eventmode)
                         {
                             SkipRecord(pr);
+                            objectids.Remove(pr.OBJECTID.Value);
                         }
                         continue;
+                    }
+
+                    if (objectids.Count==0)
+                    {
+                        resume = false;
                     }
                 }
 
@@ -168,10 +304,15 @@ namespace CensusFiles
                     results.Add(pr);
                 }
 
+    
                 pr = null;
-                GC.AddMemoryPressure(200000000);
-                GC.Collect();
-                GC.WaitForFullGCComplete();
+
+                if (dogc)
+                {
+                    GC.AddMemoryPressure(200000000);
+                    GC.Collect();
+                    GC.WaitForFullGCComplete();
+                }
             }
 
             dread.Close();

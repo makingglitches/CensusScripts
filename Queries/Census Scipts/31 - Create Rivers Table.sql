@@ -25,12 +25,15 @@ CREATE TABLE [dbo].[Rivers](
 	MinLatitude float,
 	MinLongitude float,
 	MaxLatitude float,
-	MaxLongitude float
+	MaxLongitude float,
 
  CONSTRAINT [PK_Rivers] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+,
+CONSTRAINT [UN_Rivers_OBJID] UNIQUE(ObjectId)
+
 ) ON [PRIMARY]
 GO
 
