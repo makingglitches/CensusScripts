@@ -70,6 +70,8 @@
     <Compile Include="IRecordLoader.cs" />
     <Compile Include="IRecordWriter.cs" />
     <Compile Include="ClassGenerator.cs" />
+    <Compile Include="Loaders\GenericLoader.cs" />
+    <Compile Include="Loaders\LoaderOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Queries\InsertAquifer.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -112,8 +114,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Loaders\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
