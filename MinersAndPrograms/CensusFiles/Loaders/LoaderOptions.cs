@@ -11,6 +11,8 @@ namespace CensusFiles.Loaders
    public class LoaderOptions
     {
 
+        public bool ConsoleLogging { get; set; }
+
         public List<string> FieldsToExclude = new List<string>()
         { 
             "Id"
@@ -18,7 +20,7 @@ namespace CensusFiles.Loaders
 
         public Dictionary<string, Type> FieldsToManuallyType = new Dictionary<string, Type>()
         {
-            {"Shape", typeof(SqlGeometry) }
+            {"Shape", typeof(SqlGeography) }
         };
 
         /// <summary>
@@ -38,6 +40,7 @@ namespace CensusFiles.Loaders
             Resume = true;
             TempDirectoryName = "output";
             LoadShapeFile = true;
+            ConsoleLogging = true;
 
             SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder()
             {
@@ -89,6 +92,11 @@ namespace CensusFiles.Loaders
         /// Sql Server Connection String
         /// </summary>
         public string ConnectionString { get; set; }
+
+        public SqlConnection MakeConnection()
+        {
+            return new SqlConnection(ConnectionString);
+        }
 
     }
 }

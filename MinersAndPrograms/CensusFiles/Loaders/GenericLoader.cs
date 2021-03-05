@@ -14,15 +14,21 @@ using DbfDataReader;
 
 namespace CensusFiles.Loaders
 {
-    public abstract class GenericLoader
+    public class GenericLoader
     {
+
+
+        public GenericLoader(LoaderOptions options)
+        {
+            Options = options;
+        }
 
         /// <summary>
         /// Delegate representing the thingamajig that creates new class instances.
         /// </summary>
         /// <returns></returns>
         public delegate IRecordLoader NewClass();
-        public delegate void ReportStat(int index, int wrote, int writing);
+        public delegate void ReportStat(int index,int wrote, int writing, double rate);
 
         public delegate void ProcessFunction(GenericLoader g,  int index, IRecordLoader r, ShapeUtilities.BaseRecord shape, int wrote);
         public delegate void ReportLength(GenericLoader g,  string dbffilename, string shpfilename, long length);
@@ -86,20 +92,22 @@ namespace CensusFiles.Loaders
         }
 
         private List<IRecordLoader> towrite = new List<IRecordLoader>();
+        private int wrote = 0;
+        private double totalsecondswriting = 0;
+        private double recordpersecond = 0;
 
-        public void LoadZips(LoaderOptions options)
+        public void LoadZips()
         {
-            Options = options;
-
-            Console.WriteLine("Processing Table " + options.TableName);
+           
+            Console.WriteLine("Processing Table " + Options.TableName);
 
             #region FilesAndDirectories
-            var zipfiles = Directory.GetFiles(options.FileDirectory, "*.zip");
-            var outputdir = options.FileDirectory + "\\" + options.TempDirectoryName;            
+            var zipfiles = Directory.GetFiles(Options.FileDirectory, "*.zip");
+            var outputdir = Options.FileDirectory + "\\" + Options.TempDirectoryName;            
 
             if (Directory.Exists(outputdir))
             {
-                Directory.Delete(outputdir);
+                Directory.Delete(outputdir,true);
             }
 
             Directory.CreateDirectory(outputdir);
@@ -108,26 +116,26 @@ namespace CensusFiles.Loaders
             #region InitialSQL
             Console.WriteLine("Opening SQL Connection.");
             
-            SqlConnection scon = new SqlConnection(options.ConnectionString);
+            SqlConnection scon = new SqlConnection(Options.ConnectionString);
             scon.Open();
 
-            if (options.EmptyTable)
+            if (Options.EmptyTable)
             {
                 Console.WriteLine("Emptying table of records.");
-                SqlCommand scom = new SqlCommand("truncate table dbo." + options.TableName,scon);
+                SqlCommand scom = new SqlCommand("truncate table dbo." + Options.TableName,scon);
                 scom.ExecuteNonQuery();
             }
 
 
             List<object> resumeids = new List<object>();
 
-            if (options.Resume)
+            if (Options.Resume)
             {
-                Console.WriteLine("Retrieving resume ids. Field " + options.SqlResumeId + " selected.");
-                SqlCommand getresumeids = new SqlCommand("select " + options.SqlResumeId + " from dbo." + options.TableName + " order by " + options.SqlResumeId, scon);
+                Console.WriteLine("Retrieving resume ids. Field " + Options.SqlResumeId + " selected.");
+                SqlCommand getresumeids = new SqlCommand("select " + Options.SqlResumeId + " from dbo." + Options.TableName + " order by " + Options.SqlResumeId, scon);
                 var ir = getresumeids.ExecuteReader();
 
-                while (ir.Read()) { resumeids.Add(ir[options.SqlResumeId]);  }
+                while (ir.Read()) { resumeids.Add(ir[Options.SqlResumeId]);  }
 
                 ir.Close();
             }
@@ -140,7 +148,6 @@ namespace CensusFiles.Loaders
             #region ProcessZipFiles
             bool checkresume = resumeids.Count > 0;
 
-            int wrote = 0;
 
             foreach (string z in zipfiles)
             {
@@ -156,15 +163,17 @@ namespace CensusFiles.Loaders
                 
                 ShapeUtilities.ShapeFile sfile = null;
          
-                if (options.LoadShapeFile)
+                if (Options.LoadShapeFile)
                 {
                     sfile = new ShapeUtilities.ShapeFile(shpfile);
+                    sfile.Load();
                 }
 
                 int sindex = 0;
 
                 // report length back to implementer.
                 OnLength(this,dbasefile,shpfile, dr.DbfTable.Header.RecordCount);
+
 
                 while (dr.Read())
                 {
@@ -176,9 +185,9 @@ namespace CensusFiles.Loaders
                     
                     if (checkresume)
                     {
-                        if (resumeids.Contains(dr[options.DbaseResumeId]))
+                        if (resumeids.Contains(dr[Options.DbaseResumeId]))
                         {
-                            resumeids.Remove(dr[options.DbaseResumeId]);
+                            resumeids.Remove(dr[Options.DbaseResumeId]);
                             checkresume = resumeids.Count > 0;
                             SkipRecord(this, sindex, i, currshape,wrote);
                             sindex++;
@@ -190,13 +199,14 @@ namespace CensusFiles.Loaders
 
                     towrite.Add(i);
 
-                    Status(sindex, wrote, 0);
+                    Status(sindex, wrote, 0,  totalsecondswriting==0?0: wrote/totalsecondswriting);
 
                     if (Options.RecordLimit == towrite.Count)
                     {
-                        Status(sindex, wrote, towrite.Count);
-                        wrote +=  DoCopy();
-                        Status(sindex, wrote, 0);
+                        Status(sindex, wrote, towrite.Count, recordpersecond);
+                        DoCopy();
+                        Status(sindex, wrote, 0, recordpersecond);
+                        
                     }
 
                     sindex++;
@@ -204,16 +214,24 @@ namespace CensusFiles.Loaders
 
                 dr.Close();
 
+                if (towrite.Count>0)
+                {
+                    Status(sindex, wrote, towrite.Count, recordpersecond);
+                    DoCopy();
+                    Status(sindex, wrote, 0,recordpersecond);
+                }
 
-                Directory.Delete(outputdir);
+                Directory.Delete(outputdir,true);
             }
 
             #endregion ProcessZipFiles
 
         }
 
-        private int DoCopy()
+        private void DoCopy()
         {
+            DateTime start = DateTime.Now;
+
             // if i want to error checking i'll just catch the exception in the calling block of code.
             DataTable dt = GetTable();
             
@@ -240,11 +258,15 @@ namespace CensusFiles.Loaders
 
             scon.Close();
 
-            int res = towrite.Count();
+            wrote+=towrite.Count();
+
 
             towrite.Clear();
 
-            return res;
+            DateTime end = DateTime.Now;
+
+            totalsecondswriting += end.Subtract(start).TotalSeconds;
+            recordpersecond = wrote / totalsecondswriting;
    
         }
 

@@ -14,8 +14,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Aquifer](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[ObjectId] [int] NULL,
+	[ObjectId] [int] not NULL,
 	[RockName] [nvarchar](500) NULL,
 	[RockType] [int] NULL,
 	[AquiferName] [nvarchar](500) NULL,
@@ -29,7 +28,7 @@ CREATE TABLE [dbo].[Aquifer](
 	[Shape] [geography] NULL,
  CONSTRAINT [PK_Aquifer] PRIMARY KEY CLUSTERED 
 (
-	[Id] ASC
+	[ObjectId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO

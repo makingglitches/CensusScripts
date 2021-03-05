@@ -15,9 +15,36 @@ using Microsoft.SqlServer.Types;
 namespace CensusFiles
 {
     public class RiversRecord : RiversBase,IRecordLoader
-    {
+    {        
         public PolyLineShape ShapeInfo { get; set; }
 
+        public void PutRecord(DataTable dt)
+        {
+
+            DataRow dr = dt.NewRow();
+
+            dr["ObjectId"] = this.OBJECTID;
+            dr["Name"] = this.Name;
+            dr["StateAbbreviation"] = this.State;
+            dr["Region"] = this.Region;
+            dr["Miles"] = this.Miles;
+            dr["ShapeLength"] = this.Shape__Len;
+            dr["Shape"] = this.ShapeInfo?.GetMSSQLInstance();
+
+            var bounding = this.ShapeInfo?.GetExtent();
+
+            if (bounding != null)
+            {
+                dr["MinLatitude"] = bounding.X1;
+                dr["MinLongitude"] = bounding.Y1;
+                dr["MaxLatitude"] = bounding.X2;
+                dr["MaxLongitude"] = bounding.Y2;
+            }
+
+            dt.Rows.Add(dr);
+        }
+
+        #region SuperCeded
         public static event Action<RiversRecord> OnParse;
         public static event Action<long> OnFileLength;
         public static event Action<RiversRecord> SkipRecord;
@@ -319,5 +346,8 @@ namespace CensusFiles
 
             return results;
         }
+
+        #endregion SuperCeded
+        
     }
 }

@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data.Common;
 using System.Data;
+using CensusFiles.Loaders;
 
 
 namespace Fixfbfcrap
@@ -19,22 +20,43 @@ namespace Fixfbfcrap
     {
         static void Main(string[] args)
         {
+            LoaderOptions l = new LoaderOptions()
+            {
+                TableName = "Rivers",
+                EmptyTable = false,
+                Resume=true,
+                DbaseResumeId = "OBJECTID",
+                SqlResumeId = "ObjectId",
+                RecordLimit=1000,
+                FileDirectory = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData"
+            };
 
-            SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
-            scb.InitialCatalog = "Geography";
-            scb.IntegratedSecurity = true;
+            GenericLoader g = new GenericLoader(l);
+            g.GetNewRecord = ()=> (IRecordLoader)new RiversRecord() ;
+            g.ProcessRecord += G_ProcessRecord;
+            g.SkipRecord += G_SkipRecord;
+            g.Status += G_Status;
+            g.OnLength += G_OnLength;
 
-            SqlConnection scon = new SqlConnection(scb.ConnectionString);
-            scon.Open();
+            g.LoadZips();
 
-            DataTable dt = RiversRecord.GetTable(scon);
+            #region OldCommentedCode
 
-            SqlBulkCopy sb = new SqlBulkCopy(scon);
+            //SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder();
+            //scb.InitialCatalog = "Geography";
+            //scb.IntegratedSecurity = true;
 
-            sb.DestinationTableName = "Rivers";
-            sb.WriteToServer(dt);
+            //SqlConnection scon = new SqlConnection(scb.ConnectionString);
+            //scon.Open();
 
-            scon.Close();
+            //DataTable dt = RiversRecord.GetTable(scon);
+
+            //SqlBulkCopy sb = new SqlBulkCopy(scon);
+
+            //sb.DestinationTableName = "Rivers";
+            //sb.WriteToServer(dt);
+
+            //scon.Close();
 
             //// ok lets look into record 272
             //var shp = new ShapeFile(@"C:\Users\John\Documents\CensusProject\Issues\tl_2019_01_place\tl_2019_01_place.shp");
@@ -229,7 +251,76 @@ namespace Fixfbfcrap
 
             //ts.Flush();
             //ts.Close();
+            #endregion OldCommentedCode
+        }
 
+        private static long _length;
+        private static int x;
+        private static int y;
+        private static long consolewid;
+        private static string BlankLine;
+
+        private static void G_OnLength(GenericLoader g, string dbffilename, string shpfilename, long length)
+        {
+            _length = length;
+            
+            Console.WriteLine("Processing Dbase: " + Path.GetFileName( dbffilename));
+            Console.WriteLine("Processing shp: " + Path.GetFileName(shpfilename));
+            Console.WriteLine("Discovered " + length.ToString() + " Records.");
+            
+            if ( g.Options.Resume) 
+            { 
+                Console.WriteLine("===> Resume On <==="); 
+            }
+
+            x = Console.CursorLeft;
+            y = Console.CursorTop;
+            consolewid = Console.LargestWindowWidth;
+
+            BlankLine = string.Empty;
+
+            for (int rep=0; rep < 80; rep++)
+            {
+                BlankLine += " ";
+            }
+        }
+
+
+        // they are actually fearful of being caught but they screw up other people by acting like people will misinterpret things
+        // and then pretending until someone grabs them by their head and makes the best use of their mouth
+        // in general the idea is to pressure everyone not only to acting a certain way in their WEIRD trash system
+        // but also to restructure the minds of people not like them if they tell them to screw their emotions up.
+
+        private static void G_Status(int index, int wrote, int writing, double rate)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine(BlankLine);
+            Console.WriteLine(BlankLine);
+
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine("Processing record " + (index+1).ToString() + " of " + _length.ToString());
+            Console.WriteLine((writing>0?"===>WRITING:"+writing.ToString()+" <====":"")+ "Wrote: "+wrote.ToString()+" to Database @ "+rate.ToString()+" r/s");
+        }
+
+        private static void G_SkipRecord(GenericLoader g, int index, IRecordLoader r, BaseRecord shape, int wrote)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine(BlankLine);
+            Console.WriteLine(BlankLine);
+            Console.SetCursorPosition(x, y);
+            Console.WriteLine("Skipping " + index.ToString() + " of " + _length.ToString());
+        }
+
+        private static void G_ProcessRecord(GenericLoader g, int index, IRecordLoader r, BaseRecord shape, int wrote)
+        {
+            // nothing to do for rivers record
+            // but here one might process fips codes etc
+            // however may migrate all that to the sql scripts collection for after the main load event.
+            // since everything needed is pretty much there.
+
+            // annndd a use afterall.
+            var r1 = (RiversRecord)r;
+            r1.ShapeInfo = (PolyLineShape) shape;
         }
     }
 }

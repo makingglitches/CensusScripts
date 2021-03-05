@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using DbfDataReader;
+using Microsoft.SqlServer.Types;
+using System.Data.SqlTypes;
+
 
 
 // useful as previous but not specifcally what we're looking for here.
@@ -21,6 +24,19 @@ namespace ShapeUtilities
         {
           
         }
+
+
+
+        /// <summary>
+        /// Primarily the purpose for this is to populate a bulkcopy ready datatable.
+        /// Returns the dacfx server type.
+        /// </summary>
+        public SqlGeography GetMSSQLInstance()
+        {
+            return 
+            SqlGeography.STGeomFromText(new SqlChars(new SqlString(this.GetWKT())), 4326);
+        }
+
 
         /// <summary>
         /// Gets the bounding box of a shape implemeting IHasPoints

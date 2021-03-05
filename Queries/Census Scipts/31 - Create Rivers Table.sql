@@ -14,8 +14,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Rivers](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[ObjectId] [int] NULL,
+	[ObjectId] [int] Not NULL,
 	[Name] [nvarchar](300) NULL,
 	[StateAbbreviation] [nvarchar](8) NULL,
 	[Region] [int] NULL,
@@ -29,11 +28,8 @@ CREATE TABLE [dbo].[Rivers](
 
  CONSTRAINT [PK_Rivers] PRIMARY KEY CLUSTERED 
 (
-	[Id] ASC
+	[ObjectId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-,
-CONSTRAINT [UN_Rivers_OBJID] UNIQUE(ObjectId)
-
 ) ON [PRIMARY]
 GO
 

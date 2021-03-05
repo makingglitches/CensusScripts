@@ -142,5 +142,10 @@ namespace CensusFiles
 
 
         }
+
+        public void PutRecord(DataTable tgt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
