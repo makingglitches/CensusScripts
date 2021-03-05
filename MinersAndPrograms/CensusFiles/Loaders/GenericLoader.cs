@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Data.SqlTypes;
 
+
 using DbfDataReader;
 
 namespace CensusFiles.Loaders
@@ -47,6 +48,12 @@ namespace CensusFiles.Loaders
         /// Fires when the present dbase files length is retrieved
         /// </summary>
         public event ReportLength OnLength;
+
+        /// <summary>
+        /// Fires when the thread reports back a status.
+        /// </summary>
+        public event ReportStat Status;
+       
 
         public DataTable GetTable()
         {
@@ -130,6 +137,7 @@ namespace CensusFiles.Loaders
 
             #endregion InitialSQL
 
+            #region ProcessZipFiles
             bool checkresume = resumeids.Count > 0;
 
             int wrote = 0;
@@ -182,9 +190,13 @@ namespace CensusFiles.Loaders
 
                     towrite.Add(i);
 
+                    Status(sindex, wrote, 0);
+
                     if (Options.RecordLimit == towrite.Count)
                     {
-
+                        Status(sindex, wrote, towrite.Count);
+                        wrote +=  DoCopy();
+                        Status(sindex, wrote, 0);
                     }
 
                     sindex++;
@@ -196,8 +208,44 @@ namespace CensusFiles.Loaders
                 Directory.Delete(outputdir);
             }
 
-            
+            #endregion ProcessZipFiles
 
+        }
+
+        private int DoCopy()
+        {
+            // if i want to error checking i'll just catch the exception in the calling block of code.
+            DataTable dt = GetTable();
+            
+            foreach (IRecordLoader i in towrite)
+            {
+                i.PutRecord(dt);
+            }
+
+            SqlConnection scon = new SqlConnection(Options.ConnectionString);
+            scon.Open();
+
+            SqlBulkCopy sq = new SqlBulkCopy(scon);
+
+            sq.DestinationTableName = Options.TableName;
+
+            // doesnt this seem stupid ?
+            // well i'd say yeah it was if they didnt design it stupidly to go off ordinal position rather than matching column names !
+            foreach (DataColumn dc in dt.Columns)
+            {
+                sq.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
+            }
+
+            sq.WriteToServer(dt);
+
+            scon.Close();
+
+            int res = towrite.Count();
+
+            towrite.Clear();
+
+            return res;
+   
         }
 
     }

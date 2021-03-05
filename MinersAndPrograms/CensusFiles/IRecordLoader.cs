@@ -10,6 +10,6 @@ namespace CensusFiles
 {
    public interface IRecordLoader:IBaseReader
     {
-        void PutRecord(IBaseReader r, DataTable tgt);
+        void PutRecord( DataTable tgt);
     }
 }
