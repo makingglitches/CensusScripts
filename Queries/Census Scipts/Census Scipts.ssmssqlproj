@@ -217,6 +217,12 @@
           <AssociatedConnUserName />
           <FullPath>32 - Create Aquifers Table.sql</FullPath>
         </FileNode>
+        <FileNode Name="33 - Create FileSources Table.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>33 - Create FileSources Table.sql</FullPath>
+        </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
