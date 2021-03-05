@@ -13,7 +13,7 @@ using System.Data;
 
 namespace CensusFiles
 {
-    public class CountyRecord:CountyBase
+    public class CountyRecord:CountyBase,IRecordLoader
     {
         public string FipsId { get; set; }
         public PolygonShape ShapeInfo { get; set; }

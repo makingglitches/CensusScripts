@@ -12,7 +12,7 @@ using System.IO;
 
 namespace CensusFiles
 {
-    public class PlaceRecord :PlaceBase
+    public class PlaceRecord :PlaceBase,IRecordLoader
     {
 
         public string FipsId { get; set; }

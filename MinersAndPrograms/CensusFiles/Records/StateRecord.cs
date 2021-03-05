@@ -12,7 +12,7 @@ using System.IO;
 
 namespace CensusFiles
 {
-    public class StateRecord : StateBase
+    public class StateRecord : StateBase,IRecordLoader
     {
         public string FipsId { get; set; }
 

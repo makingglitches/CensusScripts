@@ -12,7 +12,7 @@ using DbfDataReader;
 
 namespace CensusFiles
 {
-    public class AquiferRecord : AquiferBase
+    public class AquiferRecord : AquiferBase,IRecordLoader
     {
         public PolygonShape ShapeInfo { get; set; }
 

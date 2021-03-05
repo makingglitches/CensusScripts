@@ -14,7 +14,7 @@ using Microsoft.SqlServer.Types;
 
 namespace CensusFiles
 {
-    public class RiversRecord : RiversBase
+    public class RiversRecord : RiversBase,IRecordLoader
     {
         public PolyLineShape ShapeInfo { get; set; }
 

@@ -11,7 +11,7 @@ using System.IO;
 
 namespace CensusFiles
 {
-    public class RoadRecord : RoadBase
+    public class RoadRecord : RoadBase,IRecordLoader
     {
         public string FipsId { get; set; }
 

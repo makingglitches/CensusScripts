@@ -9,7 +9,7 @@ using System.Data.SqlTypes;
 
 namespace CensusFiles
 {
-  public  class FipsKeyRecord:FipsKeyBase
+  public  class FipsKeyRecord:FipsKeyBase, IRecordLoader
     {
 
         public static List<FipsKeyRecord> GetStates(SqlConnection scon)
