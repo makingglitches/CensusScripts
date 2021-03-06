@@ -23,7 +23,7 @@ namespace Fixfbfcrap
             LoaderOptions l = new LoaderOptions()
             {
                 TableName = "Rivers",
-                EmptyTable = false,
+                EmptyTable = true,
                 Resume=true,
                 DbaseResumeId = "OBJECTID",
                 SqlResumeId = "ObjectId",
@@ -258,7 +258,7 @@ namespace Fixfbfcrap
         // these people tell half truths mostly but a few whole ones
         // and they live their lives in an artificial circleS
       
-        private static void G_ProcessRecord(GenericLoader g, int index, IRecordLoader r, BaseRecord shape, int wrote)
+        private static void G_ProcessRecord(GenericLoader g, int index, IRecordLoader r, BaseRecord shape)
         {
             // nothing to do for rivers record
             // but here one might process fips codes etc
