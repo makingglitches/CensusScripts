@@ -21,6 +21,66 @@ namespace CensusFiles.Loaders
         public GenericLoader(LoaderOptions options)
         {
             Options = options;
+           
+            if (options.ConsoleLogging)
+            {
+                this.SkipRecord += GenericLoader_SkipRecord;
+                this.Status += GenericLoader_Status;
+                this.OnLength += GenericLoader_OnLength;
+            }
+        }
+
+        private long dbflength = 0;
+        private int cursorx = 0;
+        private int cursory = 0;
+        private string blankline = "";
+
+        private void GenericLoader_OnLength(GenericLoader g, string dbffilename, string shpfilename, long length)
+        {
+            dbflength = length;
+
+            Console.WriteLine("Processing Dbase: " + Path.GetFileName(dbffilename));
+            Console.WriteLine("Processing shp: " + Path.GetFileName(shpfilename));
+            Console.WriteLine("Discovered " + length.ToString() + " Records.");
+
+            if (g.Options.Resume)
+            {
+                Console.WriteLine("===> Resume On <===");
+            }
+
+
+
+            // interesting tidbit Console.LargestWindowWidth doesnt work worth shit. 
+            cursorx = Console.CursorLeft;
+            cursory = Console.CursorTop;
+            
+            blankline = string.Empty;
+
+            for (int rep = 0; rep < 80; rep++)
+            {
+                blankline += " ";
+            }
+        }
+
+        private void GenericLoader_Status(int index, int wrote, int writing, double rate)
+        {
+            Console.SetCursorPosition(cursorx, cursory);
+            Console.WriteLine(blankline);
+            Console.WriteLine(blankline);
+
+            Console.SetCursorPosition(cursorx, cursory);
+            Console.WriteLine("Processing record " + (index + 1).ToString() + " of " + dbflength.ToString());
+            Console.WriteLine((writing > 0 ? "===>WRITING:" + writing.ToString() + " <====" : "") + "Wrote: " + wrote.ToString() + " to Database @ " + rate.ToString() + " r/s");
+
+        }
+
+        private void GenericLoader_SkipRecord(GenericLoader g, int index, IRecordLoader r, ShapeUtilities.BaseRecord shape, int wrote)
+        {
+            Console.SetCursorPosition(cursorx, cursory);
+            Console.WriteLine(blankline);
+            Console.WriteLine(blankline);
+            Console.SetCursorPosition(cursorx, cursory);
+            Console.WriteLine("Skipping " + index.ToString() + " of " + dbflength.ToString());
         }
 
         /// <summary>

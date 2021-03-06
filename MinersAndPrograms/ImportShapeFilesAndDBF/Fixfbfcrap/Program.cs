@@ -34,10 +34,7 @@ namespace Fixfbfcrap
             GenericLoader g = new GenericLoader(l);
             g.GetNewRecord = ()=> (IRecordLoader)new RiversRecord() ;
             g.ProcessRecord += G_ProcessRecord;
-            g.SkipRecord += G_SkipRecord;
-            g.Status += G_Status;
-            g.OnLength += G_OnLength;
-
+           
             g.LoadZips();
 
             #region OldCommentedCode
@@ -254,63 +251,13 @@ namespace Fixfbfcrap
             #endregion OldCommentedCode
         }
 
-        private static long _length;
-        private static int x;
-        private static int y;
-        private static long consolewid;
-        private static string BlankLine;
-
-        private static void G_OnLength(GenericLoader g, string dbffilename, string shpfilename, long length)
-        {
-            _length = length;
-            
-            Console.WriteLine("Processing Dbase: " + Path.GetFileName( dbffilename));
-            Console.WriteLine("Processing shp: " + Path.GetFileName(shpfilename));
-            Console.WriteLine("Discovered " + length.ToString() + " Records.");
-            
-            if ( g.Options.Resume) 
-            { 
-                Console.WriteLine("===> Resume On <==="); 
-            }
-
-            x = Console.CursorLeft;
-            y = Console.CursorTop;
-            consolewid = Console.LargestWindowWidth;
-
-            BlankLine = string.Empty;
-
-            for (int rep=0; rep < 80; rep++)
-            {
-                BlankLine += " ";
-            }
-        }
-
-
-        // they are actually fearful of being caught but they screw up other people by acting like people will misinterpret things
-        // and then pretending until someone grabs them by their head and makes the best use of their mouth
-        // in general the idea is to pressure everyone not only to acting a certain way in their WEIRD trash system
-        // but also to restructure the minds of people not like them if they tell them to screw their emotions up.
-
-        private static void G_Status(int index, int wrote, int writing, double rate)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine(BlankLine);
-            Console.WriteLine(BlankLine);
-
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine("Processing record " + (index+1).ToString() + " of " + _length.ToString());
-            Console.WriteLine((writing>0?"===>WRITING:"+writing.ToString()+" <====":"")+ "Wrote: "+wrote.ToString()+" to Database @ "+rate.ToString()+" r/s");
-        }
-
-        private static void G_SkipRecord(GenericLoader g, int index, IRecordLoader r, BaseRecord shape, int wrote)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine(BlankLine);
-            Console.WriteLine(BlankLine);
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine("Skipping " + index.ToString() + " of " + _length.ToString());
-        }
-
+       
+      
+        // as much as i get sick of rewriting the same fucking code I get sick of having to constantly attempt to pretend
+        // that there is some rhyme or reason to this
+        // these people tell half truths mostly but a few whole ones
+        // and they live their lives in an artificial circleS
+      
         private static void G_ProcessRecord(GenericLoader g, int index, IRecordLoader r, BaseRecord shape, int wrote)
         {
             // nothing to do for rivers record
