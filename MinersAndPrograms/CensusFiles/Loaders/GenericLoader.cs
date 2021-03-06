@@ -158,8 +158,11 @@ namespace CensusFiles.Loaders
 
         public void LoadZips()
         {
-           
-            Console.WriteLine("Processing Table " + Options.TableName);
+
+            if (Options.ConsoleLogging)
+            {
+                Console.WriteLine("Processing Table " + Options.TableName);
+            }
 
             #region FilesAndDirectories
             var zipfiles = Directory.GetFiles(Options.FileDirectory, "*.zip");
@@ -174,14 +177,14 @@ namespace CensusFiles.Loaders
             #endregion FilesAndDirectories
 
             #region InitialSQL
-            Console.WriteLine("Opening SQL Connection.");
+           // Console.WriteLine("Opening SQL Connection.");
             
             SqlConnection scon = new SqlConnection(Options.ConnectionString);
             scon.Open();
 
             if (Options.EmptyTable)
             {
-                Console.WriteLine("Emptying table of records.");
+               if (Options.ConsoleLogging)  Console.WriteLine("Emptying table of records.");
                 SqlCommand scom = new SqlCommand("truncate table dbo." + Options.TableName,scon);
                 scom.ExecuteNonQuery();
             }
@@ -191,7 +194,7 @@ namespace CensusFiles.Loaders
 
             if (Options.Resume)
             {
-                Console.WriteLine("Retrieving resume ids. Field " + Options.SqlResumeId + " selected.");
+                if (Options.ConsoleLogging) Console.WriteLine("Retrieving resume ids. Field " + Options.SqlResumeId + " selected.");
                 SqlCommand getresumeids = new SqlCommand("select " + Options.SqlResumeId + " from dbo." + Options.TableName + " order by " + Options.SqlResumeId, scon);
                 var ir = getresumeids.ExecuteReader();
 
@@ -200,7 +203,8 @@ namespace CensusFiles.Loaders
                 ir.Close();
             }
 
-            Console.WriteLine("Closing SQL Connection");
+            //Console.WriteLine("Closing SQL Connection");
+            
             scon.Close();
 
             #endregion InitialSQL
@@ -211,8 +215,12 @@ namespace CensusFiles.Loaders
 
             foreach (string z in zipfiles)
             {
+
+
+                if (Options.ConsoleLogging) Console.WriteLine( "Extracting contents of archive " + Path.GetFileName(z));
+                    
                 // extract zipfile contents
-                ZipFile.ExtractToDirectory(z, outputdir);
+                    ZipFile.ExtractToDirectory(z, outputdir);
 
                 // retrieve shpfile and dbf file
                 string dbasefile = Directory.GetFiles(outputdir, "*.dbf").First();
@@ -225,6 +233,8 @@ namespace CensusFiles.Loaders
          
                 if (Options.LoadShapeFile)
                 {
+                    if (Options.ConsoleLogging) Console.WriteLine("Loading shapefile " + shpfile);
+                    
                     sfile = new ShapeUtilities.ShapeFile(shpfile);
                     sfile.Load();
                 }
@@ -319,7 +329,6 @@ namespace CensusFiles.Loaders
             scon.Close();
 
             wrote+=towrite.Count();
-
 
             towrite.Clear();
 
