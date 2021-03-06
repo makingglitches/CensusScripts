@@ -417,6 +417,7 @@ namespace CensusFiles.Loaders
                 sq.ColumnMappings.Add(dc.ColumnName, dc.ColumnName);
             }
 
+            //.... sighhhhhhhhhhhh 
             sq.WriteToServer(dt);
 
             scon.Close();

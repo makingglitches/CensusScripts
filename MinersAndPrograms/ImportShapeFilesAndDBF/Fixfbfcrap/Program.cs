@@ -36,7 +36,11 @@ namespace Fixfbfcrap
         {
             string dir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData";
 
-            RiversLoader
+            RiversLoader rl = new RiversLoader(false, true, dir);
+
+            rl.Options.RecordLimit = 100;
+
+            rl.LoadZips();
             
 
             // nope.. instead i'm sitting in poverty doing my best not to go nutty.
