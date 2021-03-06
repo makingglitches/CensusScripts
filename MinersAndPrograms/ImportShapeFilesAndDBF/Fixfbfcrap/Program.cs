@@ -53,9 +53,7 @@ namespace Fixfbfcrap
            
             g.LoadZips();
 
-            // and meanwhile stop trying to delay me till i end up writing the same things assholes.
-            // let the imposter write their own fucking code !
-            // this belongs to john r sohn !
+            
 
             #region OldCommentedCode
 
