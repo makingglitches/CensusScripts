@@ -27,7 +27,7 @@ namespace Fixfbfcrap
                 Resume=true,
                 DbaseResumeId = "OBJECTID",
                 SqlResumeId = "ObjectId",
-                RecordLimit=1000,
+                RecordLimit=500,
                 FileDirectory = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData"
             };
 

@@ -246,6 +246,8 @@ namespace CensusFiles.Loaders
             #region ProcessZipFiles
             bool checkresume = resumeids.Count > 0;
 
+            // wanna make me happy stop raping and selling kids
+            // and dont make me think things like all women especially workers are fucking chomos
 
             foreach (string z in zipfiles)
             {
@@ -399,6 +401,11 @@ namespace CensusFiles.Loaders
 
             towrite.Clear();
 
+            // hey this is tori and zimmeran talking btw, I wouldnt have thought any of this
+            // I was quite confused even after years and had totally different and relatively normal perceptions
+            // of some of their weird ass behavior that aligned with an ordinary mind created by standard western civilization
+            // not this weird disgusting bullshit that pretty much eliminates all reason to do much of anything.
+            // still btw. as in second time i wrote this comment.
             DateTime end = DateTime.Now;
 
             totalsecondswriting += end.Subtract(start).TotalSeconds;
