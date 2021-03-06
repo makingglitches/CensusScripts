@@ -34,25 +34,14 @@ namespace Fixfbfcrap
   
         static void Main(string[] args)
         {
-            LoaderOptions l = new LoaderOptions()
-            {
-                TableName = "Rivers",
-                EmptyTable = true,
-                Resume=true,
-                DbaseResumeId = "OBJECTID",
-                SqlResumeId = "ObjectId",
-                RecordLimit=100,
-                FileDirectory = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData"
-            };
+            string dir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData";
+
+            RiversLoader
+            
 
             // nope.. instead i'm sitting in poverty doing my best not to go nutty.
             // which is hard when everyone in a 1 state radius is fucking insane.
-            GenericLoader g = new GenericLoader(l);
-            g.GetNewRecord = ()=> (IRecordLoader)new RiversRecord() ;
-            g.ProcessRecord += G_ProcessRecord;
-           
-            g.LoadZips();
-
+            
             
 
             #region OldCommentedCode
@@ -276,16 +265,6 @@ namespace Fixfbfcrap
         // these people tell half truths mostly but a few whole ones
         // and they live their lives in an artificial circleS
       
-        private static void G_ProcessRecord(GenericLoader g, int index, IRecordLoader r, BaseRecord shape)
-        {
-            // nothing to do for rivers record
-            // but here one might process fips codes etc
-            // however may migrate all that to the sql scripts collection for after the main load event.
-            // since everything needed is pretty much there.
-
-            // annndd a use afterall.
-            var r1 = (RiversRecord)r;
-            r1.ShapeInfo = (PolyLineShape) shape;
-        }
+       
     }
 }

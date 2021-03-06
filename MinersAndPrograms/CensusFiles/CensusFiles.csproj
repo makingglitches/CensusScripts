@@ -70,10 +70,10 @@
     <Compile Include="GeneratedBases\StateBase.cs" />
     <Compile Include="IBaseReader.cs" />
     <Compile Include="IRecordLoader.cs" />
-    <Compile Include="IRecordWriter.cs" />
     <Compile Include="ClassGenerator.cs" />
     <Compile Include="Loaders\GenericLoader.cs" />
     <Compile Include="Loaders\LoaderOptions.cs" />
+    <Compile Include="Loaders\RiversLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Queries\InsertAquifer.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
