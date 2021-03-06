@@ -18,6 +18,20 @@ namespace Fixfbfcrap
 {
     class Program
     {
+        //  i need more fucking ram !
+        // course this worked fine yesterday with no resources semaphore wait at approx 80% memory usage
+        // at 1000 records per.. so fuck off assholes.
+        //... still. ass fucking holes stop dragging me back trying to make me act like the rest of these labotomized assholes are correct !
+        // instead of manufacturing crimes to entrap me that make no sense just to delay me, why not do what you people should have done
+        // if you were really security minded and just send me some chick to screw and make it so i work in a cabin somewhere writing code in th evenings
+        // etc.. jesus, i'd never have complained or noticed anything you people were doing if you werent fucking advertising so hard
+        // and additionally no i wont sit here and say extra years of my life werent dragged out of me
+        // while the rest of these idiots slowly became basketweaving madmen 
+        // seriously though goddamn if you people were actually hiding something you wouldnt just wave it around where anyone can see and say
+        // 'whoa... thats really odd and disconcerting and they are acting like TOTAL FUCKING FREAKS'
+        // and invent the lie that this is the way it always was and spout that shit to someone else mother fuckers.
+        // go hang with my chomo fucking dad if you people want to feel 'normal', he was one of the 1970s loser club.
+  
         static void Main(string[] args)
         {
             LoaderOptions l = new LoaderOptions()
@@ -27,7 +41,7 @@ namespace Fixfbfcrap
                 Resume=true,
                 DbaseResumeId = "OBJECTID",
                 SqlResumeId = "ObjectId",
-                RecordLimit=500,
+                RecordLimit=100,
                 FileDirectory = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData"
             };
 
