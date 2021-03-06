@@ -45,11 +45,17 @@ namespace Fixfbfcrap
                 FileDirectory = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData"
             };
 
+            // nope.. instead i'm sitting in poverty doing my best not to go nutty.
+            // which is hard when everyone in a 1 state radius is fucking insane.
             GenericLoader g = new GenericLoader(l);
             g.GetNewRecord = ()=> (IRecordLoader)new RiversRecord() ;
             g.ProcessRecord += G_ProcessRecord;
            
             g.LoadZips();
+
+            // and meanwhile stop trying to delay me till i end up writing the same things assholes.
+            // let the imposter write their own fucking code !
+            // this belongs to john r sohn !
 
             #region OldCommentedCode
 
