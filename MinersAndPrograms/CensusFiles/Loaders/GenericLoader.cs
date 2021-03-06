@@ -267,7 +267,7 @@ namespace CensusFiles.Loaders
 
                 if (Options.LoadShapeFile)
                 {
-                    if (Options.ConsoleLogging) Console.WriteLine("Loading shapefile " + shpfile);
+                    if (Options.ConsoleLogging) Console.WriteLine("Loading shapefile " +  Path.GetFileName(shpfile));
 
                     sfile = new ShapeUtilities.ShapeFile(shpfile);
                     sfile.Load();
@@ -335,6 +335,30 @@ namespace CensusFiles.Loaders
 
             #endregion ProcessZipFiles
         }
+
+
+        // could have raised a normal son or daughter by now
+        // theyd be entering college
+        // id be better than my father and help them
+        // but they reduced all colleges to whore houses
+        // especially uwyo and csu i noticed
+        // where they pretend for a time to be extremely annoying liberals
+        // while selling their asses
+        // and not learning jack shit using our work and tests to cut time out of their day.
+        // and in contravention to common sense are seemingly all tireless 
+        // and not broker than shit, and have been now for like 20 some odd years doing the same dumb shit.
+        // course not sure if its that bad on the east coast, but it was there... oh yay.
+        // supposedly pa is flatout chomo pervert in many places now.. sigh.
+        // well, one thing is for certain, they surrrrreeee accomplished their goals
+        // 1. make everyone a pervert that they can
+        // 2. run around in circles forever.
+        // 3. be genuinely horrible human beings
+        // 4. be less than genuine in the assertion that they're wonderful
+        // 5. fuck themselves over.
+        // 6. drag everyone around with them.
+        // go ahead delete this again assholes. prove us right as we always fucking are !
+        // i'd have been happier not knowing, and more importantly been able to live just fine without a knot of ugly fucking anklebiting 
+        // sickening vipers for neighbors classmates and coworkers !
 
         #region Sql Server Functions
         public DataTable GetTable()
