@@ -81,12 +81,6 @@
     <Compile Include="Loaders\RoadsLoader.cs" />
     <Compile Include="Loaders\StateLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Queries\InsertAquifer.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Queries\InsertRiver.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Compile Include="Records\AquiferRecord.cs" />
     <Compile Include="Records\CountyRecord.cs" />
     <Compile Include="Records\FipsKeyRecord.cs" />
@@ -104,20 +98,6 @@
       <Project>{b1b2e1d1-085c-42c7-bc55-e27b36cac38d}</Project>
       <Name>ShapeUtilities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Queries\InsertCounty.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Queries\InsertPlace.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Queries\InsertRoad.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Queries\InsertState.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
