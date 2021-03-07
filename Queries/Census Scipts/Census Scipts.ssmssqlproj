@@ -241,6 +241,12 @@
           <AssociatedConnUserName />
           <FullPath>30 - Populate Climate Stations from JSON.sql</FullPath>
         </FileNode>
+        <FileNode Name="Get TableMap beginning statements.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Get TableMap beginning statements.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
