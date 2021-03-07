@@ -12,10 +12,11 @@ using DbfDataReader;
 
 namespace CensusFiles
 {
-    public class AquiferRecord : AquiferBase,IRecordLoader
+    public class AquiferRecord : AquiferBase,IRecordLoader,IHasShape
     {
-        public PolygonShape Shape { get; set; }
+        public BaseShapeRecord Shape { get; set; }
 
+        #region Superceded
         public static SqlCommand GetInsert(SqlConnection scon)
         {
             string cmd = File.ReadAllText("Queries\\InsertAquifer.txt");
@@ -145,9 +146,34 @@ namespace CensusFiles
             return results;
         }
 
+        #endregion Superceded
+
         public void PutRecord(DataTable tgt)
         {
-            throw new NotImplementedException();
+            DataRow dr = tgt.NewRow();
+            dr["AquiferCode"] = this.AQ_CODE;
+            dr["AquiferName"] = this.AQ_NAME;
+
+            var bounds = this.Shape?.GetExtent();
+
+            if (bounds != null)
+            {
+                dr["MaxLatitude"] = bounds.X2;
+                dr["MaxLongitude"] = bounds.Y2;
+                dr["MinLatitude"] = bounds.X1;
+                dr["MinLongitude"] = bounds.Y1;
+            }
+
+
+            dr["ObjectId"] = this.OBJECTID;
+            dr["RockName"] = this.ROCK_NAME;
+            dr["RockType"] = this.ROCK_TYPE;
+            dr["Shape"] = this.Shape?.GetMSSQLInstance();
+            dr["ShapeArea"] = this.Shape_Area;
+            dr["ShapeLength"] = this.Shape_Leng;
+
+            tgt.Rows.Add(dr);
+
         }
     }
 }

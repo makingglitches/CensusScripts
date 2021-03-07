@@ -12,17 +12,19 @@ using System.IO;
 
 namespace CensusFiles
 {
-    public class PlaceRecord :PlaceBase,IRecordLoader
+    public class PlaceRecord :PlaceBase,IRecordLoader,IHasShape
     {
+
+        public PlaceRecord()
+        {
+
+        }
 
         public string FipsId { get; set; }
 
-        public PolygonShape Shape { get; set; }
+        public BaseShapeRecord Shape { get; set; }
 
-        // somewhere along the line, fort collins became a haven for whores and chomos that raped me in the 1980s
-        // let the fbi know, they don't give a shit
-        // hashtag bombs, terrorist, still alive, blow up world trade center, notice you fucking assholes !
-        //.. jesus
+        #region Superceded
         public static SqlCommand GetInsert(SqlConnection scon)
         {
             string cmd = File.ReadAllText("Queries\\InsertPlace.txt");
@@ -100,10 +102,7 @@ namespace CensusFiles
 
         }
 
-        public PlaceRecord()
-        {
-
-        }
+       
 
         public static  event Action<PlaceRecord> OnParse;
         public static  event Action<long> OnFileLength;
@@ -200,9 +199,54 @@ namespace CensusFiles
             return results;
         }
 
+        #endregion Superceded
+
         public void PutRecord(DataTable tgt)
         {
-            throw new NotImplementedException();
+            DataRow dr = tgt.NewRow();
+
+            dr["AreaLand"] = this.ALAND;
+            dr["AreaWater"] = this.AWATER;
+
+            dr["FipsClass"] = this.CLASSFP;
+            dr["FipsId"] = this.FipsId;
+            dr["GeoId"] = this.GEOID;
+            dr["GNISCode"] = this.PLACENS;
+
+
+            
+            dr["Latitude"] = this.INTPTLAT;
+            dr["LegalName"] = this.NAMELSAD;
+            dr["Longitude"] = this.INTPTLON;
+            dr["LSADId"] = this.LSAD;
+
+
+            bool isCDP = this.MTFCC.ToString() == "GS4210"; // GS4110 is the value for incorporated, should check if there are null values in ds
+
+            dr["CensusPlace"] = isCDP;
+            dr["IncorporatedPlace"] = !isCDP;
+
+
+
+            dr["MetroOrMicroIndicator"] = this.PCICBSA;
+
+
+            dr["Name"] = this.NAME;
+
+            dr["Shape"] = this.Shape?.GetMSSQLInstance();
+
+            var bounding = this.Shape?.GetExtent();
+
+            if (bounding != null)
+            {
+                dr["MinLatitude"] = bounding.X1;
+                dr["MinLongitude"] = bounding.Y1;
+                dr["MaxLatitude"] = bounding.X2;
+                dr["MaxLongitude"] = bounding.Y2;
+            }
+
+
+            tgt.Rows.Add(dr);
         }
     }
 }

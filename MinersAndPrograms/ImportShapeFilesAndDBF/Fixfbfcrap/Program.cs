@@ -59,15 +59,23 @@ namespace Fixfbfcrap
             //RoadsLoader roadl = new RoadsLoader(true, false, roaddir);
 
             //roadl.Options.RecordLimit = 1000;
-            
+
             //roadl.LoadZips();
 
 
-            string countydir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\CountyZips";
-            CountyLoader col = new CountyLoader(false, true, countydir);
-            col.Options.RecordLimit = 1000;
-            col.LoadZips();
+            //string countydir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\CountyZips";
+            //CountyLoader col = new CountyLoader(false, true, countydir);
+            //col.Options.RecordLimit = 1000;
+            //col.LoadZips();
 
+            //string aqudir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\AqiferData";
+            //AquiferLoader aql = new AquiferLoader(false, true, aqudir);
+            //aql.LoadZips();
+
+            string placedir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\PlacesZips";
+            PlaceLoader pl = new PlaceLoader(false, true, placedir);
+            pl.Options.RecordLimit = 1000;
+            pl.LoadZips();
 
             // nope.. instead i'm sitting in poverty doing my best not to go nutty.
             // which is hard when everyone in a 1 state radius is fucking insane.

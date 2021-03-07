@@ -37,6 +37,7 @@ namespace CensusFiles.Loaders
         {
             CountyRecord cr = (CountyRecord)r;
 
+
             cr.FipsId = cr.STATEFP + cr.COUNTYFP + blankline;
         }
     }

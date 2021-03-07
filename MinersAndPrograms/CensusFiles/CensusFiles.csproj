@@ -72,9 +72,11 @@
     <Compile Include="IHasShape.cs" />
     <Compile Include="IRecordLoader.cs" />
     <Compile Include="ClassGenerator.cs" />
+    <Compile Include="Loaders\AquiferLoader.cs" />
     <Compile Include="Loaders\CountyLoader.cs" />
     <Compile Include="Loaders\GenericLoader.cs" />
     <Compile Include="Loaders\LoaderOptions.cs" />
+    <Compile Include="Loaders\PlaceLoader.cs" />
     <Compile Include="Loaders\RiversLoader.cs" />
     <Compile Include="Loaders\RoadsLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

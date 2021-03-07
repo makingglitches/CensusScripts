@@ -13,10 +13,10 @@ using System.Data;
 
 namespace CensusFiles
 {
-    public class CountyRecord:CountyBase,IRecordLoader
+    public class CountyRecord:CountyBase,IRecordLoader,IHasShape
     {
         public string FipsId { get; set; }
-        public PolygonShape Shape { get; set; }
+        public BaseShapeRecord Shape { get; set; }
 
 
         #region Superceded
