@@ -88,6 +88,6 @@ namespace ShapeUtilities
         }
 
 
-        public BaseRecord Record;
+        public BaseShapeRecord Record;
     }
 }

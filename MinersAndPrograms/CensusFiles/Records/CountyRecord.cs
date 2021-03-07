@@ -16,8 +16,10 @@ namespace CensusFiles
     public class CountyRecord:CountyBase,IRecordLoader
     {
         public string FipsId { get; set; }
-        public PolygonShape ShapeInfo { get; set; }
+        public PolygonShape Shape { get; set; }
 
+
+        #region Superceded
         public static event Action<CountyRecord> OnParse;
         public static event Action<long> OnFileLength;
 
@@ -58,9 +60,9 @@ namespace CensusFiles
             object fipser = string.IsNullOrEmpty(FipsId) ? DBNull.Value as object : this.FipsId as object;
 
             object geomstring =
-         ShapeInfo == null ? DBNull.Value as object :
+         Shape == null ? DBNull.Value as object :
          //"geography::STGeomFromText('" + 
-         ShapeInfo.GetWKT();
+         Shape.GetWKT();
          //+ "',4122)";
 
             insertcmd.Parameters["@FipsId"].Value = fipser;
@@ -77,7 +79,7 @@ namespace CensusFiles
             insertcmd.Parameters["@Latitude"].Value = this.INTPTLAT;
             insertcmd.Parameters["@Shape"].Value = geomstring;
 
-            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+            var bounding = geomstring != DBNull.Value ? Shape.GetExtent() : null;
 
             insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
             insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
@@ -132,7 +134,7 @@ namespace CensusFiles
 
                 if (shpfile != null)
                 {
-                    r.ShapeInfo = (PolygonShape)shpfile.Records[shpfileindex].Record;
+                    r.Shape = (PolygonShape)shpfile.Records[shpfileindex].Record;
                     shpfileindex++;
                 }
 
@@ -157,9 +159,39 @@ namespace CensusFiles
 
         }
 
+        #endregion Superceded
+
         public void PutRecord(DataTable tgt)
         {
-            throw new NotImplementedException();
+
+            DataRow dr = tgt.NewRow();
+
+            var bounds = this.Shape?.GetExtent();
+
+            dr["AreaLand"] = this.ALAND;
+            dr["AreaWater"] = this.AWATER;
+            dr["ClassFP"] = this.CLASSFP;
+            dr["FipsId"] = this.FipsId;
+            dr["GeoId"] = this.GEOID;
+            dr["GNISId"] = this.COUNTYNS;
+            dr["Latititude"] = this.INTPTLAT;
+            dr["Longitude"] = this.INTPTLON;
+            dr["LSAD"] = this.LSAD;
+
+            if (bounds != null)
+            {
+                dr["MaxLatitude"] = bounds.X2;
+                dr["MaxLongitude"] = bounds.Y2;
+                dr["MinLatitude"] = bounds.X1;
+                dr["MinLongitude"] = bounds.Y1;
+            }
+
+            dr["MTFCC"] = this.MTFCC;
+            dr["Name"] = this.NAME;
+            dr["NameLSAD"] = this.NAMELSAD;
+            dr["Shape"] = this.Shape?.GetMSSQLInstance();
+
+            tgt.Rows.Add(dr);
         }
     }
 }

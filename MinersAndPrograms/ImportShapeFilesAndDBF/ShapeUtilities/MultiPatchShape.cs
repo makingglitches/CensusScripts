@@ -19,7 +19,7 @@ namespace ShapeUtilities
     }
 
    
-    public class MultiPatchShape:BaseRecord, IHasPoints
+    public class MultiPatchShape:BaseShapeRecord, IHasPoints
     {
         public ShpBox BoundingBox { get; set; }
         public int NumberParts { get; set; }

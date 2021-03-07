@@ -7,7 +7,7 @@ using System.IO;
 
 namespace ShapeUtilities
 {
-    public class MultiPointShape:BaseRecord, IHasPoints
+    public class MultiPointShape:BaseShapeRecord, IHasPoints
     {
         public ShpBox BoundingBox { get; set; }
         public int NumberPoints { get; set; }

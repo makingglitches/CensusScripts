@@ -14,9 +14,9 @@ using Microsoft.SqlServer.Types;
 
 namespace CensusFiles
 {
-    public class RiversRecord : RiversBase,IRecordLoader
+    public class RiversRecord : RiversBase,IRecordLoader, IHasShape
     {        
-        public PolyLineShape ShapeInfo { get; set; }
+        public BaseShapeRecord Shape { get; set; }
 
         public void PutRecord(DataTable dt)
         {
@@ -29,9 +29,9 @@ namespace CensusFiles
             dr["Region"] = this.Region;
             dr["Miles"] = this.Miles;
             dr["ShapeLength"] = this.Shape__Len;
-            dr["Shape"] = this.ShapeInfo?.GetMSSQLInstance();
+            dr["Shape"] = this.Shape?.GetMSSQLInstance();
 
-            var bounding = this.ShapeInfo?.GetExtent();
+            var bounding = this.Shape?.GetExtent();
 
             if (bounding != null)
             {
@@ -88,14 +88,14 @@ namespace CensusFiles
             insertcmd.Parameters["@ShapeLength" + (row == 0 ? "" : row.ToString())].Value = this.Shape__Len;
 
             object geomstring =
-              ShapeInfo == null ? DBNull.Value as object :
+              Shape == null ? DBNull.Value as object :
               //"geography::STGeomFromText('" + 
-              ShapeInfo.GetWKT() //+ "',4122)"
+              Shape.GetWKT() //+ "',4122)"
               ;
 
             insertcmd.Parameters["@Shape" + (row == 0 ? "" : row.ToString())].Value = geomstring;
 
-            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+            var bounding = geomstring != DBNull.Value ? Shape.GetExtent() : null;
 
             insertcmd.Parameters["@MinLon" + (row == 0 ? "" : row.ToString())].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
             insertcmd.Parameters["@MinLat" + (row == 0 ? "" : row.ToString())].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
@@ -189,9 +189,9 @@ namespace CensusFiles
                 dr["Region"] = rec.Region;
                 dr["Miles"] = rec.Miles;
                 dr["ShapeLength"] = rec.Shape__Len;
-                dr["Shape"] = rec.ShapeInfo==null ? null: SqlGeography.STGeomFromText(new SqlChars( new SqlString(  rec.ShapeInfo.GetWKT())),4326);
+                dr["Shape"] = rec.Shape==null ? null: SqlGeography.STGeomFromText(new SqlChars( new SqlString(  rec.Shape.GetWKT())),4326);
               
-                var bounding = rec.ShapeInfo!= null ? rec.ShapeInfo.GetExtent() : null;
+                var bounding = rec.Shape!= null ? rec.Shape.GetExtent() : null;
 
                 if (bounding != null)
                 {
@@ -317,7 +317,7 @@ namespace CensusFiles
 
                 if (shpfile != null)
                 {
-                    pr.ShapeInfo = (PolyLineShape)shpfile.Records[shpfileindex].Record;
+                    pr.Shape = (PolyLineShape)shpfile.Records[shpfileindex].Record;
                     shpfileindex++;
                 }
 

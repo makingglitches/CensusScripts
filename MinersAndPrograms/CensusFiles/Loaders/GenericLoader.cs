@@ -28,6 +28,22 @@ namespace CensusFiles.Loaders
                 this.SkipRecord += GenericLoader_SkipRecord;
                 this.Status += GenericLoader_Status;
                 this.OnLength += GenericLoader_OnLength;
+                this.ProcessRecord += GenericLoader_ProcessRecord;
+            }
+        }
+
+        public GetDerivedKey DerivedKeyGenerator { get; set; }
+
+        private void GenericLoader_ProcessRecord(GenericLoader g, int index, IRecordLoader r, ShapeUtilities.BaseShapeRecord shape)
+        {
+            // catchall to avoid unnecessary processrecord event handlers in implementations.
+            // this should really just be all of them really.
+            // however fips calculation may not allow this in a few record types.
+            // ... and just in case there is a usecase where we're loading a state supplied dbf WITHOUT a shapefile.
+            if (r is IHasShape)
+            {
+                IHasShape rec = (IHasShape)r;
+                rec.Shape = shape;
             }
         }
 
@@ -103,7 +119,7 @@ namespace CensusFiles.Loaders
 
         }
 
-        private void GenericLoader_SkipRecord(GenericLoader g, int index, IRecordLoader r, ShapeUtilities.BaseRecord shape)
+        private void GenericLoader_SkipRecord(GenericLoader g, int index, IRecordLoader r, ShapeUtilities.BaseShapeRecord shape)
         {
             Console.SetCursorPosition(cursorx, cursory);
             Console.WriteLine(blankline);
@@ -115,6 +131,8 @@ namespace CensusFiles.Loaders
         #endregion ConsoleLogging EventHandlers
 
         #region Event Delegates
+
+        public delegate object GetDerivedKey(DbfDataReader.DbfDataReader d, GenericLoader g);
 
         /// <summary>
         /// Represents an event handler which reports back stats about all processing
@@ -143,7 +161,7 @@ namespace CensusFiles.Loaders
         /// <param name="r"></param>
         /// <param name="shape"></param>
         /// <param name="wrote"></param>
-        public delegate void ProcessFunction(GenericLoader g, int index, IRecordLoader r, ShapeUtilities.BaseRecord shape);
+        public delegate void ProcessFunction(GenericLoader g, int index, IRecordLoader r, ShapeUtilities.BaseShapeRecord shape);
 
         /// <summary>
         /// Reports the initial length and other file information to the event handler
@@ -189,7 +207,16 @@ namespace CensusFiles.Loaders
         private double totalsecondswriting = 0;
         private double recordpersecond = 0;
         private int skippedrecords = 0;
+        private string currentDBFName;
+        private string currentSHPName;
         #endregion Private Processing Fields
+
+        #region Current FileNames
+        public string DBFFileName { get { return currentDBFName; } }
+        public string SHPFileName { get { return currentSHPName; } }
+        #endregion Current FilesNames
+
+
 
         public void LoadZips()
         {
@@ -230,6 +257,7 @@ namespace CensusFiles.Loaders
             {
                 if (Options.ConsoleLogging) Console.WriteLine("Retrieving resume ids. Field " + Options.SqlResumeId + " selected.");
                 SqlCommand getresumeids = new SqlCommand("select " + Options.SqlResumeId + " from dbo." + Options.TableName + " order by " + Options.SqlResumeId, scon);
+                
                 var ir = getresumeids.ExecuteReader();
 
                 while (ir.Read()) { resumeids.Add(ir[Options.SqlResumeId]); }
@@ -257,26 +285,26 @@ namespace CensusFiles.Loaders
                 ZipFile.ExtractToDirectory(z, outputdir);
 
                 // retrieve shpfile and dbf file
-                string dbasefile = Directory.GetFiles(outputdir, "*.dbf").First();
-                string shpfile = Directory.GetFiles(outputdir, "*.shp").First();
+                currentDBFName  = Directory.GetFiles(outputdir, "*.dbf").First();
+                currentSHPName = Directory.GetFiles(outputdir, "*.shp").First();
 
                 DbfDataReader.DbfDataReaderOptions ops = new DbfDataReaderOptions() { SkipDeletedRecords = true };
-                DbfDataReader.DbfDataReader dr = new DbfDataReader.DbfDataReader(dbasefile, ops);
+                DbfDataReader.DbfDataReader dr = new DbfDataReader.DbfDataReader(currentDBFName, ops);
 
                 ShapeUtilities.ShapeFile sfile = null;
 
                 if (Options.LoadShapeFile)
                 {
-                    if (Options.ConsoleLogging) Console.WriteLine("Loading shapefile " +  Path.GetFileName(shpfile));
+                    if (Options.ConsoleLogging) Console.WriteLine("Loading shapefile " +  Path.GetFileName(currentSHPName));
 
-                    sfile = new ShapeUtilities.ShapeFile(shpfile);
+                    sfile = new ShapeUtilities.ShapeFile(currentSHPName);
                     sfile.Load();
                 }
 
                 int sindex = 0;
 
                 // report length back to implementer.
-                OnLength(this, dbasefile, shpfile, dr.DbfTable.Header.RecordCount);
+                OnLength(this, currentDBFName, currentSHPName, dr.DbfTable.Header.RecordCount);
 
 
                 while (dr.Read())
@@ -285,11 +313,14 @@ namespace CensusFiles.Loaders
                     i.Read(dr);
 
                     // interesting... c# update anyone ?
-                    ShapeUtilities.BaseRecord currshape = sfile?.Records[sindex].Record;
+                    ShapeUtilities.BaseShapeRecord currshape = sfile?.Records[sindex].Record;
 
                     if (checkresume)
                     {
-                        if (resumeids.Contains(dr[Options.DbaseResumeId]))
+
+                        object key = Options.DerivedResumeKey ? DerivedKeyGenerator(dr, this) : dr[Options.DbaseResumeId];
+                  
+                        if (resumeids.Contains(key))
                         {
                             resumeids.Remove(dr[Options.DbaseResumeId]);
                             checkresume = resumeids.Count > 0;
@@ -331,6 +362,11 @@ namespace CensusFiles.Loaders
                 Directory.Delete(outputdir, true);
 
                 ReportFinalStats(wrote, skippedrecords, totalsecondswriting, recordpersecond);
+
+                wrote = 0;
+                totalsecondswriting = 0;
+                skippedrecords = 0;
+                recordpersecond = 0;
             }
 
             #endregion ProcessZipFiles

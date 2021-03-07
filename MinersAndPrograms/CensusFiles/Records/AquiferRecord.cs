@@ -14,7 +14,7 @@ namespace CensusFiles
 {
     public class AquiferRecord : AquiferBase,IRecordLoader
     {
-        public PolygonShape ShapeInfo { get; set; }
+        public PolygonShape Shape { get; set; }
 
         public static SqlCommand GetInsert(SqlConnection scon)
         {
@@ -63,14 +63,14 @@ namespace CensusFiles
             insertcmd.Parameters["@ShapeArea"].Value = this.Shape_Area;
 
             object geomstring =
-              ShapeInfo == null ? DBNull.Value as object :
+              Shape == null ? DBNull.Value as object :
               //"geography::STGeomFromText('" + 
-              ShapeInfo.GetWKT() //+ "',4122)"
+              Shape.GetWKT() //+ "',4122)"
               ;
 
             insertcmd.Parameters["@Shape"].Value = geomstring;
 
-            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+            var bounding = geomstring != DBNull.Value ? Shape.GetExtent() : null;
 
             insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
             insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
@@ -120,7 +120,7 @@ namespace CensusFiles
 
                 if (shpfile != null)
                 {
-                    pr.ShapeInfo = (PolygonShape)shpfile.Records[shpfileindex].Record;
+                    pr.Shape = (PolygonShape)shpfile.Records[shpfileindex].Record;
                     shpfileindex++;
                 }
 

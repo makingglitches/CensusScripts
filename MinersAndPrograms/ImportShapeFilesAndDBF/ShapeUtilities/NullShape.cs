@@ -7,7 +7,7 @@ using System.IO;
 
 namespace ShapeUtilities
 {
-    public class NullShape:BaseRecord
+    public class NullShape:BaseShapeRecord
     {
         public NullShape(BinaryReader br):base(br)
         {

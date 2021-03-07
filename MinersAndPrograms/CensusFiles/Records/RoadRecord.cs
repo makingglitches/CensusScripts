@@ -11,12 +11,16 @@ using System.IO;
 
 namespace CensusFiles
 {
-    public class RoadRecord : RoadBase,IRecordLoader
+    public class RoadRecord : RoadBase,IRecordLoader,IHasShape
     {
+
+        public string StCtyLinId { get; set; }
         public string FipsId { get; set; }
+        
+        public BaseShapeRecord Shape { get; set; }
 
-        public PolyLineShape ShapeInfo { get; set; }
 
+        #region Superceded
         public static event Action<RoadRecord> OnParse;
         public static event Action<long> OnFileLength;
 
@@ -62,11 +66,11 @@ namespace CensusFiles
                 RoadRecord r = new RoadRecord();
                 r.Read(dread);
 
-                r.FipsId = fipsid;
+               
 
                 if (shpfile != null)
                 {
-                    r.ShapeInfo = (PolyLineShape)shpfile.Records[shpfileindex].Record;
+                    r.Shape = (PolyLineShape)shpfile.Records[shpfileindex].Record;
                     shpfileindex++;
                 }
 
@@ -117,12 +121,11 @@ namespace CensusFiles
 
         public void MapParameters(SqlCommand insertcmd)
         {
-            object fipser = string.IsNullOrEmpty(FipsId) ? DBNull.Value as object : this.FipsId as object;
-
+            
             object geomstring =
-           ShapeInfo == null ? DBNull.Value as object :
+           Shape == null ? DBNull.Value as object :
            //"geography::STGeomFromText('" + 
-           ShapeInfo.GetWKT();
+           Shape.GetWKT();
             //+ "',4122)";
 
            
@@ -133,7 +136,7 @@ namespace CensusFiles
             insertcmd.Parameters["@FeatureCode"].Value = this.MTFCC;
             insertcmd.Parameters["@Shape"].Value = geomstring;
 
-            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+            var bounding = geomstring != DBNull.Value ? Shape.GetExtent() : null;
 
             insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
             insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;
@@ -143,9 +146,30 @@ namespace CensusFiles
 
         }
 
+        #endregion Superceded
+
         public void PutRecord(DataTable tgt)
         {
-            throw new NotImplementedException();
+            DataRow dr =  tgt.NewRow();
+
+            dr["StCtyLinId"] = this.StCtyLinId;
+            dr["LinearId"]= this.LINEARID;
+            dr["FullName"] = this.FULLNAME;
+            dr["RouteType"] = this.RTTYP;
+            dr["MafFeatureCode"] = this.MTFCC;
+            dr["Shape"] = Shape.GetMSSQLInstance();
+            dr["FipsId"] = FipsId;
+            var bounding = Shape?.GetExtent();
+
+            if (bounding != null)
+            {
+                dr["MinLongitude"] = bounding.X1;
+                dr["MinLatitude"] = bounding.Y1;
+                dr["MaxLongitude"] = bounding.X2;
+                dr["MaxLatitude"] = bounding.Y2;
+            }
+
+            tgt.Rows.Add(dr);
         }
     }
 }

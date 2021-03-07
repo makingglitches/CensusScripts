@@ -16,7 +16,7 @@ namespace CensusFiles
     {
         public string FipsId { get; set; }
 
-        public PolygonShape ShapeInfo { get; set; }
+        public PolygonShape Shape { get; set; }
 
         public static event Action<StateRecord> OnParse;
         public static event Action<long> OnFileLength;
@@ -63,7 +63,7 @@ namespace CensusFiles
 
                 if (shpfile != null)
                 {
-                    r.ShapeInfo = (PolygonShape)shpfile.Records[shpfileindex].Record;
+                    r.Shape = (PolygonShape)shpfile.Records[shpfileindex].Record;
                     shpfileindex++;
                 }
 
@@ -125,9 +125,9 @@ namespace CensusFiles
             object fipser = string.IsNullOrEmpty(FipsId) ? DBNull.Value as object : this.FipsId as object;
 
             object geomstring =
-           ShapeInfo == null ? DBNull.Value as object :
+           Shape == null ? DBNull.Value as object :
            //"geography::STGeomFromText('" + 
-           ShapeInfo.GetWKT();
+           Shape.GetWKT();
             //+ "',4122)";
 
             insertcmd.Parameters["@RegionCode"].Value =this.REGION;
@@ -143,7 +143,7 @@ namespace CensusFiles
             insertcmd.Parameters["@Latitude"].Value=this.INTPTLAT;
             insertcmd.Parameters["@Shape"].Value=geomstring;
 
-            var bounding = geomstring != DBNull.Value ? ShapeInfo.GetExtent() : null;
+            var bounding = geomstring != DBNull.Value ? Shape.GetExtent() : null;
 
             insertcmd.Parameters["@MinLon"].Value = bounding != null ? (object)bounding.X1 : DBNull.Value;
             insertcmd.Parameters["@MinLat"].Value = bounding != null ? (object)bounding.Y1 : DBNull.Value;

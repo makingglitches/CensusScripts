@@ -17,10 +17,10 @@ using System.Data.SqlTypes;
 
 namespace ShapeUtilities
 {
-   public class BaseRecord
+   public class BaseShapeRecord
     {
 
-        public BaseRecord(BinaryReader reader)
+        public BaseShapeRecord(BinaryReader reader)
         {
           
         }
@@ -266,7 +266,7 @@ namespace ShapeUtilities
             return string.Empty;
         }
 
-        public static BaseRecord ReadRecord(BinaryReader reader)
+        public static BaseShapeRecord ReadRecord(BinaryReader reader)
         {
             return new NullShape(reader);
         }

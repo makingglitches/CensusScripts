@@ -10,6 +10,10 @@ namespace CensusFiles.Loaders
 {
    public class LoaderOptions
     {
+        /// <summary>
+        /// Is the resume key one that has been derived ? If so perform additional processing.
+        /// </summary>
+        public bool DerivedResumeKey { get; set; }
 
         public bool ConsoleLogging { get; set; }
 
@@ -41,6 +45,7 @@ namespace CensusFiles.Loaders
             TempDirectoryName = "output";
             LoadShapeFile = true;
             ConsoleLogging = true;
+            DerivedResumeKey = false;
 
             SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder()
             {

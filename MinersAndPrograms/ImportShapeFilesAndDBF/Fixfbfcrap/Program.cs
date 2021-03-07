@@ -34,19 +34,45 @@ namespace Fixfbfcrap
   
         static void Main(string[] args)
         {
-            string dir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData";
+            //string dir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RiversAndStreamsData";
 
-            RiversLoader rl = new RiversLoader(false, true, dir);
+            //RiversLoader rl = new RiversLoader(true, false, dir);
 
-            rl.Options.RecordLimit = 100;
+            //rl.Options.RecordLimit = 100;
 
-            rl.LoadZips();
+            //rl.LoadZips();
+
+
+            // apparently tori wanted to save time for whatever piece of crap keep stealing my work to 
+            // get some rape in. poor poor lad.
+            // motherfuckers = them
+            // seriously all this waste and time that could have been better spent working on something constructive and they say
+            // 'oh we know his daddy, and he wasnt raised to know shit about our true awful fucked up self destructive and purely destructive natures
+            // 'i know we can take advantage of him and try to set him up to get stuck so he will be susceptible to our "evil empire" bullshit
+            // 'and thereby we can scare or traumatize him into making stuff we steal constantly and then turn shit around so he wont want anything
+            // 'later on while we're in the process of fucking ourselves over'
+            // which apparnetly they are doing.
+            // and the world too.
+
+            //string roaddir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\RoadsZips";
+
+            //RoadsLoader roadl = new RoadsLoader(true, false, roaddir);
+
+            //roadl.Options.RecordLimit = 1000;
             
+            //roadl.LoadZips();
+
+
+            string countydir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\CountyZips";
+            CountyLoader col = new CountyLoader(false, true, countydir);
+            col.Options.RecordLimit = 1000;
+            col.LoadZips();
+
 
             // nope.. instead i'm sitting in poverty doing my best not to go nutty.
             // which is hard when everyone in a 1 state radius is fucking insane.
-            
-            
+
+
 
             #region OldCommentedCode
 

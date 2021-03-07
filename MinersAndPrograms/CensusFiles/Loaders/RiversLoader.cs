@@ -24,14 +24,9 @@ namespace CensusFiles.Loaders
             )
         {
             this.GetNewRecord = () => (IRecordLoader)new RiversRecord();
-            this.ProcessRecord += RiversLoader_ProcessRecord;
            
         }
 
-        private void RiversLoader_ProcessRecord(GenericLoader g, int index, IRecordLoader r, ShapeUtilities.BaseRecord shape)
-        {
-            RiversRecord rec = (RiversRecord)r;
-            rec.ShapeInfo = (PolyLineShape) shape;
-        }
+        
     }
 }

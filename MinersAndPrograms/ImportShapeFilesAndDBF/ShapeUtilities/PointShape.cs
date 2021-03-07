@@ -7,7 +7,7 @@ using System.IO;
 
 namespace ShapeUtilities
 {
-    public class PointShape:BaseRecord
+    public class PointShape:BaseShapeRecord
     {
         public double X { get; set; }
         public double Y { get; set; }
