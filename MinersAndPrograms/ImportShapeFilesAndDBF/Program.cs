@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.IO;
 using System.Data.Linq;
-
+using CensusFiles.Loaders;
 
 namespace ImportShapeFilesAndDBF
 {
@@ -15,28 +15,25 @@ namespace ImportShapeFilesAndDBF
     {
         static void Main(string[] args)
         {
-
             string basedatadir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\";
 
-         //   AquiferLoader aq = new AquiferLoader(basedatadir + "AqiferData", true, true);
-          //  aq.LoadZips();
+            //   AquiferLoader aq = new AquiferLoader(basedatadir + "AqiferData", true, true);
+            //  aq.LoadZips();
 
-            RiversLoader rivl = new RiversLoader(basedatadir + "RiversAndStreamsData", false, true, true);
+            RiversLoader rivl = new RiversLoader(true, false, basedatadir + "RiversAndStreamsData");
             rivl.LoadZips();
 
-            PlaceLoader pl = new PlaceLoader(basedatadir + "PlacesZips", true, true);
+            PlaceLoader pl = new PlaceLoader(true, false,basedatadir + "PlacesZips");
             pl.LoadZips();
 
-            RoadLoader rl = new RoadLoader(basedatadir + "RoadsZips", true, true);
+            RoadsLoader rl = new RoadsLoader(true,false,basedatadir + "RoadsZips");
             rl.LoadZips();
 
-            CountyLoader cl = new CountyLoader(basedatadir + "CountyZips", true, true);
+            CountyLoader cl = new CountyLoader(true,false,basedatadir + "CountyZips");
             cl.LoadZips();
 
-            StateLoader st = new StateLoader(basedatadir + "StateZips", true, true);
+            StateLoader st = new StateLoader(true,false,basedatadir + "StateZips");
             st.LoadZips();
-
-
         }
     }
 }
