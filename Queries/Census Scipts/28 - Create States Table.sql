@@ -14,11 +14,10 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[States](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[RegionCode] [nchar](2) NULL,
 	[DivisionCode] [nchar](2) NULL,
 	[FipsKey] [nchar](2) NULL,
-	[GNISKey] [nchar](8) NULL,
+	[GNISKey] [nchar](8) not NULL,
 	[Abbreviation] [nchar](2) NULL,
 	[Name] [nchar](100) NULL,
 	[LSAD] [nchar](2) NULL,
@@ -30,8 +29,13 @@ CREATE TABLE [dbo].[States](
 	MinLongitude [float] null,
 	MaxLatitude [float] null,
 	MaxLongitude [float] null,
-	[Shape] Geography null
-) ON [PRIMARY]
+	[Shape] Geography null,
+	constraint [PK_States]  PRIMARY KEY CLUSTERED 
+(
+	GNISKey ASC
+)
+
+) ON [PRIMARY] 
 GO
 
 

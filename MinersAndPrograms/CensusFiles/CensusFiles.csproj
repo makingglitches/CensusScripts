@@ -79,6 +79,7 @@
     <Compile Include="Loaders\PlaceLoader.cs" />
     <Compile Include="Loaders\RiversLoader.cs" />
     <Compile Include="Loaders\RoadsLoader.cs" />
+    <Compile Include="Loaders\StateLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Queries\InsertAquifer.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -72,10 +72,15 @@ namespace Fixfbfcrap
             //AquiferLoader aql = new AquiferLoader(false, true, aqudir);
             //aql.LoadZips();
 
-            string placedir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\PlacesZips";
-            PlaceLoader pl = new PlaceLoader(false, true, placedir);
-            pl.Options.RecordLimit = 1000;
-            pl.LoadZips();
+            //string placedir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\PlacesZips";
+            //PlaceLoader pl = new PlaceLoader(false, true, placedir);
+            //pl.Options.RecordLimit = 1000;
+            //pl.LoadZips();
+
+
+            string statedir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\StateZips";
+            StateLoader sl = new StateLoader(false, true, statedir);
+            sl.LoadZips();
 
             // nope.. instead i'm sitting in poverty doing my best not to go nutty.
             // which is hard when everyone in a 1 state radius is fucking insane.
