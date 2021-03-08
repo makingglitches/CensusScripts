@@ -11,6 +11,15 @@ namespace CensusFiles.Loaders
    public class LoaderOptions
     {
         /// <summary>
+        /// How many seconds to wait between retries.
+        /// </summary>
+        public int SecondsToWait { get; set; }
+
+        /// <summary>
+        /// How many times to retry write to sql database on failure. can occur when system memory is temporarily low.
+        /// </summary>
+        public int Retries { get; set; }
+        /// <summary>
         /// Is the resume key one that has been derived ? If so perform additional processing.
         /// </summary>
         public bool DerivedResumeKey { get; set; }

@@ -18,6 +18,7 @@ namespace CensusFiles.Loaders
     {
         #region Initialization
 
+
         public GenericLoader(LoaderOptions options)
         {
             Options = options;
@@ -51,7 +52,7 @@ namespace CensusFiles.Loaders
         {
             Console.WriteLine("Total Run Time: " + TimeSpan.FromSeconds(totalseconds).ToString());
             Console.WriteLine("Processed " + wrote.ToString() + " records.");
-            Console.WriteLine("Skipped " + wrote.ToString() + " records.");
+            Console.WriteLine("Skipped " + skipped.ToString() + " records.");
             Console.WriteLine("Avg Rate " + recordpersecond.ToString() + " records/second");
         }
 
@@ -204,11 +205,15 @@ namespace CensusFiles.Loaders
         #region Private Processing Fields
         private List<IRecordLoader> towrite = new List<IRecordLoader>();
         private int wrote = 0;
+
+        private int retries = 0;
+        private double totalsecondsprocessing = 0;
         private double totalsecondswriting = 0;
         private double recordpersecond = 0;
         private int skippedrecords = 0;
         private string currentDBFName;
         private string currentSHPName;
+        private int sindex = 0;
         #endregion Private Processing Fields
 
         #region Current FileNames
@@ -216,6 +221,12 @@ namespace CensusFiles.Loaders
         public string SHPFileName { get { return currentSHPName; } }
         #endregion Current FilesNames
 
+        public double BatchSecondsProcessing = 0;
+        public double BatchSecondsWriting = 0;
+        public  int BatchRecordsWrote = 0;
+        public int BatchRetries = 0;
+        public int BatchRecordsSkipped = 0;
+        public double BatchRecordsPerSecond = 0;
 
 
         public void LoadZips()
@@ -301,7 +312,7 @@ namespace CensusFiles.Loaders
                     sfile.Load();
                 }
 
-                int sindex = 0;
+                sindex = 0;
 
                 // report length back to implementer.
                 OnLength(this, currentDBFName, currentSHPName, dr.DbfTable.Header.RecordCount);
@@ -309,6 +320,9 @@ namespace CensusFiles.Loaders
 
                 while (dr.Read())
                 {
+                    DateTime startproc = DateTime.Now;
+                    DateTime endproc;
+
                     IRecordLoader i = GetNewRecord();
                     i.Read(dr);
 
@@ -327,6 +341,9 @@ namespace CensusFiles.Loaders
                             SkipRecord(this, sindex, i, currshape);
                             skippedrecords++;
                             sindex++;
+                            endproc = DateTime.Now;
+                            totalsecondsprocessing += startproc.Subtract(endproc).TotalSeconds;
+
                             continue;
                         }
                     }
@@ -334,18 +351,19 @@ namespace CensusFiles.Loaders
                     // allow user specfied code to run which performs actions on 
                     // the loaded record 
                     ProcessRecord(this, sindex, i, currshape);
+                    endproc = DateTime.Now;
 
+                    totalsecondsprocessing += startproc.Subtract(endproc).TotalSeconds;
+                    
                     towrite.Add(i);
 
                     Status(sindex, wrote, 0, totalsecondswriting == 0 ? 0 : wrote / totalsecondswriting);
 
                     if (Options.RecordLimit == towrite.Count)
                     {
-                        Status(sindex, wrote, towrite.Count, recordpersecond);
-                        DoCopy();
-                        Status(sindex, wrote, 0, recordpersecond);
-
+                        DoTableWrite();
                     }
+
 
                     sindex++;
                 }
@@ -354,15 +372,21 @@ namespace CensusFiles.Loaders
 
                 if (towrite.Count > 0)
                 {
-                    Status(sindex, wrote, towrite.Count, recordpersecond);
-                    DoCopy();
-                    Status(sindex, wrote, 0, recordpersecond);
+                    DoTableWrite();
                 }
 
                 Directory.Delete(outputdir, true);
 
                 ReportFinalStats(wrote, skippedrecords, totalsecondswriting, recordpersecond);
 
+                BatchRecordsSkipped += skippedrecords;
+                BatchRecordsWrote += wrote;
+                BatchRetries += retries;
+                BatchSecondsProcessing += totalsecondsprocessing;
+                BatchSecondsWriting += totalsecondswriting;
+
+                retries = 0;
+                totalsecondsprocessing = 0;
                 wrote = 0;
                 totalsecondswriting = 0;
                 skippedrecords = 0;
@@ -373,6 +397,43 @@ namespace CensusFiles.Loaders
         }
 
         #region Sql Server Functions
+
+        private void DoTableWrite()
+        {
+            int localretries = 0;
+
+            Status(sindex, wrote, towrite.Count, recordpersecond);
+
+            while (localretries < Options.Retries)
+            {
+                try
+                {
+                    DoCopy();
+                    break;
+                }
+                catch (Exception e)
+                {
+                    localretries++;
+
+                    if (localretries == Options.Retries)
+                    {
+                        Console.WriteLine("Maximum number of retries reached. Exiting.");
+                        File.WriteAllText("error.txt", e.ToString());
+                        Console.WriteLine("See error.txt for exception information.");
+                        return;
+                    }
+
+                    Console.WriteLine("Waiting " + Options.SecondsToWait.ToString());
+                    System.Threading.Thread.Sleep(Options.SecondsToWait * 1000);
+                }
+            }
+
+            retries += localretries;
+
+            Status(sindex, wrote, 0, recordpersecond);
+
+        }
+
         public DataTable GetTable()
         {
             SqlConnection scon = new SqlConnection(Options.ConnectionString);
