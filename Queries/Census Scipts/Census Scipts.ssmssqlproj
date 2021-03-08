@@ -218,10 +218,28 @@
           <FullPath>32 - Create Aquifers Table.sql</FullPath>
         </FileNode>
         <FileNode Name="33 - Create FileSources Table.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>33 - Create FileSources Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="34 - Create GetKeyColumns SP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>34 - Create GetKeyColumns SP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="35 - Create ext schema.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>35 - Create ext schema.sql</FullPath>
+        </FileNode>
+        <FileNode Name="36 - Create ext key stores.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>36 - Create ext key stores.sql</FullPath>
         </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
