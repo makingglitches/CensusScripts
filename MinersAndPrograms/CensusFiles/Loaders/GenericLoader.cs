@@ -397,9 +397,25 @@ namespace CensusFiles.Loaders
 
             // let senoir chomo cripple get fucked up some more, getting a little sick of seeing people stare at children.
             // fuck them for now.
-           // scon =  Options.MakeConnection();
+            // scon =  Options.MakeConnection();
 
-            SqlCommand getcount = new SqlCommand( "select count(*) from dbo."+
+            scon.Open();
+            SqlCommand getcount = new SqlCommand("select count(*) from dbo." + Options.TableName, scon);
+            int sqlrecords = getcount.ExecuteNonQuery();
+
+            if ( sqlrecords == BatchRecordsSkipped+BatchRecordsWrote)
+            {
+                Console.WriteLine("Record number in table matches progress thus far. A total of " + sqlrecords.ToString() + " discovered.");
+            }
+            scon.Close();
+
+            // whats going to be really funny is when i bury all snarky messages
+            // by changing single lines
+            // or deleting and burying these comments so github cant pretend its not complicit in burying things.
+            // hey heres an idea, how about you people tap the government that is intentionally delaying the world from being a better place
+            // and enabling chomo fags like all of you, to in some way improve the way it monetizes public services like cloud storage
+            // for honest citizens and keep these fags from doing business ? by say taking services that were rebooted 
+            // and swapping photos out etc.
         }
 
         #region Sql Server Functions
