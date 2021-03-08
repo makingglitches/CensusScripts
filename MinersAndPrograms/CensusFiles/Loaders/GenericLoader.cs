@@ -8,7 +8,7 @@ using System.IO.Compression;
 using System.Data.SqlClient;
 using System.Data;
 using System.Data.SqlTypes;
-
+using DbfDataReader;
 
 using DbfDataReader;
 
@@ -301,6 +301,53 @@ namespace CensusFiles.Loaders
             scon.Close();
 
             #endregion InitialSQL
+
+            if (Options.Resume)
+            {
+
+                DateTime startcrunch = DateTime.Now;
+
+                Dictionary<string, List<object>> files = new Dictionary<string, List<object>>(); 
+
+                foreach (string z in zipfiles)
+                {
+                    ZipArchive za = ZipFile.OpenRead(z);
+
+                    foreach (ZipArchiveEntry ze in za.Entries)
+                    {
+                        if (ze.Name.EndsWith(".dbf"))
+                        {
+                            ze.ExtractToFile("local.dbf", true);
+                            
+                            DbfDataReader.DbfDataReader d = 
+                                new DbfDataReader.DbfDataReader("local.dbf", new DbfDataReaderOptions() { SkipDeletedRecords = true });
+
+                            List<object> ids = new List<object>();
+
+                            while (d.Read())
+                            {
+                                if (Options.DerivedResumeKey)
+                                {
+                                    ids.Add(DerivedKeyGenerator(d, this));
+                                }
+                                else
+                                {
+                                    ids.Add(d[Options.DbaseResumeId]);
+                                }
+                            }
+
+                            // add the files ids into the dictionary for later comparison against the database
+                            // will transmit ALL ids to the database per file and see if there are 
+                            files.Add(ze.FullName, ids);
+
+
+                        }
+                    }
+                }
+
+
+                DateTime endcrunch = DateTime.Now;
+            }
 
             #region ProcessZipFiles
             bool checkresume = resumeids.Count > 0;

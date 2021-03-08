@@ -1,13 +1,13 @@
   HTTP/1.1 200 OK
-  Date: Mon, 08 Mar 2021 23:50:56 GMT
+  Date: Mon, 08 Mar 2021 23:53:07 GMT
   X-Frame-Options: SAMEORIGIN
   Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
   X-Frame-Options: DENY
   X-UA-Compatible: IE=edge
-  Set-Cookie: JSESSIONID=6CE2AAA19342982A17D8ED8D73251543; Path=/catalog; Secure; HttpOnly
-  Content-Disposition: attachment; filename="PaintedTurtle_C.zip"
-  Content-Length: 3472086
-  Keep-Alive: timeout=10, max=490
+  Set-Cookie: JSESSIONID=A9CA3F19AB8C6BC7107F1BDDF8A3B395; Path=/catalog; Secure; HttpOnly
+  Content-Disposition: attachment; filename="Plain_belliedWa.zip"
+  Content-Length: 1996957
+  Keep-Alive: timeout=10, max=437
   Connection: Keep-Alive
   Content-Type: application/zip
-  Set-Cookie: BNES_JSESSIONID=NmStnarDz3xsjPfsPzJl2UNTO/Y5v3UPGknwhepu2pC80S57OrWVgpjh2sO9r43aCqVR4roFvmd0NN3n9ObBbCtzdh0PotANZ/1PguOckVZPCKZO2ZSf6w==; Path=/catalog; Secure; HttpOnly
+  Set-Cookie: BNES_JSESSIONID=jZ7CfuhsBty/EuaRVttbxZ7/KRqbtAcNs0pkxgD5Os0BvmtQOrdio+TBTkvvJNiqutS4VaA4wGTnRuq+7zzeWlVfQoMbl5nQCSnHW15EXoCFRua7pXxb3w==; Path=/catalog; Secure; HttpOnly

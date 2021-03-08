@@ -68,10 +68,11 @@
     <Compile Include="GeneratedBases\RiversBase.cs" />
     <Compile Include="GeneratedBases\RoadBase.cs" />
     <Compile Include="GeneratedBases\StateBase.cs" />
-    <Compile Include="IBaseReader.cs" />
-    <Compile Include="IHasShape.cs" />
-    <Compile Include="IRecordLoader.cs" />
-    <Compile Include="ClassGenerator.cs" />
+    <Compile Include="Helpers\ClassGenerator.cs" />
+    <Compile Include="Helpers\KeyProcessor.cs" />
+    <Compile Include="Interfaces\IBaseReader.cs" />
+    <Compile Include="Interfaces\IHasShape.cs" />
+    <Compile Include="Interfaces\IRecordLoader.cs" />
     <Compile Include="Loaders\AquiferLoader.cs" />
     <Compile Include="Loaders\CountyLoader.cs" />
     <Compile Include="Loaders\GenericLoader.cs" />
