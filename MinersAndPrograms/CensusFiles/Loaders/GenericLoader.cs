@@ -394,6 +394,12 @@ namespace CensusFiles.Loaders
             }
 
             #endregion ProcessZipFiles
+
+            // let senoir chomo cripple get fucked up some more, getting a little sick of seeing people stare at children.
+            // fuck them for now.
+           // scon =  Options.MakeConnection();
+
+            SqlCommand getcount = new SqlCommand( "select count(*) from dbo."+
         }
 
         #region Sql Server Functions
@@ -463,6 +469,15 @@ namespace CensusFiles.Loaders
 
             return dt;
         }
+
+        // these people are so fucked up some of them like fucking and abusing and being abused by crippled and retarded people.
+        // fuck that.
+        // interesting fact, statistically, cripples, deformed people, midgets and extremely ugly morbidly obese people are at a high risk
+        // of being child molesters, under NATURAL not intentional circumstances.
+        // its ugly truths like this they try to keep us from knowing, like that most sex offenders that target children and babies tend to 
+        // be women. most especially those who grow up being prostituted or with a history of sexual abuse in general.
+        // nope, they want weaponized laws that make us blind to possibilities.
+        // heres an ugly one, some people who are crippled in their insane asylum society, crippled children and traded their health and limb to do so.
 
         private void DoCopy()
         {

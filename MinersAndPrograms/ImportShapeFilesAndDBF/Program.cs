@@ -23,6 +23,8 @@ namespace ImportShapeFilesAndDBF
             RiversLoader rivl = new RiversLoader(true, false, basedatadir + "RiversAndStreamsData");
             rivl.LoadZips();
 
+
+
             PlaceLoader pl = new PlaceLoader(true, false,basedatadir + "PlacesZips");
             pl.LoadZips();
 
