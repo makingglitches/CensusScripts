@@ -10,6 +10,12 @@ namespace CensusFiles.Loaders
 {
    public class LoaderOptions
     {
+
+        /// <summary>
+        /// Write a double-check report.
+        /// </summary>
+        public bool WriteSummaryFile { get; set; }
+
         /// <summary>
         /// How many seconds to wait between retries.
         /// </summary>
@@ -48,6 +54,9 @@ namespace CensusFiles.Loaders
 
         public LoaderOptions()
         {
+            WriteSummaryFile = true;
+            SecondsToWait = 15;
+            Retries = 5;
             RecordLimit = 500;
             EmptyTable = false;
             Resume = true;

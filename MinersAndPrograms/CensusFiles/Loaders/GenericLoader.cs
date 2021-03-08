@@ -53,7 +53,7 @@ namespace CensusFiles.Loaders
             Console.WriteLine("Total Run Time: " + TimeSpan.FromSeconds(totalseconds).ToString());
             Console.WriteLine("Processed " + wrote.ToString() + " records.");
             Console.WriteLine("Skipped " + skipped.ToString() + " records.");
-            Console.WriteLine("Avg Rate " + recordpersecond.ToString() + " records/second");
+            Console.WriteLine("Avg Rate " + recordwrotepersecond.ToString() + " records/second");
         }
 
         public LoaderOptions Options { get; set; }
@@ -126,7 +126,7 @@ namespace CensusFiles.Loaders
             Console.WriteLine(blankline);
             Console.WriteLine(blankline);
             Console.SetCursorPosition(cursorx, cursory);
-            Console.WriteLine("Skipping " + index.ToString() + " of " + dbflength.ToString());
+            Console.WriteLine("Skipping " + (index+1).ToString() + " of " + dbflength.ToString());
         }
 
         #endregion ConsoleLogging EventHandlers
@@ -209,7 +209,8 @@ namespace CensusFiles.Loaders
         private int retries = 0;
         private double totalsecondsprocessing = 0;
         private double totalsecondswriting = 0;
-        private double recordpersecond = 0;
+        private double recordwrotepersecond = 0;
+        private double recordsprocpersecond = 0;
         private int skippedrecords = 0;
         private string currentDBFName;
         private string currentSHPName;
@@ -221,16 +222,35 @@ namespace CensusFiles.Loaders
         public string SHPFileName { get { return currentSHPName; } }
         #endregion Current FilesNames
 
+        #region Public Batch Fields
+
         public double BatchSecondsProcessing = 0;
         public double BatchSecondsWriting = 0;
         public  int BatchRecordsWrote = 0;
         public int BatchRetries = 0;
         public int BatchRecordsSkipped = 0;
-        public double BatchRecordsPerSecond = 0;
-
+        public double BatchRecordsWrotePerSecond = 0;
+        public double BatchRecordsProcsPerSecond = 0;
+        #endregion Public Batch Fields
 
         public void LoadZips()
         {
+
+            string summaryfilename = Options.TableName + " Load Summary.txt";
+
+            if (Options.WriteSummaryFile)
+            {
+                // filename
+                // written records
+                // skipped records
+                // time processing
+                // time writing to server
+                // records processed / s
+                // records written / s
+                File.WriteAllText(summaryfilename,
+                    "Input File\tRecord Count\tWrote Records\tSkipped Existing\tTime Processing\tTime Writing To Server\tRetries\tRecords Proc/s\tRecords Wrote/s\n");
+            }
+
             if (Options.ConsoleLogging)
             {
                 Console.WriteLine("Processing Table " + Options.TableName);
@@ -377,23 +397,73 @@ namespace CensusFiles.Loaders
 
                 Directory.Delete(outputdir, true);
 
-                ReportFinalStats(wrote, skippedrecords, totalsecondswriting, recordpersecond);
+                recordsprocpersecond = (wrote + skippedrecords) / totalsecondsprocessing;
+
+                if (Options.WriteSummaryFile)
+                {
+                    // filename
+                    // written records
+                    // skipped records
+                    // time processing
+                    // time writing to server
+                    // records processed / s
+                    // records written / s
+                    File.AppendAllText(summaryfilename,
+                        Path.GetFileName(z) + "\t" +
+                        wrote.ToString() + "\t" +
+                        skippedrecords.ToString() + "\t" +
+                        TimeSpan.FromSeconds(totalsecondsprocessing).ToString() + "\t" +
+                        TimeSpan.FromSeconds(totalsecondswriting).ToString() + "\t" +
+                        recordsprocpersecond.ToString() + "\t"+
+                        recordwrotepersecond.ToString() + "\t\n");
+
+
+                }
+
+
+                ReportFinalStats(wrote, skippedrecords, totalsecondswriting, recordwrotepersecond);
 
                 BatchRecordsSkipped += skippedrecords;
                 BatchRecordsWrote += wrote;
                 BatchRetries += retries;
                 BatchSecondsProcessing += totalsecondsprocessing;
                 BatchSecondsWriting += totalsecondswriting;
+              
 
                 retries = 0;
                 totalsecondsprocessing = 0;
                 wrote = 0;
                 totalsecondswriting = 0;
                 skippedrecords = 0;
-                recordpersecond = 0;
+                recordwrotepersecond = 0;
             }
 
             #endregion ProcessZipFiles
+
+            BatchRecordsWrotePerSecond = BatchRecordsWrote / BatchSecondsWriting;
+            BatchRecordsProcsPerSecond = (BatchRecordsSkipped + BatchRecordsWrote) / BatchSecondsProcessing;
+
+
+
+
+            if (Options.WriteSummaryFile)
+            {
+                // filename
+                // written records
+                // skipped records
+                // time processing
+                // time writing to server
+                // records processed / s
+                // records written / s
+                File.AppendAllText(summaryfilename,
+                    "Batch Totals\t" +
+                    BatchRecordsWrote.ToString() + "\t" +
+                    BatchRecordsSkipped.ToString() + "\t" +
+                    TimeSpan.FromSeconds(BatchSecondsProcessing).ToString() + "\t" +
+                    TimeSpan.FromSeconds(BatchSecondsWriting).ToString() + "\t" +
+                    recordsprocpersecond.ToString() + "\t" +
+                    recordwrotepersecond.ToString() + "\n");
+            }
 
             // let senoir chomo cripple get fucked up some more, getting a little sick of seeing people stare at children.
             // fuck them for now.
@@ -401,12 +471,20 @@ namespace CensusFiles.Loaders
 
             scon.Open();
             SqlCommand getcount = new SqlCommand("select count(*) from dbo." + Options.TableName, scon);
+         
             int sqlrecords = getcount.ExecuteNonQuery();
 
             if ( sqlrecords == BatchRecordsSkipped+BatchRecordsWrote)
             {
                 Console.WriteLine("Record number in table matches progress thus far. A total of " + sqlrecords.ToString() + " discovered.");
             }
+            else
+            {
+                Console.WriteLine("Differing counts");
+                Console.WriteLine("Server returned count: " + sqlrecords.ToString());
+                Console.WriteLine("Skipped + Processed: " + (BatchRecordsWrote + BatchRecordsSkipped).ToString());
+            }
+           
             scon.Close();
 
             // whats going to be really funny is when i bury all snarky messages
@@ -424,7 +502,7 @@ namespace CensusFiles.Loaders
         {
             int localretries = 0;
 
-            Status(sindex, wrote, towrite.Count, recordpersecond);
+            Status(sindex, wrote, towrite.Count, recordwrotepersecond);
 
             while (localretries < Options.Retries)
             {
@@ -452,7 +530,7 @@ namespace CensusFiles.Loaders
 
             retries += localretries;
 
-            Status(sindex, wrote, 0, recordpersecond);
+            Status(sindex, wrote, 0, recordwrotepersecond);
 
         }
 
@@ -533,7 +611,7 @@ namespace CensusFiles.Loaders
             DateTime end = DateTime.Now;
 
             totalsecondswriting += end.Subtract(start).TotalSeconds;
-            recordpersecond = wrote / totalsecondswriting;
+            recordwrotepersecond = wrote / totalsecondswriting;
 
         }
 
