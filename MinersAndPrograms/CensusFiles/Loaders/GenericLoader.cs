@@ -10,8 +10,6 @@ using System.Data;
 using System.Data.SqlTypes;
 using DbfDataReader;
 
-using DbfDataReader;
-
 namespace CensusFiles.Loaders
 {
     public class GenericLoader
@@ -212,8 +210,8 @@ namespace CensusFiles.Loaders
         private double recordwrotepersecond = 0;
         private double recordsprocpersecond = 0;
         private int skippedrecords = 0;
-        private string currentDBFName;
-        private string currentSHPName;
+        internal string currentDBFName;
+        internal string currentSHPName;
         private int sindex = 0;
         #endregion Private Processing Fields
 
@@ -232,6 +230,16 @@ namespace CensusFiles.Loaders
         public double BatchRecordsWrotePerSecond = 0;
         public double BatchRecordsProcsPerSecond = 0;
         #endregion Public Batch Fields
+
+        CensusFiles.Helpers.KeyProcessor keyprocess;
+
+        public Action ResetKeyFields;
+
+        public void LoadKeys(bool truncate=false)
+        {
+            keyprocess = new Helpers.KeyProcessor(Options, this);
+            keyprocess.LoadKeys(truncate);
+        }
 
         public void LoadZips()
         {
@@ -302,53 +310,7 @@ namespace CensusFiles.Loaders
 
             #endregion InitialSQL
 
-            if (Options.Resume)
-            {
-
-                DateTime startcrunch = DateTime.Now;
-
-                Dictionary<string, List<object>> files = new Dictionary<string, List<object>>(); 
-
-                foreach (string z in zipfiles)
-                {
-                    ZipArchive za = ZipFile.OpenRead(z);
-
-                    foreach (ZipArchiveEntry ze in za.Entries)
-                    {
-                        if (ze.Name.EndsWith(".dbf"))
-                        {
-                            ze.ExtractToFile("local.dbf", true);
-                            
-                            DbfDataReader.DbfDataReader d = 
-                                new DbfDataReader.DbfDataReader("local.dbf", new DbfDataReaderOptions() { SkipDeletedRecords = true });
-
-                            List<object> ids = new List<object>();
-
-                            while (d.Read())
-                            {
-                                if (Options.DerivedResumeKey)
-                                {
-                                    ids.Add(DerivedKeyGenerator(d, this));
-                                }
-                                else
-                                {
-                                    ids.Add(d[Options.DbaseResumeId]);
-                                }
-                            }
-
-                            // add the files ids into the dictionary for later comparison against the database
-                            // will transmit ALL ids to the database per file and see if there are 
-                            files.Add(ze.FullName, ids);
-
-
-                        }
-                    }
-                }
-
-
-                DateTime endcrunch = DateTime.Now;
-            }
-
+            
             #region ProcessZipFiles
             bool checkresume = resumeids.Count > 0;
 

@@ -1,7 +1,7 @@
 -- for use when clearing old values
 
 use Geography;
-
+go
 
 truncate table  dbo.FileSources
 

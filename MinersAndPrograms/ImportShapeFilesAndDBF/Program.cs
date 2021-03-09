@@ -18,24 +18,22 @@ namespace ImportShapeFilesAndDBF
             string basedatadir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\";
 
             //   AquiferLoader aq = new AquiferLoader(basedatadir + "AqiferData", true, true);
-            //  aq.LoadZips();
+            //  aq.LoadKeys(true);
 
             RiversLoader rivl = new RiversLoader(true, false, basedatadir + "RiversAndStreamsData");
-            rivl.LoadZips();
-
-
+            rivl.LoadKeys(true);
 
             PlaceLoader pl = new PlaceLoader(true, false,basedatadir + "PlacesZips");
-            pl.LoadZips();
+            pl.LoadKeys(true);
 
             RoadsLoader rl = new RoadsLoader(true,false,basedatadir + "RoadsZips");
-            rl.LoadZips();
+            rl.LoadKeys(true);
 
             CountyLoader cl = new CountyLoader(true,false,basedatadir + "CountyZips");
-            cl.LoadZips();
+            cl.LoadKeys(true);
 
             StateLoader st = new StateLoader(true,false,basedatadir + "StateZips");
-            st.LoadZips();
+            st.LoadKeys(true);
         }
     }
 }

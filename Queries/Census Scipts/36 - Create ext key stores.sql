@@ -1,3 +1,5 @@
+use Geography
+go
 
 declare @KeyTable as table(tabname nvarchar(max), colname nvarchar(max), dtype nvarchar(max), charlen  int)
 
@@ -23,11 +25,12 @@ begin
 
 		select  @t=k.tabname, @c=k.colname, @d=k.dtype, @l =k.charlen from @KeyTable k
 		
-		select @com = concat('CREATE TABLE [ext].[',@t,']( [key] ' ,@d,  
+		select @com = concat('CREATE TABLE [ext].[',@t,'Keys',']( [key] ' ,@d,  
 		case 
 		when @d='int' then ' ' 
 		when @d in ( 'char', 'nvarchar','nchar','varchar') then concat('(', trim(CAST(@l as char)),')')
 		end,',',
+		'FileSourceId nvarchar(300) null,',
 		'CONSTRAINT [PK_ext',@t,'] PRIMARY KEY CLUSTERED( [key] ASC)',
 		') on [Primary]')
 
