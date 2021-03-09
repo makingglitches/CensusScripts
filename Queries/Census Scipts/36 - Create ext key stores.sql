@@ -63,6 +63,14 @@ begin
 		-- dragging back a list of 8 million record ids is not an acceptable option for one because its an anxiety inducing scenario aint it ? lol
 		-- thats why we create moving shit that tells the user 'OH UH HEY, SOMETHING IS STILL HAPPENING.. WE THINK !'
 		-- would be nice if i could connect to the activity monitor and report semaphores back to the ui !
+	
+	
+		select @com = concat ('DROP PROCEDURE if exists [dbo].[',@t,'_GetLoaded]');
+
+		print 'Cmd Text SP:'
+		print @com
+		exec (@com)
+
 		select @com = concat ('drop type if exists dbo.',@t,'KeyTableType')
 		print @com
 		exec(@com)
@@ -71,17 +79,10 @@ begin
 		print @com
 		exec (@com)
 
-		
-		select @com = concat ('DROP PROCEDURE if exists [dbo].[',@t,'_GetLoaded]');
-
-		print 'Cmd Text SP:'
-		print @com
-		exec (@com)
-
 
 		select @com = concat ('CREATE PROCEDURE [dbo].[',@t,'_GetLoaded] @keysToCheck dbo.',@t,'KeyTableType READONLY ',
 		'AS BEGIN SET NOCOUNT ON; ',
-		'select t.keyid, case when exists (select null from dbo.Roads r where r.',@c,'=t.keyid) then 1 else 0 end as Loaded from @keysToCheck t ',
+		'select t.keyid, case when exists (select null from dbo.',@t,' r where r.',@c,'=t.keyid) then 1 else 0 end as Loaded from @keysToCheck t ',
 		'END')
 
 		print @com
