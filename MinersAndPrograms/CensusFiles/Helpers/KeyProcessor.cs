@@ -101,11 +101,12 @@ namespace CensusFiles.Helpers
 
                     if (KeyValues.Columns.Count ==1)
                     {
-                        KeyValues.Columns.Add("key", key.GetType());
+                        KeyValues.Columns.Add("keyid", key.GetType());
                     }
 
-                    dr["key"] = key;
+                    dr["keyid"] = key;
                     dr["FileSourceId"] = dbfname;
+                    
 
                     KeyValues.Rows.Add(dr);
                 }
