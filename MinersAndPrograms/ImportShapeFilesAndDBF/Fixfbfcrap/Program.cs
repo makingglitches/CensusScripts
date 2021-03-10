@@ -25,11 +25,50 @@ namespace Fixfbfcrap
         static void Main(string[] args)
         {
 
-
-
             string locspecdir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\SpeciesData";
 
-            SpeciesRepackager.Repackage(locspecdir, locspecdir + "\\repack",null);
+
+            SqlConnection scon = new SqlConnection();
+
+            SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder()
+            {
+                InitialCatalog ="Geography",
+                IntegratedSecurity=true
+            };
+
+            scon.ConnectionString = scsb.ConnectionString;
+
+            scon.Open();
+
+            SqlCommand scom = new SqlCommand("select ArchiveName from dbo.Species", scon);
+
+            var dr = scom.ExecuteReader();
+
+            List<string> files = Directory.GetFiles(locspecdir).Select(o=>Path.GetFileName(o)).ToList();
+            List<string> missing = new List<string>();
+
+            while (dr.Read())
+            {
+                
+                if (!files.Contains(dr["ArchiveName"].ToString()))
+                {
+                    missing.Add(dr["ArchiveName"].ToString());
+                }
+                
+            }
+
+            // they are rather sick in that when they destroy a persons personal work and hide photos
+            // they took of themselves when they are younger they are encouraging themselves to be 
+            // murdered as they should be.
+            // by what excuse do people steal years of someones life, photos, changes, writing, etc 
+            // and then claim it never happened and in the long run fuck themselves as well ?
+            dr.Close();
+            scon.Close();
+
+
+            //string locspecdir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\SpeciesData";
+
+            //SpeciesRepackager.Repackage(locspecdir, locspecdir + "\\repack",null);
 
             //string[] files = Directory.GetFiles(locspecdir, "*.zip");
 

@@ -14,11 +14,12 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Species](
-	[DownloadLink] [nvarchar](300) NULL,
-	[CommonName] [nvarchar](100) NULL,
-	[Kingdom] [nvarchar](50) NULL,
-	[ScientificName] [nvarchar](100) NULL,
-	[ArchiveName] [nvarchar](200) NULL
+	[DownloadLink] [nvarchar](300) not NULL,
+	[CommonName] [nvarchar](100) not NULL,
+	[Kingdom] [nvarchar](50) not NULL,
+	[ScientificName] [nvarchar](100) not NULL,
+	[ArchiveName] [nvarchar](200) not NULL,
+	[ContentsPrefix] [nvarchar](50) null
 ) ON [PRIMARY]
 GO
 

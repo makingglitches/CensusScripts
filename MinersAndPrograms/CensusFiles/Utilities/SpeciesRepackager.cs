@@ -103,6 +103,7 @@ namespace CensusFiles.Utilities
             sw.Flush();
             s.Flush();
             s.Close();
+
             // how many times this long time period has passed, no idea, but everyone is freaked out and scared
             // when i end up back somewhere else, who knows if its an act or theyre being awoken from 
             // a very long slumber if that is even the case but they certainly all seem MORE miserable
