@@ -95,14 +95,21 @@ namespace CensusFiles.Helpers
 
                 while (db.Read())
                 {
-                    DataRow dr = KeyValues.NewRow();
-
+                    
                     object key = Options.DerivedResumeKey ? parent.DerivedKeyGenerator(db, parent) : db[Options.DbaseResumeId];
 
                     if (KeyValues.Columns.Count ==1)
                     {
-                        KeyValues.Columns.Add("keyid", key.GetType());
+                        DataColumn keyfield = new DataColumn("keyid", key.GetType());
+                        DataColumn filefield = KeyValues.Columns[0];
+
+                        // fail, udt types do not automap to the field ordering in the table. though named the fing same.
+                        KeyValues.Columns.Clear();
+                        KeyValues.Columns.Add(keyfield);
+                        KeyValues.Columns.Add(filefield);
                     }
+
+                    DataRow dr = KeyValues.NewRow();
 
                     dr["keyid"] = key;
                     dr["FileSourceId"] = dbfname;
@@ -114,13 +121,25 @@ namespace CensusFiles.Helpers
                 db.Close();
 
                 Console.WriteLine("Loaded " + KeyValues.Rows.Count.ToString() + " keys");
-                bulk.WriteToServer(KeyValues);
+
+                SqlCommand getloaded = new SqlCommand("[ext]." + Options.TableName + "_GetLoaded", con);
+                getloaded.CommandType = CommandType.StoredProcedure;
+
+
+                SqlParameter parm =  getloaded.Parameters.AddWithValue("@keysToCheck", KeyValues);
+
+                parm.SqlDbType = SqlDbType.Structured;
+           //     parm.TypeName = "[ext]." + Options.TableName + "KeyTableType";
+                
+                // replaced sqlbulkcopy with table-valued parameter accepting stored procedure
+                // seems to work just as fast and the subquery calculates which records were loaded rather quickly.
+                getloaded.ExecuteNonQuery();
+                
+                //bulk.WriteToServer(KeyValues);
                 Console.WriteLine("Wrote to server");
 
                 KeyValues.Rows.Clear();
             }
-
-
 
 
             con.Close();

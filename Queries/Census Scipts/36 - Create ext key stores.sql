@@ -65,24 +65,26 @@ begin
 		-- would be nice if i could connect to the activity monitor and report semaphores back to the ui !
 	
 	
-		select @com = concat ('DROP PROCEDURE if exists [dbo].[',@t,'_GetLoaded]');
+		select @com = concat ('DROP PROCEDURE if exists [ext].[',@t,'_GetLoaded]');
 
 		print 'Cmd Text SP:'
 		print @com
 		exec (@com)
 
-		select @com = concat ('drop type if exists dbo.',@t,'KeyTableType')
+		select @com = concat ('drop type if exists ext.',@t,'KeyTableType')
 		print @com
 		exec(@com)
 
-		select @com = concat('create type dbo.',@t,'KeyTableType as table(keyid ',@dt,')')
+		select @com = concat('create type ext.',@t,'KeyTableType as table(keyid ',@dt,', filesourceid nvarchar(300))')
 		print @com
 		exec (@com)
 
 
-		select @com = concat ('CREATE PROCEDURE [dbo].[',@t,'_GetLoaded] @keysToCheck dbo.',@t,'KeyTableType READONLY ',
+
+		select @com = concat ('CREATE PROCEDURE [ext].[',@t,'_GetLoaded] @keysToCheck ext.',@t,'KeyTableType READONLY ',
 		'AS BEGIN SET NOCOUNT ON; ',
-		'select t.keyid, case when exists (select null from dbo.',@t,' r where r.',@c,'=t.keyid) then 1 else 0 end as Loaded from @keysToCheck t ',
+		' insert into [ext].[',@t,'Keys](keyid,FileSourceId,Loaded) ',
+		'select t.keyid, t.filesourceid, case when exists (select null from dbo.',@t,' r where r.',@c,'=t.keyid) then 1 else 0 end as Loaded from @keysToCheck t ',
 		'END')
 
 		print @com
