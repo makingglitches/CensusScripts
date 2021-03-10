@@ -1,4 +1,4 @@
 # HSTS 1.0 Known Hosts database for GNU Wget.
 # Edit at your own risk.
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
-www.sciencebase.gov	0	1	1614470407	63072000
+www.sciencebase.gov	0	1	1615410640	63072000

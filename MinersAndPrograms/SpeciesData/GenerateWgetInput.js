@@ -31,25 +31,27 @@ var timems = 1000;
 
 for (var i in speciesdata) {
 	console.log('Processing: ' + i + ' of ' + speciesdata.length);
-	if (!speciesdata[i].RangeArchiveName) {
-		var cmd = '.\\wget --server-response -q -O - ' + speciesdata[i].DlLink + ' 1>dumby.txt 2>value.txt';
+	
+	// if (!speciesdata[i].RangeArchiveName) {
+	// 	var cmd = '.\\wget --server-response -q -O - ' + speciesdata[i].DlLink + ' 1>dumby.txt 2>value.txt';
 
-		var dumby = execSync(cmd, { encoding: 'utf-8', maxBuffer: 1024 });
+	// 	// standard error contains the http response header
+	// 	// standout contains some kind of binary response
+	
+	// 	var output = fs.readFileSync('value.txt').toString();
 
-		var output = fs.readFileSync('value.txt').toString();
+	// 	var namestart = output.indexOf('filename=') + 10;
+	// 	var clpos = output.indexOf('Content-Length');
+	// 	var len = clpos - namestart - 3;
 
-		var namestart = output.indexOf('filename=') + 10;
-		var clpos = output.indexOf('Content-Length');
-		var len = clpos - namestart - 3;
+	// 	var sub = output.substr(namestart, len);
+	// 	sub = sub.substr(0, sub.indexOf('"'));
 
-		var sub = output.substr(namestart, len);
-		sub = sub.substr(0, sub.indexOf('"'));
+	// 	console.log(sub);
 
-		console.log(sub);
-
-		speciesdata[i].RangeArchiveName = sub;
-		fs.writeFileSync('speciesdatawithfilename.json', JSON.stringify(speciesdata));
-	}
+	// 	speciesdata[i].RangeArchiveName = sub;
+	// 	fs.writeFileSync('speciesdatawithfilename.json', JSON.stringify(speciesdata));
+	// }
 
 	if (!speciesdata[i].Downloaded) {
 		try {
@@ -57,12 +59,22 @@ for (var i in speciesdata) {
 				fs.mkdirSync('.\\zips');
 			}
 
+			var outname = speciesdata[i].ScientificName.replace(" ","_");
+
+			console.log(outname);
 			var getcmd =
-				'.\\wget.exe --content-disposition -P .\\zips ' +
+				'.\\wget.exe -O ".\\zips\\'+ outname +'.zip" -P .\\zips ' +
 				speciesdata[i].DlLink +
                 ' 1>dumby.txt 2>value.txt';
-                
+
+			// var getcmd =
+			// 	'.\\wget.exe --content-disposition -P .\\zips ' +
+			// 	speciesdata[i].DlLink +
+            //     ' 1>dumby.txt 2>value.txt';
+    
+		
 			execSync(getcmd);
+			speciesdata[i].RangeArchiveName=outname;
 			speciesdata[i].Downloaded = true;
 			fs.writeFileSync('speciesdatawithfilename.json', JSON.stringify(speciesdata));
 		} catch (e) {

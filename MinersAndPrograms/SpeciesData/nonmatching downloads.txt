@@ -1,0 +1,51 @@
+C:\Users\John>wget --content-disposition https://www.sciencebase.gov/catalog/file/get/59f5eba9e4b063d5d307e06d
+--2021-03-10 12:31:54--  https://www.sciencebase.gov/catalog/file/get/59f5eba9e4b063d5d307e06d
+Resolving www.sciencebase.gov (www.sciencebase.gov)... 137.227.233.234
+Connecting to www.sciencebase.gov (www.sciencebase.gov)|137.227.233.234|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1372568 (1.3M) [application/zip]
+Saving to: 'Yellow_throated.zip'
+
+Yellow_throated.zip           100%[=================================================>]   1.31M  43.2KB/s    in 57s
+
+2021-03-10 12:32:54 (23.6 KB/s) - 'Yellow_throated.zip' saved [1372568/1372568]
+
+
+C:\Users\John>wget --content-disposition https://www.sciencebase.gov/catalog/file/get/59f5ebf1e4b063d5d307e2c3
+--2021-03-10 12:32:57--  https://www.sciencebase.gov/catalog/file/get/59f5ebf1e4b063d5d307e2c3
+Resolving www.sciencebase.gov (www.sciencebase.gov)... 137.227.233.234
+Connecting to www.sciencebase.gov (www.sciencebase.gov)|137.227.233.234|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1625911 (1.5M) [application/zip]
+Saving to: 'Yellow_throated.zip.1'
+
+Yellow_throated.zip.1          17%[=======>                                          ] 271.75K  --.-KB/s    eta 3m 10s ^C
+C:\Users\John>wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5eba9e4b063d5d307e06d 1>val.txt
+  HTTP/1.1 200 OK
+  Date: Wed, 10 Mar 2021 19:34:09 GMT
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
+  X-Frame-Options: DENY
+  X-UA-Compatible: IE=edge
+  Set-Cookie: JSESSIONID=A45CE74053809799CFBCB70C0B9E1564; Path=/catalog; Secure; HttpOnly
+  Content-Disposition: attachment; filename="Yellow_throated.zip"
+  Content-Length: 1372568
+  Keep-Alive: timeout=10, max=500
+  Connection: Keep-Alive
+  Content-Type: application/zip
+  Set-Cookie: BNES_JSESSIONID=qcx7vyqbGpXhRd109XfuPwo0CTrpyIcAaIrHwwoq6nVFHU7Ul389s8q0Vqrpt6K51aHacUkTL5RrIFeSApDuqHM6ZPfo0ZdfllecEtn0MNi7qAwOkjBy+Q==; Path=/catalog; Secure; HttpOnly
+
+C:\Users\John>wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ebf1e4b063d5d307e2c3 1>val.txt
+  HTTP/1.1 200 OK
+  Date: Wed, 10 Mar 2021 19:34:49 GMT
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
+  X-Frame-Options: DENY
+  X-UA-Compatible: IE=edge
+  Set-Cookie: JSESSIONID=EF0D06570DBA923A6A6F9704DAA589C1; Path=/catalog; Secure; HttpOnly
+  Content-Disposition: attachment; filename="Yellow_throated.zip"
+  Content-Length: 1625911
+  Keep-Alive: timeout=10, max=500
+  Connection: Keep-Alive
+  Content-Type: application/zip
+  Set-Cookie: BNES_JSESSIONID=Ho0DNOHrR9xM6mH9kLyXRn88Xj2kmD15Use7uK3lgedCN7PzrWXC/R5Tu2fn+Bx4lK8kFjV/5ajURHlN543Y/Lz4IGKc5CORt/JumOLWbO1OGlOm2wcBdQ==; Path=/catalog; Secure; HttpOnly
