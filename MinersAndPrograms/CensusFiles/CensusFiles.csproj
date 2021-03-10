@@ -89,6 +89,7 @@
     <Compile Include="Records\RiversRecord.cs" />
     <Compile Include="Records\RoadRecord.cs" />
     <Compile Include="Records\StateRecord.cs" />
+    <Compile Include="Utilities\SpeciesRepackager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ImportShapeFilesAndDBF\DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
