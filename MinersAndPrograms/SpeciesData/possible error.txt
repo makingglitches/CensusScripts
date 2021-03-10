@@ -1,0 +1,39 @@
+really could use a self hosted bug tracking thingamajig
+
+just had a conversation with someone either intercepting calls to the government or some other weirdo at the usgs 
+interestingly the number was retrieved form a www2.usgs.gov site... herm
+
+anyway
+
+below is a table. with at least some of these the file sizes end up being different when one actually downloads them.
+what i'm interested in is whether the content-disposition field from their web server is for some reason pumping the correct data
+but the wrong fucking filename which under the correct circumstances could REALLY fuck shit up requiring closer inspection of the
+included xml files programatically to make sure the right species data is there in the first place ! 
+
+1	https://www.sciencebase.gov/catalog/file/get/59f5ec4fe4b063d5d307e5f5	Arizona Cotton Rat	Mammal	Sigmodon arizonae cienegae	ArizonaCottonRa.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec4fe4b063d5d307e5f5
+2	https://www.sciencebase.gov/catalog/file/get/59f5e1f2e4b063d5d307dbbd	Arizona Cotton Rat	Mammal	Sigmodon arizonae	ArizonaCottonRa.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e1f2e4b063d5d307dbbd
+3	https://www.sciencebase.gov/catalog/file/get/59f5ebfae4b063d5d307e311	Baja California Collared Lizard	Reptile	Crotaphytus vestigium	BajaCaliforniaC.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ebfae4b063d5d307e311
+4	https://www.sciencebase.gov/catalog/file/get/59f5ebfae4b063d5d307e313	Baja California Coachwhip	Reptile	Coluber fuliginosus	BajaCaliforniaC.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ebfae4b063d5d307e313
+5	https://www.sciencebase.gov/catalog/file/get/59f5e22ae4b063d5d307dcfb	Black-throated Green Warbler	Bird	Dendroica virens	Black_throatedG.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e22ae4b063d5d307dcfb
+6	https://www.sciencebase.gov/catalog/file/get/59f5e266e4b063d5d307de6d	Black-throated Gray Warbler	Bird	Dendroica nigrescens	Black_throatedG.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e266e4b063d5d307de6d
+7	https://www.sciencebase.gov/catalog/file/get/59f5e1afe4b063d5d307da65	Northern Pygmy-owl (californicum)	Bird	Glaucidium gnoma californicum	NorthernPygmy_o.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e1afe4b063d5d307da65
+8	https://www.sciencebase.gov/catalog/file/get/59f5ec3be4b063d5d307e535	Northern Pygmy-owl (gnoma)	Bird	Glaucidium gnoma gnoma	NorthernPygmy_o.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec3be4b063d5d307e535
+9	https://www.sciencebase.gov/catalog/file/get/59f5ec3be4b063d5d307e537	Northern Pygmy-owl	Bird	Glaucidium gnoma	NorthernPygmy_o.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec3be4b063d5d307e537
+10	https://www.sciencebase.gov/catalog/file/get/59f5ec1de4b063d5d307e44d	Prairie Vole	Mammal	Microtus ochrogaster taylori	PrairieVole_Mic.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec1de4b063d5d307e44d
+11	https://www.sciencebase.gov/catalog/file/get/59f5e27ee4b063d5d307def1	Prairie Vole	Mammal	Microtus ochrogaster	PrairieVole_Mic.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e27ee4b063d5d307def1
+12	https://www.sciencebase.gov/catalog/file/get/59f5e1c5e4b063d5d307dad3	Southern Pocket Gopher (intermedius)	Mammal	Thomomys umbrinus intermedius	SouthernPocketG.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e1c5e4b063d5d307dad3
+13	https://www.sciencebase.gov/catalog/file/get/59f5ebb3e4b063d5d307e0cb	Southern Pocket Gopher	Mammal	Thomomys umbrinus	SouthernPocketG.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ebb3e4b063d5d307e0cb
+14	https://www.sciencebase.gov/catalog/file/get/59f5e1a3e4b063d5d307da39	Southern Red-backed Vole	Mammal	Myodes gapperi	SouthernRed_bac.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e1a3e4b063d5d307da39
+15	https://www.sciencebase.gov/catalog/file/get/59f5ec1ae4b063d5d307e429	Southern Red-backed Salamander	Amphibian	Plethodon serratus	SouthernRed_bac.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec1ae4b063d5d307e429
+16	https://www.sciencebase.gov/catalog/file/get/59f5ec18e4b063d5d307e41f	Western Red-backed Salamander	Amphibian	Plethodon vehiculum	WesternRed_back.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec18e4b063d5d307e41f
+17	https://www.sciencebase.gov/catalog/file/get/59f5eba0e4b063d5d307e013	Western Red-backed Vole	Mammal	Myodes californicus	WesternRed_back.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5eba0e4b063d5d307e013
+18	https://www.sciencebase.gov/catalog/file/get/59f5e238e4b063d5d307dd51	White-throated Sparrow	Bird	Zonotrichia albicollis	White_throatedS.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e238e4b063d5d307dd51
+19	https://www.sciencebase.gov/catalog/file/get/59f5e2a4e4b063d5d307dfc7	White-throated Swift	Bird	Aeronautes saxatalis	White_throatedS.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e2a4e4b063d5d307dfc7
+20	https://www.sciencebase.gov/catalog/file/get/59f5e1c8e4b063d5d307dae1	Wyoming Ground Squirrel (aureus)	Mammal	Urocitellus elegans aureus	WyomingGroundSq.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5e1c8e4b063d5d307dae1
+21	https://www.sciencebase.gov/catalog/file/get/59f5ec0be4b063d5d307e3a1	Wyoming Ground Squirrel (elegans)	Mammal	Urocitellus elegans elegans	WyomingGroundSq.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec0be4b063d5d307e3a1
+22	https://www.sciencebase.gov/catalog/file/get/59f5ec4ae4b063d5d307e5cb	Wyoming Ground Squirrel (nevadensis)	Mammal	Urocitellus elegans nevadensis	WyomingGroundSq.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ec4ae4b063d5d307e5cb
+23	https://www.sciencebase.gov/catalog/file/get/59f5ebc9e4b063d5d307e173	Wyoming Ground Squirrel	Mammal	Urocitellus elegans	WyomingGroundSq.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ebc9e4b063d5d307e173
+24	https://www.sciencebase.gov/catalog/file/get/59f5eba4e4b063d5d307e03d	Yellow-pine Chipmunk (celeris)	Mammal	Tamias amoenus celeris	Yellow_pineChip.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5eba4e4b063d5d307e03d
+25	https://www.sciencebase.gov/catalog/file/get/59f5ebc8e4b063d5d307e16d	Yellow-pine Chipmunk	Mammal	Tamias amoenus	Yellow_pineChip.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ebc8e4b063d5d307e16d
+26	https://www.sciencebase.gov/catalog/file/get/59f5eba9e4b063d5d307e06d	Yellow-throated Vireo	Bird	Vireo flavifrons	Yellow_throated.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5eba9e4b063d5d307e06d
+27	https://www.sciencebase.gov/catalog/file/get/59f5ebf1e4b063d5d307e2c3	Yellow-throated Warbler	Bird	Dendroica dominica	Yellow_throated.zip	NULL	.\\wget --server-response -q -O - https://www.sciencebase.gov/catalog/file/get/59f5ebf1e4b063d5d307e2c3
