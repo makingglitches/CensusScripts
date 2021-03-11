@@ -1,3 +1,5 @@
+use Geography
+go
 
 declare @shdarch as table(fname nvarchar(300))
 
