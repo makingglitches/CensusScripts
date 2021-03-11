@@ -1,22 +1,28 @@
+
+//#region imports
 const console = require('console');
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { onrejectionhandled } = require('globalthis/implementation');
 const { stdin, stdout } = require('process');
 const readline = require('readline');
 var fs = require('fs');
+//#endregion imports
+
 
 console.log('App Started');
-
 console.log(process.cwd());
 
+
+//#region field initialization
+
+// read in the client side mining js
+// this basically is the end result of manual deconstruction
+// of the data services which btw are sometimes OBFUSCATED
+// this page makes mining pertinent data difficult.
+// and of course the api's dont actually allow access to the USEFUL data.
 var miningjs = fs.readFileSync(
 	'minestations.js'
 );
-
-function sendarg(arg)
-{
-	mainwindow.send('nochochannel',arg)
-}
 
 // the folder to download the zips to.
 var datafolder = 'C:\\Users\\John\\Documents\\CensusProject\\LocalClimateData';
@@ -24,7 +30,10 @@ var datafolder = 'C:\\Users\\John\\Documents\\CensusProject\\LocalClimateData';
 // the list of stations mined from the site
 var stations = [];
 
+// the window that will be displaying the local climate data webpage
 var lcdwindow;
+
+// the window that will be displaying the mainwindow to control and query the lcd window
 var mainwindow;
 
 // load stations json
@@ -35,27 +44,29 @@ else {
 	stations = JSON.parse(fs.readFileSync('lcd.json'));
 }
 
-function createWindow() {
+//#endregion field initialization
+
+//#region helper methods
+// send something to the main window
+function sendarg(arg)
+{
+	mainwindow.send('nochochannel',arg)
+}
+
+
+// creates  a browser window with or without node integration
+function createWindow(nodeint) {
 	return new BrowserWindow({
 		width: 800,
 		height: 600,
 		webPreferences: {
-			nodeIntegration: false
-		}
-	});
-}
-
-function createNodeWindow() {
-	return new BrowserWindow({
-		width: 800,
-		height: 600,
-		webPreferences: {
-			nodeIntegration: true
+			nodeIntegration: nodeint
 		}
 	});
 }
 
 
+// injects javascript into the lcd window and then returns a promise to implement
 function injectJs(js) {
 	var prom = lcdwindow.webContents
 		.executeJavaScript(js)
@@ -66,12 +77,13 @@ function injectJs(js) {
 			console.log('Error injecting JS');
 			console.log('Error: ' + (error ? error : '<empty>'));
 		});
+
 	return prom;
 }
 
 function LoadLCD()
 {
-	lcdwindow = createWindow();
+	lcdwindow = createWindow(false);
 	lcdLoadPromise = lcdwindow.loadURL('https://www.ncdc.noaa.gov/cdo-web/datatools/lcd');
 	lcdwindow.webContents.toggleDevTools();
 
@@ -93,10 +105,10 @@ function LoadLCD()
 	});
 
 }
+
 function LoadMain() {
 
-
-	mainwindow = createNodeWindow();
+	mainwindow = createWindow(true);
 	mainwindowLoadPromise = mainwindow.loadFile('index.html');
 
 	mainwindowLoadPromise
@@ -142,9 +154,12 @@ function LoadMain() {
 		}
 	});
 
-	mainwindow.webContents.toggleDevTools();
-	
+	mainwindow.webContents.toggleDevTools();	
 }
+
+//#endregion helper methods
+
+//#region application events
 
 app.whenReady().then((value) => {
 	LoadMain();
@@ -167,3 +182,5 @@ app.on('activate', () => {
 app.on('browser-window-created', () => {
 	console.log('Browser Window Created');
 });
+
+//#endregion application events
