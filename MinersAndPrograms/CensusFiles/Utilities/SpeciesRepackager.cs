@@ -26,7 +26,13 @@ namespace CensusFiles.Utilities
 
             SqlCommand getspecies = new SqlCommand("select * from dbo.Species", scon);
 
-
+            var dr = getspecies.ExecuteReader();
+            
+            
+            while ( dr.Read())
+            {
+             
+            }
 
             // thats a new attempt for them to try to curb my progress heh.
             // or perhaps not so much now.
