@@ -16,9 +16,11 @@ GO
 CREATE TABLE [dbo].[Species](
 	[DownloadLink] [nvarchar](300) not NULL,
 	[CommonName] [nvarchar](100) not NULL,
-	[Kingdom] [nvarchar](50) not NULL,
+	[AnimalType] [nvarchar](50) not NULL,
 	[ScientificName] [nvarchar](100) not NULL,
-	[ArchiveName] [nvarchar](200) not NULL,
+	[ServerArchiveName] [nvarchar](200) not NULL,
+	[ArchiveName] [nvarchar](200) not null,
+	[DownloadGuid] [nvarchar] (100) not null,
 	[ContentsPrefix] [nvarchar](50) null,
 ) ON [PRIMARY]
 GO
