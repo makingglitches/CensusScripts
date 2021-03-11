@@ -14,3 +14,4 @@ from dbo.species s
 where exists(select null from @shdarch t where t.fname=s.ArchiveName)
 order by s.ArchiveName
 
+

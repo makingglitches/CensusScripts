@@ -14,6 +14,7 @@ using System.Data;
 using CensusFiles.Loaders;
 using CensusFiles.Utilities;
 using System.IO.Compression;
+using System.Xml;
 
 namespace Fixfbfcrap
 {
@@ -25,88 +26,21 @@ namespace Fixfbfcrap
         static void Main(string[] args)
         {
 
-            string locspecdir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\SpeciesData";
+            XmlDocument x = new XmlDocument();
+            
+          
+            x.Load("bCOHAx_CONUS_Range_2001v1.xml");
+
+            var titlenode = x.SelectSingleNode("/metadata/idinfo/citation/citeinfo/title");
 
 
-            SqlConnection scon = new SqlConnection();
+            string speciesinfo = titlenode.InnerText;
+            string commonname = speciesinfo.Substring(0, speciesinfo.IndexOf("("));
+            string latinname = speciesinfo.Substring(speciesinfo.IndexOf("(") + 1,  speciesinfo.IndexOf(")") -  speciesinfo.IndexOf("(") -1  );
 
-            SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder()
-            {
-                InitialCatalog ="Geography",
-                IntegratedSecurity=true
-            };
+            Console.WriteLine(commonname);
+            Console.WriteLine(latinname);
 
-            scon.ConnectionString = scsb.ConnectionString;
-
-            scon.Open();
-
-            SqlCommand scom = new SqlCommand("select ArchiveName from dbo.Species", scon);
-
-            var dr = scom.ExecuteReader();
-
-            List<string> files = Directory.GetFiles(locspecdir).Select(o=>Path.GetFileName(o)).ToList();
-            List<string> missing = new List<string>();
-
-            while (dr.Read())
-            {
-                
-                if (!files.Contains(dr["ArchiveName"].ToString()))
-                {
-                    missing.Add(dr["ArchiveName"].ToString());
-                }
-                
-            }
-
-            // they are rather sick in that when they destroy a persons personal work and hide photos
-            // they took of themselves when they are younger they are encouraging themselves to be 
-            // murdered as they should be.
-            // by what excuse do people steal years of someones life, photos, changes, writing, etc 
-            // and then claim it never happened and in the long run fuck themselves as well ?
-            dr.Close();
-            scon.Close();
-
-
-            //string locspecdir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\SpeciesData";
-
-            //SpeciesRepackager.Repackage(locspecdir, locspecdir + "\\repack",null);
-
-            //string[] files = Directory.GetFiles(locspecdir, "*.zip");
-
-            //List<string> containedzip = new List<string>();
-
-            //bool end = false;
-
-            //foreach (string f in files)
-            //{
-            //    ZipArchive za = ZipFile.OpenRead(f);
-
-            //    foreach (ZipArchiveEntry s in za.Entries)
-            //    {
-            //        if (s.Name.ToLower().EndsWith(".zip"))
-            //        {
-            //            if (containedzip.Contains(s.Name.ToLower()))
-            //            {
-            //                end = true;
-            //                Console.WriteLine("Found duplicate subarchive name");
-            //                break ;
-            //            }
-            //            else
-            //            {
-            //                containedzip.Add(s.Name.ToLower());
-            //            }
-            //        }
-            //    }
-
-            //    if (end)
-            //    {
-            //        break;
-            //    }
-
-            //}
-
-            //if (!end) Console.WriteLine("No Duplicates found.");
-
-            //Console.ReadLine();
         }
        
     }

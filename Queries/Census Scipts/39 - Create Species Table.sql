@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[Species](
 	[Kingdom] [nvarchar](50) not NULL,
 	[ScientificName] [nvarchar](100) not NULL,
 	[ArchiveName] [nvarchar](200) not NULL,
-	[ContentsPrefix] [nvarchar](50) null
+	[ContentsPrefix] [nvarchar](50) null,
 ) ON [PRIMARY]
 GO
 

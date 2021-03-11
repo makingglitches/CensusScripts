@@ -14,8 +14,17 @@ namespace CensusFiles.Utilities
     // for some reason the gov packages species archives different than literally EVERY fucking thing they design.
     public class SpeciesRepackager
     {
-        public static void Repackage(string inputzipdir, string outputzipdir,SqlConnection scon)
+        public static void Repackage(string inputzipdir, string outputzipdir, string connectionstring)
         {
+            SqlConnection scon = new SqlConnection(connectionstring);
+            scon.Open();
+
+            SqlCommand getspecies = new SqlCommand("select * from dbo.Species",scon);
+            
+
+            // thats a new attempt for them to try to curb my progress heh.
+            // or perhaps not so much now.
+
 
             inputzipdir = inputzipdir.Trim().EndsWith("\\") ? 
                 inputzipdir.Trim().Substring(0, inputzipdir.Trim().Length - 1):inputzipdir.Trim();
