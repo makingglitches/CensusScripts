@@ -16,7 +16,15 @@ namespace CensusFiles.Utilities
     public class SpeciesRepackager
     {
 
-        
+        private class speciespiece
+        {
+            public string ArchiveName { get; set; }
+            public string CommonName { get; set; }
+            public string ScientificName { get; set; }
+            public string DownloadGuid { get; set; }
+            public string ContentKey { get; set; } 
+            public bool DescriptorXMLMatches { get; set; }
+        }
 
 
         public static void Repackage(string inputzipdir, string outputzipdir, string connectionstring)
@@ -24,15 +32,29 @@ namespace CensusFiles.Utilities
             SqlConnection scon = new SqlConnection(connectionstring);
             scon.Open();
 
-            SqlCommand getspecies = new SqlCommand("select * from dbo.Species", scon);
+            SqlCommand getspecies = new SqlCommand("select s.ArchiveName,s.CommonName,s.ScientificName,s.DownloadGuid from dbo.species s", scon);
 
             var dr = getspecies.ExecuteReader();
-            
+
+            List<speciespiece> species = new List<speciespiece>();
             
             while ( dr.Read())
             {
-             
+                speciespiece p = new speciespiece()
+                {
+                    ArchiveName = dr["ArchiveName"].ToString(),
+                    CommonName = dr["CommonName"].ToString(),
+                    DownloadGuid = dr["DownloadGuid"].ToString(),
+                    ScientificName = dr["ScientificName"].ToString()
+                };
+
+                species.Add(p);
             }
+
+            List<speciespiece> matchedPieces = new List<speciespiece>();
+
+            dr.Close();
+            scon.Close();
 
             // thats a new attempt for them to try to curb my progress heh.
             // or perhaps not so much now.
@@ -57,6 +79,30 @@ namespace CensusFiles.Utilities
 
                 ZipArchive za = ZipFile.OpenRead(file);
 
+                speciespiece match = null;
+
+                foreach ( speciespiece p  in species)
+                {
+                    if (p.ArchiveName==Path.GetFileName(file))
+                    {
+                        match = p;
+                        break;
+                    }
+                }
+
+
+                // better got that species database populated !
+                if (match == null)
+                {
+                    Console.WriteLine(Path.GetFileName(file) + " has no matches in dbo.Species !");
+                    continue;
+                }
+
+                // reduce the number of items to scan.
+                species.Remove(match);
+                matchedPieces.Add(match);
+                
+
                 foreach (ZipArchiveEntry ze in za.Entries)
                 {
 
@@ -73,12 +119,16 @@ namespace CensusFiles.Utilities
                         var titlenode = x.SelectSingleNode("/metadata/idinfo/citation/citeinfo/title");
 
                         string speciesinfo = titlenode.InnerText;
-                        string commonname = speciesinfo.Substring(0, speciesinfo.IndexOf("("));
-                        string latinname = speciesinfo.Substring(speciesinfo.IndexOf("(") + 1, speciesinfo.IndexOf(")") - speciesinfo.IndexOf("(") - 1);
-                        string contentdesc = ze.Name.Split(new char[] { '_' })[0];
-                    
-                        // todo: insert compare code here once sql records are added.
+                        string commonname = speciesinfo.Substring(0, speciesinfo.IndexOf("(")).Trim().ToLower();
+                        string latinname = speciesinfo.Substring(speciesinfo.IndexOf("(") + 1,
+                            speciesinfo.IndexOf(")") - speciesinfo.IndexOf("(") - 1).Trim().ToLower();
+                        string contentdesc = ze.Name.Split(new char[] { '_' })[0].Trim();
 
+                        // todo: insert compare code here once sql records are added.
+                        match.ContentKey = contentdesc;
+
+                        match.DescriptorXMLMatches = match.CommonName.Trim().ToLower() == commonname &&
+                                                     match.ScientificName.Trim().ToLower() == latinname;
 
                     }
                     if (ze.Name.ToLower().EndsWith(".zip"))
