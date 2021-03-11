@@ -7,6 +7,7 @@ using System.IO.Compression;
 using System.IO;
 using CensusFiles.Loaders;
 using System.Data.SqlClient;
+using System.Xml;
 
 namespace CensusFiles.Utilities
 {
@@ -55,8 +56,23 @@ namespace CensusFiles.Utilities
 
                     if (ze.Name.ToLower().EndsWith(".xml"))
                     {
+                        // process xml descriptor file to double check crap.
 
-                       // process xml descriptor file to double check crap.
+                        ze.ExtractToFile("desc.xml");
+   
+                        XmlDocument x = new XmlDocument();
+
+                        x.Load("desc.xml");
+
+                        var titlenode = x.SelectSingleNode("/metadata/idinfo/citation/citeinfo/title");
+
+                        string speciesinfo = titlenode.InnerText;
+                        string commonname = speciesinfo.Substring(0, speciesinfo.IndexOf("("));
+                        string latinname = speciesinfo.Substring(speciesinfo.IndexOf("(") + 1, speciesinfo.IndexOf(")") - speciesinfo.IndexOf("(") - 1);
+                        string contentdesc = ze.Name.Split(new char[] { '_' })[0];
+                    
+                        // todo: insert compare code here once sql records are added.
+
 
                     }
                     if (ze.Name.ToLower().EndsWith(".zip"))

@@ -26,20 +26,6 @@ namespace Fixfbfcrap
         static void Main(string[] args)
         {
 
-            XmlDocument x = new XmlDocument();
-            
-          
-            x.Load("bCOHAx_CONUS_Range_2001v1.xml");
-
-            var titlenode = x.SelectSingleNode("/metadata/idinfo/citation/citeinfo/title");
-
-
-            string speciesinfo = titlenode.InnerText;
-            string commonname = speciesinfo.Substring(0, speciesinfo.IndexOf("("));
-            string latinname = speciesinfo.Substring(speciesinfo.IndexOf("(") + 1,  speciesinfo.IndexOf(")") -  speciesinfo.IndexOf("(") -1  );
-
-            Console.WriteLine(commonname);
-            Console.WriteLine(latinname);
 
         }
        
