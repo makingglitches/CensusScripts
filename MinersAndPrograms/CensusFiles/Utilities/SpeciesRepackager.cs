@@ -14,20 +14,25 @@ namespace CensusFiles.Utilities
     // for some reason the gov packages species archives different than literally EVERY fucking thing they design.
     public class SpeciesRepackager
     {
+
+        
+
+
         public static void Repackage(string inputzipdir, string outputzipdir, string connectionstring)
         {
             SqlConnection scon = new SqlConnection(connectionstring);
             scon.Open();
 
-            SqlCommand getspecies = new SqlCommand("select * from dbo.Species",scon);
-            
+            SqlCommand getspecies = new SqlCommand("select * from dbo.Species", scon);
+
+
 
             // thats a new attempt for them to try to curb my progress heh.
             // or perhaps not so much now.
 
 
-            inputzipdir = inputzipdir.Trim().EndsWith("\\") ? 
-                inputzipdir.Trim().Substring(0, inputzipdir.Trim().Length - 1):inputzipdir.Trim();
+            inputzipdir = inputzipdir.Trim().EndsWith("\\") ?
+                inputzipdir.Trim().Substring(0, inputzipdir.Trim().Length - 1) : inputzipdir.Trim();
 
             outputzipdir = outputzipdir.Trim().EndsWith("\\") ?
                outputzipdir.Trim().Substring(0, outputzipdir.Trim().Length - 1) : outputzipdir.Trim();
@@ -47,7 +52,13 @@ namespace CensusFiles.Utilities
 
                 foreach (ZipArchiveEntry ze in za.Entries)
                 {
-                    
+
+                    if (ze.Name.ToLower().EndsWith(".xml"))
+                    {
+
+                       // process xml descriptor file to double check crap.
+
+                    }
                     if (ze.Name.ToLower().EndsWith(".zip"))
                     {
                         // earlier tests indicate all the species subcontents files have a prefix which is unqiue.
@@ -66,9 +77,9 @@ namespace CensusFiles.Utilities
                         Directory.CreateDirectory(tempdir);
                         Directory.CreateDirectory(contentdir);
 
-                        ze.ExtractToFile(tempdir+"\\temp.zip");
+                        ze.ExtractToFile(tempdir + "\\temp.zip");
 
-                        ZipFile.ExtractToDirectory(tempdir+"\\temp.zip", contentdir);
+                        ZipFile.ExtractToDirectory(tempdir + "\\temp.zip", contentdir);
 
                         if (File.Exists(repacked))
                         {
@@ -90,9 +101,9 @@ namespace CensusFiles.Utilities
                         // or just doesnt have ANY standards or values whatsoever.
                         // we've had quite enough of those little whores.
 
-                        ZipFile.CreateFromDirectory(contentdir, 
+                        ZipFile.CreateFromDirectory(contentdir,
                                                    repacked);
-                        
+
                     }
                 }
 

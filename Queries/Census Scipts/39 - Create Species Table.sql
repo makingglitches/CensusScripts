@@ -22,6 +22,7 @@ CREATE TABLE [dbo].[Species](
 	[ArchiveName] [nvarchar](200) not null,
 	[DownloadGuid] [nvarchar] (100) not null,
 	[ContentsPrefix] [nvarchar](50) null,
+	[DescriptorXMLMatches] bit null
 ) ON [PRIMARY]
 GO
 
