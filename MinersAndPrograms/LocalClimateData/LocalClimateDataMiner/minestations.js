@@ -56,6 +56,7 @@ function CallStations(_limit, _offset) {
 		});
 }
 
+// 3rd
 // this sets the download options on the view cart page
 function DownloadOptionsPage(startdate, enddate) {
 	$('#LCD_CUSTOM_CSV').click();
@@ -64,6 +65,7 @@ function DownloadOptionsPage(startdate, enddate) {
 	$('.cartButton').click();
 }
 
+// 4th 
 // this submits the selected stations and sets the email address
 function DownloadSubmission(email) {
 	$('#email').val(email);
@@ -72,11 +74,14 @@ function DownloadSubmission(email) {
 	$('#buttonSubmit').click();
 }
 
+// 2nd 
 // this navigates to the cart contents
 function GoToCart() {
 	$('#cartPreviewButton').click();
 }
 
+
+// 1st
 // this function pushes data to the lcd's session stack, selecting the statioid for download
 function addCartData(stationid) {
 	var ajaxparams = {

@@ -120,14 +120,18 @@ function LoadMain() {
 			console.log('Error Loading');
 		});
 
+
+		// i can see alot of room for improvement in syntax
+		// i should write a module :)
 	
 	mainwindow.webContents.session.on('will-download', (event,item,wcontents)=>
 	{
+		console.log("Why is this firing in mainwindow ?");
 		console.log(item.getFilename());
 
 		item.on('done',(event,state)=>
 		{
-			console.log(this.getFilename());
+			//console.log(this.getFilename());
 			console.log(state)
 		});
 

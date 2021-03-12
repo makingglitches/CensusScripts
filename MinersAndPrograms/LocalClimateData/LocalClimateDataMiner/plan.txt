@@ -1,0 +1,41 @@
+
+1. Start control window with nodeintegration and web browser pointing to initial local climate data download page
+2. Load set of helper functions (minestations.js) into LCD window everytime it navigates
+3. Set up IPC for renderer and main threads, one on control window one on index.js thread
+4. Allow control window to be used to test the leech process by passing a few arguments to the main process
+5. Call the channel 'nochochannel'
+6. Load lcd.json which will contain the mined climate station ids
+7. Stagger the leech so as not to violate ToS (they want something like 400 station hours or less per download request)
+8. Maintain past data and leech daily in smaller number to gather more data.
+9. Set up script calls to be puppeted by index.js on each page load
+10. Go through this process:
+    a. control window sends downloadoptions to main thread
+    b. main thread breaks download request down into smaller units (under 400 station hours each)
+    c. main thread iterates through the smaller task units doing the following:
+        i. push selected item ids via javascript injection into page
+        ii. call minestations addCartData for each item 
+        iii. call GoToCart()
+        iv. once page navigation completes call DownloadOptionsPage()
+        v.  once page navigates call DownloadSubmission()
+        vi.  get order number from page which will be populated into the textbox control on page as well
+        vii. every so many seconds click the "check now" button, will need function for this.
+        viii. check status field for 'complete' on page reload, then click 'download button'
+        ix. handle download event, on download finished send lcdwindow back to start and continue processing queue
+
+notes: lcd window session times out after inactivity annoyingly. keep the page busy.
+notes: for some reason the download event attached to MAINWINDOW is the one that fires when a download occurs.
+notes: data gets delivered as a single csv file. more processing is necessary to make this useful at all.
+
+I think the code fires in mainwindow's process because a new window is opened to handle the download.
+would be nice to know if a reference to this window can be captured so it can be closed on completion.
+however the download status wait actually is working properly.
+
+remember working on this before, dont know why they have to keep cutting things off
+
+truthfullky they should know they're only entrapping themselves. these assholes spout a bunch of self love shit that 
+is like music to the ear of some piece of baby raping garbage or anyone who has wounded self esteem about 
+getting some future they deserve so they dont do anything but try to impede the progression of others
+which in general hurts them because more pieces of the puzzle would be filled in allowing someone to 
+get out of this and survive and perhaps even open the eyes of others
+
+censorship in that aspect is hurting EVERYONE not just them and not just us.

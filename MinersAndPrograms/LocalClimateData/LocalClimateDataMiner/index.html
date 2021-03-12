@@ -7,6 +7,7 @@
 
         const { ipcRenderer } = require('electron')
 
+        // receiving a message from index.js
         ipcRenderer.on('nochochannel', (event, arg) => {
            
             if (arg.type=='recordcount')
@@ -48,11 +49,11 @@
         <label for="fromid">Start Id</label>
         <input type="number" min="0" id="fromid">
         <label for="toid">To Id</label>
-        <input type="number" min="0" id="toid">
+        <input type="number" min="0" id="toid"> <br>
         <label for="startDate">Start Date</label>
         <input type="date" id="startDate">
         <label for="endDate">End Date</label>
-        <input type="date" id="endDate">
+        <input type="date" id="endDate"><br>
         <button id="sendSelectPost">Send</button>
     </div>
 
