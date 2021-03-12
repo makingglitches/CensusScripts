@@ -18,23 +18,29 @@ namespace ImportShapeFilesAndDBF
         {
             string basedatadir = ConfigurationManager.AppSettings["basedatadir"];
 
-            AquiferLoader aq = new AquiferLoader(true,false,basedatadir + "AqiferData");
-            aq.LoadZips();
 
-            RiversLoader rivl = new RiversLoader(true, false, basedatadir + "RiversAndStreamsData");
-            rivl.LoadZips();
+            // still working on the fast resume id portion, so for now we're going to skip the 8 million or so row tablescan
 
-            PlaceLoader pl = new PlaceLoader(true, false, basedatadir + "PlacesZips");
-            pl.LoadZips();
+            //AquiferLoader aq = new AquiferLoader(true,false,basedatadir + "AqiferData");
+            //aq.LoadZips();
 
-            RoadsLoader rl = new RoadsLoader(true, false, basedatadir + "RoadsZips");
-            rl.LoadZips();
+            //RiversLoader rivl = new RiversLoader(true, false, basedatadir + "RiversAndStreamsData");
+            //rivl.LoadZips();
 
-            CountyLoader cl = new CountyLoader(true, false, basedatadir + "CountyZips");
-            cl.LoadZips();
+            //PlaceLoader pl = new PlaceLoader(true, false, basedatadir + "PlacesZips");
+            //pl.LoadZips();
 
-            StateLoader st = new StateLoader(true, false, basedatadir + "StateZips");
-            st.LoadZips();
+            //RoadsLoader rl = new RoadsLoader(true, false, basedatadir + "RoadsZips");
+            //rl.LoadZips();
+
+            //CountyLoader cl = new CountyLoader(true, false, basedatadir + "CountyZips");
+            //cl.LoadZips();
+
+            //StateLoader st = new StateLoader(true, false, basedatadir + "StateZips");
+            //st.LoadZips();
+
+            SpeciesSeasonLoader ssl = new SpeciesSeasonLoader(true, false, basedatadir + "SpeciesData\\repack");
+            ssl.LoadZips();
         }
     }
 }

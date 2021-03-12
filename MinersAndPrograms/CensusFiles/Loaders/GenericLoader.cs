@@ -212,10 +212,12 @@ namespace CensusFiles.Loaders
         private int skippedrecords = 0;
         internal string currentDBFName;
         internal string currentSHPName;
+        internal string currentZipFileName;
         private int sindex = 0;
         #endregion Private Processing Fields
 
         #region Current FileNames
+        public string ZipFileName { get { return currentZipFileName; } }
         public string DBFFileName { get { return currentDBFName; } }
         public string SHPFileName { get { return currentSHPName; } }
         #endregion Current FilesNames
@@ -295,7 +297,7 @@ namespace CensusFiles.Loaders
             if (Options.Resume)
             {
                 if (Options.ConsoleLogging) Console.WriteLine("Retrieving resume ids. Field " + Options.SqlResumeId + " selected.");
-                SqlCommand getresumeids = new SqlCommand("select " + Options.SqlResumeId + " from dbo." + Options.TableName + " order by " + Options.SqlResumeId, scon);
+                SqlCommand getresumeids = new SqlCommand("select " + (Options.DerivedSqlKey? Options.DerivedSqlClause: Options.SqlResumeId) + " from dbo." + Options.TableName + " order by " + Options.SqlResumeId, scon);
                 
                 var ir = getresumeids.ExecuteReader();
 
@@ -312,6 +314,7 @@ namespace CensusFiles.Loaders
 
             
             #region ProcessZipFiles
+            
             bool checkresume = resumeids.Count > 0;
 
             // wanna make me happy stop raping and selling kids
@@ -319,6 +322,8 @@ namespace CensusFiles.Loaders
 
             foreach (string z in zipfiles)
             {
+                currentZipFileName = z;
+
                 if (Options.ConsoleLogging) Console.WriteLine("Extracting contents of archive " + Path.GetFileName(z));
 
                 // extract zipfile contents

@@ -30,6 +30,10 @@ namespace CensusFiles.Loaders
         /// </summary>
         public bool DerivedResumeKey { get; set; }
 
+        public bool DerivedSqlKey { get; set; }
+
+        public string DerivedSqlClause { get; set; }
+
         public bool ConsoleLogging { get; set; }
 
         public List<string> FieldsToExclude = new List<string>()
@@ -52,6 +56,8 @@ namespace CensusFiles.Loaders
         /// </summary>
         public string DbaseResumeId { get; set; }
 
+      
+
         public LoaderOptions()
         {
             WriteSummaryFile = true;
@@ -64,7 +70,7 @@ namespace CensusFiles.Loaders
             LoadShapeFile = true;
             ConsoleLogging = true;
             DerivedResumeKey = false;
-
+            
             SqlConnectionStringBuilder scb = new SqlConnectionStringBuilder()
             {
                 DataSource="localhost",

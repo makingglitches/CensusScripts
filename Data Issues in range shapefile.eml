@@ -1,0 +1,214 @@
+Return-Path: <john.r.sohn@gmail.com>
+Received: from ?IPv6:::ffff:192.168.15.200? ([205.169.143.154])
+        by smtp.gmail.com with ESMTPSA id c25sm1986288otk.35.2021.03.12.11.50.34
+        for <amckerrow@usgs.gov>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 12 Mar 2021 11:50:35 -0800 (PST)
+Message-ID: <604bc60b.1c69fb81.472a0.c112@mx.google.com>
+MIME-Version: 1.0
+To: "amckerrow@usgs.gov" <amckerrow@usgs.gov>
+From: bahahahahah <john.r.sohn@gmail.com>
+Subject: Data Issues in range shapefile
+Date: Fri, 12 Mar 2021 12:50:30 -0700
+Importance: normal
+X-Priority: 3
+Content-Type: multipart/alternative;
+	boundary="_8DF0A1DE-A68F-4188-9867-97359F11818F_"
+
+--_8DF0A1DE-A68F-4188-9867-97359F11818F_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+
+
+Hello ! So I don=E2=80=99t know how long its been since last this email got=
+ sent, but the issue is still there !
+The shapefiles in the species data download are in many cases mangled, havi=
+ng randomly sampled a number of them.
+
+This like, was a real project right ? =F0=9F=98=9D=20
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=E2=87=92 Begin former damn email.
+
+So I=E2=80=99ve been finding some programmic  inconsistencies in the data a=
+s reported and I just redownloaded the species range data again yesterday j=
+ust to be sure.
+
+I also directly pulled it from the website.
+
+What scale are you guys using in the shapefile included in the range downlo=
+ad per species ?
+
+None of the shapefile fit the typical -90 to 90 , -180 to 180  lat/lon form=
+at that is expected.
+
+Instead there are largeeeeeeeee values way outside what would be expected.
+
+I direct you to https://www.sciencebase.gov/catalog/item/59f5eba3e4b063d5d3=
+07e03b
+
+I=E2=80=99m getting values like=20
+
+=0DName=0DValue=0DType=0D=0DX=0D-172581.34369999915=0Ddouble=0D=0DY=0D79691=
+1.1875=0Ddouble=0D
+Should I just divide by like 1000 for the lat and like
+10000 for the lon ?
+
+At face value it looks like this may be a precision error in the data itsel=
+f.
+
+Like someone converted wrongly SOMEHOW from one database to another=E2=80=
+=A6..
+I tried reversing the endianness just to be certain that wasn=E2=80=99t the=
+ mistake but=E2=80=A6 yeah if I take this value..
+
+172.58134369999915 W 79.69111875 N
+
+=E2=80=A6 well it points me to the middle of the goddamn ocean for a the Au=
+stin blind salamander=E2=80=A6 LOL
+
+Something is very very mangled in the output data. There are values in the =
+22200 range and the header contains bounding boxes with abnormally large ra=
+nges as well while all the other header fields are correctly
+Within range.
+
+So LOL Umm.. possibly correct the export error and let john here who has la=
+bored so hard in tartorus so many years to just use this data source, a hap=
+py man no longer pushing boulders up hills again ?
+
+Thanks ever so much for not conforming to ridiculous stereotypes about gove=
+rnment pompousness, laziness, and dysfunction in advance lol
+
+
+
+
+=20
+
+Sent from Mail for Windows 10
+
+
+--_8DF0A1DE-A68F-4188-9867-97359F11818F_
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta ht=
+tp-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8"><meta name=
+=3DGenerator content=3D"Microsoft Word 15 (filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DEN-US link=3Dblue vlink=3D"#954F72" style=3D=
+'word-wrap:break-word'><div class=3DWordSection1><p class=3DMsoNormal><o:p>=
+&nbsp;</o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNor=
+mal>Hello ! So I don=E2=80=99t know how long its been since last this email=
+ got sent, but the issue is still there !</p><p class=3DMsoNormal>The shape=
+files in the species data download are in many cases mangled, having random=
+ly sampled a number of them.</p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><=
+p class=3DMsoNormal>This like, was a real project right ? <span style=3D'fo=
+nt-family:"Segoe UI Emoji",sans-serif'>&#128541;</span> </p><p class=3DMsoN=
+ormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p cla=
+ss=3DMsoNormal>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D<span style=3D'font-family:=
+Wingdings'>=C3=A8</span> Begin former damn email.</p><p class=3DMsoNormal><=
+o:p>&nbsp;</o:p></p><p class=3DMsoNormal>So I=E2=80=99ve been finding some =
+programmic =C2=A0inconsistencies in the data as reported and I just redownl=
+oaded the species range data again yesterday just to be sure.</p><p class=
+=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>I also directly pull=
+ed it from the website.</p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p cla=
+ss=3DMsoNormal>What scale are you guys using in the shapefile included in t=
+he range download per species ?</p><p class=3DMsoNormal><o:p>&nbsp;</o:p></=
+p><p class=3DMsoNormal>None of the shapefile fit the typical -90 to 90 , -1=
+80 to 180=C2=A0 lat/lon format that is expected.</p><p class=3DMsoNormal><o=
+:p>&nbsp;</o:p></p><p class=3DMsoNormal>Instead there are largeeeeeeeee val=
+ues way outside what would be expected.</p><p class=3DMsoNormal><o:p>&nbsp;=
+</o:p></p><p class=3DMsoNormal>I direct you to <a href=3D"https://www.scien=
+cebase.gov/catalog/item/59f5eba3e4b063d5d307e03b">https://www.sciencebase.g=
+ov/catalog/item/59f5eba3e4b063d5d307e03b</a></p><p class=3DMsoNormal><o:p>&=
+nbsp;</o:p></p><p class=3DMsoNormal>I=E2=80=99m getting values like </p><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p><div><table class=3DMsoNormalTable b=
+order=3D0 cellspacing=3D0 cellpadding=3D0 style=3D'border-collapse:collapse=
+'><tr><td style=3D'border:solid black 1.0pt;border-right:none;padding:1.5pt=
+ 1.5pt 1.5pt 1.5pt'></td><td style=3D'border:solid black 1.0pt;border-left:=
+none;padding:1.5pt 1.5pt 1.5pt 1.5pt'><p class=3DMsoNormal align=3Dcenter s=
+tyle=3D'text-align:center'><b>Name</b><b><o:p></o:p></b></p></td><td style=
+=3D'border:solid black 1.0pt;border-left:none;padding:1.5pt 1.5pt 1.5pt 1.5=
+pt'><p class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><b>Valu=
+e<o:p></o:p></b></p></td><td style=3D'border:solid black 1.0pt;border-left:=
+none;padding:1.5pt 1.5pt 1.5pt 1.5pt'><p class=3DMsoNormal align=3Dcenter s=
+tyle=3D'text-align:center'><b>Type<o:p></o:p></b></p></td></tr><tr><td styl=
+e=3D'border-top:none;border-left:solid black 1.0pt;border-bottom:solid blac=
+k 1.0pt;border-right:none;padding:1.5pt 1.5pt 1.5pt 1.5pt'></td><td style=
+=3D'border-top:none;border-left:none;border-bottom:solid black 1.0pt;border=
+-right:solid black 1.0pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'><p class=3DMsoNor=
+mal>X<o:p></o:p></p></td><td style=3D'border-top:none;border-left:none;bord=
+er-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:1.5pt 1.=
+5pt 1.5pt 1.5pt'><p class=3DMsoNormal>-172581.34369999915<o:p></o:p></p></t=
+d><td style=3D'border-top:none;border-left:none;border-bottom:solid black 1=
+.0pt;border-right:solid black 1.0pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'><p cla=
+ss=3DMsoNormal>double<o:p></o:p></p></td></tr><tr><td style=3D'border-top:n=
+one;border-left:solid black 1.0pt;border-bottom:solid black 1.0pt;border-ri=
+ght:none;padding:1.5pt 1.5pt 1.5pt 1.5pt'></td><td style=3D'border-top:none=
+;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black =
+1.0pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'><p class=3DMsoNormal>Y<o:p></o:p></p=
+></td><td style=3D'border-top:none;border-left:none;border-bottom:solid bla=
+ck 1.0pt;border-right:solid black 1.0pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'><p=
+ class=3DMsoNormal>796911.1875<o:p></o:p></p></td><td style=3D'border-top:n=
+one;border-left:none;border-bottom:solid black 1.0pt;border-right:solid bla=
+ck 1.0pt;padding:1.5pt 1.5pt 1.5pt 1.5pt'><p class=3DMsoNormal>double<o:p><=
+/o:p></p></td></tr></table></div><p class=3DMsoNormal><o:p>&nbsp;</o:p></p>=
+<p class=3DMsoNormal>Should I just divide by like 1000 for the lat and like=
+</p><p class=3DMsoNormal>10000 for the lon ?</p><p class=3DMsoNormal><o:p>&=
+nbsp;</o:p></p><p class=3DMsoNormal>At face value it looks like this may be=
+ a precision error in the data itself.</p><p class=3DMsoNormal><o:p>&nbsp;<=
+/o:p></p><p class=3DMsoNormal>Like someone converted wrongly SOMEHOW from o=
+ne database to another=E2=80=A6..</p><p class=3DMsoNormal>I tried reversing=
+ the endianness just to be certain that wasn=E2=80=99t the mistake but=E2=
+=80=A6 yeah if I take this value..</p><p class=3DMsoNormal><o:p>&nbsp;</o:p=
+></p><p class=3DMsoNormal>172.58134369999915 W 79.69111875 N</p><p class=3D=
+MsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>=E2=80=A6 well it point=
+s me to the middle of the goddamn ocean for a the Austin blind salamander=
+=E2=80=A6 LOL</p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNo=
+rmal>Something is very very mangled in the output data. There are values in=
+ the 22200 range and the header contains bounding boxes with abnormally lar=
+ge ranges as well while all the other header fields are correctly</p><p cla=
+ss=3DMsoNormal>Within range.</p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><=
+p class=3DMsoNormal>So LOL Umm.. possibly correct the export error and let =
+john here who has labored so hard in tartorus so many years to just use thi=
+s data source, a happy man no longer pushing boulders up hills again ?</p><=
+p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal>Thanks ever s=
+o much for not conforming to ridiculous stereotypes about government pompou=
+sness, laziness, and dysfunction in advance lol</p><p class=3DMsoNormal><o:=
+p>&nbsp;</o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMsoN=
+ormal><o:p>&nbsp;</o:p></p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p cla=
+ss=3DMsoNormal> </p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p><p class=3DMs=
+oNormal>Sent from <a href=3D"https://go.microsoft.com/fwlink/?LinkId=3D5509=
+86">Mail</a> for Windows 10</p><p class=3DMsoNormal><o:p>&nbsp;</o:p></p></=
+div></body></html>=
+
+--_8DF0A1DE-A68F-4188-9867-97359F11818F_--
+

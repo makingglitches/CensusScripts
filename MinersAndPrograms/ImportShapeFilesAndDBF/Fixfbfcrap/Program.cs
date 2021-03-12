@@ -26,6 +26,57 @@ namespace Fixfbfcrap
         static void Main(string[] args)
         {
 
+            string zipdir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\SpeciesData\repack";
+            string sfs = @"c:\testdata";
+
+            string[] shpfiles = Directory.GetFiles(sfs, "*.shp");
+
+            foreach (string f in shpfiles)
+            {
+                ShapeFile s = new ShapeFile(f);
+                s.Load();
+
+                Console.Write(f);
+
+                int countlon = 0;
+                int countlat = 0;
+
+                for (int x = 0; x < s.Records.Count; x++)
+                {
+                    PolygonShape ps = (PolygonShape)s.Records[x].Record;
+
+                    for (int y = 0; y < ps.NumPoints; y++)
+                    {
+
+                        countlon += (ps.Points[y].X > 180 || ps.Points[y].X < -180) ? 1 : 0;
+                        countlat += (ps.Points[y].Y > 90 || ps.Points[y].Y < -90) ? 1 : 0;
+                     
+                    }
+
+                }
+
+                if (countlat > 0 || countlon > 0)
+                {
+                    Console.WriteLine("File Contained " + countlat.ToString() + " bad latitude points and " + countlon.ToString() + " bad longitude points.");
+                }
+                else
+                {
+                    Console.WriteLine("File within bounds");
+                }
+
+            }
+
+            //string f = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\SpeciesData\repack\temp\contents\mBCPMx_CONUS_Range_2001v1.dbf";
+
+            //DbfDataReader.DbfDataReader db = new DbfDataReader.DbfDataReader(f);
+
+            //ClassGenerator.WriteClassBase("SpeciesSeasonBase", "SpeciesSeasonBase.cs", db);
+
+            // takes awhile to run...
+            //string indir = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\SpeciesData";
+            //LoaderOptions op = new LoaderOptions();
+
+            //SpeciesRepackager.Repackage(indir, indir + "\\repack", op.ConnectionString);
 
         }
        

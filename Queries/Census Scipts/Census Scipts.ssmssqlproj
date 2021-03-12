@@ -277,6 +277,12 @@
           <AssociatedConnUserName />
           <FullPath>42 - Generate Data Class Code.sql</FullPath>
         </FileNode>
+        <FileNode Name="43 - Create SpeciesSeason Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>localhost</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>43 - Create SpeciesSeason Table.sql</FullPath>
+        </FileNode>
         <FileNode Name="Check SQL Mgmt Import Census.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:localhost:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>localhost</AssociatedConnSrvName>

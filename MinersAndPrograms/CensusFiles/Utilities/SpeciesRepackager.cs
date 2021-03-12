@@ -110,7 +110,7 @@ namespace CensusFiles.Utilities
                     {
                         // process xml descriptor file to double check crap.
 
-                        ze.ExtractToFile("desc.xml");
+                        ze.ExtractToFile("desc.xml",true);
    
                         XmlDocument x = new XmlDocument();
 
@@ -179,13 +179,30 @@ namespace CensusFiles.Utilities
                     }
                 }
 
-
+                
 
             }
 
-            var s = File.Create(outputzipdir + "\\keys.txt");
+            scon.Open();
 
-            StreamWriter sw = new StreamWriter(s);
+            SqlCommand specupdate = new SqlCommand("update dbo.Species set ContentsPrefix=@prefix, DescriptorXMLMatches=@matches where DownloadGuid=@guid");
+            specupdate.Connection = scon;
+
+
+            foreach (speciespiece s in matchedPieces)
+            {
+                specupdate.Parameters.Clear();
+                specupdate.Parameters.AddWithValue("@prefix", s.ContentKey);
+                specupdate.Parameters.AddWithValue("@matches", s.DescriptorXMLMatches);
+                specupdate.Parameters.AddWithValue("@guid", s.DownloadGuid);
+                specupdate.ExecuteNonQuery();
+            }
+
+            scon.Close();
+
+            var fs = File.Create(outputzipdir + "\\keys.txt");
+
+            StreamWriter sw = new StreamWriter(fs);
 
             foreach (KeyValuePair<string, string> kvp in filekey)
             {
@@ -193,8 +210,8 @@ namespace CensusFiles.Utilities
             }
 
             sw.Flush();
-            s.Flush();
-            s.Close();
+            fs.Flush();
+            fs.Close();
 
             // how many times this long time period has passed, no idea, but everyone is freaked out and scared
             // when i end up back somewhere else, who knows if its an act or theyre being awoken from 

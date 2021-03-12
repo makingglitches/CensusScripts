@@ -67,6 +67,7 @@
     <Compile Include="GeneratedBases\PlaceBase.cs" />
     <Compile Include="GeneratedBases\RiversBase.cs" />
     <Compile Include="GeneratedBases\RoadBase.cs" />
+    <Compile Include="GeneratedBases\SpeciesSeasonBase.cs" />
     <Compile Include="GeneratedBases\StateBase.cs" />
     <Compile Include="Helpers\ClassGenerator.cs" />
     <Compile Include="Helpers\KeyProcessor.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Loaders\PlaceLoader.cs" />
     <Compile Include="Loaders\RiversLoader.cs" />
     <Compile Include="Loaders\RoadsLoader.cs" />
+    <Compile Include="Loaders\SpeciesSeasonLoader.cs" />
     <Compile Include="Loaders\StateLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Records\AquiferRecord.cs" />
@@ -88,7 +90,9 @@
     <Compile Include="Records\PlaceRecord.cs" />
     <Compile Include="Records\RiversRecord.cs" />
     <Compile Include="Records\RoadRecord.cs" />
+    <Compile Include="Records\SpeciesSeasonRecord.cs" />
     <Compile Include="Records\StateRecord.cs" />
+    <Compile Include="Utilities\SpeciesJson.cs" />
     <Compile Include="Utilities\SpeciesRepackager.cs" />
   </ItemGroup>
   <ItemGroup>
