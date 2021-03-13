@@ -1,6 +1,11 @@
 
 export enum MessageType{RecordCount, DownloadOptions, StartJob, JobFinished,JobProgress}
-
+// they figured out that as a child they had to either kill someone or 
+// imprison me falsely after a very long time to make me forget
+// so that is what they have been doing
+// which btw leads us to, i saw them cripple someone
+// also betrayal by the family which they accomplished through my piece of shit father
+// and then later by my sister.
 export class PRecordCount
 {
     public ptype:MessageType = MessageType.RecordCount;
