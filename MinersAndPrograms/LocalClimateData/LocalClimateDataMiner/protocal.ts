@@ -49,6 +49,12 @@ export class PRecordCount
 // so they can send fucking child molesters out from this state with a backstory they can adapt
 
 
+// and then on top of that these retards seem intent on matching EVERYTHING up to some inane
+// numerical schedule.
+// i mean it really is ridiculous.
+// times, purchases, addresses, everytime they force something to reoccur because god forbid a person have
+// free will. like they always did.
+
 export class Job
 {
     
