@@ -6,7 +6,7 @@ const { onrejectionhandled } = require('globalthis/implementation');
 const { stdin, stdout } = require('process');
 const readline = require('readline');
 var fs = require('fs');
-const { SSL_OP_NO_TLSv1_1 } = require('constants');
+const { PRecordCount, PDownloadOptions } = require('./protocal');
 //#endregion imports
 
 
@@ -153,9 +153,15 @@ function LoadMain()
 		console.log("Message Rcvd:");
 		console.log(args);
 
+		
+
+
 		if (args.type=='recordcount')
 		{
-			event.reply('nochochannel',{type:'recordcount', count:stations.length});
+				
+			var pr = new PRecordCount(stations.length);
+			event.reply('nochochannel',pr);
+			
 		}
 		else if (args.type=='downloadoptions')
 		{
@@ -178,6 +184,16 @@ function LoadMain()
 			else
 			{
 				// god i cant think this late in the evening heh.
+				
+				var jobcount = Math.ceil( (counts*days)/maxdays);
+
+				var daysperjob = days/jobcount;
+
+				var currentstart = startdate;
+
+				var msperyear = 365*24*60*60*1000;
+
+				
 
 			}
 
