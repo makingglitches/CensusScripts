@@ -7,14 +7,24 @@
 
         const { ipcRenderer } = require('electron')
 
+        var pixperitem=0.0;
+        var currindex=0;
+
         // receiving a message from index.js
         ipcRenderer.on('nochochannel', (event, arg) => {
            
+            console.log("received message:"+args);
+
             if (arg.type=='recordcount')
             {
                 $('#countids').html(arg.count);
                 $('#toid').attr('max',arg.count-1);
                 $('#fromid').attr('max',arg.count-1);
+            }
+            else if (arg.type=="processtart")
+            {
+                $('#progresslabel').text("Progress "+arg.index+"/"+arg.count);
+                $('#progressbar').css("width","0px");
             }
         });
 
@@ -45,21 +55,29 @@
 
     <div id="CartOptions">
         Select items in the lcd webpage for download.<br>
-        There are <span id='countids'></span> ids in the lcd.json file.
+        There are <span id='countids'></span> ids in the lcd.json file.<br>
+
         <label for="fromid">Start Id</label>
         <input type="number" min="0" id="fromid">
         <label for="toid">To Id</label>
         <input type="number" min="0" id="toid"> <br>
+
         <label for="startDate">Start Date</label>
         <input type="date" id="startDate">
         <label for="endDate">End Date</label>
         <input type="date" id="endDate"><br>
+        
         <button id="sendSelectPost">Send</button>
     </div>
-
-    <div id="StationGrab">
-
+    <br>
+    <br>
+    
+    <div id ="progresslabel">Progress 0/x</div><br>
+    
+    <div id ="progresscont" style="width: 200px; height: 50px;">
+    <div id="progressbar" style="width:0px; height:50px; background-color: red;"></div>
     </div>
+    
 
 </body>
 

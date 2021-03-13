@@ -6,6 +6,7 @@ const { onrejectionhandled } = require('globalthis/implementation');
 const { stdin, stdout } = require('process');
 const readline = require('readline');
 var fs = require('fs');
+const { SSL_OP_NO_TLSv1_1 } = require('constants');
 //#endregion imports
 
 
@@ -83,6 +84,8 @@ function injectJs(js) {
 
 function LoadLCD()
 {
+	
+	// the site wont load if nodeintegration is on for some reason.
 	lcdwindow = createWindow(false);
 	lcdLoadPromise = lcdwindow.loadURL('https://www.ncdc.noaa.gov/cdo-web/datatools/lcd');
 	lcdwindow.webContents.toggleDevTools();
@@ -106,7 +109,8 @@ function LoadLCD()
 
 }
 
-function LoadMain() {
+function LoadMain() 
+{
 
 	mainwindow = createWindow(true);
 	mainwindowLoadPromise = mainwindow.loadFile('index.html');
@@ -142,7 +146,11 @@ function LoadMain() {
 		console.log('navigated to:'+url)
 	});
 
+	
+	var jobs=[];
+
 	ipcMain.on('nochochannel', (event, args) => {
+		console.log("Message Rcvd:");
 		console.log(args);
 
 		if (args.type=='recordcount')
@@ -154,12 +162,31 @@ function LoadMain() {
 			job = args;
 			job.started=false;
 			job.processed=''
-			
+
+			var counts = args.toid - args.fromid +1;
+
+			var startdate =  Date.parse(args.fromdate)
+			var enddate = Date.parse(args.todate);
+
+			var days = (enddate - startdate) /1000/3600/24;
+			var maxdays = 10*365-7;
+
+			if (counts*days < maxdays)
+			{
+				jobs.push( job);
+			}
+			else
+			{
+				// god i cant think this late in the evening heh.
+
+			}
+
 		}
 	});
 
 	mainwindow.webContents.toggleDevTools();	
 }
+
 
 //#endregion helper methods
 
