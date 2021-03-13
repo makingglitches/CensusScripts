@@ -158,10 +158,13 @@ function LoadMain()
 
 		if (args.type=='recordcount')
 		{
-				
-			var pr = new PRecordCount(stations.length);
-			event.reply('nochochannel',pr);
+		    var min = Number.MAX_SAFE_INTEGER;
+			var max = Number.MIN_SAFE_INTEGER;
 			
+			var pr = new PRecordCount(stations.length,stations);
+
+			event.reply('nochochannel',pr);
+
 		}
 		else if (args.type=='downloadoptions')
 		{

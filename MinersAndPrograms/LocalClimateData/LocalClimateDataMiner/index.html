@@ -3,6 +3,13 @@
 
 <body>
     <script>
+        exports = {};
+    </script>
+    <script src="protocal.js" type="text/javascript"></script>
+
+    <script>
+  
+
         window.$ = window.jQuery = require('jquery');
 
         const { ipcRenderer } = require('electron')
@@ -13,12 +20,14 @@
         // receiving a message from index.js
         ipcRenderer.on('nochochannel', (event, arg) => {
            
-            console.log("received message:"+args);
-
-            if (arg.type=='recordcount')
+            console.log("received message:"+arg);
+            
+        
+            
+            if (arg.type==MessageType.RecordCount)
             {
                 $('#countids').html(arg.count);
-                $('#toid').attr('max',arg.count-1);
+                $('#toid').attr('min',0);
                 $('#fromid').attr('max',arg.count-1);
             }
             else if (arg.type=="processtart")

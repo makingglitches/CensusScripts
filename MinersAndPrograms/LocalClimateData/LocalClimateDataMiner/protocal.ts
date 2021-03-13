@@ -21,6 +21,8 @@ export class PRecordCount
     // the only way is to continue life past this point from this place, with everything i created
     // whether they drop me back in pa or not this laptop cannot be stolen again.
 
+    // so ways they 
+
 
 }
 
