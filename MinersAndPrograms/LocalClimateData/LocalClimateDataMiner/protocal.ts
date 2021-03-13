@@ -32,6 +32,41 @@ export class PRecordCount
 
 }
 
+// their game is they play like they had nothing to do with something
+// but the series of timed and convenient (for them) events that occur 
+// along with some very blatant ones say the opposite
+// that and these fucking whores pretend sometimes they dont see something
+// like some massive chomo get on the bus and punch a 20 something guy who hasnt seen anything out
+// and steal his bag.
+// larimer county in fort collins is to blame for quite a few things.
+
+// if these files go missing
+// if this laptop goes missing
+// if john r sohn goes to jail or prison it is an attempt to build up his anxiety regarding losing his work 
+// and his memories to facilitate the theft of them by 'unavoidable problems'... like storing a single fucking
+// 2x2x3 bag containing diplomas hard disks and a laptop for the umpteenth time which time and time again
+// just like the fucked up car they sold, stealing HIS money, they lust after
+// so they can send fucking child molesters out from this state with a backstory they can adapt
+
+
+export class Job
+{
+    
+    public Started:boolean;
+    public StartDate:Date;
+    public EndDate:Date;
+    public StartId:number;
+    public EndId:number;
+
+    constructor(startdate:Date, enddate:Date, startid:number, endid:number)
+    {
+
+        this.Started=false;
+
+
+    }
+}
+
 export class PDownloadOptions
 {
     public ptype:MessageType = MessageType.DownloadOptions;
@@ -41,6 +76,7 @@ export class PDownloadOptions
     public StartId:number;
     public EndId:number;
     public totalDays:number;
+    public readonly MaxDays:number = 10 * 365 -7;
 
     public PDownloadOptions(startdate:Date,enddate:Date, startid:number,endid:number)
     {
@@ -66,6 +102,11 @@ export class PDownloadOptions
     {
         return this.StationIds == null ? this.totalDays * (this.EndId-this.StartId+1)
         : this.totalDays* this.StationIds.length;
+    }
+
+    public JobDates():number
+    {
+        return this.StationDays
     }
 
 }
