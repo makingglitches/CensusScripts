@@ -1,7 +1,6 @@
 
 export enum MessageType{RecordCount, DownloadOptions, StartJob, JobFinished,JobProgress}
 
-
 export class PRecordCount
 {
     public ptype:MessageType = MessageType.RecordCount;

@@ -24,11 +24,11 @@
             
         
             
-            if (arg.type==MessageType.RecordCount)
+            if (arg.ptype==MessageType.RecordCount)
             {
-                $('#countids').html(arg.count);
+                $('#countids').html(arg.stationcount);
                 $('#toid').attr('min',0);
-                $('#fromid').attr('max',arg.count-1);
+                $('#fromid').attr('max',arg.stationcount-1);
             }
             else if (arg.type=="processtart")
             {
