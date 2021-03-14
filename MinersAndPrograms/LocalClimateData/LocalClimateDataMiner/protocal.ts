@@ -55,6 +55,16 @@ export class PRecordCount
 // times, purchases, addresses, everytime they force something to reoccur because god forbid a person have
 // free will. like they always did.
 
+
+// why do i feel they dont want something finished correctly they just want the same shit done ?
+// why ?
+// not because they encourage a person in any way at all towards anything but repetition and self destruction
+// no they see no value in any work except that which they see profit of the worst kinds in
+// self development requiring alot of 'wasted' effort reproducing the works of others, eg calculus practice etc
+// no no.
+// they just want people stuck doing the same shit so their little rape paradise they constructed to 
+// horrify good men and women and stimulate their numb cocks and aging untouchable pussies 
+// while feeling somehow elevated over a horde of brainless people.
 export class Job
 {
     
