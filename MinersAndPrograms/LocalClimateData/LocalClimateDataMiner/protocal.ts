@@ -1,3 +1,4 @@
+import { TouchBarScrubber } from "electron";
 
 export enum MessageType{RecordCount, DownloadOptions, StartJob, JobFinished,JobProgress}
 
@@ -16,6 +17,9 @@ export class PRecordCount
 
 export class Job
 {
+    
+    public DownloadName:string;
+
     public Started:boolean;
     public StartDate:Date;
     public EndDate:Date;
@@ -53,27 +57,67 @@ export class PDownloadOptions
 
     // just about 10 years worth of days.
     // the max the service allows.
-    public readonly MaxDays:number = (10 * 365) -7;
+    public readonly MaxDays:number = Math.floor(10 * 365.25) -7; // padded by a week for safety, the service is quirky
     private readonly MsPerDay:number = 24*60*60*1000;
+
+    private readonly MaxStations10year:number =  this.MaxDays;
+
+    public stationDays:number;
+    
 
     constructor(startdate:Date,enddate:Date, startid:number,endid:number)
     {
         this.StartDate = startdate;
         this.EndDate = enddate;
+
         this.StartId = startid;
         this.EndId=endid;
 
         this.totalDays = this.EndDate.valueOf() - this.StartDate.valueOf();
         this.totalDays = this.totalDays / 1000 / 60 / 60 / 24;
+
+        // the number of days requested x total number of stations
+        this.stationDays = this.totalDays* (this.EndId-this.StartId);
+
+        // yeah the key would be to ask if he'd like to show someone his work.
+        // under normal circumstances
+        // or basically to make a point of speaking with him more.
+        // until that became the case.
+        
+        var idsegments:Array<int> = [];
+        var 
+
+
+
+
+
+        // the max days requested at once rounded to lowest nearest integer
+        var wholedaysperjob = Math.floor(this.stationDays/this.MaxDays );
+    
+        // DAMN I'M WORKING SLOW. WHY ???
+        // NORMALL I FLY ALONG AT A PRETTY FAST RATE !
+        // distracted by my environment
+        // thinking about alot of awful things...
+
+        if ( wholedaysperjob < 1)
+        {
+
+        }
+        
+
+
     }
 
-    public StationDays():number
-    {
-        return this.StationIds == null ? this.totalDays * (this.EndId-this.StartId+1)
-        : this.totalDays* this.StationIds.length;
-    }
-
-    // god i hate this fucking old drunken bastard. and the rest of them so goddamned much.
+    // instead of being shitty about a good time, why not just have the good time and not expect fucked up things ?
+    // the trade is having someone who gives a shit for awhile.
+    // i walk around hating everyone in sight for a good goddamn reason because i'm convinced they're all
+    // psycho garbage thanks to experience/zim/tori/others 
+    // would be nice to be able to just relax happily and contentedly like when i was young
+    // and didnt know what these people were or rather not just that but what  they were pretty much
+    // allowed to do that they should not be doing.
+    // only a completely evil, selfish, cynical, self serving bastard would allow them to 
+    // perpetuate the ruination that created most of them just to get off.
+    // there is no excuse for any of this or anyone.
 
     public JobDates():Array<Job>
     {
