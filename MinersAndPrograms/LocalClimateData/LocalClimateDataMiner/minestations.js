@@ -65,6 +65,7 @@ function DownloadOptionsPage(startdate, enddate) {
 	$('.cartButton').click();
 }
 
+
 // 4th 
 // this submits the selected stations and sets the email address
 function DownloadSubmission(email) {
@@ -106,12 +107,33 @@ function addCartData(stationid) {
 	$.ajax(ajaxparams);
 }
 
+
+//5th
+//clicks the 'check order status' button that appears after placing an order.
 function CheckStatusButton()
 {
 	$('.statusButton')[0].click();
 }
 
+
+//6th if still processing
+function CheckStatusAgain()
+{
+	$('[data-bind*="resetPaginationAndGetOrders"]')[0].click();
+}
+
+
+//7th check until this is 'Complete'
+function GetJobStatus()
+{
+	return $('td[data-bind*="item.status"]')[0].innerText;
+}
+
+//8th
+//click download button
 function ClickToDownload()
 {
-	$('[title="Click to download"]')[0].click()
+	$('a[data-bind*="$root.click(\'download\'"]')[0].click();
 }
+
+// i should really just make something that scans the document and checks all this stuff.
