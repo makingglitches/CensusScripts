@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.PDownloadOptions = exports.PRecordCount = exports.MessageType = void 0;
+exports.PDownloadOptions = exports.Job = exports.PRecordCount = exports.MessageType = void 0;
 var MessageType;
 (function (MessageType) {
     MessageType[MessageType["RecordCount"] = 0] = "RecordCount";
@@ -18,33 +18,42 @@ var PRecordCount = /** @class */ (function () {
     return PRecordCount;
 }());
 exports.PRecordCount = PRecordCount;
-var PDownloadOptions = /** @class */ (function () {
-    function PDownloadOptions() {
-        this.ptype = MessageType.DownloadOptions;
+var Job = /** @class */ (function () {
+    function Job(startdate, enddate, startid, endid) {
+        this.Started = false;
+        this.StartDate = startdate;
+        this.EndDate = enddate;
+        this.StartId = startid;
+        this.EndId = endid;
     }
-    PDownloadOptions.prototype.PDownloadOptions = function (startdate, enddate, startid, endid) {
+    return Job;
+}());
+exports.Job = Job;
+var PDownloadOptions = /** @class */ (function () {
+    function PDownloadOptions(startdate, enddate, startid, endid) {
+        this.ptype = MessageType.DownloadOptions;
+        // just about 10 years worth of days.
+        // the max the service allows.
+        this.MaxDays = 10 * 365 - 7;
         this.StartDate = startdate;
         this.EndDate = enddate;
         this.StartId = startid;
         this.EndId = endid;
         this.totalDays = this.EndDate.valueOf() - this.EndDate.valueOf();
         this.totalDays = this.totalDays / 1000 / 60 / 60 / 24;
-    };
-    // so why exactly do they cut shit off like assholes again ?
-    // it would be so fucking simple to just let the world move forward
-    // and even when they didnt have an excuse right around the REAL 'great recession' they started fucking 
-    // everything up.
-    // maybe teaching utter hatred for anyone in black and gold is the right way to go since everyone else here is 
-    // a fucking weak ass coward that will give after they realize pushing hard enough 
-    // leads to them being hurt.
+    }
     PDownloadOptions.prototype.StationDays = function () {
         return this.StationIds == null ? this.totalDays * (this.EndId - this.StartId + 1)
             : this.totalDays * this.StationIds.length;
     };
+    PDownloadOptions.prototype.JobDates = function () {
+        var jobs = [];
+        var numberJobs = Math.ceil(this.StationDays() / this.MaxDays);
+        var daysperjob = Math.floor(this.totalDays / numberJobs);
+        var odddays = (this.totalDays / numberJobs - daysperjob) * numberJobs;
+        console.log((daysperjob * numberJobs + odddays));
+        return jobs;
+    };
     return PDownloadOptions;
 }());
 exports.PDownloadOptions = PDownloadOptions;
-// the newer his dark materials season 2 sends the right message
-// even if zimmerman indicates they kept taking assshots of a young teen
-// because it was adapted by perverts.
-// they always find a way of cheapening everything.
