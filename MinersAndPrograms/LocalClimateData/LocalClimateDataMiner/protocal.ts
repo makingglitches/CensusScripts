@@ -62,6 +62,7 @@ export class PDownloadOptions
     private readonly MsPerDay:number = 24*60*60*1000;
     private readonly MaxStations10year:number =  this.MaxDays;
 
+// an they chose one african american with no accent to play the bad guy.... lol
     public stationDays:number;
     public daysPerDivision:number;
 
