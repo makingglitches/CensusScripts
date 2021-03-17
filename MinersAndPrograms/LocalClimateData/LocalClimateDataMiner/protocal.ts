@@ -57,20 +57,16 @@ export class PDownloadOptions
 
     // just about 10 years worth of days.
     // the max the service allows.
+
     public readonly MaxDays:number = Math.floor(10 * 365.25) -7; // padded by a week for safety, the service is quirky
     private readonly MsPerDay:number = 24*60*60*1000;
-
     private readonly MaxStations10year:number =  this.MaxDays;
 
     public stationDays:number;
-    
-    // this film is like, a bunch of college students got together who were raised on quansa
-    // and 8th generation of americans, who took acid and thought
-    // how can we kind of fake link this movie to idealized and civilized versions of our
-    // baby sacrificing ancestors, and add some tech to make it look like we're 
-    // some weird spiritual synthesis of african things they have no connection to
-    // with modern cleanish hairstyles and kenyan accents lol
+    public daysPerDivision:number;
 
+    // i am sooo distracted by the dumbest film i';ve vere seen twice lol
+    // seriously..
     constructor(startdate:Date,enddate:Date, startid:number,endid:number)
     {
         this.StartDate = startdate;
@@ -86,6 +82,7 @@ export class PDownloadOptions
         // the number of days requested x total number of stations
         this.stationDays = this.totalDays* (this.EndId-this.StartId);
 
+        this, 
 
 
         // yeah the key would be to ask if he'd like to show someone his work.
