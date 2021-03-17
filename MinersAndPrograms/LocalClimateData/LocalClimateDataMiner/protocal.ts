@@ -64,6 +64,12 @@ export class PDownloadOptions
 
     public stationDays:number;
     
+    // this film is like, a bunch of college students got together who were raised on quansa
+    // and 8th generation of americans, who took acid and thought
+    // how can we kind of fake link this movie to idealized and civilized versions of our
+    // baby sacrificing ancestors, and add some tech to make it look like we're 
+    // some weird spiritual synthesis of african things they have no connection to
+    // with modern cleanish hairstyles and kenyan accents lol
 
     constructor(startdate:Date,enddate:Date, startid:number,endid:number)
     {
@@ -74,10 +80,13 @@ export class PDownloadOptions
         this.EndId=endid;
 
         this.totalDays = this.EndDate.valueOf() - this.StartDate.valueOf();
-        this.totalDays = this.totalDays / 1000 / 60 / 60 / 24;
+ 
+        this.totalDays = this.totalDays / this.MsPerDay;
 
         // the number of days requested x total number of stations
         this.stationDays = this.totalDays* (this.EndId-this.StartId);
+
+
 
         // yeah the key would be to ask if he'd like to show someone his work.
         // under normal circumstances
