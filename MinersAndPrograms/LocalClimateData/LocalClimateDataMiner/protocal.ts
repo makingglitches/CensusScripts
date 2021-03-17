@@ -85,7 +85,11 @@ export class PDownloadOptions
         // until that became the case.
         
         var idsegments:Array<int> = [];
-        var 
+        
+
+        // maybe just need a break since i've been walking about 8 miles a day or more 
+        // and not working in places free of distraction. sigh.
+        // not to mention i dont like the chomo assholes wandering around.
 
 
 
