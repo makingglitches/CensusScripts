@@ -57,17 +57,15 @@ export class PDownloadOptions
 
     // just about 10 years worth of days.
     // the max the service allows.
-
     public readonly MaxDays:number = Math.floor(10 * 365.25) -7; // padded by a week for safety, the service is quirky
+
     private readonly MsPerDay:number = 24*60*60*1000;
+
     private readonly MaxStations10year:number =  this.MaxDays;
 
-// an they chose one african american with no accent to play the bad guy.... lol
     public stationDays:number;
     public daysPerDivision:number;
 
-    // i am sooo distracted by the dumbest film i';ve vere seen twice lol
-    // seriously..
     constructor(startdate:Date,enddate:Date, startid:number,endid:number)
     {
         this.StartDate = startdate;
