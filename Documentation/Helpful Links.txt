@@ -53,7 +53,6 @@ https://www.cdc.gov/lyme/datasurveillance/tables-recent.html
 
 I may have to go to each state governments websites to compile better data
 
-
 -- kind of useless data.
 https://waterdata.usgs.gov/nwis/inventory
 
@@ -68,84 +67,30 @@ see as i said this could keep EVERYONE busy. reproducing gis data in overlay of 
 rivers and streams gis data
 https://hub.arcgis.com/datasets/esri::usa-rivers-and-streams/data
 
-as I previously found when they were doing this dumb shit expecting me to pull a solution for entrapmemnt out of my ass since thats all these pedophile whores in colorado specialize in to try to freak out their former  victims into forgetting entire time periods until finally their minds ruined when they are older they just start discarding whole time periods like they did when they were children, that garbage zimmerman and i discussed elevation data which is QUITE  data intensive
 
-redownloaded a pdf of the bulk data download link usgs.
-wouldnt it be nice if I could just do gis data work and applications for a fucking living ?
-I like data gathering and many things are worth expanding and making more machine parseable so useful 
-compilations can be generated for humans !
-
-mother fucking fuck fucks :) x2
-
-Oh and use the same damn usgs downloader and convert anything with .img in a zip into a geotiff, because there are no fucking
-readers for the format in c#!
 https://apps.nationalmap.gov/downloader/#/
 
-the thought that often comes to mind is do they feel like the idiots they are when they get boners over things like peanute butter or sprigs of celery ?
 
-apparently they dont agree :P
-
-and why is their chomo government still trying to bring out the damage my father put in my mind back in 84 or 85 ?
-
-oh cute, they do this all the fucking time freezing application versions, apparently .img file format is still not being handled that well in gdal.
-
-and the hacky goddamn way one has to install it leads me to question as well !
-
-oh whats better is they took over all the fucking doctor and dentist offices in colorado and staffed them with cocksucking pedo whores and find reasons to deny treatment or cause diseases and problems in people. they dont do this based off of people being like them, or not, they just do these things to fuck a person up in the mind.
-
-oh and in the case of teeth they try to hold a person back in their stupid fucked up neverending feedback loop by ensuring they dont get any permanent marks etc
-
-so in repetition of a previous fucking fuck conversation 
+here are some fucking fuck fucking aquifer sources which are indicative of porous rock that water moves through and collects in apparently.
+nothing like watching people parasde around retards with possible mental problems numerous times making suggestive comments in a horny voice to them pretending to help
+them gain a better chance at walking without a goddamn walker. few times now. and thanks to john zimmerman and his chomo bitch whore tori for polluting my mind and fort collins for being what they are which is a giant trash receptacle asking to be set on fire.
 
 https://water.usgs.gov/ogw/aquifer/map.html
 
-I got this fucking fuck there aquifer data source which the same likely robot fucking fuck on the other side of the f-ing world directed me to the same goddamn page which contained, yes useful data but in a repetition of previous conversations with an agent of the goivernment which is likely not the same person because the government is no longer useful and offices of the fbi in dc are infiltrated by fucking child molesters.
 
 So we have the plants download page. hurray.
-And I very much have annoyed certain people.. some more.
-Seriously assholes, all of you peoples credibility is long gone.  What is so wrong with the idea of between being pretty much forced to walk around in circles or be chucked in jail for being beaten up because you're all sadists that need to feel powerful over other people, most especially those who are not cruel sadomasochistic drama queens with emphasis on queens and like to make people feel like they have no hope. oh btw, we do NOT want to be arrested nor do we NEED to be arrested. We NEED to be away from vicious child selling garbage and chomo whores that trade their offspring among one another everytime someone fucks one of said whores.
-I do not need drama.
-I do not need unhappiness.
-I do not need stress.
-I do not need anxiety.
-I NEED to get the hell away from all of YOU. 
-AND BTW, GOING AROUND IN CIRCLES TRYING TO KEEP SHIT CONSISTENT UNTIL YOU DRIVE SOMEONE NUTS AND THEY END UP KILLING YOU FUCKING FUCKS IS NOT THE WAY TO GO ABOUT REMAINING ALIVE ! In between humping my luggage and pretending inanimate objects represent your victims, and getting sexually aroused over colored foods and turnips and eggs and whatever else you creepy bastards think about, perhaps you could get to the serious business of unfucking your ears ?
-I DONT LIKE YOU PEOPLE
-I ALSO AM NOT LIKE YOU PEOPLE
-I LIKE WOMEN AND I'M FAIRLY ANGRY THEY HAVE BEEN RUINED FOR ME SINCE THEIR DADDIES APPARENTLY THOUGHT WARPING THEM INTO CHILD MOLESTERS WOULD BE A FUNNY IDEA. you people say you KNOW i like women, so what gives ?
-Anyway.
-
-Plants database below, will likely need a mining tool because its advanced search generates next to nothing, so therefore a custom search will have to be made to gradually mine the species characteristics.
-Edibility and toxicity will have to be found elsewhere.
-Please eat shit and die. and fuck you people for ruining star wars for me ! I used to watch the trilogy like twice a week as a fucking kid ! fucking creepy ass chomo bastards hiding bragging rights about being raping slaves that spend their lives limiting the progression of our fucking country and stacking their living maggot spawn trash everywhere !
 
 https://plants.usda.gov/download.html
 
 
-so as i sit here and listen to this peace of crap little shit whore listening at first to babies screaming and getting visibly sexually excited for the second time. thanks biden, trump and obama, for letting me get trapped in the place my father let me be raped. i'm so glad i had to find out what they are and your respective governments abandoned me here. never would have seen anyone crippled, murdered or otherwise had i not ended up here, or developed ye olde trauma based repressive tendency starting when i was a child.
-third time guessing.
-
-anyway.
 
 https://www.mrlc.gov/data/type/tree-canopy
 
-tree canopy coverage, along with building characteristics would allow someone to do neat things like estimate which routes to take to avoid
-the sun most of the day on foot based on sunrise-sunset algorithms as supplied here...
-(there is some legalize and this is not the original noaa calculation algorithm i found years ago)
-https://www.esrl.noaa.gov/gmd/grad/solcalc/calcdetails.html
-
-its out there somewhere but would be moot if i found an apparent position algorithm whiicccch seems to have been rediscovered at 
-penn state's website... one sec..
-
-which seems fairly simple
 
 https://www.e-education.psu.edu/eme812/node/583
 
-then this needs converted into a light source and the projection of shadows and their thickness can be estimated.
-this does not  account for some fucked up places in the usa where they intentionally silver over shit to reflect sunlight around and around
-as a way of burning pedestrians skin and no i'm not kidding.
-
+ this renders perfectly in qgis and for 19 gb still doesnt quite reach the layer of granularity one would hope for for that kind of data usage.
 https://www.mrlc.gov/data?f%5B0%5D=category%3Atree%20canopy
-bear in mind that this is not a perfect idea.
-in some cities they do things like intentionally thin tree branches at vital parts of the year, not just trim them, so they let light through so people have nowhere to take shelter.
-god bless america land of the hypocritical torturer asshole.
+
+this contains the installer for the qgis desktop application and adjoining libraries compiled for windows like gdal.
+https://trac.osgeo.org/osgeo4w/
