@@ -92,3 +92,9 @@ https://www.mrlc.gov/data?f%5B0%5D=category%3Atree%20canopy
 
 this contains the installer for the qgis desktop application and adjoining libraries compiled for windows like gdal.
 https://trac.osgeo.org/osgeo4w/
+
+so once again, yeah the treecanopy matches satellite imagery of actual tree positioning pretty goddamn well.
+
+there is a online app for distance calculation between lat and lon again, for doublecheck.
+https://www.nhc.noaa.gov/gccalc.shtml
+
