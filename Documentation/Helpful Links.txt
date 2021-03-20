@@ -98,3 +98,7 @@ so once again, yeah the treecanopy matches satellite imagery of actual tree posi
 there is a online app for distance calculation between lat and lon again, for doublecheck.
 https://www.nhc.noaa.gov/gccalc.shtml
 
+
+you have to build the gdal and proj from source
+to fix the issues with the build you have to run this command after all the other build projects finish in an administrator window.
+>msbuild INSTALL.vcxproj /p:platform=x64 /p:configuration=release
