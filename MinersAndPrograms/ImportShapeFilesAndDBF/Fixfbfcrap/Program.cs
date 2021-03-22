@@ -32,6 +32,9 @@ namespace Fixfbfcrap
 
         static void Main(string[] args)
         {
+
+            // john quay sohn and his doubles can be found in new cumberland, enola, and coudersport pa.
+
             string file = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\TreeCanopy\nlcd_2016_treecanopy_2019_08_31";
 
             //  SetDllDirectory(@"C:\OSGeo4W64\apps\gdal\csharp\csharp");
