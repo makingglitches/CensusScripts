@@ -32,6 +32,8 @@ namespace Fixfbfcrap
 
         static void Main(string[] args)
         {
+            // and would like to know why this has been suprressed and the date is still being rolled back ?
+            // letting a new gen of their trash children they raped all their lives hurt little kids like they did me ?
 
             // john quay sohn and his doubles can be found in new cumberland, enola, and coudersport pa.
 
