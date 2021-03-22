@@ -3,4 +3,7 @@
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\OSGeo4W64\apps\gdal\csharp\csharp\</ReferencePath>
+  </PropertyGroup>
 </Project>
