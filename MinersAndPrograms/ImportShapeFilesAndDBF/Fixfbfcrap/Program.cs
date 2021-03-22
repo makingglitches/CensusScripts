@@ -32,10 +32,11 @@ namespace Fixfbfcrap
 
         static void Main(string[] args)
         {
-            // and would like to know why this has been suprressed and the date is still being rolled back ?
-            // letting a new gen of their trash children they raped all their lives hurt little kids like they did me ?
-
-            // john quay sohn and his doubles can be found in new cumberland, enola, and coudersport pa.
+            // i really hate zimmerman and these people for pushing their non straight agenda to make it harder for
+            // men to approach women in this time period unless they're being set up to get in trouble by rotten
+            // whores. which likely comprise most of the woemn on the set of the expanse
+            // and yeah now remember the end of the season because zimmerman commented on that one.
+            // a very long time ago it seems.
 
             string file = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\TreeCanopy\nlcd_2016_treecanopy_2019_08_31";
 
@@ -49,15 +50,6 @@ namespace Fixfbfcrap
             Environment.CurrentDirectory = @"C:\OSGeo4W64\apps\gdal\csharp\csharp";
             
             //and isnt it interesting it can't find a dll in teh same goddamn directory
-            // this is swig generated and i know i got it to work before
-            // before they stole this fucking computer.
-            // and harddrives as they have been doing over and over since i was younger.
-            // now they're just moving forward all the shit they can't push on me so they can fake
-            // that there were consequences that dont make sense when they will HAVE to let me go
-            // just to traumatize me into forgetting using the weakness john quay sohn introduced 
-            // into my head by letting me be raped in fort collins, co when i was a kid.
-
-            // anyway. fuck all of you people.
             Gdal.Open(file, Access.GA_ReadOnly);
       
         }
