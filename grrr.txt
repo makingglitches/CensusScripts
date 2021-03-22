@@ -1,5 +1,2 @@
-
-see this is why i need headphones.
-
-looks like we're going linux heh
-and rebuilding all the fucking sources without wifi on or any networking devices active, in fact i'll fuckingh remove the netwroking devices before i rebuild the sources you fucks.
+note these are not deletions
+thats the value of fucking source control.
