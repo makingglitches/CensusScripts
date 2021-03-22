@@ -1,15 +1,5 @@
-so kind of getting sick of solving problems for whoever thieves my work.
+so zimmerman and these pieces of shit in this town he's connected to keep placing people smoking in my path and now have some cigarette butt smelling piece of loud mouthed garbage 
+he introduced into my environment sitting near me again.
+he needs charged for this as do his accomplices.
 
-gdal osgeo4w worked right out of the fucking box the first time.
-now for some reason it doenst but i should probably check for bug fixes.
-
-cmake was another issue for some reason at one point not putting the preprocessor directives.. but heres the deal
-
-none of that second part should have worked because the include file for symbol rename is supposed to be triggered by
-the implementing code
-
-so now all i should have to do is update the gdal lib's build process to define PROJ_RENAME_SYMBOLS so that it doesnt throw all these 'unresolved symbols' crap 
-which a quick fucking repeat grep indicated were being defined in the generated c header file.
-
-god i hate these people.
 
