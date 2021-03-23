@@ -19,9 +19,9 @@ int main()
 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
+// ryan he says. awful jackass still.
+// they just gotta keep on trying to make time stand still
+// why ?
 // Tips for Getting Started: 
 //   1. Use the Solution Explorer window to add/manage files
 //   2. Use the Team Explorer window to connect to source control
