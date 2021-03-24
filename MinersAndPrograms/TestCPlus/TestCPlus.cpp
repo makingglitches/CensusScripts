@@ -43,28 +43,17 @@ int main()
     std::cout << poDataset->GetFileList() << "\n";
 
     std::cout << poDataset->GetGCPProjection() << "\n";
+    std::cout << poDataset->GetRasterXSize() << ", " << poDataset->GetRasterYSize() << "\n";
+    
 
-    // so once again jupyter for learning this seems smart.
-    // i always have so many scattered thoughts and drawing them together with gradual meat 
-    // and bone example seems useful still....
-    // course the tool may not have quite the functionality i'm looking for though...
-    // to be useful to me it would seem to need to be able to represent a whole range of things
-    // and pull together at the very least c++ and mssql connections+queries so that
-    // and allow me to add links to useful informations surrounding the concept
-    // as i am remembering looking at this its unclear if it was useless or if i just didnt 
-    // push enough in between them wasting my time and bitching at each other.
-
-    // god so fucking sleepy.
-
-    // the jupyter notebooks arent far enough developed yet for use with c++
-    // and i dont see much use in python atm except for specific tasks
-    // js is just fine for json parsing
-    // and besides vs seems to offer a way of genning classes from json anyway.
-    // right now just to process raster data the c++ lib will probably be fine.
-    // c++ is not my native language but its familiar enough 
-    // and its robust and i just really want to limit the number of languages this project uses.
-    // we alredy have electron, c# and node and c++ and sql.
-    // that seems ike enough
+    // see its shit like this that annoys the fuck out of me.
+    // i can segment and tile the damn image into smaller pngs.
+    // the calculator i found would reduce the file size in png lossless format to
+    // 9.78 GB at its present resolution of 161190 x 104424
+    // that is a 9.82  GB saved thats is pretty decent.
+    // but nooooo i have to keep redisovering during the worst period of my life
+    // not like they could just let this stand and leave my shit alone.
+    // nope. that would be too goddamn much to ask apparently.
 
 }
 
