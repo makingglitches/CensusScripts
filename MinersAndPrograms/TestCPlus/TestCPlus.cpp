@@ -54,7 +54,17 @@ int main()
     // as i am remembering looking at this its unclear if it was useless or if i just didnt 
     // push enough in between them wasting my time and bitching at each other.
 
+    // god so fucking sleepy.
 
+    // the jupyter notebooks arent far enough developed yet for use with c++
+    // and i dont see much use in python atm except for specific tasks
+    // js is just fine for json parsing
+    // and besides vs seems to offer a way of genning classes from json anyway.
+    // right now just to process raster data the c++ lib will probably be fine.
+    // c++ is not my native language but its familiar enough 
+    // and its robust and i just really want to limit the number of languages this project uses.
+    // we alredy have electron, c# and node and c++ and sql.
+    // that seems ike enough
 
 }
 
