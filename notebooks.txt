@@ -1,0 +1,15 @@
+they are tempting
+jupyter notebooks
+but python really isnt the language i need to be working in atm.
+
+certainly would be a more familair paradigm to that of node for some things, but browser automation and simplified json manipulation is mostly
+what i use node for.
+
+
+python does seem nice, its just... well...
+
+sql server... you know.
+and .. ado.net is pretty well supported
+and.. well.. c# is pretty and visual studio is nice..
+
+and pycharm isnt bad but c++, python, r, etc are ugly.
