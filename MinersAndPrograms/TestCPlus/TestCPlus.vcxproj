@@ -145,7 +145,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GdalSegmenter.cpp" />
     <ClCompile Include="TestCPlus.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GdalSegmenter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

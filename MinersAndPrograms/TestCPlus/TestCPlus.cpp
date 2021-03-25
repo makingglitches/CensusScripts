@@ -39,12 +39,25 @@ int main()
     std::cout << poDataset->GetDriver()->GetDescription() << "\n";
 
     GDALDataset::Bands b =   poDataset->GetBands();
+    
     std::cout << b.size() << "\n";
     std::cout << poDataset->GetFileList() << "\n";
 
     std::cout << poDataset->GetGCPProjection() << "\n";
     std::cout << poDataset->GetRasterXSize() << ", " << poDataset->GetRasterYSize() << "\n";
+    std::cout << poDataset->GetRasterCount() << "\n";
+
+    GDALDataset::Features f = poDataset->GetFeatures();
     
+    for (auto&& flp  : poDataset->GetFeatures())
+    {
+      
+        std::cout << "Feature of layer " <<
+          flp.layer->GetName()  << std::endl;
+        flp.feature->DumpReadable();
+    }
+
+    GDALClose((GDALDatasetH) poDataset);
 
     // see its shit like this that annoys the fuck out of me.
     // i can segment and tile the damn image into smaller pngs.
