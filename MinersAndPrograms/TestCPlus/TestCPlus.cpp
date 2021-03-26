@@ -6,6 +6,10 @@
 #include "gdal_priv.h"
 #include "cpl_conv.h"
 
+#include "ogr_core.h"
+#include "ogr_feature.h"
+#include "ogrsf_frmts.h"
+
 int main()
 {
 
@@ -51,13 +55,28 @@ int main()
     
     for (auto&& flp  : poDataset->GetFeatures())
     {
-      
         std::cout << "Feature of layer " <<
-          flp.layer->GetName()  << std::endl;
-        flp.feature->DumpReadable();
+          flp.layer->GetName()  << std::endl;  
     }
 
+    double coordbounds[6];
+
+    if (poDataset->GetGeoTransform(coordbounds) == CE_None)
+    {
+        std::cout << "UL GeoX: " << coordbounds[0] << std::endl;
+        std::cout << "UL GeoY: " << coordbounds[3] << std::endl;
+        std::cout << "GeoX / Pixel:" << coordbounds[1] << std::endl;
+        std::cout << "GeoY / Pixel:" << coordbounds[5] << std::endl;
+     }
+
     GDALClose((GDALDatasetH) poDataset);
+
+    // i need to download a bunch of porn clips
+    // use the song leitbild
+    // and change the color and lighting around and the speed and combine clips with some other images like you'd find 
+    // in war marches and the like and make a drug-like video that stimulates the best parts at once ;P
+    // maybe if they watched that enough they'd not be fucked up lol
+    // lookie here, titties. and hard industrial. lol
 
     // see its shit like this that annoys the fuck out of me.
     // i can segment and tile the damn image into smaller pngs.
