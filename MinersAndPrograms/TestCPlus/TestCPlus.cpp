@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 //#include "gdal.h"
 #include "gdal_priv.h"
 #include "cpl_conv.h"
@@ -33,59 +34,87 @@ int main()
     
     poDataset = (GDALDataset*)GDALOpen(filename, GA_ReadOnly);
     
-    GDALRasterBand* band = poDataset->GetRasterBand(1);
+    
 
-   
 
-    std::cout << poDataset->GetRasterCount() << "\n";
+    std::cout << "Raster Count: " << poDataset->GetRasterCount() << "\n";
 
-    std::cout << poDataset->GetProjectionRef() << "\n";
-    std::cout << poDataset->GetDriver()->GetDescription() << "\n";
+    std::cout << "Projection Reference: " <<  poDataset->GetProjectionRef() << "\n";
+    std::cout << "Driver: " << poDataset->GetDriver()->GetDescription() << "\n";
 
     GDALDataset::Bands b =   poDataset->GetBands();
     
-    std::cout << b.size() << "\n";
+    std::cout << "Bands Size: " << b.size() << "\n";
+
     std::cout << poDataset->GetFileList() << "\n";
 
     std::cout << poDataset->GetGCPProjection() << "\n";
-    std::cout << poDataset->GetRasterXSize() << ", " << poDataset->GetRasterYSize() << "\n";
-    std::cout << poDataset->GetRasterCount() << "\n";
 
+    std::cout << "Raster Count: " << poDataset->GetRasterCount() << "\n";
+
+    // this confuses me, and its empty anyway
+    // but there appears to be privately contained implementations of the iterator class
+    // so the implementer cant access them..
     GDALDataset::Features f = poDataset->GetFeatures();
     
+
+    // i am actually wondering what files would have these.
+    // raster data is fairly space intensive so i may not find out for awhile.
     for (auto&& flp  : poDataset->GetFeatures())
     {
         std::cout << "Feature of layer " <<
           flp.layer->GetName()  << std::endl;  
     }
 
+    // this is asking for a wrapper class for code neatness.
     double coordbounds[6];
+
+    std::cout << "Raster Size (X,Y): "<<  poDataset->GetRasterXSize() << ", " << poDataset->GetRasterYSize() << "\n";
 
     if (poDataset->GetGeoTransform(coordbounds) == CE_None)
     {
-        std::cout << "UL GeoX: " << coordbounds[0] << std::endl;
-        std::cout << "UL GeoY: " << coordbounds[3] << std::endl;
+        // wasted a lot of time once looking up how to fucking use cout with formatters
+        // and somehow floats and digits were skipped.
+        printf("Upper Left GeoX: %.5f\n", coordbounds[0]);
+        printf("Upper Left GeoY: %.5f\n", coordbounds[3]);
         std::cout << "GeoX / Pixel:" << coordbounds[1] << std::endl;
         std::cout << "GeoY / Pixel:" << coordbounds[5] << std::endl;
      }
 
+
+    // fetch some raster information
+    // the goal is to segment this enormous fucking file into a much nicer COMPRESSED series of small files
+    // and then create a spatial index so implementing programs can fetch only the data they need 
+    // however sparing the 20 GB to something closer and more space efficient and tying them
+    // against every gis object in the database.
+    // which in general is the idea.
+    // then the user code drives which entities get pulled back based on these indexes and their boundary selections.
+
+    // of course if displaying these, scale should probably factor.
+    // which qgis seems to do very very well.
+
+    int blockx, blocky;
+    
+    GDALRasterBand* band = poDataset->GetRasterBand(1);
+
+    band->GetBlockSize(&blockx, &blocky);
+
+    std::cout << "This is probably all repeated. Actually sure it is. Remember blocky.\n"
+        << "Blocksize x: " << blockx
+        << "  Blocksize y: " << blocky << "\n you know if these people wnat to understand suffering"
+        << " Being inhuman monsters that were formed by their garbage parents, one would think they'd just do something obvious.\n"
+        << "Like strike themselves with a fucking hammer on their forehead. always glad to give these trash helpful advice.\n";
+
+
+    // i find this interesting apparently the free and delete operators in std c++ cause issues with msvc.
+    // they apparently migrated to garbage collection.
     GDALClose((GDALDatasetH) poDataset);
 
-    // i need to download a bunch of porn clips
-    // use the song leitbild
-    // and change the color and lighting around and the speed and combine clips with some other images like you'd find 
-    // in war marches and the like and make a drug-like video that stimulates the best parts at once ;P
-    // maybe if they watched that enough they'd not be fucked up lol
-    // lookie here, titties. and hard industrial. lol
-
-    // see its shit like this that annoys the fuck out of me.
-    // i can segment and tile the damn image into smaller pngs.
-    // the calculator i found would reduce the file size in png lossless format to
-    // 9.78 GB at its present resolution of 161190 x 104424
-    // that is a 9.82  GB saved thats is pretty decent.
-    // but nooooo i have to keep redisovering during the worst period of my life
-    // not like they could just let this stand and leave my shit alone.
-    // nope. that would be too goddamn much to ask apparently.
-
+    // seriously today was just another day of mind and body and soul pollution.
+    // really was.
+    // i wish these people werent monsters.
+    // every night i'm here i'm just reminded that these weird fucked up creatures
+    // are mirrored by their younger prettier better hidden counterparts
+    // and almost just as worthless.
 }
 
