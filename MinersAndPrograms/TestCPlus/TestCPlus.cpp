@@ -101,10 +101,10 @@ int main()
 
     std::cout << "This is probably all repeated. Actually sure it is. Remember blocky.\n"
         << "Blocksize x: " << blockx
-        << "  Blocksize y: " << blocky << "\n you know if these people wnat to understand suffering"
-        << " Being inhuman monsters that were formed by their garbage parents, one would think they'd just do something obvious.\n"
-        << "Like strike themselves with a fucking hammer on their forehead. always glad to give these trash helpful advice.\n";
+        << "  Blocksize y: " << blocky << "\n";
 
+    std::cout << GDALGetDataTypeName(band->GetRasterDataType()) << std::endl;
+    std::cout << GDALGetColorInterpretationName(band->GetColorInterpretation()) << std::endl;
 
     // i find this interesting apparently the free and delete operators in std c++ cause issues with msvc.
     // they apparently migrated to garbage collection.
