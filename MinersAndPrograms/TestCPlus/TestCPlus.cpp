@@ -103,8 +103,8 @@ int main()
         << "Blocksize x: " << blockx
         << "  Blocksize y: " << blocky << "\n";
 
-    std::cout << GDALGetDataTypeName(band->GetRasterDataType()) << std::endl;
-    std::cout << GDALGetColorInterpretationName(band->GetColorInterpretation()) << std::endl;
+    std::cout << "Raster Band Type: " << GDALGetDataTypeName(band->GetRasterDataType()) << std::endl;
+    std::cout << "Color Interpretation Name: " << GDALGetColorInterpretationName(band->GetColorInterpretation()) << std::endl;
 
     // i find this interesting apparently the free and delete operators in std c++ cause issues with msvc.
     // they apparently migrated to garbage collection.
