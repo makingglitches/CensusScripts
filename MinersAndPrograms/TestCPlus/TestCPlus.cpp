@@ -255,6 +255,10 @@ int main()
     // we'll see if something fucks up, but the #define is already included.
     //extern PNG_EXPORT(void, png_set_zbuf_size)
 
+    // obviously the good ole feds werent exceedingly helpful since either the original trump or biden gov was in power at the time
+    // so the damn corrupt ass administrators werent hearing about actual change or adding tools with the time investment already finished added
+    // no instead these fucks let abominations like the ruby programming language through ! seriously ? and while python is a nice enough language
+    // its also overrated imho !
 
     //section 4.3 of libpng-1.4.0 manual defines this pretty welll.
     // we're stripping the alpha channel
