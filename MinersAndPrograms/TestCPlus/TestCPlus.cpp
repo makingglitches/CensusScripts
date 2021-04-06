@@ -265,6 +265,18 @@ int main()
     png_set_IHDR(png_ptr,info_ptr,512,512,PNG_COLOR_TYPE_RGB,)
 
 
+        // personally i think these bastards are so big on 'everyone be quiet' because they think they're getting away with things
+        // because someone told them they were getting away with things
+        // to get them to do the same things to essentially create a manageabe society of fucking clones
+        // to further the slave trade in america, of all nations creeds and colors
+        // who then breed and create little monster slaves, that are thoroughly fucked up in nature
+        // because for the life of me i can't see how we havent burned this fucking country down by now
+        // and slaughtered all the fucking rich people, and redistributed everything
+        // and/or created a more sensible system that lowers the amount of negative stress
+        // and promotes more positive feeling levels of it along with reward and gives people time to learn various things
+        // and let the junkies die off etc.
+        // no offense.
+
     // have  a feeling this will fail again lol
     // seriously, would have had all this crap implemented by now if you fucks would stop bugging me goddamn it !
 
