@@ -169,7 +169,12 @@ int main()
 
     byte* bufbyte = (byte*)buffer;
 
-    FILE* pf= std::fopen("test.png", "wb");
+    
+    
+    // need to make sure the warnings about stdio ops are paid attention to here, the compiler doesnt want to 
+    // to build atm because it doesnt like fopen which is ansi c... no idea why.
+    // also seem to remember fopen should be returning an integer not a struct, we'll see if it works.
+    FILE* pf= fopen("test.png", "wb");
 
     png_structp png_ptr = png_create_write_struct
     (PNG_LIBPNG_VER_STRING, png_voidp_NULL,
@@ -262,16 +267,22 @@ int main()
 
     //section 4.3 of libpng-1.4.0 manual defines this pretty welll.
     // we're stripping the alpha channel
-    png_set_IHDR(png_ptr,info_ptr,512,512,PNG_COLOR_TYPE_RGB,)
+    // bit-depth signifies the individual color component possible values.
+    // which in this case seem to be limited 256x256x256 so, 8.
+    // the interlace value i'm kind of curious about
+    // as would this make zooming better or faster if i decide to display this data ?
+    // for now i'll set it to adam7
+    // documentation indicates to set the last two arguments to there defaults, makes me wonder why they are there at all.
+    png_set_IHDR(png_ptr, info_ptr, 512, 512, 8, PNG_COLOR_TYPE_RGB, PNG_INTERLACE_ADAM7, PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT);
 
+    // left off on page 35
+    // its cold in them their hills atm
+    // gonna retreat.
+    // pallette can be directly constructed using the above gdal methods
+    // there are 256 colors according to qgis in the raster file.
+    // this is going to end up just working for a specific raster atm, but can be made far more generic later.
 
-    // so we're just gonna take our fucking time this time.
-    // fuck you fucking weird ass chomo slaver fucking baby raping people !
-    // and if you all want to be whores so badly, let me work, make money
-    // and sure i'll pay you all, at fmr :P
-      
-    // have  a feeling this will fail again lol
-    // seriously, would have had all this crap implemented by now if you fucks would stop bugging me goddamn it !
+    /// bahahhahahahahaha
 
     // i find this interesting apparently the free and delete operators in std c++ cause issues with msvc.
     // they apparently migrated to garbage collection.
