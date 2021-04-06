@@ -21,6 +21,9 @@
     <ClCompile Include="GdalSegmenter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pngtest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GdalSegmenter.h">
