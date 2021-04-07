@@ -28,6 +28,8 @@
  * of files at once by typing "pngtest -m file1.png file2.png ..."
  */
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #if defined(_WIN32_WCE)
 #  if _WIN32_WCE < 211
      __error__ (f|w)printf functions are not supported on old WindowsCE.;

@@ -1,6 +1,8 @@
 // TestCPlus.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <iostream>
 #include <iomanip>
 //#include "gdal.h"
@@ -169,16 +171,17 @@ int main()
 
     byte* bufbyte = (byte*)buffer;
 
+    // the above works well enough.
     
     
     // need to make sure the warnings about stdio ops are paid attention to here, the compiler doesnt want to 
     // to build atm because it doesnt like fopen which is ansi c... no idea why.
     // also seem to remember fopen should be returning an integer not a struct, we'll see if it works.
-    FILE* pf= fopen("test.png", "wb");
+    FILE* pf =   fopen("test.png", "wb");
 
     png_structp png_ptr = png_create_write_struct
-    (PNG_LIBPNG_VER_STRING, png_voidp_NULL,
-        png_error_ptr_NULL,png_error_ptr_NULL);
+    (PNG_LIBPNG_VER_STRING, NULL,
+        NULL,NULL);
 
     if (!png_ptr)
         return (ERROR);
@@ -214,9 +217,10 @@ int main()
     // the palette. a downsize is i think png's compose a 4 byte per pixel or 32 bpp 
     // for full color, all i'll need is a 3 byte however or 24 bpp
     // because the alpha channel is always 255.
-    png_set_compression_level(png_ptr,
-        Z_BEST_COMPRESSION);
+    png_set_compression_level(png_ptr, 9);
+       
 
+    // fucking goddamn it !!!!
 
     // should write a benchmark once this is up and working
     // following an algorithm where it tiles EVERY part of the raster at a few select tile sizes 
@@ -245,7 +249,7 @@ int main()
     png_set_compression_method(png_ptr, 8);
 
     // in the zlib deflateinit2()  description it says to set this for filtered data.
-    png_set_compression_strategy(png_ptr, Z_DEFAULT_COMPRESSION);
+    png_set_compression_strategy(png_ptr, PNG_Z_DEFAULT_STRATEGY);
   
     // TRY THIS TO SEE HOW MUCH OF A DIFFERENVE IT MAKES.
     //png_set_compression_strategy(png_ptr, Z_FILTERED);
@@ -281,6 +285,21 @@ int main()
     // pallette can be directly constructed using the above gdal methods
     // there are 256 colors according to qgis in the raster file.
     // this is going to end up just working for a specific raster atm, but can be made far more generic later.
+
+    png_colorp pal = new png_color[256];
+
+    for (int x = 0; x < 256; x++)
+    {
+        int ret = colors->GetColorEntryAsRGB(x, c);
+
+        // simple conversion.
+        pal[x].red = (png_byte) c->c1;
+        pal[x].green = (png_byte) c->c2;
+        pal[x].blue = (png_byte) c->c3;
+    }
+   
+    
+    png_set_PLTE(png_ptr, info_ptr, pal, 256);
 
     /// bahahhahahahahaha
 
