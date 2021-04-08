@@ -1,0 +1,104 @@
+https://www.cadcorp.com/products/desktop/cadcorp-sis-desktop-express
+
+https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/species-data-download?qt-science_center_objects=0#qt-science_center_objects
+
+ftp://ftp2.census.gov/
+
+https://www.fns.usda.gov/snap/retailer-locator
+
+https://www.ncdc.noaa.gov/cdo-web/datatools/lcd
+
+https://www.ncdc.noaa.gov/cdo-web/search?datasetid=PRECIP_15
+
+https://www.weather.gov/marfc/DailyPrecipData
+
+https://www.epa.gov/sunsafety/uv-index-1
+
+https://www.usgs.gov/products/maps/gis-data
+
+https://pfaf.org/user/cmspage.aspx?pageid=174
+
+https://pfaf.org/user/shop.aspx
+
+https://plants.sc.egov.usda.gov/java/
+
+obviously some miners would be very helpful.
+plants and species arent always so easily obtained
+
+
+the kml database from the national parks service databases which redirects to arcgis contains more usuable features if you can
+find the actual datasource you're looking for.
+
+https://public-nps.opendata.arcgis.com/search?collection=Dataset
+
+something to look at 
+
+https://mapbox.github.io/togeojson/
+https://geojson.org
+
+its possible that I may want to consider from the perspective of someone who is walking around a lot... maybe..
+adding a time buffer to incorporate extra rest and recuperation between each major point.
+
+https://water.usgs.gov/ogw/aquifer/map.html
+
+https://www.fws.gov/wetlands/Data/Data-Download.html
+
+https://www.cdc.gov/gis/geo-spatial-data.html
+
+https://avmajournals.avma.org/doi/pdfplus/10.2460/javma.256.2.195
+
+i wonder if they realize when i talk about separatist things I mean forming a place where we can raise children and adults who arent raped ? they must underestimate how infectious they are.
+
+https://www.cdc.gov/lyme/datasurveillance/tables-recent.html
+
+I may have to go to each state governments websites to compile better data
+
+-- kind of useless data.
+https://waterdata.usgs.gov/nwis/inventory
+
+-- maybe with headwater consideration ?
+https://hub.arcgis.com/datasets/esri::usa-rivers-and-streams/data
+
+-- worth deeper look
+https://earthexplorer.usgs.gov
+
+see as i said this could keep EVERYONE busy. reproducing gis data in overlay of activities for most redundancy.
+
+rivers and streams gis data
+https://hub.arcgis.com/datasets/esri::usa-rivers-and-streams/data
+
+
+https://apps.nationalmap.gov/downloader/#/
+
+
+and thanks for that some more. so. charge them all again.
+and if you people would like some updates, i can give you a whollleee bunch of awful shit that happens to these rapist garbage pieces of shit. they already earned it. they dont need anything in return for giving in to what i could just flat out do to them anyway.
+https://water.usgs.gov/ogw/aquifer/map.html
+
+
+So we have the plants download page. hurray.
+
+https://plants.usda.gov/download.html
+
+
+
+https://www.mrlc.gov/data/type/tree-canopy
+
+
+https://www.e-education.psu.edu/eme812/node/583
+
+ this renders perfectly in qgis and for 19 gb still doesnt quite reach the layer of granularity one would hope for for that kind of data usage.
+https://www.mrlc.gov/data?f%5B0%5D=category%3Atree%20canopy
+
+this contains the installer for the qgis desktop application and adjoining libraries compiled for windows like gdal.
+https://trac.osgeo.org/osgeo4w/
+
+so once again, yeah the treecanopy matches satellite imagery of actual tree positioning pretty goddamn well.
+
+there is a online app for distance calculation between lat and lon again, for doublecheck.
+https://www.nhc.noaa.gov/gccalc.shtml
+
+
+you have to build the gdal and proj from source
+to fix the issues with the build you have to run this command after all the other build projects finish in an administrator window.
+>msbuild INSTALL.vcxproj /p:platform=x64 /p:configuration=release

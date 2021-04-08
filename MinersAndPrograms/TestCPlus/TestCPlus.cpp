@@ -167,6 +167,7 @@ int main()
     buffer = new byte[512 * 512];
 
     // so checking here.
+    // its the spacing argument that lets qgis read super fast I bet !
     res = band->RasterIO(GF_Read, 161190-512, 104424-512,512,512,buffer, 512,512,GDT_Byte, 1, 0, NULL);
 
     byte* bufbyte = (byte*)buffer;
@@ -301,7 +302,68 @@ int main()
     
     png_set_PLTE(png_ptr, info_ptr, pal, 256);
 
+
+    png_textp comments = new png_text[3];
+    comments[0].compression = PNG_TEXT_COMPRESSION_zTXt;
+    comments[1].key = (png_charp)"Src";
+    comments[1].text = (png_charp)"Treecanopy.img";
+    comments[1].text_length = strlen(comments[1].text);
+
+    comments[1].compression = PNG_TEXT_COMPRESSION_zTXt;
+    comments[1].key = (png_charp) "Size";
+    comments[1].text = (png_charp)"512x512";
+    comments[1].text_length = strlen(comments[1].text);
+
+    comments[2].compression = PNG_TEXT_COMPRESSION_zTXt;
+    comments[2].key = (png_charp) "TilePos";
+    comments[2].text = (png_charp)"1x1";
+    comments[2].text_length = strlen(comments[2].text);
+
+
+    png_set_text(png_ptr, info_ptr, comments, 3);
+
+    // see if setting a pallette histogram makes any difference or even shows up in a reader
+    // could make a difference in selecting tiles without scanning all its pixels.
+
+    
+
+    // set background color.
+
+    // oh look same bug in libpng
+    // what fun.
+    // this throws an access violation in libpng16
+    /*png_color_16*  backcol = new png_color_16();
+    backcol->red = (png_uint_16)pal[0].red;
+    backcol->green = (png_uint_16)pal[0].green;
+    backcol->blue = (png_uint_16)pal[0].blue;
+
+    png_set_bKGD(png_ptr, info_ptr, backcol);*/
+
+    // if i remember correctly this is a bogus binary causing the problem.
+    // wish it was easier just to build all these libs under windows !
+    png_bytepp imgrows = new png_bytep[512];
+
+  
+    std::cout << "Copying sample tile to image rows:  ";
+
+    for (int y = 0; y < 512; y++)
+    {
+        for (int x = 0; x < 512; x++)
+        {
+            imgrows[y] = new png_byte[512];
+            imgrows[y][x] = (png_byte)bufbyte[y * 512 + x];
+        }
+    }
+
+    std::cout << "done" << std::endl;
+     
+    png_set_rows(png_ptr, info_ptr,imgrows );
+
+    png_write_png(png_ptr, info_ptr, PNG_TRANSFORM_IDENTITY, NULL);
     /// bahahhahahahahaha
+
+   // png_write_flush(png_ptr);
+    
 
     // i find this interesting apparently the free and delete operators in std c++ cause issues with msvc.
     // they apparently migrated to garbage collection.
