@@ -11,3 +11,12 @@ obj
 /MinersAndPrograms/SpeciesData/zips
 /MinersAndPrograms/ImportShapeFilesAndDBF/x64
 /MinersAndPrograms/TestCPlus/x64
+/MinersAndPrograms/GenerateClass/obj
+/MinersAndPrograms/GenerateClass/bin
+/MinersAndPrograms/ImportShapeFilesAndDBF/bin
+/MinersAndPrograms/ImportShapeFilesAndDBF/obj
+/MinersAndPrograms/ImportShapeFilesAndDBF/ShapeUtilities/obj
+/MinersAndPrograms/ImportShapeFilesAndDBF/ShapeUtilities/bin
+/MinersAndPrograms/ImportShapeFilesAndDBF/Fixfbfcrap/obj
+/MinersAndPrograms/ImportShapeFilesAndDBF/Fixfbfcrap/bin
+/MinersAndPrograms/ImportShapeFilesAndDBF/.vs
