@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "copyheaders.js",
+            "args": [
+                "C:\\Users\\John\\Documents\\CensusProject\\gdallib\\proj-8.0.0\\src",
+                "C:\\Users\\John\\Documents\\CensusProject\\gdallib\\gdal-3.2.2rc1\\LibDir"
+            ]
+        }
+    ]
+}

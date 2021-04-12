@@ -40,18 +40,12 @@ int main()
     std::cout << "Hello World!\n";
     
     const char* filename = R"(C:\Users\John\Documents\CensusProject\CensusShapeFileData\TreeCanopy\nlcd_2016_treecanopy_2019_08_31\nlcd_2016_treecanopy_2019_08_31.img)";
-    
-
-  
-   
+       
     GDALDataset* poDataset;
     GDALAllRegister();
     
     poDataset = (GDALDataset*)GDALOpen(filename, GA_ReadOnly);
     
-    
-
-
     std::cout << "Raster Count: " << poDataset->GetRasterCount() << "\n";
 
     std::cout << "Projection Reference: " <<  poDataset->GetProjectionRef() << "\n";
@@ -305,44 +299,47 @@ int main()
 
     png_textp comments = new png_text[3];
     comments[0].compression = PNG_TEXT_COMPRESSION_zTXt;
-    comments[1].key = (png_charp)"Src";
-    comments[1].text = (png_charp)"Treecanopy.img";
-    comments[1].text_length = strlen(comments[1].text);
+    //comments[1].key = (png_charp)malloc(3);
+    //comments[1].text = (png_charp)"Treecanopy.img";
+    //comments[1].text_length = strlen(comments[1].text);
 
     comments[1].compression = PNG_TEXT_COMPRESSION_zTXt;
-    comments[1].key = (png_charp) "Size";
-    comments[1].text = (png_charp)"512x512";
-    comments[1].text_length = strlen(comments[1].text);
+    //comments[1].key = (png_charp) "Size";
+    //comments[1].text = (png_charp)"512x512";
+    //comments[1].text_length = strlen(comments[1].text);
 
     comments[2].compression = PNG_TEXT_COMPRESSION_zTXt;
-    comments[2].key = (png_charp) "TilePos";
-    comments[2].text = (png_charp)"1x1";
-    comments[2].text_length = strlen(comments[2].text);
+    //comments[2].key = (png_charp) "TilePos";
+    //comments[2].text = (png_charp)"1x1";
+    //comments[2].text_length = strlen(comments[2].text);
 
 
-    png_set_text(png_ptr, info_ptr, comments, 3);
+   // png_set_text(png_ptr, info_ptr, comments, 3);
 
-    // see if setting a pallette histogram makes any difference or even shows up in a reader
-    // could make a difference in selecting tiles without scanning all its pixels.
+    //// see if setting a pallette histogram makes any difference or even shows up in a reader
+    //// could make a difference in selecting tiles without scanning all its pixels.
 
+    //
+
+    //// set background color.
+
+    //// oh look same bug in libpng
+    //// what fun.
+    //// this throws an access violation in libpng16
     
-
-    // set background color.
-
-    // oh look same bug in libpng
-    // what fun.
-    // this throws an access violation in libpng16
-    /*png_color_16*  backcol = new png_color_16();
+    png_color_16*  backcol = new png_color_16();
+    
     backcol->red = (png_uint_16)pal[0].red;
     backcol->green = (png_uint_16)pal[0].green;
     backcol->blue = (png_uint_16)pal[0].blue;
 
-    png_set_bKGD(png_ptr, info_ptr, backcol);*/
+    png_set_bKGD(png_ptr, info_ptr, backcol);
 
-    // if i remember correctly this is a bogus binary causing the problem.
-    // wish it was easier just to build all these libs under windows !
+    //// if i remember correctly this is a bogus binary causing the problem.
+    //// wish it was easier just to build all these libs under windows !
     png_bytepp imgrows = new png_bytep[512];
 
+    // i may just skip this as I think performance will be poor.
   
     std::cout << "Copying sample tile to image rows:  ";
 
@@ -351,7 +348,9 @@ int main()
         for (int x = 0; x < 512; x++)
         {
             imgrows[y] = new png_byte[512];
-            imgrows[y][x] = (png_byte)bufbyte[y * 512 + x];
+            memcpy(imgrows[y], &bufbyte[512 * y], 512);
+
+            //imgrows[y][x] = (png_byte)bufbyte[y * 512 + x];
         }
     }
 
@@ -360,7 +359,12 @@ int main()
     png_set_rows(png_ptr, info_ptr,imgrows );
 
     png_write_png(png_ptr, info_ptr, PNG_TRANSFORM_IDENTITY, NULL);
+    png_write_flush(png_ptr);
+
+    fclose(pf);
     /// bahahhahahahahaha
+
+
 
    // png_write_flush(png_ptr);
     
@@ -369,11 +373,11 @@ int main()
     // they apparently migrated to garbage collection.
     GDALClose((GDALDatasetH) poDataset);
 
-    // seriously today was just another day of mind and body and soul pollution.
-    // really was.
-    // i wish these people werent monsters.
-    // every night i'm here i'm just reminded that these weird fucked up creatures
-    // are mirrored by their younger prettier better hidden counterparts
-    // and almost just as worthless.
+   // // seriously today was just another day of mind and body and soul pollution.
+   // // really was.
+   // // i wish these people werent monsters.
+   // // every night i'm here i'm just reminded that these weird fucked up creatures
+   // // are mirrored by their younger prettier better hidden counterparts
+   // // and almost just as worthless.
 }
 
