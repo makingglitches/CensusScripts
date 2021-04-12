@@ -37,6 +37,18 @@ function recursepath(srcpath,filefilter=".h") {
 	return files;
 }
 
+function recurseCreate(apath)
+{
+    if (!fs.existsSync(apath))
+    {
+        // go up a level.
+        recurseCreate( path.dirname(apath));
+        
+        console.log("creating directory: "+destination+without);
+        fs.mkdirSync(apath);
+    }
+}
+
 
 console.log(process.argv[2]);
 
@@ -65,12 +77,8 @@ for (var i in headerfiles)
     {
         without+="\\";
     }
-    
-    if (! fs.existsSync( destination+ without))
-    {
-        console.log("creating directory: "+destination+without);
-        fs.mkdirSync(destination+without);
-    }
+
+    recurseCreate(destination+without);
 
     console.log("Copying: "+ path.basename(headerfiles[i]));
     c++;
