@@ -42,6 +42,7 @@ namespace Fixfbfcrap
 
             string file = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\TreeCanopy\nlcd_2016_treecanopy_2019_08_31\nlcd_2016_treecanopy_2019_08_31.img";
 
+            
             Gdal.AllRegister();
 
             //and isnt it interesting it can't find a dll in teh same goddamn directory
@@ -56,6 +57,7 @@ namespace Fixfbfcrap
 
 
             var bounds = new { Left = geo[0], Top = geo[3], xsize = geo[1], ysize = geo[5] };
+
 
 
             byte[] bytes = new byte[512 * 512];
