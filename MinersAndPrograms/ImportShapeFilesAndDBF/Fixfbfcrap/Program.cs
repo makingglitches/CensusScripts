@@ -45,57 +45,61 @@ namespace Fixfbfcrap
             
             Gdal.AllRegister();
 
-            //and isnt it interesting it can't find a dll in teh same goddamn directory
-            Dataset d = Gdal.Open(file, Access.GA_ReadOnly);
+            TestSizes ts = new TestSizes(file);
+            
+            ts.Start();
+
+            ////and isnt it interesting it can't find a dll in teh same goddamn directory
+            //Dataset d = Gdal.Open(file, Access.GA_ReadOnly);
 
 
-            var b = d.GetRasterBand(1);
-            var ct = b.GetColorTable();
-            double[] geo = new double[6];
+            //var b = d.GetRasterBand(1);
+            //var ct = b.GetColorTable();
+            //double[] geo = new double[6];
 
-            d.GetGeoTransform(geo);
-
-
-            var bounds = new { Left = geo[0], Top = geo[3], xsize = geo[1], ysize = geo[5] };
+            //d.GetGeoTransform(geo);
 
 
+            //var bounds = new { Left = geo[0], Top = geo[3], xsize = geo[1], ysize = geo[5] };
 
-            byte[] bytes = new byte[512 * 512];
 
 
-            b.ReadRaster(d.RasterXSize/2, d.RasterYSize/2, 512, 512, bytes, 512, 512, 0, 0);
+            //byte[] bytes = new byte[512 * 512];
 
-            System.Drawing.Bitmap dest = new System.Drawing.Bitmap(512, 512);
 
-            Console.WriteLine(ct.GetCount());
+            //b.ReadRaster(d.RasterXSize/2, d.RasterYSize/2, 512, 512, bytes, 512, 512, 0, 0);
 
-            for (int x = 0; x < 512; x++)
-            {
-                for (int y=0; y < 512; y++)
-                {
-                    var index = bytes[y * 512 + x];
-                    var col = ct.GetColorEntry(index);
-                    var c = Color.FromArgb(col.c4, col.c1, col.c2, col.c3);
-                    dest.SetPixel(x, y, c);
-                }
-            }
+            //System.Drawing.Bitmap dest = new System.Drawing.Bitmap(512, 512);
+
+            //Console.WriteLine(ct.GetCount());
+
+            //for (int x = 0; x < 512; x++)
+            //{
+            //    for (int y=0; y < 512; y++)
+            //    {
+            //        var index = bytes[y * 512 + x];
+            //        var col = ct.GetColorEntry(index);
+            //        var c = Color.FromArgb(col.c4, col.c1, col.c2, col.c3);
+            //        dest.SetPixel(x, y, c);
+            //    }
+            //}
 
             
-            ImageCodecInfo pnginfo = ImageCodecInfo.GetImageEncoders().Where(o => o.FormatID.Equals(ImageFormat.Png.Guid)).First();
+            //ImageCodecInfo pnginfo = ImageCodecInfo.GetImageEncoders().Where(o => o.FormatID.Equals(ImageFormat.Png.Guid)).First();
 
-            var compop = System.Drawing.Imaging.Encoder.Compression;
-            var qualop = System.Drawing.Imaging.Encoder.Quality;
+            //var compop = System.Drawing.Imaging.Encoder.Compression;
+            //var qualop = System.Drawing.Imaging.Encoder.Quality;
 
             
-            FileStream fs = new FileStream("test.png", FileMode.Create, FileAccess.Write, FileShare.None);
+            //FileStream fs = new FileStream("test.png", FileMode.Create, FileAccess.Write, FileShare.None);
 
-            dest.Save(fs, ImageFormat.Png);
+            //dest.Save(fs, ImageFormat.Png);
 
-            fs.Flush();
-            fs.Close();
+            //fs.Flush();
+            //fs.Close();
 
-            // seriously days wasted trying to get the libpng library to work in goddamn c++ and it f's up !
-            // a few minutes of this and boom it works !
+            //// seriously days wasted trying to get the libpng library to work in goddamn c++ and it f's up !
+            //// a few minutes of this and boom it works !
 
         }
 

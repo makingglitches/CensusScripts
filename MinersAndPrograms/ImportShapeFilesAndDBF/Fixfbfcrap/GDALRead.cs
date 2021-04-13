@@ -19,8 +19,29 @@ namespace Fixfbfcrap
             public double GepTop;
             public double GeoPerPixelX;
             public double GeoPerPixelY;
+        }
 
+        // i think to them time we invest in our projects represents time they don't think they'll have to do anything
+        
 
+        public int XTiles(int res)
+        {
+            return (int)Math.Ceiling((double)RasterImg.RasterXSize / res);
+        }
+
+        public int YTiles(int res)
+        {
+            return (int)Math.Ceiling((double)RasterImg.RasterYSize / res);
+        }
+
+        public int remainderX(int res)
+        {
+            return (int)(RasterImg.RasterXSize % res);
+        }
+
+        public int remaindery(int res)
+        {
+            return (int)(RasterImg.RasterYSize % res);
         }
 
         public int TileSizeX;
