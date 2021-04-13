@@ -42,14 +42,6 @@ namespace Fixfbfcrap
 
             string file = @"C:\Users\John\Documents\CensusProject\CensusShapeFileData\TreeCanopy\nlcd_2016_treecanopy_2019_08_31\nlcd_2016_treecanopy_2019_08_31.img";
 
-            //  SetDllDirectory(@"C:\OSGeo4W64\apps\gdal\csharp\csharp");
-
-            // see its complaining about not finding the dll.
-            // i've updated the PATH variable.
-            // i've set the path here to search on using the kernel32 wrapper above
-
-            // i changed the directory to location of the dll.
-            //  Environment.CurrentDirectory = @"C:\OSGeo4W64\apps\gdal\csharp\csharp";
             Gdal.AllRegister();
 
             //and isnt it interesting it can't find a dll in teh same goddamn directory
@@ -100,13 +92,8 @@ namespace Fixfbfcrap
             fs.Flush();
             fs.Close();
 
-            // its not just that csharp is better
-            // it looks nicer
-            // the code is cleaner
-            // and tracking down what is wrong is much easier !!!
-            // I mean this is still using the same lowlevel functions but its NICE! 
-            // still !
-
+            // seriously days wasted trying to get the libpng library to work in goddamn c++ and it f's up !
+            // a few minutes of this and boom it works !
 
         }
 
