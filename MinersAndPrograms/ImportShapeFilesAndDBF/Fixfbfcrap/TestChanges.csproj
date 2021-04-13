@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="gdalconst_csharp, Version=1.0.7659.35861, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\gdalconst_csharp.dll</HintPath>
+    </Reference>
     <Reference Include="gdal_csharp">
-      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal\csharp\csharp\gdal_csharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\gdal_csharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.DacFx.x64.150.4897.1\lib\net46\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
@@ -54,8 +58,17 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.DacFx.x64.150.4897.1\lib\net46\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.7659.35860, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.7659.35860, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\osr_csharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
