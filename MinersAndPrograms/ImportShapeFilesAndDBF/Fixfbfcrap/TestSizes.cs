@@ -10,6 +10,11 @@ using System.IO;
 
 namespace Fixfbfcrap
 {
+
+    // Oh what a perfect wonderful day
+    // the women had large breasts
+    // and i got everything i wanted with no annoyance.
+
     public class TestSizes
     {
         private string filename;
@@ -18,19 +23,21 @@ namespace Fixfbfcrap
         /// The size of the file specified by filename.
         /// </summary>
         public double RasterSize = 0;
-        /// <summary>
-        /// Publishes a set of keys combined with doubles that identify max resolution and total recode size for png
-        /// </summary>
-        public Dictionary<int, double> TiffSize = new Dictionary<int, double>();
-        public Dictionary<int, TimeSpan> EncodeTime = new Dictionary<int, TimeSpan>();
-        /// <summary>
-        /// Publishes a set of keys combined with doubles that idenify max resoltion and total record size for tiff
-        /// </summary>
-        public Dictionary<int, double> PNGSize = new Dictionary<int, double>();
-        
+
+        GDALRead.TimePieces[,] reports;
+
         public TestSizes(string fname)
         {
             filename = fname;
+        }
+
+        public class TimeToLen
+        {
+            public int TileSize=0;
+            public long PngSize=0;
+            public long TiffSize=0;
+            public TimeSpan TiffTime = TimeSpan.Zero;
+            public TimeSpan PngTime = TimeSpan.Zero;
         }
 
         public void Start()
@@ -38,34 +45,35 @@ namespace Fixfbfcrap
             Console.WriteLine("Compression Size Test For Specific Raster");
 
             FileInfo f = new FileInfo(filename);
-
+            FileInfo f2 = new FileInfo(filename.Substring(0, filename.Length - 4)+".ige");
             Console.WriteLine("Present Filename: " + filename);
-            Console.WriteLine("Size: " + (f.Length / 1024 / 1024).ToString() + " Mb");
+            Console.WriteLine("Size: " + ( (f.Length+f2.Length) / 1024 / 1024).ToString() + " Mb");
 
             GDALRead r = new GDALRead(filename);
             r.OpenFile();
             int[] sizes = new int[] {512,1024,2048,4096 };
 
+            List<TimeToLen> measures = new List<TimeToLen>();
+            
 
             for (int s = 0; s < sizes.Length; s++)
             {
                 Console.WriteLine("Processing image tiles of size {0}", sizes[s]);
                 
-                long currsizepng = 0;
-                long currtiffsize = 0;
-
-                TimeSpan copyTime;
-                TimeSpan pngTime;
-                TimeSpan tiffTime;
-
                 Console.WriteLine("Size in Tiles: {0} x {1}", r.XTiles(sizes[s]), r.YTiles(sizes[s]));
-
                 
                 int xtiles = r.XTiles(sizes[s]);
                 int ytiles = r.YTiles(sizes[s]);
 
+                reports = new GDALRead.TimePieces[xtiles,ytiles];
+
                 var t = r.GetTileTest(xtiles-1, ytiles-1, 512);
 
+                TimeToLen measure = new TimeToLen();
+
+                measure.TileSize = sizes[s];
+
+                measures.Add(measure);
 
                 for (int x = 0; x < xtiles; x++)
                 {
@@ -75,56 +83,34 @@ namespace Fixfbfcrap
                         Console.Write("                                        ");
                         Console.CursorLeft = 0;
                         Console.Write("Processing Tile {0}, {1}", x, y);
-                       
-                        int tilex = x * sizes[s] > r.RasterImg.RasterXSize ? r.remainderX(sizes[s]) : sizes[s];
-                        int tiley = y * sizes[s] > r.RasterImg.RasterXSize ? r.remaindery(sizes[s]) : sizes[s];
 
-                        DateTime start = DateTime.Now;
-                       
-                        Bitmap b =  r.CopyToBitmap(1, tilex, tilex, x * sizes[s], y * sizes[s], tilex, tiley);
-                        DateTime end = DateTime.Now;
-
-                        copyTime = end - start;
-
-
-                        start = DateTime.Now;
-
-                        MemoryStream ms = new MemoryStream();
-                        b.Save(ms, ImageFormat.Png);
-
-                        end = DateTime.Now;
-                        pngTime = end - start;
-
-                        currsizepng += ms.Length;
-                        
-                        start = DateTime.Now;
-                        ms = new MemoryStream();
-
-                    //    var codec = ImageCodecInfo.GetImageEncoders().Where(o => o.FormatID.Equals(ImageFormat.Tiff)).First();
-                        b.Save(ms, ImageFormat.Tiff);
-
-                        end = DateTime.Now;
-
-                        currtiffsize += ms.Length;
-
-                        tiffTime = start - end;
-
+                        var test = r.GetTileTest(x, y, sizes[s]);
+                        measure.PngSize += t.PngSize;
+                        measure.TiffSize += t.TiffSize;
+                        measure.PngTime = measure.PngTime + t.PngTime;
+                        measure.TiffTime = measure.TiffTime + t.TiffTime;
+                        reports[x, y] = test;
                     }
                 }
 
-                PNGSize.Add(sizes[s], currsizepng);
-                TiffSize.Add(sizes[s], currsizepng);
-
+          
             }
 
             Console.WriteLine("Calulated Sizes.");
 
-            Console.WriteLine("\tSize\t\tPNG\t\tTiff");
+            Console.WriteLine("\tSize\tPNG Time\tPng Size\tTiff Time\tTiff Size");
 
-            for (int x = 0; x < sizes.Length; x++)
+            for (int x=0; x< measures.Count; x++)
             {
-                Console.WriteLine("\t{0}\t\t{1} Mb\t\t{2} Mb", x, PNGSize[sizes[x]], TiffSize[sizes[x]]);
+                Console.WriteLine("{0}\t{1}\t{2} mb\t{3}\t{4} mb",
+                    measures[x].TileSize, 
+                    measures[x].PngTime, 
+                    measures[x].PngSize/1024/1024, 
+                    measures[x].TiffTime, 
+                    measures[x].TiffSize/1024/1024);
+
             }
+            
             Console.WriteLine();
             Console.WriteLine("Test Complete.");
             Console.WriteLine();
