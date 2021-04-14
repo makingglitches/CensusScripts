@@ -14,33 +14,141 @@ namespace Fixfbfcrap
     public class GDALRead
     {
 
+        public class TileVariance
+        {
+            public int TileSize { get; set; }
+            public int x { get; set; }
+            public int y { get; set; }
+
+            public Dictionary<byte, long> Spread = new Dictionary<byte, long>();
+        }
+
+
+        public List<List<TileVariance>> GetTileVariances(int tilesize)
+        {
+            var remx = remainderX(tilesize);
+            var remy = remaindery(tilesize);
+
+            var tilesx = XTiles(tilesize);
+            var tilesy = YTiles(tilesize);
+
+            List<List<TileVariance>> variances = new List<List<TileVariance>>();
+
+            for (int y=0; y < tilesy; y++)
+            {
+                int height = tilesy - 1 == y && remy > 0 ? remy : tilesize;
+                
+                variances.Add(new List<TileVariance>());
+
+                for (int x=0; x < tilesx; x++)
+                {
+                    int width = tilesx - 1 == x && remx > 0 ? remx : tilesize;
+
+                    var v = GetVariance(1, x * tilesize, y *tilesize, width,height);
+                    
+                    v.x = x;
+                    v.y = y;
+                    v.TileSize = tilesize;
+
+                    variances[y].Add(v);
+                }
+            }
+
+            return variances;
+        }
+
+
+        /// <summary>
+        /// Gets the variance (number of each byte value) in a tile sampled from the raster
+        /// </summary>
+        /// <param name="band"></param>
+        /// <param name="startx"></param>
+        /// <param name="starty"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <returns></returns>
+        TileVariance GetVariance(int band, int startx, int starty, int width, int height)
+        {
+            TileVariance test = new TileVariance();
+
+            byte[] bytes = new byte[width * height];
+
+            var bandp = RasterImg.GetRasterBand(band);
+
+            bandp.ReadRaster(startx, starty, width, height, bytes, width, height, 0, 0);
+
+            for (int x=0; x < width;x++)
+            {
+                for(int y = 0;y<height;y++ )
+                {
+                    if (test.Spread.ContainsKey(bytes[y * width + x]))
+                    {
+                        test.Spread[bytes[y * width + x]]++;
+                    }
+                    else
+                    {
+                        test.Spread.Add(bytes[y * width + x], 1);
+                    }
+                }
+            }
+
+
+            return test;
+        }
+
+
+        /// <summary>
+        /// Represents pertinent time and size results from compressing data read from the raster
+        /// </summary>
         public class TimePieces
         {
-            public long PngSize;
-            public long TiffSize;
-            public TimeSpan CopyTime;
-            public TimeSpan PngTime;
-            public TimeSpan TiffTime;
+            public long PngSize { get; set; }
+            public long TiffSize { get; set; }
+            public TimeSpan CopyTime { get; set; }
+            public TimeSpan PngTime { get; set; }
+            public TimeSpan TiffTime { get; set; }
         }
 
         // i think to them time we invest in our projects represents time they don't think they'll have to do anything
         
 
+
+        /// <summary>
+        /// Returns the number of tile columns at a specific tile size.
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
         public int XTiles(int res)
         {
             return (int)Math.Ceiling((double)RasterImg.RasterXSize / res);
         }
 
+        /// <summary>
+        /// Returns the number of tile rows at a specific tile size
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
         public int YTiles(int res)
         {
             return (int)Math.Ceiling((double)RasterImg.RasterYSize / res);
         }
 
+
+        /// <summary>
+        /// Returns the width in pixels of the last tile column of the raster, if not evenly divisable by tile size.
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
         public int remainderX(int res)
         {
             return (int)(RasterImg.RasterXSize % res);
         }
 
+        /// <summary>
+        /// For oddly divisable raster heights, returns the remainder of pixels height-wise, that represent the height of the last tile row in pixels
+        /// </summary>
+        /// <param name="res"></param>
+        /// <returns></returns>
         public int remaindery(int res)
         {
             return (int)(RasterImg.RasterYSize % res);
@@ -57,11 +165,25 @@ namespace Fixfbfcrap
             filename = fname;
         }
 
+        /// <summary>
+        /// This opens the raster file and uses the gdal sharp wrapper to create the main dataobject which it stores in the RasterImg field.
+        /// </summary>
         public void OpenFile()
         {
             RasterImg = Gdal.Open(filename,Access.GA_ReadOnly);
         }
 
+        /// <summary>
+        /// This creates a bitmap object from raster data at specific locations in the raster.
+        /// </summary>
+        /// <param name="band"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="startx"></param>
+        /// <param name="starty"></param>
+        /// <param name="readw"></param>
+        /// <param name="readh"></param>
+        /// <returns></returns>
         public Bitmap CopyToBitmap(int band, int width, int height, int startx, int starty, int readw, int readh)
         {
             Bitmap b = new Bitmap(width, height);
@@ -88,6 +210,14 @@ namespace Fixfbfcrap
             return b;
         }
 
+        /// <summary>
+        /// This function performs data tracking on one tile at a specific tile size and location for the compression test
+        /// Also taking into mind processing time for each major step.
+        /// </summary>
+        /// <param name="tilex"></param>
+        /// <param name="tiley"></param>
+        /// <param name="tilesize"></param>
+        /// <returns></returns>
         public TimePieces GetTileTest(int tilex,int tiley, int tilesize)
         {
 
