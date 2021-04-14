@@ -60,9 +60,16 @@ namespace Fixfbfcrap
 
                 Console.WriteLine("Size in Tiles: {0} x {1}", r.XTiles(sizes[s]), r.YTiles(sizes[s]));
 
-                for (int x = 0; x < r.XTiles(sizes[s]); x++)
+                
+                int xtiles = r.XTiles(sizes[s]);
+                int ytiles = r.YTiles(sizes[s]);
+
+                var t = r.GetTileTest(xtiles-1, ytiles-1, 512);
+
+
+                for (int x = 0; x < xtiles; x++)
                 {
-                    for (int y = 0; y < r.YTiles(sizes[s]); y++)
+                    for (int y = 0; y < ytiles; y++)
                     {
                         Console.CursorLeft = 0;
                         Console.Write("                                        ");
@@ -73,6 +80,7 @@ namespace Fixfbfcrap
                         int tiley = y * sizes[s] > r.RasterImg.RasterXSize ? r.remaindery(sizes[s]) : sizes[s];
 
                         DateTime start = DateTime.Now;
+                       
                         Bitmap b =  r.CopyToBitmap(1, tilex, tilex, x * sizes[s], y * sizes[s], tilex, tiley);
                         DateTime end = DateTime.Now;
 

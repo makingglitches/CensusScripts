@@ -7,18 +7,20 @@ using OSGeo.GDAL;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace Fixfbfcrap
 {
     public class GDALRead
     {
 
-        public class GDALSizes
+        public class TimePieces
         {
-            public double GeoLeft;
-            public double GepTop;
-            public double GeoPerPixelX;
-            public double GeoPerPixelY;
+            public long PngSize;
+            public long TiffSize;
+            public TimeSpan CopyTime;
+            public TimeSpan PngTime;
+            public TimeSpan TiffTime;
         }
 
         // i think to them time we invest in our projects represents time they don't think they'll have to do anything
@@ -69,25 +71,67 @@ namespace Fixfbfcrap
 
             byte[] bytes = new byte[readw * readh];
 
-            
-
             var getdatares = imgband.ReadRaster(startx, starty, readw, readh, bytes, readw, readh, 0, 0);
 
-            for (int x=startx; x < startx+readw; x++)
+            for (int x=0; x < readw; x++)
             {
-                for (int y=starty; y < starty+readh;y++)
+                for (int y=0; y < readh;y++)
                 {
-                    var index = bytes[(y-starty) * readh + (x-startx)];
+                    var index = bytes[y * readw + x];
+
                     var col = colortable.GetColorEntry(index);
                     var c = Color.FromArgb(col.c4, col.c1, col.c2, col.c3);
-                    b.SetPixel(x-startx, y-starty, c);
+                    b.SetPixel(x, y, c);
                 }
             }
 
             return b;
         }
 
+        public TimePieces GetTileTest(int tilex,int tiley, int tilesize)
+        {
 
+            TimePieces t = new TimePieces();
+ 
+            int tilewidth = (tilex+1) * tilesize > RasterImg.RasterXSize ? remainderX(tilesize) : tilesize;
+            int tileheight = (tiley+1) * tilesize > RasterImg.RasterYSize ? remaindery(tilesize) : tilesize;
+
+            DateTime start = DateTime.Now;
+
+            int startx = tilex * tilesize;
+            int starty = tiley * tilesize;
+
+            Bitmap b = CopyToBitmap(1, tilewidth, tileheight, startx ,starty, tilewidth, tileheight);
+           
+            DateTime end = DateTime.Now;
+
+            t.CopyTime = end - start;
+
+
+            start = DateTime.Now;
+
+            MemoryStream ms = new MemoryStream();
+            b.Save(ms, ImageFormat.Png);
+
+            end = DateTime.Now;
+            
+            t.PngTime = end - start;
+            
+            t.PngSize =  ms.Length;
+
+            start = DateTime.Now;
+            ms = new MemoryStream();
+
+            //    var codec = ImageCodecInfo.GetImageEncoders().Where(o => o.FormatID.Equals(ImageFormat.Tiff)).First();
+            b.Save(ms, ImageFormat.Tiff);
+
+            end = DateTime.Now;
+            
+            t.TiffSize= ms.Length;
+            t.TiffTime = start - end;
+
+            return t;
+        }
 
     }
 }
