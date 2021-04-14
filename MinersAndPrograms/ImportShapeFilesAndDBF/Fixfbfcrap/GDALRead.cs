@@ -16,11 +16,15 @@ namespace Fixfbfcrap
 
         public class TileVariance
         {
+            public double StdDev { get; set; }
+            public long Count { get; set; }
+            public int CeilAvg { get; set; }
             public int TileSize { get; set; }
             public int x { get; set; }
             public int y { get; set; }
 
             public Dictionary<byte, long> Spread = new Dictionary<byte, long>();
+            public Dictionary<byte, double> Percentages = new Dictionary<byte, double>();
         }
 
 
@@ -42,6 +46,11 @@ namespace Fixfbfcrap
 
                 for (int x=0; x < tilesx; x++)
                 {
+                    Console.CursorLeft = 0;
+                    Console.Write("                                      ");
+                    Console.CursorLeft = 0;
+                    Console.Write("Processing Tile: {0} x {1}", x, y);
+
                     int width = tilesx - 1 == x && remx > 0 ? remx : tilesize;
 
                     var v = GetVariance(1, x * tilesize, y *tilesize, width,height);
@@ -53,6 +62,8 @@ namespace Fixfbfcrap
                     variances[y].Add(v);
                 }
             }
+
+
 
             return variances;
         }
@@ -71,6 +82,9 @@ namespace Fixfbfcrap
         {
             TileVariance test = new TileVariance();
 
+            ulong sum = 0;
+            long count = 0;
+
             byte[] bytes = new byte[width * height];
 
             var bandp = RasterImg.GetRasterBand(band);
@@ -81,6 +95,10 @@ namespace Fixfbfcrap
             {
                 for(int y = 0;y<height;y++ )
                 {
+
+                    sum += bytes[y * width + x];
+                    count++;
+
                     if (test.Spread.ContainsKey(bytes[y * width + x]))
                     {
                         test.Spread[bytes[y * width + x]]++;
@@ -92,7 +110,24 @@ namespace Fixfbfcrap
                 }
             }
 
+            test.Count = count;
+            test.CeilAvg = (int) Math.Ceiling((double)sum / count);
+            
+            double va = 0;
 
+            for (byte x=0; x < test.Spread.Count; x++)
+            {
+                if (test.Spread.ContainsKey(x))
+                {
+                    va += (x - test.CeilAvg) ^ 2 * test.Spread[x];
+
+                    test.Percentages.Add(x, test.Spread[x] / test.Count);
+                }
+               
+            }
+
+            test.StdDev = Math.Sqrt(va / test.Spread.Count);
+            
             return test;
         }
 

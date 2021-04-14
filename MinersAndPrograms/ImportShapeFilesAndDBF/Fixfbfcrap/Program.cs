@@ -45,6 +45,10 @@ namespace Fixfbfcrap
             
             Gdal.AllRegister();
 
+
+            TestVariances tv = new TestVariances(file);
+            tv.Start();
+
             TestSizes ts = new TestSizes(file);
             
             ts.Start();

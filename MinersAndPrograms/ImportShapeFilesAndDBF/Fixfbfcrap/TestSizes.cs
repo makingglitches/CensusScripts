@@ -193,16 +193,16 @@ namespace Fixfbfcrap
                 int startx = -1;
                 int starty = -1;
 
-                while (reports[s][startx+1,starty+1]!=null)
-                {
-                    starty++;
+                //while (reports[s][startx+1,starty+1]!=null)
+                //{
+                //    starty++;
 
-                    if (starty == ytiles-1 )
-                    {
-                        starty = -1;
-                        startx++;
-                    }
-                }
+                //    if (starty == ytiles-1 )
+                //    {
+                //        starty = -1;
+                //        startx++;
+                //    }
+                //}
 
                 startx = startx == -1 ? 0 : startx;
                 starty = starty == -1 ? 0 : starty;
@@ -225,7 +225,7 @@ namespace Fixfbfcrap
                         measure.PngTime = measure.PngTime + test.PngTime;
                         measure.TiffTime = measure.TiffTime + test.TiffTime;
                         
-                        reports[s][x, y] = test;
+                  //      reports[s][x, y] = test;
 
                         File.WriteAllText("measures.json", JsonSerializer.Serialize(measures));
                         File.WriteAllText("times.json", JsonSerializer.Serialize(reports));
