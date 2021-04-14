@@ -58,10 +58,17 @@ namespace Fixfbfcrap
                 TimeSpan pngTime;
                 TimeSpan tiffTime;
 
+                Console.WriteLine("Size in Tiles: {0} x {1}", r.XTiles(sizes[s]), r.YTiles(sizes[s]));
+
                 for (int x = 0; x < r.XTiles(sizes[s]); x++)
                 {
                     for (int y = 0; y < r.YTiles(sizes[s]); y++)
                     {
+                        Console.CursorLeft = 0;
+                        Console.Write("                                        ");
+                        Console.CursorLeft = 0;
+                        Console.Write("Processing Tile {0}, {1}", x, y);
+                       
                         int tilex = x * sizes[s] > r.RasterImg.RasterXSize ? r.remainderX(sizes[s]) : sizes[s];
                         int tiley = y * sizes[s] > r.RasterImg.RasterXSize ? r.remaindery(sizes[s]) : sizes[s];
 

@@ -77,10 +77,10 @@ namespace Fixfbfcrap
             {
                 for (int y=starty; y < starty+readh;y++)
                 {
-                    var index = bytes[y * 512 + x];
+                    var index = bytes[(y-starty) * readh + (x-startx)];
                     var col = colortable.GetColorEntry(index);
                     var c = Color.FromArgb(col.c4, col.c1, col.c2, col.c3);
-                    b.SetPixel(x, y, c);
+                    b.SetPixel(x-startx, y-starty, c);
                 }
             }
 
