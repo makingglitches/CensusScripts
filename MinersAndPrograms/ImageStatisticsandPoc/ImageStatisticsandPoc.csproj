@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="gdalconst_csharp">
+      <HintPath>..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\gdalconst_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdal_csharp">
+      <HintPath>..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp">
+      <HintPath>..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp">
+      <HintPath>..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\osr_csharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -30,7 +30,7 @@ namespace Fixfbfcrap
 
         static extern bool SetDllDirectory(string lpPathName);
 
-
+        
 
         static void Main(string[] args)
         {
@@ -48,6 +48,25 @@ namespace Fixfbfcrap
 
             TestVariances tv = new TestVariances(file);
             tv.Start();
+
+            List<GDALRead.TileVariance> vars = new List<GDALRead.TileVariance>();
+
+            tv.variances.ForEach(o => o.ForEach(o2 => vars.Add(o2)));
+
+            
+
+            vars.Select(o => new
+            {
+                dev = o.StdDev,
+                x = o.x,
+                y = o.y,
+                count = o.Count,
+                minperc = o.Percentages.Max(o2 => o2.P),
+                maxperc = o.Percentages.Max(o2 => o2.P),
+                stdplus1 = o.Spread.Where(o2 => o.StdDev >= o2.B - o.CeilAvg && o2.B > o.CeilAvg).Sum(o2 => o2.C),
+                stdminus1 = o.Spread.Where(o2=> -o.StdDev <= o2.B - o.CeilAvg && o2.B < o.CeilAvg).Sum(o2=>o2.C),
+                stdplus2 = o.Spread.Where(o2=> )
+            }).ToList();
 
             TestSizes ts = new TestSizes(file);
             

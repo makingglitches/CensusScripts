@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Imaging;
 using System.Drawing;
-using OSGeo.GDAL;
 using System.IO;
 using System.Text.Json;
+using ImageStatisticsandPoc.Stats;
 
-namespace Fixfbfcrap
+namespace ImageStatisticsandPoc.Tests
 {
 
     // Oh what a perfect wonderful day

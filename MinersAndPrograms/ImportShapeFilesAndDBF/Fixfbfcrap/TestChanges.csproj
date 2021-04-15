@@ -81,11 +81,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GDALRead.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestSizes.cs" />
-    <Compile Include="TestVariances.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -98,6 +95,10 @@
     <ProjectReference Include="..\..\CensusFiles\CensusFiles.csproj">
       <Project>{d8352a45-8769-423e-b873-7e6ded83c4d1}</Project>
       <Name>CensusFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ImageStatisticsandPoc\ImageStatisticsandPoc.csproj">
+      <Project>{c7b388ac-4953-4415-a118-e3b691ccf3e5}</Project>
+      <Name>ImageStatisticsandPoc</Name>
     </ProjectReference>
     <ProjectReference Include="..\DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
       <Project>{056ede95-9f44-48e2-aa3e-81fe498df00a}</Project>
