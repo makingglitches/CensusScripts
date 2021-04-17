@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace ImageStatisticsandPoc
+namespace RasterStats
 {
     public class GDALRead
     {

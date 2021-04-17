@@ -4,11 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageStatisticsandPoc.Stats
+namespace RasterStats.Stats
 {
-
-  
-
     public class TileVariance
     { 
 
@@ -36,12 +33,12 @@ namespace ImageStatisticsandPoc.Stats
                 {
 
                     if (count > testinglimit && testinglimit > 0) break;
-                    if (testinglimit > 0) count++;
+                    count++;
 
                     Console.CursorLeft = 0;
                     Console.Write("                                      ");
                     Console.CursorLeft = 0;
-                    Console.Write("Processing Tile: {0} x {1}", x, y);
+                    Console.Write("Processing Tile: {0} x {1} #{2}", x, y,count);
 
                     int width = tilesx - 1 == x && remx > 0 ? remx : tilesize;
 
@@ -134,7 +131,7 @@ namespace ImageStatisticsandPoc.Stats
                     PercSpread p = new PercSpread()
                     {
                         B = val.B,
-                        P = val.C / test.Count
+                        P = (double)val.C / (double)test.Count
                     };
 
                     test.Percentages.Add(p);
@@ -206,12 +203,12 @@ namespace ImageStatisticsandPoc.Stats
 
                     if (val.StdDevs == 0.0 && nv.StartDev == 0.0 && nv.EndDev == 0.0)
                     {
-                        nv.Count++;
+                        nv.Count += val.C;
                         break;
                     }
-                    else if (val.StdDevs > nv.StartDev && val.StdDevs <= nv.EndDev)
+                    else if ( val.StdDevs!=0 && val.StdDevs > nv.StartDev && val.StdDevs <= nv.EndDev)
                     {
-                        nv.Count++;
+                        nv.Count += val.C;
                         break;
                     }
                 }

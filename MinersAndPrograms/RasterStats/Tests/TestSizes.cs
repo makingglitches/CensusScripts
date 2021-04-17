@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing.Imaging;
 using System.Drawing;
 using System.IO;
-using System.Text.Json;
-using ImageStatisticsandPoc.Stats;
+using RasterStats.Stats;
 
-namespace ImageStatisticsandPoc.Tests
+namespace RasterStats.Tests
 {
 
     // Oh what a perfect wonderful day
@@ -119,7 +118,8 @@ namespace ImageStatisticsandPoc.Tests
 
                 if (!string.IsNullOrEmpty(mstring))
                 {
-                    measures = (List<TimeToLen>)JsonSerializer.Deserialize(mstring, typeof(List<TimeToLen>));
+                    // add load code here
+                    measures = new List<TimeToLen>(); // (List<TimeToLen>)JsonSerializer.Deserialize(mstring, typeof(List<TimeToLen>));
                 }
                 else
                 {
@@ -137,8 +137,8 @@ namespace ImageStatisticsandPoc.Tests
 
                 if (!string.IsNullOrEmpty(tstring))
                 {
-                    reports = (List<List<List<GDALRead.TimePieces>>>)
-                        JsonSerializer.Deserialize(tstring, typeof(GDALRead.TimePieces[][,]));
+                    // add load code here.
+                    reports = new List<List<List<GDALRead.TimePieces>>>();
                 }
                 else
                 {
@@ -227,9 +227,7 @@ namespace ImageStatisticsandPoc.Tests
                         
                   //      reports[s][x, y] = test;
 
-                        File.WriteAllText("measures.json", JsonSerializer.Serialize(measures));
-                        File.WriteAllText("times.json", JsonSerializer.Serialize(reports));
-
+                        // add file save here.
                     }
                 }
 

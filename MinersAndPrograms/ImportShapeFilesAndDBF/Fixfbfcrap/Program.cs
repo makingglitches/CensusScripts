@@ -19,6 +19,8 @@ using OSGeo.GDAL;
 using System.Runtime.InteropServices;
 using System.Drawing.Imaging;
 using System.Drawing;
+using RasterStats.Tests;
+using RasterStats.Stats;
 
 namespace Fixfbfcrap
 {
@@ -45,84 +47,86 @@ namespace Fixfbfcrap
             
             Gdal.AllRegister();
 
+            // how to select that is the most representative eh ?
+            // 3600 values to make this very simple of value seperation.
+            // stdev is a nice indicator but can be skewed.
 
-            TestVariances tv = new TestVariances(file);
+            TestVariances tv = new TestVariances(file,30000);
             tv.Start();
 
-            List<GDALRead.TileVariance> vars = new List<GDALRead.TileVariance>();
+            List<TileVariance> vars = new List<TileVariance>();
 
+            // transform into a flat list.
             tv.variances.ForEach(o => o.ForEach(o2 => vars.Add(o2)));
 
+           
+            vars.Sort( (x,y)=>
+            {
+                if (x.StdDev > y.StdDev) return 1;
+                else if (x.StdDev < y.StdDev) return -1;
+                else return 0;
+            });
+
+            //var bystdev = vars.GroupBy(o => o.StdDev, o => o);
+
+
+            // processing time currently about 1 per second
+            double secs = vars.Count / 60.0 / 60.0;
+
+            Console.WriteLine("At earlier test speed, encoding to two formats took a second each.");
+            Console.WriteLine("For the present raster that equals {0} hours.", secs);
+            Console.WriteLine("To reduce this down to an hour. Record count must reduce to: {0} of {1}", Math.Ceiling(vars.Count / secs), vars.Count);
+
+            var maxstdev = vars.Max(o => o.StdDev);
+            var minstdev = vars.Min(o => o.StdDev);
+
+            // i need to get a sampling of rate from so many repeats between certain saturation values.
+            // now percentages will always add up to 100%, so min-max should place samples in a certain range
+            // stddev is likely not the best way to group but it is quick and likely it generally will be representative enough
+            // all but the last row and last column are the same size in the samples.
+            // i have a feeling i'll have to make some arbitrary divosr.
+ 
+            // distribute across one percentage each 
+            // most of them are of unique size except stdev of 0.
+            var panelsize = (maxstdev - minstdev) / 100;
+
+            double startpanel = minstdev;
+
+            Console.WriteLine("Dividing stdev range into panels, panel size was: {0}", panelsize);
+
+            Dictionary<double, List<TileVariance>> panels = new Dictionary<double, List<TileVariance>>();
+            Dictionary<double, long> panelcounts = new Dictionary<double, long>();
+
+
+
+            while (startpanel < maxstdev)
+            {
+                var panel =vars.Where(o => o.StdDev >= startpanel && o.StdDev < startpanel + panelsize).ToList();
+                
+                long c = 0;
+
+                panel.Sort((a, b) =>
+                {
+                    if (a.StdDev > b.StdDev) return 1;
+                    else if (a.StdDev < b.StdDev) return -1;
+                    else return 0;
+                });
+
+                panels.Add(startpanel, panel);
+
+                panelcounts.Add(startpanel, c);
+
+                startpanel += panelsize;
+                
+            }
+
             
 
-            vars.Select(o => new
-            {
-                dev = o.StdDev,
-                x = o.x,
-                y = o.y,
-                count = o.Count,
-                minperc = o.Percentages.Max(o2 => o2.P),
-                maxperc = o.Percentages.Max(o2 => o2.P),
-                stdplus1 = o.Spread.Where(o2 => o.StdDev >= o2.B - o.CeilAvg && o2.B > o.CeilAvg).Sum(o2 => o2.C),
-                stdminus1 = o.Spread.Where(o2=> -o.StdDev <= o2.B - o.CeilAvg && o2.B < o.CeilAvg).Sum(o2=>o2.C),
-                stdplus2 = o.Spread.Where(o2=> )
-            }).ToList();
 
             TestSizes ts = new TestSizes(file);
-            
+
+            // start test sizes test
             ts.Start();
-
-            ////and isnt it interesting it can't find a dll in teh same goddamn directory
-            //Dataset d = Gdal.Open(file, Access.GA_ReadOnly);
-
-
-            //var b = d.GetRasterBand(1);
-            //var ct = b.GetColorTable();
-            //double[] geo = new double[6];
-
-            //d.GetGeoTransform(geo);
-
-
-            //var bounds = new { Left = geo[0], Top = geo[3], xsize = geo[1], ysize = geo[5] };
-
-
-
-            //byte[] bytes = new byte[512 * 512];
-
-
-            //b.ReadRaster(d.RasterXSize/2, d.RasterYSize/2, 512, 512, bytes, 512, 512, 0, 0);
-
-            //System.Drawing.Bitmap dest = new System.Drawing.Bitmap(512, 512);
-
-            //Console.WriteLine(ct.GetCount());
-
-            //for (int x = 0; x < 512; x++)
-            //{
-            //    for (int y=0; y < 512; y++)
-            //    {
-            //        var index = bytes[y * 512 + x];
-            //        var col = ct.GetColorEntry(index);
-            //        var c = Color.FromArgb(col.c4, col.c1, col.c2, col.c3);
-            //        dest.SetPixel(x, y, c);
-            //    }
-            //}
-
-            
-            //ImageCodecInfo pnginfo = ImageCodecInfo.GetImageEncoders().Where(o => o.FormatID.Equals(ImageFormat.Png.Guid)).First();
-
-            //var compop = System.Drawing.Imaging.Encoder.Compression;
-            //var qualop = System.Drawing.Imaging.Encoder.Quality;
-
-            
-            //FileStream fs = new FileStream("test.png", FileMode.Create, FileAccess.Write, FileShare.None);
-
-            //dest.Save(fs, ImageFormat.Png);
-
-            //fs.Flush();
-            //fs.Close();
-
-            //// seriously days wasted trying to get the libpng library to work in goddamn c++ and it f's up !
-            //// a few minutes of this and boom it works !
 
         }
 

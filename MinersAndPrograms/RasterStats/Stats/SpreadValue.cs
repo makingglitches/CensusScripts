@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageStatisticsandPoc.Stats
+namespace RasterStats.Stats
 {
-
-    public class PercSpread
+    public class SpreadValue
     {
         public byte B { get; set; }
-        public double P { get; set; }
+        public long C { get; set; }
+        public double StdDevs { get; set; }
     }
 }

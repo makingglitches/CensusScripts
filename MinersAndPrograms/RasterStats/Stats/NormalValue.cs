@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageStatisticsandPoc.Stats
+namespace RasterStats.Stats
 {
    public class NormalValue
     {
