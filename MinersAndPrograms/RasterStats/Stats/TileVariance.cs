@@ -7,11 +7,38 @@ using System.Threading.Tasks;
 namespace RasterStats.Stats
 {
     public class TileVariance
-    { 
+    {
 
         #region Computation
 
-    public static List<List<TileVariance>> GetTileVariances(GDALRead activeFile, int tilesize, int testinglimit = 0)
+        // my father commited a crime of some sort when i was a child in the pine barrens of long island ny.
+        // i didnt see anything but apparently his doubnle was with me that day and they alternated to do something fucked up.
+
+        // wrote this last time, they've been concealing evidence.
+
+        public void WriteRow(System.IO.TextWriter s)
+        {
+            s.Write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t", x, y, Count, TileSize, StdDev, CeilAvg, MaxPercentage, MinPercentage);
+
+            for (int b = 0; b < 256; b++)
+            {
+                int index = byteIndex.ContainsKey((byte)b) ? byteIndex[(byte)b] : -1;
+                if (index > -1)
+                {
+                    s.Write("{0}-({1})\t", Spread[index].C, Percentages[index].P);
+                }
+                else
+                {
+                    s.Write("-\t");
+                }
+            }
+
+            s.WriteLine();
+
+        }
+
+
+        public static List<List<TileVariance>> GetTileVariances(GDALRead activeFile, int tilesize, int testinglimit = 0)
         {
             var remx = activeFile.remainderX(tilesize);
             var remy = activeFile.remaindery(tilesize);

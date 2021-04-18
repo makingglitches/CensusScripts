@@ -57,6 +57,7 @@
     <Compile Include="Stats\PercValue.cs" />
     <Compile Include="Stats\SpreadValue.cs" />
     <Compile Include="Stats\TileVariance.cs" />
+    <Compile Include="Stats\TimePieces.cs" />
     <Compile Include="Tests\TestSizes.cs" />
     <Compile Include="Tests\TestVariances.cs" />
   </ItemGroup>

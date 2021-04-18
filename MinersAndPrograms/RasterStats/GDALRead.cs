@@ -8,27 +8,12 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using RasterStats.Stats;
 
 namespace RasterStats
 {
     public class GDALRead
     {
-
-        /// <summary>
-        /// Represents pertinent time and size results from compressing data read from the raster
-        /// </summary>
-        public class TimePieces
-        {
-            public long PngSize { get; set; }
-            public long TiffSize { get; set; }
-            public TimeSpan CopyTime { get; set; }
-            public TimeSpan PngTime { get; set; }
-            public TimeSpan TiffTime { get; set; }
-        }
-
-        // i think to them time we invest in our projects represents time they don't think they'll have to do anything
-        
-
 
         /// <summary>
         /// Returns the number of tile columns at a specific tile size.

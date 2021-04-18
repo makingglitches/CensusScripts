@@ -51,7 +51,7 @@ namespace Fixfbfcrap
             // 3600 values to make this very simple of value seperation.
             // stdev is a nice indicator but can be skewed.
 
-            TestVariances tv = new TestVariances(file,30000);
+            TestVariances tv = new TestVariances(file);
             tv.Start();
 
             List<TileVariance> vars = new List<TileVariance>();
@@ -73,9 +73,14 @@ namespace Fixfbfcrap
             // processing time currently about 1 per second
             double secs = vars.Count / 60.0 / 60.0;
 
+            double samplesize = Math.Ceiling(vars.Count / secs);
+
+
             Console.WriteLine("At earlier test speed, encoding to two formats took a second each.");
             Console.WriteLine("For the present raster that equals {0} hours.", secs);
-            Console.WriteLine("To reduce this down to an hour. Record count must reduce to: {0} of {1}", Math.Ceiling(vars.Count / secs), vars.Count);
+            Console.WriteLine("To reduce this down to an hour. Record count must reduce to: {0} of {1}", samplesize, vars.Count);
+
+    
 
             var maxstdev = vars.Max(o => o.StdDev);
             var minstdev = vars.Min(o => o.StdDev);
@@ -112,6 +117,8 @@ namespace Fixfbfcrap
                     else return 0;
                 });
 
+                c = panel.Select(o => o.Count).Sum();
+
                 panels.Add(startpanel, panel);
 
                 panelcounts.Add(startpanel, c);
@@ -120,13 +127,44 @@ namespace Fixfbfcrap
                 
             }
 
-            
+            long totalc = panelcounts.Select(o => o.Value).Sum();
+
+            Dictionary<double, int> parts = new Dictionary<double, int>();
+
+            foreach (var c in panelcounts)
+            {
+                parts.Add(c.Key, (int)Math.Ceiling((double)c.Value / (double)totalc * samplesize));
+            }
+
+            Dictionary<double, List<TileVariance>> selections = new Dictionary<double, List<TileVariance>>();
+
+            Random r = new Random();
 
 
-            TestSizes ts = new TestSizes(file);
+
+            foreach (var c in parts)
+            {
+                List<TileVariance> samples = new List<TileVariance>();
+
+                for (int i = 0; i < c.Value; i++)
+                {
+                    var sampleindex = (int)Math.Floor(r.NextDouble() * c.Value);
+                    samples.Add(panels[c.Key][sampleindex]);
+                }
+
+                selections.Add(c.Key, samples);
+            }
+
+
+            TestSizes ts = new TestSizes(file,selections);
 
             // start test sizes test
-            ts.Start();
+            ts.Start(512);
+
+            foreach ( var c in ts.report)
+            {
+                c.Value.CopyTime =  new TimeSpan(0,0, (int) c.Value.CopyTime.TotalSeconds * samplesize);
+            }
 
         }
 

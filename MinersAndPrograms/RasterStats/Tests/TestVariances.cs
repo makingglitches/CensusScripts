@@ -62,23 +62,8 @@ namespace RasterStats.Tests
                 {
                     var item = vy[x];
 
-                    s.Write("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t", x, y, item.Count, item.TileSize, item.StdDev, item.CeilAvg,item.MaxPercentage,item.MinPercentage);
-
-                    for (int b=0; b < 256; b++)
-                    {
-                        int index = item.byteIndex.ContainsKey((byte)b) ? item.byteIndex[(byte)b] : -1;
-                        if (index > -1)
-                        {
-                            s.Write("{0}-({1})\t", item.Spread[index].C, item.Percentages[index].P);
-                        }
-                        else
-                        {
-                            s.Write("-\t");
-                        }
-                    }
-
-                    s.WriteLine();
-
+                    item.WriteRow(s);
+                   
                 }
             }
 
