@@ -161,10 +161,23 @@ namespace Fixfbfcrap
             // start test sizes test
             ts.Start(512);
 
+            double sampleratio = (double)vars.Count / samplesize;
+
+           
+
+            Console.WriteLine("Panel Start\tPanel End\tCopy Time\tPng Time\tTiff Time\tPng Size\tTiff Size\t");
+
             foreach ( var c in ts.report)
             {
-                c.Value.CopyTime =  new TimeSpan(0,0, (int) c.Value.CopyTime.TotalSeconds * samplesize);
+                c.Value.CopyTime =  new TimeSpan(0,0, (int) (c.Value.CopyTime.TotalSeconds * sampleratio));
+                c.Value.PngTime = new TimeSpan(0, 0, (int)(c.Value.PngTime.TotalSeconds * sampleratio));
+                c.Value.TiffTime = new TimeSpan(0, 0, (int)(c.Value.TiffTime.TotalSeconds * sampleratio));
+                c.Value.PngSize = (long)(c.Value.PngSize * sampleratio);
+                c.Value.TiffSize = (long)(c.Value.TiffSize * sampleratio);
+                Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t",c.Key, c.Key + panelsize, c.Value.CopyTime, c.Value.PngTime, c.Value.TiffTime, c.Value.PngSize, c.Value.TiffSize);
             }
+
+            Console.WriteLine("Process finished.");
 
         }
 

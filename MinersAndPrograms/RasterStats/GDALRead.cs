@@ -160,7 +160,7 @@ namespace RasterStats
             end = DateTime.Now;
             
             t.TiffSize= ms.Length;
-            t.TiffTime = start - end;
+            t.TiffTime = end - start;
 
             return t;
         }
