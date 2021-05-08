@@ -13,7 +13,7 @@
             ],
             "program": "copyheaders.js",
             "args": [
-                "C:\\Users\\John\\Documents\\CensusProject\\gdallib\\proj-8.0.0\\src",
+                "C:\\Users\\John\\Documents\\CensusProject\\gdallib\\tiff-4.2.0",
                 "C:\\Users\\John\\Documents\\CensusProject\\gdallib\\gdal-3.2.2rc1\\LibDir"
             ]
         }

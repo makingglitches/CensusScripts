@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="gdalconst_csharp, Version=1.0.7659.35861, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\gdalconst_csharp.dll</HintPath>
+    </Reference>
     <Reference Include="gdal_csharp">
-      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal\csharp\csharp\gdal_csharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\gdal_csharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.DacFx.x64.150.4897.1\lib\net46\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
@@ -54,10 +58,21 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.DacFx.x64.150.4897.1\lib\net46\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.7659.35860, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.7659.35860, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\OSGeo4W64\apps\gdal2\csharp\osr_csharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +96,10 @@
       <Project>{d8352a45-8769-423e-b873-7e6ded83c4d1}</Project>
       <Name>CensusFiles</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\RasterStats\RasterStats.csproj">
+      <Project>{e209b16e-76d0-4d26-8a86-7827ae267f40}</Project>
+      <Name>RasterStats</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DbfDataReader\src\DbfDataReader\DbfDataReader.csproj">
       <Project>{056ede95-9f44-48e2-aa3e-81fe498df00a}</Project>
       <Name>DbfDataReader</Name>
@@ -94,6 +113,9 @@
     <Content Include="bCOHAx_CONUS_Range_2001v1.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
