@@ -4,9 +4,12 @@
 use Geography
 go
 
-drop table dbo.SNAP_Store_Locations
-go
+if (exists (select null from sys.tables st where st.name='SNAP_Store_Locations'))
+begin
+	drop table dbo.SNAP_Store_Locations
+end
 
+go
 create table dbo.SNAP_Store_Locations
 (
 	X float not null,
